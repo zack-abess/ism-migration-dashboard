@@ -1,0 +1,1726 @@
+{
+  "generatedAt": "2026-03-26T15:46:38.095Z",
+  "summary": {
+    "done": 12,
+    "skip": 8,
+    "inProgress": 12,
+    "total": 32
+  },
+  "totalClasses": 1116,
+  "totalEntries": {
+    "notes": 249596,
+    "assiduite": 73084,
+    "classes": 7025,
+    "pupils": 32
+  },
+  "schools": {
+    "ISM Dakar Ecole d'Ingénieurs": {
+      "years": [
+        "courant",
+        "2017-2018",
+        "2018-2019",
+        "2019-2020",
+        "2020-2021",
+        "2021-2022",
+        "2022-2023",
+        "2024-2025",
+        "2025-2026"
+      ],
+      "doneCount": 9,
+      "skipCount": 0,
+      "inProgressCount": 0
+    },
+    "ISM Dakar Ecole de Droit": {
+      "years": [
+        "courant",
+        "2017-2018",
+        "2018-2019",
+        "2019-2020",
+        "2020-2021",
+        "2021-2022",
+        "2022-2023",
+        "2023-2024"
+      ],
+      "doneCount": 1,
+      "skipCount": 0,
+      "inProgressCount": 7
+    },
+    "ISM Dakar Madiba Leadership Institut": {
+      "years": [
+        "2025-2026"
+      ],
+      "doneCount": 1,
+      "skipCount": 0,
+      "inProgressCount": 0
+    },
+    "ISM Online et ISF": {
+      "years": [
+        "2020-2021"
+      ],
+      "doneCount": 1,
+      "skipCount": 0,
+      "inProgressCount": 0
+    },
+    "ISM HQ": {
+      "years": [
+        "2018-2019",
+        "2019-2020",
+        "2020-2021",
+        "2021-2022",
+        "2022-2023",
+        "2023-2024",
+        "2024-2025",
+        "2025-2026"
+      ],
+      "doneCount": 0,
+      "skipCount": 8,
+      "inProgressCount": 0
+    },
+    "ISM Online & ISF": {
+      "years": [
+        "2021-2022",
+        "2022-2023",
+        "2023-2024",
+        "2024-2025",
+        "2025-2026"
+      ],
+      "doneCount": 0,
+      "skipCount": 0,
+      "inProgressCount": 5
+    }
+  },
+  "licences": [
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2017-2018",
+      "displayName": "ISM Dakar Ecole de Droit 2017-2018",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2017-2018",
+      "status": "in_progress",
+      "nbClasses": 20,
+      "lastModified": "2026-03-26T11:30:20.910Z",
+      "scrapers": {
+        "classes": {
+          "total": 131,
+          "ok": 131,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 131
+        },
+        "notes": {
+          "total": 617,
+          "ok": 511,
+          "empty": 104,
+          "error": 0,
+          "noperiod": 2,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 11817
+        },
+        "assiduite": {
+          "total": 80,
+          "ok": 71,
+          "empty": 9,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1567
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2018-2019",
+      "displayName": "ISM Dakar Ecole de Droit 2018-2019",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2018-2019",
+      "status": "in_progress",
+      "nbClasses": 24,
+      "lastModified": "2026-03-26T13:59:29.662Z",
+      "scrapers": {
+        "classes": {
+          "total": 155,
+          "ok": 155,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 155
+        },
+        "notes": {
+          "total": 658,
+          "ok": 543,
+          "empty": 53,
+          "error": 0,
+          "noperiod": 2,
+          "nofield": 60,
+          "validated": 0,
+          "totalEntries": 17503
+        },
+        "assiduite": {
+          "total": 136,
+          "ok": 92,
+          "empty": 44,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2080
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2019-2020",
+      "displayName": "ISM Dakar Ecole de Droit 2019-2020",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2019-2020",
+      "status": "in_progress",
+      "nbClasses": 25,
+      "lastModified": "2026-03-26T14:03:22.866Z",
+      "scrapers": {
+        "classes": {
+          "total": 161,
+          "ok": 161,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 161
+        },
+        "notes": {
+          "total": 761,
+          "ok": 705,
+          "empty": 8,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 48,
+          "validated": 0,
+          "totalEntries": 22297
+        },
+        "assiduite": {
+          "total": 130,
+          "ok": 107,
+          "empty": 23,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2722
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2020-2021",
+      "displayName": "ISM Dakar Ecole de Droit 2020-2021",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2020-2021",
+      "status": "in_progress",
+      "nbClasses": 26,
+      "lastModified": "2026-03-26T13:36:02.361Z",
+      "scrapers": {
+        "classes": {
+          "total": 167,
+          "ok": 167,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 167
+        },
+        "notes": {
+          "total": 622,
+          "ok": 590,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 8,
+          "nofield": 24,
+          "validated": 0,
+          "totalEntries": 23893
+        },
+        "assiduite": {
+          "total": 136,
+          "ok": 103,
+          "empty": 33,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 3115
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2021-2022",
+      "displayName": "ISM Dakar Ecole de Droit 2021-2022",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2021-2022",
+      "status": "in_progress",
+      "nbClasses": 29,
+      "lastModified": "2026-03-26T13:37:51.221Z",
+      "scrapers": {
+        "classes": {
+          "total": 185,
+          "ok": 185,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 185
+        },
+        "notes": {
+          "total": 848,
+          "ok": 840,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 1,
+          "validated": 0,
+          "totalEntries": 30607
+        },
+        "assiduite": {
+          "total": 98,
+          "ok": 93,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 5,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 3185
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2022-2023",
+      "displayName": "ISM Dakar Ecole de Droit 2022-2023",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2022-2023",
+      "status": "in_progress",
+      "nbClasses": 32,
+      "lastModified": "2026-03-26T14:28:52.821Z",
+      "scrapers": {
+        "classes": {
+          "total": 203,
+          "ok": 203,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 203
+        },
+        "notes": {
+          "total": 882,
+          "ok": 806,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 6,
+          "nofield": 70,
+          "validated": 0,
+          "totalEntries": 27479
+        },
+        "assiduite": {
+          "total": 185,
+          "ok": 168,
+          "empty": 16,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 5166
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit_2023-2024",
+      "displayName": "ISM Dakar Ecole de Droit 2023-2024",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2023-2024",
+      "status": "in_progress",
+      "nbClasses": 33,
+      "lastModified": "2026-03-26T15:25:35.618Z",
+      "scrapers": {
+        "classes": {
+          "total": 209,
+          "ok": 209,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 209
+        },
+        "notes": {
+          "total": 585,
+          "ok": 475,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 14,
+          "nofield": 96,
+          "validated": 96,
+          "totalEntries": 16760
+        },
+        "assiduite": {
+          "total": 228,
+          "ok": 200,
+          "empty": 28,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4394
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_&_ISF_2021-2022",
+      "displayName": "ISM Online & ISF 2021-2022",
+      "school": "ISM Online & ISF",
+      "year": "2021-2022",
+      "status": "in_progress",
+      "nbClasses": 26,
+      "lastModified": "2026-03-26T12:30:33.442Z",
+      "scrapers": {
+        "classes": {
+          "total": 167,
+          "ok": 167,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 167
+        },
+        "notes": {
+          "total": 245,
+          "ok": 182,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 56,
+          "validated": 0,
+          "totalEntries": 4321
+        },
+        "assiduite": {
+          "total": 112,
+          "ok": 112,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 605
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_&_ISF_2022-2023",
+      "displayName": "ISM Online & ISF 2022-2023",
+      "school": "ISM Online & ISF",
+      "year": "2022-2023",
+      "status": "in_progress",
+      "nbClasses": 41,
+      "lastModified": "2026-03-26T14:31:55.982Z",
+      "scrapers": {
+        "classes": {
+          "total": 257,
+          "ok": 257,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 257
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 264,
+          "ok": 219,
+          "empty": 45,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4611
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_&_ISF_2023-2024",
+      "displayName": "ISM Online & ISF 2023-2024",
+      "school": "ISM Online & ISF",
+      "year": "2023-2024",
+      "status": "in_progress",
+      "nbClasses": 73,
+      "lastModified": "2026-03-26T14:57:53.704Z",
+      "scrapers": {
+        "classes": {
+          "total": 449,
+          "ok": 449,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 449
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 552,
+          "ok": 496,
+          "empty": 56,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4204
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_&_ISF_2024-2025",
+      "displayName": "ISM Online & ISF 2024-2025",
+      "school": "ISM Online & ISF",
+      "year": "2024-2025",
+      "status": "in_progress",
+      "nbClasses": 92,
+      "lastModified": "2026-03-26T14:48:48.755Z",
+      "scrapers": {
+        "classes": {
+          "total": 563,
+          "ok": 563,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 563
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 561,
+          "ok": 457,
+          "empty": 97,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 6050
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_&_ISF_2025-2026",
+      "displayName": "ISM Online & ISF 2025-2026",
+      "school": "ISM Online & ISF",
+      "year": "2025-2026",
+      "status": "in_progress",
+      "nbClasses": 98,
+      "lastModified": "2026-03-26T14:53:19.990Z",
+      "scrapers": {
+        "classes": {
+          "total": 599,
+          "ok": 599,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 599
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 449,
+          "ok": 319,
+          "empty": 119,
+          "error": 0,
+          "noperiod": 11,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4605
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "courant",
+      "status": "done",
+      "nbClasses": 31,
+      "lastModified": "2026-03-26T10:11:30.637Z",
+      "scrapers": {
+        "classes": {
+          "total": 197,
+          "ok": 197,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 197
+        },
+        "notes": {
+          "total": 100,
+          "ok": 92,
+          "empty": 7,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 1,
+          "validated": 7,
+          "totalEntries": 1421
+        },
+        "assiduite": {
+          "total": 116,
+          "ok": 78,
+          "empty": 38,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1473
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2017-2018",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2017-2018",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2017-2018",
+      "status": "done",
+      "nbClasses": 38,
+      "lastModified": "2026-03-26T08:39:21.111Z",
+      "scrapers": {
+        "classes": {
+          "total": 239,
+          "ok": 239,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 239
+        },
+        "notes": {
+          "total": 843,
+          "ok": 761,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 14,
+          "nofield": 68,
+          "validated": 0,
+          "totalEntries": 15974
+        },
+        "assiduite": {
+          "total": 210,
+          "ok": 120,
+          "empty": 90,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 78,
+          "totalEntries": 1770
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2018-2019",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2018-2019",
+      "status": "done",
+      "nbClasses": 30,
+      "lastModified": "2026-03-26T08:05:39.883Z",
+      "scrapers": {
+        "classes": {
+          "total": 191,
+          "ok": 191,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 191
+        },
+        "notes": {
+          "total": 872,
+          "ok": 832,
+          "empty": 12,
+          "error": 0,
+          "noperiod": 11,
+          "nofield": 17,
+          "validated": 0,
+          "totalEntries": 20190
+        },
+        "assiduite": {
+          "total": 133,
+          "ok": 95,
+          "empty": 38,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2005
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2019-2020",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2019-2020",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2019-2020",
+      "status": "done",
+      "nbClasses": 31,
+      "lastModified": "2026-03-25T23:24:09.021Z",
+      "scrapers": {
+        "classes": {
+          "total": 197,
+          "ok": 197,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 197
+        },
+        "notes": {
+          "total": 105,
+          "ok": 104,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 1,
+          "totalEntries": 2188
+        },
+        "assiduite": {
+          "total": 95,
+          "ok": 94,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2063
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2020-2021",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2020-2021",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2020-2021",
+      "status": "done",
+      "nbClasses": 53,
+      "lastModified": "2026-03-26T12:40:30.599Z",
+      "scrapers": {
+        "classes": {
+          "total": 329,
+          "ok": 329,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 329
+        },
+        "notes": {
+          "total": 74,
+          "ok": 74,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1376
+        },
+        "assiduite": {
+          "total": 277,
+          "ok": 131,
+          "empty": 145,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2636
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2021-2022",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2021-2022",
+      "status": "done",
+      "nbClasses": 43,
+      "lastModified": "2026-03-26T08:17:10.259Z",
+      "scrapers": {
+        "classes": {
+          "total": 269,
+          "ok": 269,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 269
+        },
+        "notes": {
+          "total": 1063,
+          "ok": 1034,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 15,
+          "nofield": 14,
+          "validated": 0,
+          "totalEntries": 26584
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2022-2023",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2022-2023",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2022-2023",
+      "status": "done",
+      "nbClasses": 50,
+      "lastModified": "2026-03-26T11:56:39.436Z",
+      "scrapers": {
+        "classes": {
+          "total": 311,
+          "ok": 311,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 311
+        },
+        "notes": {
+          "total": 696,
+          "ok": 696,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 16453
+        },
+        "assiduite": {
+          "total": 183,
+          "ok": 167,
+          "empty": 13,
+          "error": 0,
+          "noperiod": 3,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4449
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2024-2025",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2024-2025",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2024-2025",
+      "status": "done",
+      "nbClasses": 53,
+      "lastModified": "2026-03-26T12:46:43.790Z",
+      "scrapers": {
+        "classes": {
+          "total": 329,
+          "ok": 329,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 329
+        },
+        "notes": {
+          "total": 18,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 18,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 198,
+          "ok": 193,
+          "empty": 4,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 6071
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2025-2026",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2025-2026",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2025-2026",
+      "status": "done",
+      "nbClasses": 61,
+      "lastModified": "2026-03-26T12:18:50.479Z",
+      "scrapers": {
+        "classes": {
+          "total": 354,
+          "ok": 354,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 354
+        },
+        "notes": {
+          "total": 195,
+          "ok": 179,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 16,
+          "validated": 0,
+          "totalEntries": 4241
+        },
+        "assiduite": {
+          "total": 91,
+          "ok": 88,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 3,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2157
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Droit",
+      "displayName": "ISM Dakar Ecole de Droit",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "courant",
+      "status": "done",
+      "nbClasses": 20,
+      "lastModified": "2026-03-26T13:09:00.308Z",
+      "scrapers": {
+        "classes": {
+          "total": 131,
+          "ok": 131,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 131
+        },
+        "notes": {
+          "total": 28,
+          "ok": 14,
+          "empty": 14,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 448
+        },
+        "assiduite": {
+          "total": 128,
+          "ok": 81,
+          "empty": 47,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2651
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Madiba_Leadership_Institut_2025-2026",
+      "displayName": "ISM Dakar Madiba Leadership Institut 2025-2026",
+      "school": "ISM Dakar Madiba Leadership Institut",
+      "year": "2025-2026",
+      "status": "done",
+      "nbClasses": 39,
+      "lastModified": "2026-03-26T10:03:57.087Z",
+      "scrapers": {
+        "classes": {
+          "total": 245,
+          "ok": 245,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 245
+        },
+        "notes": {
+          "total": 263,
+          "ok": 219,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 13,
+          "nofield": 31,
+          "validated": 44,
+          "totalEntries": 3683
+        },
+        "assiduite": {
+          "total": 72,
+          "ok": 49,
+          "empty": 16,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 578
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Online_et_ISF_2020-2021",
+      "displayName": "ISM Online et ISF 2020-2021",
+      "school": "ISM Online et ISF",
+      "year": "2020-2021",
+      "status": "done",
+      "nbClasses": 11,
+      "lastModified": "2026-03-26T11:39:58.188Z",
+      "scrapers": {
+        "classes": {
+          "total": 77,
+          "ok": 77,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 77
+        },
+        "notes": {
+          "total": 170,
+          "ok": 163,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 7,
+          "validated": 7,
+          "totalEntries": 2361
+        },
+        "assiduite": {
+          "total": 27,
+          "ok": 27,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 391
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2018-2019",
+      "displayName": "ISM HQ 2018-2019",
+      "school": "ISM HQ",
+      "year": "2018-2019",
+      "status": "skip",
+      "nbClasses": 2,
+      "lastModified": "2026-03-26T12:02:42.844Z",
+      "scrapers": {
+        "classes": {
+          "total": 23,
+          "ok": 23,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 23
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 6,
+          "ok": 6,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 16
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2019-2020",
+      "displayName": "ISM HQ 2019-2020",
+      "school": "ISM HQ",
+      "year": "2019-2020",
+      "status": "skip",
+      "nbClasses": 13,
+      "lastModified": "2026-03-26T12:01:40.997Z",
+      "scrapers": {
+        "classes": {
+          "total": 89,
+          "ok": 89,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 89
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 39,
+          "ok": 39,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 165
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2020-2021",
+      "displayName": "ISM HQ 2020-2021",
+      "school": "ISM HQ",
+      "year": "2020-2021",
+      "status": "skip",
+      "nbClasses": 29,
+      "lastModified": "2026-03-26T12:00:24.008Z",
+      "scrapers": {
+        "classes": {
+          "total": 185,
+          "ok": 185,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 185
+        },
+        "notes": {
+          "total": 61,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 13,
+          "nofield": 48,
+          "validated": 61,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 87,
+          "ok": 84,
+          "empty": 3,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 297
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2021-2022",
+      "displayName": "ISM HQ 2021-2022",
+      "school": "ISM HQ",
+      "year": "2021-2022",
+      "status": "skip",
+      "nbClasses": 17,
+      "lastModified": "2026-03-26T11:59:38.592Z",
+      "scrapers": {
+        "classes": {
+          "total": 113,
+          "ok": 113,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 113
+        },
+        "notes": {
+          "total": 49,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 48,
+          "validated": 49,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 51,
+          "ok": 51,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 258
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2022-2023",
+      "displayName": "ISM HQ 2022-2023",
+      "school": "ISM HQ",
+      "year": "2022-2023",
+      "status": "skip",
+      "nbClasses": 16,
+      "lastModified": "2026-03-26T11:59:10.516Z",
+      "scrapers": {
+        "classes": {
+          "total": 107,
+          "ok": 107,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 107
+        },
+        "notes": {
+          "total": 48,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 48,
+          "validated": 48,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 48,
+          "ok": 48,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 685
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2023-2024",
+      "displayName": "ISM HQ 2023-2024",
+      "school": "ISM HQ",
+      "year": "2023-2024",
+      "status": "skip",
+      "nbClasses": 14,
+      "lastModified": "2026-03-26T12:36:46.647Z",
+      "scrapers": {
+        "classes": {
+          "total": 95,
+          "ok": 95,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 95
+        },
+        "notes": {
+          "total": 42,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 42,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 42,
+          "ok": 42,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1315
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2024-2025",
+      "displayName": "ISM HQ 2024-2025",
+      "school": "ISM HQ",
+      "year": "2024-2025",
+      "status": "skip",
+      "nbClasses": 23,
+      "lastModified": "2026-03-26T11:56:52.828Z",
+      "scrapers": {
+        "classes": {
+          "total": 149,
+          "ok": 149,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 149
+        },
+        "notes": {
+          "total": 55,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 48,
+          "validated": 55,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 69,
+          "ok": 63,
+          "empty": 6,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1800
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_HQ_2025-2026",
+      "displayName": "ISM HQ 2025-2026",
+      "school": "ISM HQ",
+      "year": "2025-2026",
+      "status": "skip",
+      "nbClasses": 23,
+      "lastModified": "2026-03-26T11:58:05.076Z",
+      "scrapers": {
+        "classes": {
+          "total": 149,
+          "ok": 149,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 149
+        },
+        "notes": {
+          "total": 23,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 23,
+          "nofield": 0,
+          "validated": 23,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 23,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 23,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    }
+  ]
+}

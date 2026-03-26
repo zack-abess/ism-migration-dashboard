@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISM Migration Dashboard — ClassExpert → Symfony</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-hover: #334155;
+      --border: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --green: #22c55e;
+      --green-bg: rgba(34,197,94,.15);
+      --yellow: #eab308;
+      --yellow-bg: rgba(234,179,8,.15);
+      --red: #ef4444;
+      --red-bg: rgba(239,68,68,.15);
+      --blue: #3b82f6;
+      --blue-bg: rgba(59,130,246,.15);
+      --purple: #a855f7;
+      --purple-bg: rgba(168,85,247,.15);
+      --orange: #f97316;
+      --orange-bg: rgba(249,115,22,.15);
+      --gray: #64748b;
+      --gray-bg: rgba(100,116,139,.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+    .header .subtitle {
+      color: var(--text-muted);
+      font-size: .9rem;
+    }
+    .header .updated {
+      color: var(--text-muted);
+      font-size: .75rem;
+      margin-top: 4px;
+    }
+
+    /* KPI Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform .2s, border-color .2s;
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--blue);
+    }
+    .kpi-card .value {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .kpi-card .label {
+      color: var(--text-muted);
+      font-size: .85rem;
+      font-weight: 500;
+    }
+    .kpi-card .sub {
+      color: var(--text-muted);
+      font-size: .7rem;
+      margin-top: 4px;
+    }
+
+    /* Progress Bar */
+    .progress-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .progress-section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .progress-bar-container {
+      background: var(--bg);
+      border-radius: 10px;
+      height: 32px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+    }
+    .progress-segment {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #fff;
+      transition: width .5s ease;
+      min-width: 0;
+    }
+    .progress-segment span { white-space: nowrap; overflow: hidden; }
+    .seg-done { background: var(--green); }
+    .seg-skip { background: var(--gray); }
+    .seg-progress { background: var(--yellow); }
+    .progress-legend {
+      display: flex;
+      gap: 24px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      color: var(--text-muted);
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Charts Section */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .chart-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .chart-card h3 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    /* Table */
+    .table-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      overflow-x: auto;
+      margin-bottom: 32px;
+    }
+    .table-section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: .8rem;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(51,65,85,.5);
+      vertical-align: middle;
+    }
+    tr:hover td { background: rgba(59,130,246,.05); }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: .75rem;
+      font-weight: 600;
+    }
+    .badge-done { background: var(--green-bg); color: var(--green); }
+    .badge-skip { background: var(--gray-bg); color: var(--gray); }
+    .badge-in_progress { background: var(--yellow-bg); color: var(--yellow); }
+    .badge-ok { background: var(--green-bg); color: var(--green); }
+    .badge-issues { background: var(--orange-bg); color: var(--orange); }
+    .badge-empty { background: var(--red-bg); color: var(--red); }
+    .badge-na { background: var(--gray-bg); color: var(--gray); }
+
+    .mini-bar {
+      display: flex;
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+      width: 80px;
+      background: var(--bg);
+    }
+    .mini-bar .bar-ok { background: var(--green); }
+    .mini-bar .bar-err { background: var(--red); }
+    .mini-bar .bar-warn { background: var(--orange); }
+
+    .scraper-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .scraper-count {
+      font-size: .7rem;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: .75rem;
+      padding: 16px;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .charts-grid { grid-template-columns: 1fr; }
+      .kpi-card .value { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Migration ClassExpert → Symfony SI</h1>
+    <div class="subtitle">Groupe ISM — Tableau de bord d'extraction des données</div>
+    <div class="updated" id="updatedAt"></div>
+  </div>
+
+  <div class="kpi-grid" id="kpiGrid"></div>
+
+  <div class="progress-section">
+    <h2>Progression globale des licences</h2>
+    <div class="progress-bar-container" id="progressBar"></div>
+    <div class="progress-legend" id="progressLegend"></div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Répartition par école</h3>
+      <canvas id="schoolChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Santé des scrapers (toutes licences Done)</h3>
+      <canvas id="scraperChart"></canvas>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <h2>Détail par licence</h2>
+    <div class="filter-bar" id="filterBar"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Licence</th>
+          <th>Année</th>
+          <th>Statut</th>
+          <th>Classes</th>
+          <th>Notes</th>
+          <th>Assiduité</th>
+          <th>Classes (scraper)</th>
+          <th>Élèves</th>
+          <th>Dernière maj</th>
+        </tr>
+      </thead>
+      <tbody id="licenceTable"></tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Groupe ISM — Migration ClassExpert &middot; Dashboard auto-généré
+  </div>
+
+  <script>
+    let DATA = null;
+    let currentFilter = 'all';
+
+    async function loadData() {
+      try {
+        const resp = await fetch('dashboard-data.json');
+        DATA = await resp.json();
+        render();
+      } catch (e) {
+        document.body.innerHTML = '<div style="text-align:center;padding:100px;color:#ef4444;"><h2>Impossible de charger dashboard-data.json</h2><p>Lancez: node dashboard/generate_dashboard_data.js</p></div>';
+      }
+    }
+
+    function formatNum(n) {
+      if (n == null) return '—';
+      return n.toLocaleString('fr-FR');
+    }
+
+    function formatDate(iso) {
+      if (!iso) return '—';
+      const d = new Date(iso);
+      return d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    }
+
+    function scraperBadge(stats) {
+      if (!stats || stats.total === 0) return '<span class="badge badge-na">N/A</span>';
+      const pctOk = Math.round((stats.ok / stats.total) * 100);
+      const issues = stats.empty + stats.error + stats.noperiod + stats.nofield;
+      if (issues === 0) return `<div class="scraper-cell"><span class="badge badge-ok">${pctOk}%</span><span class="scraper-count">${formatNum(stats.totalEntries)} entrées</span></div>`;
+      if (pctOk >= 80) return `<div class="scraper-cell"><span class="badge badge-issues">${pctOk}%</span><span class="scraper-count">${issues} prob.</span></div>`;
+      return `<div class="scraper-cell"><span class="badge badge-empty">${pctOk}%</span><span class="scraper-count">${issues} prob.</span></div>`;
+    }
+
+    function render() {
+      const s = DATA.summary;
+
+      // Updated timestamp
+      document.getElementById('updatedAt').textContent = `Mis à jour: ${formatDate(DATA.generatedAt)}`;
+
+      // KPI Cards
+      const kpis = [
+        { value: s.total, label: 'Licences totales', color: 'var(--blue)', sub: `${Object.keys(DATA.schools).length} écoles` },
+        { value: s.done, label: 'Terminées', color: 'var(--green)', sub: `${Math.round(s.done/s.total*100)}%` },
+        { value: s.inProgress, label: 'En cours', color: 'var(--yellow)', sub: 'dans archive/' },
+        { value: s.skip, label: 'Ignorées', color: 'var(--gray)', sub: 'dans Skip/' },
+        { value: formatNum(DATA.totalClasses), label: 'Classes totales', color: 'var(--purple)', sub: 'toutes licences' },
+        { value: formatNum(DATA.totalEntries.notes), label: 'Entrées notes', color: 'var(--blue)', sub: 'lignes extraites' },
+        { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--orange)', sub: 'lignes extraites' },
+      ];
+      document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
+        <div class="kpi-card">
+          <div class="value" style="color:${k.color}">${k.value}</div>
+          <div class="label">${k.label}</div>
+          <div class="sub">${k.sub}</div>
+        </div>
+      `).join('');
+
+      // Progress Bar
+      const donePct = (s.done / s.total * 100).toFixed(1);
+      const skipPct = (s.skip / s.total * 100).toFixed(1);
+      const progressPct = (s.inProgress / s.total * 100).toFixed(1);
+      document.getElementById('progressBar').innerHTML = `
+        <div class="progress-segment seg-done" style="width:${donePct}%"><span>${s.done} done</span></div>
+        <div class="progress-segment seg-progress" style="width:${progressPct}%"><span>${s.inProgress} en cours</span></div>
+        <div class="progress-segment seg-skip" style="width:${skipPct}%"><span>${s.skip} skip</span></div>
+      `;
+      document.getElementById('progressLegend').innerHTML = `
+        <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Terminé (${donePct}%)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>En cours (${progressPct}%)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div>Ignoré (${skipPct}%)</div>
+      `;
+
+      // Filter buttons
+      const filters = [
+        { key: 'all', label: `Tous (${s.total})` },
+        { key: 'done', label: `Terminé (${s.done})` },
+        { key: 'in_progress', label: `En cours (${s.inProgress})` },
+        { key: 'skip', label: `Ignoré (${s.skip})` },
+      ];
+      document.getElementById('filterBar').innerHTML = filters.map(f =>
+        `<button class="filter-btn ${f.key === currentFilter ? 'active' : ''}" onclick="setFilter('${f.key}')">${f.label}</button>`
+      ).join('');
+
+      // Table
+      const filtered = currentFilter === 'all' ? DATA.licences : DATA.licences.filter(l => l.status === currentFilter);
+      document.getElementById('licenceTable').innerHTML = filtered.map(l => `
+        <tr>
+          <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school}</span></td>
+          <td>${l.year}</td>
+          <td><span class="badge badge-${l.status}">${l.status === 'done' ? 'Terminé' : l.status === 'skip' ? 'Ignoré' : 'En cours'}</span></td>
+          <td>${l.nbClasses}</td>
+          <td>${scraperBadge(l.scrapers.notes)}</td>
+          <td>${scraperBadge(l.scrapers.assiduite)}</td>
+          <td>${scraperBadge(l.scrapers.classes)}</td>
+          <td>${scraperBadge(l.scrapers.pupils)}</td>
+          <td style="font-size:.75rem;color:var(--text-muted)">${formatDate(l.lastModified)}</td>
+        </tr>
+      `).join('');
+
+      renderCharts();
+    }
+
+    function setFilter(f) {
+      currentFilter = f;
+      render();
+    }
+
+    function renderCharts() {
+      // School chart (horizontal bar)
+      const schoolCtx = document.getElementById('schoolChart').getContext('2d');
+      const schools = Object.entries(DATA.schools).map(([name, s]) => ({
+        name: name.replace("ISM ", "").replace("Dakar ", ""),
+        done: s.doneCount,
+        skip: s.skipCount,
+        inProgress: s.inProgressCount,
+      }));
+
+      if (window._schoolChart) window._schoolChart.destroy();
+      window._schoolChart = new Chart(schoolCtx, {
+        type: 'bar',
+        data: {
+          labels: schools.map(s => s.name),
+          datasets: [
+            { label: 'Terminé', data: schools.map(s => s.done), backgroundColor: '#22c55e' },
+            { label: 'En cours', data: schools.map(s => s.inProgress), backgroundColor: '#eab308' },
+            { label: 'Ignoré', data: schools.map(s => s.skip), backgroundColor: '#64748b' },
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11 } } } },
+          scales: {
+            x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+            y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } },
+          }
+        }
+      });
+
+      // Scraper health (done licences only)
+      const scraperCtx = document.getElementById('scraperChart').getContext('2d');
+      const doneLicences = DATA.licences.filter(l => l.status === 'done');
+      const scraperAgg = {};
+      ['notes', 'assiduite', 'classes', 'pupils'].forEach(s => {
+        scraperAgg[s] = { ok: 0, issues: 0, total: 0 };
+        doneLicences.forEach(l => {
+          const st = l.scrapers[s];
+          if (st) {
+            scraperAgg[s].ok += st.ok;
+            scraperAgg[s].issues += st.empty + st.error + st.noperiod + st.nofield;
+            scraperAgg[s].total += st.total;
+          }
+        });
+      });
+
+      if (window._scraperChart) window._scraperChart.destroy();
+      window._scraperChart = new Chart(scraperCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Notes OK', 'Notes Prob.', 'Assiduité OK', 'Assiduité Prob.', 'Classes OK', 'Classes Prob.', 'Élèves OK', 'Élèves Prob.'],
+          datasets: [{
+            data: [
+              scraperAgg.notes.ok, scraperAgg.notes.issues,
+              scraperAgg.assiduite.ok, scraperAgg.assiduite.issues,
+              scraperAgg.classes.ok, scraperAgg.classes.issues,
+              scraperAgg.pupils.ok, scraperAgg.pupils.issues,
+            ],
+            backgroundColor: [
+              '#22c55e', '#ef4444',
+              '#3b82f6', '#f97316',
+              '#a855f7', '#ef4444',
+              '#06b6d4', '#f97316',
+            ],
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 }, padding: 8 } },
+          }
+        }
+      });
+    }
+
+    // Auto-refresh every 60 seconds
+    loadData();
+    setInterval(loadData, 60000);
+  </script>
+</body>
+</html>
