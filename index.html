@@ -294,8 +294,16 @@
       <canvas id="schoolChart"></canvas>
     </div>
     <div class="chart-card">
-      <h3>Santé des scrapers (toutes licences Done)</h3>
-      <canvas id="scraperChart"></canvas>
+      <h3>Notes — santé extraction</h3>
+      <canvas id="chartNotes"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Assiduité — santé extraction</h3>
+      <canvas id="chartAssiduite"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Classes — santé extraction</h3>
+      <canvas id="chartClasses"></canvas>
     </div>
   </div>
 
@@ -469,49 +477,60 @@
         }
       });
 
-      // Scraper health (done licences only)
-      const scraperCtx = document.getElementById('scraperChart').getContext('2d');
-      const doneLicences = DATA.licences.filter(l => l.status === 'done');
-      const scraperAgg = {};
-      ['notes', 'assiduite', 'classes', 'pupils'].forEach(s => {
-        scraperAgg[s] = { ok: 0, issues: 0, total: 0 };
-        doneLicences.forEach(l => {
-          const st = l.scrapers[s];
+      // Per-scraper health charts (toutes licences, pas seulement Done)
+      const scraperConfigs = [
+        { key: 'notes',     canvasId: 'chartNotes',     label: 'Notes',     colors: { ok: '#22c55e', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
+        { key: 'assiduite', canvasId: 'chartAssiduite',  label: 'Assiduité', colors: { ok: '#3b82f6', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
+        { key: 'classes',   canvasId: 'chartClasses',    label: 'Classes',   colors: { ok: '#a855f7', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
+      ];
+
+      for (const cfg of scraperConfigs) {
+        const agg = { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, entries: 0 };
+        DATA.licences.forEach(l => {
+          const st = l.scrapers[cfg.key];
           if (st) {
-            scraperAgg[s].ok += st.ok;
-            scraperAgg[s].issues += st.empty + st.error + st.noperiod + st.nofield;
-            scraperAgg[s].total += st.total;
+            agg.ok += st.ok;
+            agg.empty += st.empty;
+            agg.error += st.error;
+            agg.noperiod += st.noperiod;
+            agg.nofield += st.nofield;
+            agg.total += st.total;
+            agg.entries += st.totalEntries;
           }
         });
-      });
 
-      if (window._scraperChart) window._scraperChart.destroy();
-      window._scraperChart = new Chart(scraperCtx, {
-        type: 'doughnut',
-        data: {
-          labels: ['Notes OK', 'Notes Prob.', 'Assiduité OK', 'Assiduité Prob.', 'Classes OK', 'Classes Prob.', 'Élèves OK', 'Élèves Prob.'],
-          datasets: [{
-            data: [
-              scraperAgg.notes.ok, scraperAgg.notes.issues,
-              scraperAgg.assiduite.ok, scraperAgg.assiduite.issues,
-              scraperAgg.classes.ok, scraperAgg.classes.issues,
-              scraperAgg.pupils.ok, scraperAgg.pupils.issues,
-            ],
-            backgroundColor: [
-              '#22c55e', '#ef4444',
-              '#3b82f6', '#f97316',
-              '#a855f7', '#ef4444',
-              '#06b6d4', '#f97316',
-            ],
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 }, padding: 8 } },
+        const ctx = document.getElementById(cfg.canvasId).getContext('2d');
+        const chartKey = '_chart_' + cfg.key;
+        if (window[chartKey]) window[chartKey].destroy();
+
+        const labels = [];
+        const values = [];
+        const colors = [];
+
+        if (agg.ok > 0)       { labels.push('OK (' + agg.ok + ')');             values.push(agg.ok);       colors.push(cfg.colors.ok); }
+        if (agg.empty > 0)    { labels.push('Vide (' + agg.empty + ')');         values.push(agg.empty);    colors.push(cfg.colors.empty); }
+        if (agg.error > 0)    { labels.push('Erreur (' + agg.error + ')');       values.push(agg.error);    colors.push(cfg.colors.error); }
+        if (agg.noperiod > 0) { labels.push('No période (' + agg.noperiod + ')'); values.push(agg.noperiod); colors.push(cfg.colors.noperiod); }
+        if (agg.nofield > 0)  { labels.push('No matière (' + agg.nofield + ')');  values.push(agg.nofield);  colors.push(cfg.colors.nofield); }
+
+        window[chartKey] = new Chart(ctx, {
+          type: 'doughnut',
+          data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 0 }] },
+          options: {
+            responsive: true,
+            cutout: '60%',
+            plugins: {
+              legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 }, padding: 8 } },
+              title: {
+                display: true,
+                text: formatNum(agg.entries) + ' entrées — ' + agg.total + ' combinaisons',
+                color: '#64748b',
+                font: { size: 12 },
+              }
+            }
           }
-        }
-      });
+        });
+      }
     }
 
     // Auto-refresh every 60 seconds
