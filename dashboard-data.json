@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T19:00:01.197Z",
+  "generatedAt": "2026-03-26T19:05:00.949Z",
   "summary": {
     "done": 21,
     "skip": 8,
@@ -7,10 +7,13 @@
     "total": 37
   },
   "totalClasses": 1284,
+  "totalEleves": 29383,
+  "totalMatieres": 2110,
+  "totalPeriodes": 44,
   "totalEntries": {
     "notes": 496684,
-    "assiduite": 86635,
-    "classes": 1295,
+    "assiduite": 93519,
+    "classes": 1318,
     "pupils": 37
   },
   "schools": {
@@ -109,6 +112,9 @@
       "year": "2017-2018",
       "status": "in_progress",
       "nbClasses": 20,
+      "nbEleves": 553,
+      "nbMatieres": 105,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T11:30:20.910Z",
       "scrapers": {
         "classes": {
@@ -160,6 +166,9 @@
       "year": "2022-2023",
       "status": "in_progress",
       "nbClasses": 32,
+      "nbEleves": 1214,
+      "nbMatieres": 163,
+      "nbPeriodes": 15,
       "lastModified": "2026-03-26T14:28:52.821Z",
       "scrapers": {
         "classes": {
@@ -211,6 +220,9 @@
       "year": "2024-2025",
       "status": "in_progress",
       "nbClasses": 48,
+      "nbEleves": 1145,
+      "nbMatieres": 147,
+      "nbPeriodes": 16,
       "lastModified": "2026-03-26T18:38:04.800Z",
       "scrapers": {
         "classes": {
@@ -262,6 +274,9 @@
       "year": "2025-2026",
       "status": "in_progress",
       "nbClasses": 57,
+      "nbEleves": 1245,
+      "nbMatieres": 0,
+      "nbPeriodes": 0,
       "lastModified": "2026-03-26T17:49:43.463Z",
       "scrapers": {
         "classes": {
@@ -313,6 +328,9 @@
       "year": "courant",
       "status": "in_progress",
       "nbClasses": 22,
+      "nbEleves": 877,
+      "nbMatieres": 0,
+      "nbPeriodes": 0,
       "lastModified": "2026-03-26T18:46:34.672Z",
       "scrapers": {
         "classes": {
@@ -364,7 +382,10 @@
       "year": "2017-2018",
       "status": "in_progress",
       "nbClasses": 19,
-      "lastModified": "2026-03-26T18:43:41.176Z",
+      "nbEleves": 835,
+      "nbMatieres": 0,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-26T19:04:39.560Z",
       "scrapers": {
         "classes": {
           "total": 20,
@@ -387,14 +408,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 228,
+          "ok": 174,
+          "empty": 54,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 6884
         },
         "pupils": {
           "total": 1,
@@ -415,17 +436,20 @@
       "year": "2018-2019",
       "status": "in_progress",
       "nbClasses": 22,
-      "lastModified": "2026-03-26T18:50:13.025Z",
+      "nbEleves": 909,
+      "nbMatieres": 0,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-26T19:03:52.461Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 23,
+          "ok": 23,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 23
         },
         "notes": {
           "total": 0,
@@ -466,6 +490,9 @@
       "year": "2021-2022",
       "status": "in_progress",
       "nbClasses": 26,
+      "nbEleves": 305,
+      "nbMatieres": 139,
+      "nbPeriodes": 8,
       "lastModified": "2026-03-26T12:30:33.442Z",
       "scrapers": {
         "classes": {
@@ -517,6 +544,9 @@
       "year": "courant",
       "status": "done",
       "nbClasses": 31,
+      "nbEleves": 500,
+      "nbMatieres": 231,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T10:11:30.637Z",
       "scrapers": {
         "classes": {
@@ -568,6 +598,9 @@
       "year": "2017-2018",
       "status": "done",
       "nbClasses": 38,
+      "nbEleves": 568,
+      "nbMatieres": 241,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T08:39:21.111Z",
       "scrapers": {
         "classes": {
@@ -619,6 +652,9 @@
       "year": "2018-2019",
       "status": "done",
       "nbClasses": 30,
+      "nbEleves": 662,
+      "nbMatieres": 251,
+      "nbPeriodes": 16,
       "lastModified": "2026-03-26T08:05:39.883Z",
       "scrapers": {
         "classes": {
@@ -670,6 +706,9 @@
       "year": "2019-2020",
       "status": "done",
       "nbClasses": 31,
+      "nbEleves": 727,
+      "nbMatieres": 372,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-25T23:24:09.021Z",
       "scrapers": {
         "classes": {
@@ -721,6 +760,9 @@
       "year": "2020-2021",
       "status": "done",
       "nbClasses": 53,
+      "nbEleves": 843,
+      "nbMatieres": 425,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T12:40:30.599Z",
       "scrapers": {
         "classes": {
@@ -772,6 +814,9 @@
       "year": "2021-2022",
       "status": "done",
       "nbClasses": 43,
+      "nbEleves": 1092,
+      "nbMatieres": 308,
+      "nbPeriodes": 15,
       "lastModified": "2026-03-26T08:17:10.259Z",
       "scrapers": {
         "classes": {
@@ -823,6 +868,9 @@
       "year": "2022-2023",
       "status": "done",
       "nbClasses": 50,
+      "nbEleves": 1478,
+      "nbMatieres": 468,
+      "nbPeriodes": 16,
       "lastModified": "2026-03-26T11:56:39.436Z",
       "scrapers": {
         "classes": {
@@ -874,6 +922,9 @@
       "year": "2024-2025",
       "status": "done",
       "nbClasses": 53,
+      "nbEleves": 1428,
+      "nbMatieres": 498,
+      "nbPeriodes": 17,
       "lastModified": "2026-03-26T12:46:43.790Z",
       "scrapers": {
         "classes": {
@@ -925,6 +976,9 @@
       "year": "2025-2026",
       "status": "done",
       "nbClasses": 61,
+      "nbEleves": 1558,
+      "nbMatieres": 334,
+      "nbPeriodes": 7,
       "lastModified": "2026-03-26T12:18:50.479Z",
       "scrapers": {
         "classes": {
@@ -976,6 +1030,9 @@
       "year": "courant",
       "status": "done",
       "nbClasses": 20,
+      "nbEleves": 614,
+      "nbMatieres": 108,
+      "nbPeriodes": 15,
       "lastModified": "2026-03-26T13:09:00.308Z",
       "scrapers": {
         "classes": {
@@ -1027,6 +1084,9 @@
       "year": "2018-2019",
       "status": "done",
       "nbClasses": 24,
+      "nbEleves": 685,
+      "nbMatieres": 144,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T16:51:47.778Z",
       "scrapers": {
         "classes": {
@@ -1078,6 +1138,9 @@
       "year": "2019-2020",
       "status": "done",
       "nbClasses": 25,
+      "nbEleves": 766,
+      "nbMatieres": 139,
+      "nbPeriodes": 12,
       "lastModified": "2026-03-26T17:56:00.759Z",
       "scrapers": {
         "classes": {
@@ -1129,6 +1192,9 @@
       "year": "2020-2021",
       "status": "done",
       "nbClasses": 26,
+      "nbEleves": 954,
+      "nbMatieres": 139,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T18:48:09.593Z",
       "scrapers": {
         "classes": {
@@ -1180,6 +1246,9 @@
       "year": "2021-2022",
       "status": "done",
       "nbClasses": 29,
+      "nbEleves": 1084,
+      "nbMatieres": 152,
+      "nbPeriodes": 13,
       "lastModified": "2026-03-26T18:30:23.135Z",
       "scrapers": {
         "classes": {
@@ -1231,6 +1300,9 @@
       "year": "2023-2024",
       "status": "done",
       "nbClasses": 33,
+      "nbEleves": 1091,
+      "nbMatieres": 169,
+      "nbPeriodes": 16,
       "lastModified": "2026-03-26T16:31:19.888Z",
       "scrapers": {
         "classes": {
@@ -1282,6 +1354,9 @@
       "year": "2025-2026",
       "status": "done",
       "nbClasses": 39,
+      "nbEleves": 460,
+      "nbMatieres": 122,
+      "nbPeriodes": 5,
       "lastModified": "2026-03-26T10:03:57.087Z",
       "scrapers": {
         "classes": {
@@ -1333,6 +1408,9 @@
       "year": "2022-2023",
       "status": "done",
       "nbClasses": 41,
+      "nbEleves": 1018,
+      "nbMatieres": 195,
+      "nbPeriodes": 10,
       "lastModified": "2026-03-26T16:58:52.481Z",
       "scrapers": {
         "classes": {
@@ -1384,6 +1462,9 @@
       "year": "2023-2024",
       "status": "done",
       "nbClasses": 73,
+      "nbEleves": 1062,
+      "nbMatieres": 187,
+      "nbPeriodes": 10,
       "lastModified": "2026-03-26T18:04:44.955Z",
       "scrapers": {
         "classes": {
@@ -1435,6 +1516,9 @@
       "year": "2024-2025",
       "status": "done",
       "nbClasses": 92,
+      "nbEleves": 1241,
+      "nbMatieres": 268,
+      "nbPeriodes": 9,
       "lastModified": "2026-03-26T18:48:53.852Z",
       "scrapers": {
         "classes": {
@@ -1486,6 +1570,9 @@
       "year": "2025-2026",
       "status": "done",
       "nbClasses": 98,
+      "nbEleves": 1190,
+      "nbMatieres": 273,
+      "nbPeriodes": 7,
       "lastModified": "2026-03-26T18:28:15.318Z",
       "scrapers": {
         "classes": {
@@ -1537,6 +1624,9 @@
       "year": "2020-2021",
       "status": "done",
       "nbClasses": 11,
+      "nbEleves": 167,
+      "nbMatieres": 122,
+      "nbPeriodes": 7,
       "lastModified": "2026-03-26T11:39:58.188Z",
       "scrapers": {
         "classes": {
@@ -1588,6 +1678,9 @@
       "year": "2018-2019",
       "status": "skip",
       "nbClasses": 2,
+      "nbEleves": 6,
+      "nbMatieres": 1,
+      "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:02:42.844Z",
       "scrapers": {
         "classes": {
@@ -1639,6 +1732,9 @@
       "year": "2019-2020",
       "status": "skip",
       "nbClasses": 13,
+      "nbEleves": 55,
+      "nbMatieres": 1,
+      "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:01:40.997Z",
       "scrapers": {
         "classes": {
@@ -1690,6 +1786,9 @@
       "year": "2020-2021",
       "status": "skip",
       "nbClasses": 29,
+      "nbEleves": 99,
+      "nbMatieres": 1,
+      "nbPeriodes": 4,
       "lastModified": "2026-03-26T12:00:24.008Z",
       "scrapers": {
         "classes": {
@@ -1741,6 +1840,9 @@
       "year": "2021-2022",
       "status": "skip",
       "nbClasses": 17,
+      "nbEleves": 86,
+      "nbMatieres": 1,
+      "nbPeriodes": 4,
       "lastModified": "2026-03-26T11:59:38.592Z",
       "scrapers": {
         "classes": {
@@ -1792,6 +1894,9 @@
       "year": "2022-2023",
       "status": "skip",
       "nbClasses": 16,
+      "nbEleves": 415,
+      "nbMatieres": 1,
+      "nbPeriodes": 3,
       "lastModified": "2026-03-26T11:59:10.516Z",
       "scrapers": {
         "classes": {
@@ -1843,6 +1948,9 @@
       "year": "2023-2024",
       "status": "skip",
       "nbClasses": 14,
+      "nbEleves": 779,
+      "nbMatieres": 1,
+      "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:36:46.647Z",
       "scrapers": {
         "classes": {
@@ -1894,6 +2002,9 @@
       "year": "2024-2025",
       "status": "skip",
       "nbClasses": 23,
+      "nbEleves": 926,
+      "nbMatieres": 1,
+      "nbPeriodes": 4,
       "lastModified": "2026-03-26T11:56:52.828Z",
       "scrapers": {
         "classes": {
@@ -1945,6 +2056,9 @@
       "year": "2025-2026",
       "status": "skip",
       "nbClasses": 23,
+      "nbEleves": 746,
+      "nbMatieres": 1,
+      "nbPeriodes": 1,
       "lastModified": "2026-03-26T11:58:05.076Z",
       "scrapers": {
         "classes": {
