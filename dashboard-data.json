@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-26T23:40:01.026Z",
+  "generatedAt": "2026-03-26T23:45:01.518Z",
   "summary": {
-    "done": 28,
+    "done": 29,
     "skip": 8,
-    "inProgress": 6,
+    "inProgress": 5,
     "total": 42
   },
   "totalClasses": 1445,
@@ -61,9 +61,9 @@
         "2022-2023",
         "2023-2024"
       ],
-      "doneCount": 3,
+      "doneCount": 4,
       "skipCount": 0,
-      "inProgressCount": 5
+      "inProgressCount": 4
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -151,60 +151,6 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 5166
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
-      "name": "ISM_Dakar_Ecole_de_Management_2019-2020",
-      "displayName": "ISM Dakar Ecole de Management 2019-2020",
-      "school": "ISM Dakar Ecole de Management",
-      "year": "2019-2020",
-      "status": "in_progress",
-      "nbClasses": 23,
-      "nbEleves": 961,
-      "nbMatieres": 114,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-26T23:38:10.241Z",
-      "scrapers": {
-        "classes": {
-          "total": 23,
-          "ok": 23,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 23
-        },
-        "notes": {
-          "total": 1403,
-          "ok": 1204,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 11,
-          "nofield": 188,
-          "validated": 164,
-          "totalEntries": 36105
-        },
-        "assiduite": {
-          "total": 276,
-          "ok": 272,
-          "empty": 4,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 7456
         },
         "pupils": {
           "total": 1,
@@ -1555,6 +1501,60 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 7488
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Management_2019-2020",
+      "displayName": "ISM Dakar Ecole de Management 2019-2020",
+      "school": "ISM Dakar Ecole de Management",
+      "year": "2019-2020",
+      "status": "done",
+      "nbClasses": 23,
+      "nbEleves": 961,
+      "nbMatieres": 114,
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-26T23:38:10.241Z",
+      "scrapers": {
+        "classes": {
+          "total": 23,
+          "ok": 23,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 23
+        },
+        "notes": {
+          "total": 1403,
+          "ok": 1204,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 11,
+          "nofield": 188,
+          "validated": 164,
+          "totalEntries": 36105
+        },
+        "assiduite": {
+          "total": 276,
+          "ok": 272,
+          "empty": 4,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 7456
         },
         "pupils": {
           "total": 1,
