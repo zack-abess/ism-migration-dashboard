@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T20:55:01.173Z",
+  "generatedAt": "2026-03-26T21:00:01.247Z",
   "summary": {
     "done": 25,
     "skip": 8,
@@ -8,12 +8,12 @@
   },
   "totalClasses": 1333,
   "totalEleves": 31451,
-  "totalMatieres": 2280,
+  "totalMatieres": 2285,
   "totalPeriodes": 50,
   "totalEntries": {
-    "notes": 592987,
+    "notes": 605962,
     "assiduite": 117089,
-    "classes": 1305,
+    "classes": 1331,
     "pupils": 39
   },
   "schools": {
@@ -169,9 +169,9 @@
       "status": "in_progress",
       "nbClasses": 22,
       "nbEleves": 877,
-      "nbMatieres": 78,
+      "nbMatieres": 90,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T20:02:46.294Z",
+      "lastModified": "2026-03-26T20:59:56.418Z",
       "scrapers": {
         "classes": {
           "total": 22,
@@ -184,14 +184,14 @@
           "totalEntries": 22
         },
         "notes": {
-          "total": 680,
-          "ok": 559,
+          "total": 1100,
+          "ok": 923,
           "empty": 11,
           "error": 0,
           "noperiod": 10,
-          "nofield": 100,
-          "validated": 111,
-          "totalEntries": 16553
+          "nofield": 156,
+          "validated": 479,
+          "totalEntries": 29528
         },
         "assiduite": {
           "total": 256,
@@ -225,7 +225,7 @@
       "nbEleves": 835,
       "nbMatieres": 97,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T20:52:12.740Z",
+      "lastModified": "2026-03-26T20:55:41.592Z",
       "scrapers": {
         "classes": {
           "total": 19,
@@ -244,7 +244,7 @@
           "error": 0,
           "noperiod": 9,
           "nofield": 128,
-          "validated": 80,
+          "validated": 435,
           "totalEntries": 26840
         },
         "assiduite": {
@@ -387,17 +387,17 @@
       "nbEleves": 1107,
       "nbMatieres": 0,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-26T20:45:19.317Z",
+      "lastModified": "2026-03-26T20:55:41.105Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 26,
+          "ok": 26,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 26
         },
         "notes": {
           "total": 0,
