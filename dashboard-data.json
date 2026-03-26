@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T17:20:00.656Z",
+  "generatedAt": "2026-03-26T17:25:00.767Z",
   "summary": {
     "done": 15,
     "skip": 8,
@@ -10,7 +10,7 @@
   "totalEntries": {
     "notes": 219350,
     "assiduite": 73084,
-    "classes": 7025,
+    "classes": 7324,
     "pupils": 34
   },
   "schools": {
@@ -354,17 +354,17 @@
       "year": "2024-2025",
       "status": "in_progress",
       "nbClasses": 48,
-      "lastModified": "2026-03-26T16:46:09.394Z",
+      "lastModified": "2026-03-26T17:22:13.591Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 299,
+          "ok": 299,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 299
         },
         "notes": {
           "total": 0,
