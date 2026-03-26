@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-03-26T20:20:00.491Z",
+  "generatedAt": "2026-03-26T20:25:01.296Z",
   "summary": {
     "done": 22,
     "skip": 8,
     "inProgress": 8,
     "total": 38
   },
-  "totalClasses": 1284,
+  "totalClasses": 1307,
   "totalEleves": 30344,
   "totalMatieres": 2252,
   "totalPeriodes": 50,
   "totalEntries": {
     "notes": 562608,
     "assiduite": 101007,
-    "classes": 1318,
+    "classes": 1282,
     "pupils": 38
   },
   "schools": {
@@ -119,14 +119,14 @@
       "lastModified": "2026-03-26T19:59:50.947Z",
       "scrapers": {
         "classes": {
-          "total": 21,
-          "ok": 21,
+          "total": 20,
+          "ok": 20,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 21
+          "totalEntries": 20
         },
         "notes": {
           "total": 681,
@@ -173,14 +173,14 @@
       "lastModified": "2026-03-26T14:28:52.821Z",
       "scrapers": {
         "classes": {
-          "total": 33,
-          "ok": 33,
+          "total": 32,
+          "ok": 32,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 33
+          "totalEntries": 32
         },
         "notes": {
           "total": 882,
@@ -224,25 +224,25 @@
       "nbEleves": 1145,
       "nbMatieres": 211,
       "nbPeriodes": 16,
-      "lastModified": "2026-03-26T19:34:37.496Z",
+      "lastModified": "2026-03-26T20:22:53.683Z",
       "scrapers": {
         "classes": {
-          "total": 49,
-          "ok": 49,
+          "total": 48,
+          "ok": 48,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 49
+          "totalEntries": 48
         },
         "notes": {
-          "total": 1369,
+          "total": 1429,
           "ok": 1219,
           "empty": 8,
           "error": 0,
           "noperiod": 22,
-          "nofield": 120,
+          "nofield": 180,
           "validated": 128,
           "totalEntries": 34098
         },
@@ -281,14 +281,14 @@
       "lastModified": "2026-03-26T20:02:46.294Z",
       "scrapers": {
         "classes": {
-          "total": 23,
-          "ok": 23,
+          "total": 22,
+          "ok": 22,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 23
+          "totalEntries": 22
         },
         "notes": {
           "total": 680,
@@ -335,14 +335,14 @@
       "lastModified": "2026-03-26T20:05:26.250Z",
       "scrapers": {
         "classes": {
-          "total": 20,
-          "ok": 20,
+          "total": 19,
+          "ok": 19,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 20
+          "totalEntries": 19
         },
         "notes": {
           "total": 595,
@@ -389,14 +389,14 @@
       "lastModified": "2026-03-26T19:22:20.648Z",
       "scrapers": {
         "classes": {
-          "total": 23,
-          "ok": 23,
+          "total": 22,
+          "ok": 22,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 23
+          "totalEntries": 22
         },
         "notes": {
           "total": 0,
@@ -436,7 +436,7 @@
       "school": "ISM Dakar Ecole de Management",
       "year": "2019-2020",
       "status": "in_progress",
-      "nbClasses": 0,
+      "nbClasses": 23,
       "nbEleves": 961,
       "nbMatieres": 0,
       "nbPeriodes": 0,
@@ -497,14 +497,14 @@
       "lastModified": "2026-03-26T19:37:12.003Z",
       "scrapers": {
         "classes": {
-          "total": 27,
-          "ok": 27,
+          "total": 26,
+          "ok": 26,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 27
+          "totalEntries": 26
         },
         "notes": {
           "total": 245,
@@ -551,14 +551,14 @@
       "lastModified": "2026-03-26T10:11:30.637Z",
       "scrapers": {
         "classes": {
-          "total": 32,
-          "ok": 32,
+          "total": 31,
+          "ok": 31,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 32
+          "totalEntries": 31
         },
         "notes": {
           "total": 714,
@@ -605,14 +605,14 @@
       "lastModified": "2026-03-26T08:39:21.111Z",
       "scrapers": {
         "classes": {
-          "total": 39,
-          "ok": 39,
+          "total": 38,
+          "ok": 38,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 39
+          "totalEntries": 38
         },
         "notes": {
           "total": 843,
@@ -659,14 +659,14 @@
       "lastModified": "2026-03-26T08:05:39.883Z",
       "scrapers": {
         "classes": {
-          "total": 31,
-          "ok": 31,
+          "total": 30,
+          "ok": 30,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 31
+          "totalEntries": 30
         },
         "notes": {
           "total": 872,
@@ -713,14 +713,14 @@
       "lastModified": "2026-03-25T23:24:09.021Z",
       "scrapers": {
         "classes": {
-          "total": 32,
-          "ok": 32,
+          "total": 31,
+          "ok": 31,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 32
+          "totalEntries": 31
         },
         "notes": {
           "total": 1169,
@@ -767,14 +767,14 @@
       "lastModified": "2026-03-26T12:40:30.599Z",
       "scrapers": {
         "classes": {
-          "total": 54,
-          "ok": 54,
+          "total": 53,
+          "ok": 53,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 54
+          "totalEntries": 53
         },
         "notes": {
           "total": 1612,
@@ -821,14 +821,14 @@
       "lastModified": "2026-03-26T08:17:10.259Z",
       "scrapers": {
         "classes": {
-          "total": 44,
-          "ok": 44,
+          "total": 43,
+          "ok": 43,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 44
+          "totalEntries": 43
         },
         "notes": {
           "total": 1063,
@@ -875,14 +875,14 @@
       "lastModified": "2026-03-26T11:56:39.436Z",
       "scrapers": {
         "classes": {
-          "total": 51,
-          "ok": 51,
+          "total": 50,
+          "ok": 50,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 51
+          "totalEntries": 50
         },
         "notes": {
           "total": 1822,
@@ -929,14 +929,14 @@
       "lastModified": "2026-03-26T12:46:43.790Z",
       "scrapers": {
         "classes": {
-          "total": 54,
-          "ok": 54,
+          "total": 53,
+          "ok": 53,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 54
+          "totalEntries": 53
         },
         "notes": {
           "total": 1972,
@@ -1037,14 +1037,14 @@
       "lastModified": "2026-03-26T13:09:00.308Z",
       "scrapers": {
         "classes": {
-          "total": 21,
-          "ok": 21,
+          "total": 20,
+          "ok": 20,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 21
+          "totalEntries": 20
         },
         "notes": {
           "total": 706,
@@ -1091,14 +1091,14 @@
       "lastModified": "2026-03-26T16:51:47.778Z",
       "scrapers": {
         "classes": {
-          "total": 25,
-          "ok": 25,
+          "total": 24,
+          "ok": 24,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 25
+          "totalEntries": 24
         },
         "notes": {
           "total": 720,
@@ -1145,14 +1145,14 @@
       "lastModified": "2026-03-26T17:56:00.759Z",
       "scrapers": {
         "classes": {
-          "total": 26,
-          "ok": 26,
+          "total": 25,
+          "ok": 25,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 26
+          "totalEntries": 25
         },
         "notes": {
           "total": 761,
@@ -1199,14 +1199,14 @@
       "lastModified": "2026-03-26T18:48:09.593Z",
       "scrapers": {
         "classes": {
-          "total": 27,
-          "ok": 27,
+          "total": 26,
+          "ok": 26,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 27
+          "totalEntries": 26
         },
         "notes": {
           "total": 846,
@@ -1253,14 +1253,14 @@
       "lastModified": "2026-03-26T18:30:23.135Z",
       "scrapers": {
         "classes": {
-          "total": 30,
-          "ok": 30,
+          "total": 29,
+          "ok": 29,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 30
+          "totalEntries": 29
         },
         "notes": {
           "total": 884,
@@ -1307,14 +1307,14 @@
       "lastModified": "2026-03-26T16:31:19.888Z",
       "scrapers": {
         "classes": {
-          "total": 34,
-          "ok": 34,
+          "total": 33,
+          "ok": 33,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 34
+          "totalEntries": 33
         },
         "notes": {
           "total": 1099,
@@ -1361,14 +1361,14 @@
       "lastModified": "2026-03-26T20:17:45.787Z",
       "scrapers": {
         "classes": {
-          "total": 58,
-          "ok": 58,
+          "total": 57,
+          "ok": 57,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 58
+          "totalEntries": 57
         },
         "notes": {
           "total": 907,
@@ -1415,14 +1415,14 @@
       "lastModified": "2026-03-26T10:03:57.087Z",
       "scrapers": {
         "classes": {
-          "total": 40,
-          "ok": 40,
+          "total": 39,
+          "ok": 39,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 40
+          "totalEntries": 39
         },
         "notes": {
           "total": 263,
@@ -1469,14 +1469,14 @@
       "lastModified": "2026-03-26T16:58:52.481Z",
       "scrapers": {
         "classes": {
-          "total": 42,
-          "ok": 42,
+          "total": 41,
+          "ok": 41,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 42
+          "totalEntries": 41
         },
         "notes": {
           "total": 410,
@@ -1523,14 +1523,14 @@
       "lastModified": "2026-03-26T18:04:44.955Z",
       "scrapers": {
         "classes": {
-          "total": 74,
-          "ok": 74,
+          "total": 73,
+          "ok": 73,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 74
+          "totalEntries": 73
         },
         "notes": {
           "total": 530,
@@ -1577,14 +1577,14 @@
       "lastModified": "2026-03-26T18:48:53.852Z",
       "scrapers": {
         "classes": {
-          "total": 93,
-          "ok": 93,
+          "total": 92,
+          "ok": 92,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 93
+          "totalEntries": 92
         },
         "notes": {
           "total": 659,
@@ -1631,14 +1631,14 @@
       "lastModified": "2026-03-26T18:28:15.318Z",
       "scrapers": {
         "classes": {
-          "total": 99,
-          "ok": 99,
+          "total": 98,
+          "ok": 98,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 99
+          "totalEntries": 98
         },
         "notes": {
           "total": 651,
@@ -1685,14 +1685,14 @@
       "lastModified": "2026-03-26T11:39:58.188Z",
       "scrapers": {
         "classes": {
-          "total": 12,
-          "ok": 12,
+          "total": 11,
+          "ok": 11,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 12
+          "totalEntries": 11
         },
         "notes": {
           "total": 170,
@@ -1739,14 +1739,14 @@
       "lastModified": "2026-03-26T12:02:42.844Z",
       "scrapers": {
         "classes": {
-          "total": 3,
-          "ok": 3,
+          "total": 2,
+          "ok": 2,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 3
+          "totalEntries": 2
         },
         "notes": {
           "total": 6,
@@ -1793,14 +1793,14 @@
       "lastModified": "2026-03-26T12:01:40.997Z",
       "scrapers": {
         "classes": {
-          "total": 14,
-          "ok": 14,
+          "total": 13,
+          "ok": 13,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 14
+          "totalEntries": 13
         },
         "notes": {
           "total": 39,
@@ -1847,14 +1847,14 @@
       "lastModified": "2026-03-26T12:00:24.008Z",
       "scrapers": {
         "classes": {
-          "total": 30,
-          "ok": 30,
+          "total": 29,
+          "ok": 29,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 30
+          "totalEntries": 29
         },
         "notes": {
           "total": 113,
@@ -1901,14 +1901,14 @@
       "lastModified": "2026-03-26T11:59:38.592Z",
       "scrapers": {
         "classes": {
-          "total": 18,
-          "ok": 18,
+          "total": 17,
+          "ok": 17,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 18
+          "totalEntries": 17
         },
         "notes": {
           "total": 49,
@@ -1955,14 +1955,14 @@
       "lastModified": "2026-03-26T11:59:10.516Z",
       "scrapers": {
         "classes": {
-          "total": 17,
-          "ok": 17,
+          "total": 16,
+          "ok": 16,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 17
+          "totalEntries": 16
         },
         "notes": {
           "total": 48,
@@ -2009,14 +2009,14 @@
       "lastModified": "2026-03-26T12:36:46.647Z",
       "scrapers": {
         "classes": {
-          "total": 15,
-          "ok": 15,
+          "total": 14,
+          "ok": 14,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 15
+          "totalEntries": 14
         },
         "notes": {
           "total": 42,
@@ -2063,14 +2063,14 @@
       "lastModified": "2026-03-26T11:56:52.828Z",
       "scrapers": {
         "classes": {
-          "total": 24,
-          "ok": 24,
+          "total": 23,
+          "ok": 23,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 24
+          "totalEntries": 23
         },
         "notes": {
           "total": 55,
@@ -2117,14 +2117,14 @@
       "lastModified": "2026-03-26T11:58:05.076Z",
       "scrapers": {
         "classes": {
-          "total": 24,
-          "ok": 24,
+          "total": 23,
+          "ok": 23,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 24
+          "totalEntries": 23
         },
         "notes": {
           "total": 23,

@@ -102,7 +102,8 @@ async function readAndMergeStatsFiles(filePaths) {
       // Clé unique : classeId|periodeId|matiereId (ou classeId|periodeId pour assiduité)
       const key = matiereId ? `${classeId}|${periodeId}|${matiereId}` : `${classeId}|${periodeId}`;
 
-      const newRow = { status, count, validation, classe, classeId, periode, matiere };
+      const isGlobal = classe === '(global)';
+      const newRow = { status, count, validation, classe, classeId, periode, matiere, isGlobal };
 
       const existing = merged.get(key);
       if (!existing) {
@@ -123,12 +124,15 @@ async function readAndMergeStatsFiles(filePaths) {
   return merged.size > 0 ? Array.from(merged.values()) : null;
 }
 
-function aggregateStats(rows) {
+function aggregateStats(rows, excludeGlobal = false) {
   if (!rows) return { total: 0, ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, validated: 0, totalEntries: 0 };
 
   let total = 0, ok = 0, empty = 0, error = 0, noperiod = 0, nofield = 0, validated = 0, totalEntries = 0;
 
   for (const row of rows) {
+    // Exclure les lignes "(global)" du stats_classes pour le compteur classes
+    if (excludeGlobal && row.isGlobal) continue;
+
     total++;
     if (row.validation && row.validation !== '') validated++;
     totalEntries += row.count;
@@ -245,7 +249,7 @@ async function main() {
       for (const scraper of SCRAPER_TYPES) {
         const statsPaths = findAllStatsFiles(lic.path, scraper);
         const rows = await readAndMergeStatsFiles(statsPaths);
-        const agg = aggregateStats(rows);
+        const agg = aggregateStats(rows, scraper === 'classes');
         scraperStats[scraper] = agg;
 
         // Extraire matières et périodes depuis les notes
