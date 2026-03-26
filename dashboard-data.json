@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T16:16:59.723Z",
+  "generatedAt": "2026-03-26T16:38:29.583Z",
   "summary": {
     "done": 12,
     "skip": 8,
@@ -8,7 +8,7 @@
   },
   "totalClasses": 1116,
   "totalEntries": {
-    "notes": 253404,
+    "notes": 238833,
     "assiduite": 73084,
     "classes": 7025,
     "pupils": 32
@@ -148,7 +148,7 @@
       "year": "2018-2019",
       "status": "in_progress",
       "nbClasses": 24,
-      "lastModified": "2026-03-26T13:59:29.662Z",
+      "lastModified": "2026-03-26T16:36:55.178Z",
       "scrapers": {
         "classes": {
           "total": 155,
@@ -167,7 +167,7 @@
           "error": 0,
           "noperiod": 2,
           "nofield": 60,
-          "validated": 0,
+          "validated": 113,
           "totalEntries": 17503
         },
         "assiduite": {
@@ -403,7 +403,7 @@
       "year": "2023-2024",
       "status": "in_progress",
       "nbClasses": 33,
-      "lastModified": "2026-03-26T16:11:22.545Z",
+      "lastModified": "2026-03-26T16:31:19.888Z",
       "scrapers": {
         "classes": {
           "total": 209,
@@ -416,14 +416,14 @@
           "totalEntries": 209
         },
         "notes": {
-          "total": 473,
-          "ok": 440,
+          "total": 42,
+          "ok": 42,
           "empty": 0,
           "error": 0,
-          "noperiod": 1,
-          "nofield": 32,
+          "noperiod": 0,
+          "nofield": 0,
           "validated": 0,
-          "totalEntries": 15739
+          "totalEntries": 1168
         },
         "assiduite": {
           "total": 228,
