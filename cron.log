@@ -548,3 +548,13 @@ To github.com:zack-abess/ism-migration-dashboard.git
 ✅ /Users/mac/Documents/Groupe ISM/schoolArt/scraper-classexpert-v2/dashboard/dashboard-data.json généré
    39 licences: 26 done, 8 skip, 5 en cours
    1346 classes | 31843 élèves | 2247 matières | 50 périodes
+[main 5a8879f] 📊 update data 2026-03-26 21:35
+ 2 files changed, 21 insertions(+), 66 deletions(-)
+To github.com:zack-abess/ism-migration-dashboard.git
+   4b0f3c2..5a8879f  main -> main
+2026-03-26 21:35:07 ✅ Dashboard mis à jour et poussé.
+2026-03-26 21:40:00 🔄 Mise à jour du dashboard...
+📊 Génération des données du dashboard...
+✅ /Users/mac/Documents/Groupe ISM/schoolArt/scraper-classexpert-v2/dashboard/dashboard-data.json généré
+   42 licences: 28 done, 8 skip, 6 en cours
+   1406 classes | 34283 élèves | 2293 matières | 50 périodes
