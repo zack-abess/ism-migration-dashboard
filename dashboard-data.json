@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T20:25:01.296Z",
+  "generatedAt": "2026-03-26T20:30:00.735Z",
   "summary": {
     "done": 22,
     "skip": 8,
@@ -8,11 +8,11 @@
   },
   "totalClasses": 1307,
   "totalEleves": 30344,
-  "totalMatieres": 2252,
+  "totalMatieres": 2253,
   "totalPeriodes": 50,
   "totalEntries": {
-    "notes": 562608,
-    "assiduite": 101007,
+    "notes": 562948,
+    "assiduite": 108463,
     "classes": 1282,
     "pupils": 38
   },
@@ -116,7 +116,7 @@
       "nbEleves": 553,
       "nbMatieres": 107,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T19:59:50.947Z",
+      "lastModified": "2026-03-26T20:29:38.602Z",
       "scrapers": {
         "classes": {
           "total": 20,
@@ -135,7 +135,7 @@
           "error": 0,
           "noperiod": 2,
           "nofield": 0,
-          "validated": 104,
+          "validated": 136,
           "totalEntries": 12471
         },
         "assiduite": {
@@ -440,7 +440,7 @@
       "nbEleves": 961,
       "nbMatieres": 0,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-26T20:19:33.762Z",
+      "lastModified": "2026-03-26T20:29:54.143Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -463,14 +463,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 276,
+          "ok": 272,
+          "empty": 4,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 7456
         },
         "pupils": {
           "total": 1,
@@ -492,9 +492,9 @@
       "status": "in_progress",
       "nbClasses": 26,
       "nbEleves": 305,
-      "nbMatieres": 139,
+      "nbMatieres": 187,
       "nbPeriodes": 8,
-      "lastModified": "2026-03-26T19:37:12.003Z",
+      "lastModified": "2026-03-26T20:26:46.790Z",
       "scrapers": {
         "classes": {
           "total": 26,
@@ -507,14 +507,14 @@
           "totalEntries": 26
         },
         "notes": {
-          "total": 245,
-          "ok": 182,
+          "total": 345,
+          "ok": 254,
           "empty": 0,
           "error": 0,
           "noperiod": 7,
-          "nofield": 56,
+          "nofield": 84,
           "validated": 56,
-          "totalEntries": 4321
+          "totalEntries": 4661
         },
         "assiduite": {
           "total": 112,
