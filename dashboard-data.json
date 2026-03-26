@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T23:05:00.731Z",
+  "generatedAt": "2026-03-26T23:10:00.770Z",
   "summary": {
     "done": 28,
     "skip": 8,
@@ -8,10 +8,10 @@
   },
   "totalClasses": 1445,
   "totalEleves": 35897,
-  "totalMatieres": 2334,
+  "totalMatieres": 2351,
   "totalPeriodes": 50,
   "totalEntries": {
-    "notes": 669067,
+    "notes": 681764,
     "assiduite": 134110,
     "classes": 1443,
     "pupils": 42
@@ -172,9 +172,9 @@
       "status": "in_progress",
       "nbClasses": 23,
       "nbEleves": 961,
-      "nbMatieres": 93,
+      "nbMatieres": 114,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T22:02:31.367Z",
+      "lastModified": "2026-03-26T23:08:24.085Z",
       "scrapers": {
         "classes": {
           "total": 23,
@@ -187,14 +187,14 @@
           "totalEntries": 23
         },
         "notes": {
-          "total": 709,
-          "ok": 598,
+          "total": 1217,
+          "ok": 1042,
           "empty": 0,
           "error": 0,
           "noperiod": 11,
-          "nofield": 100,
+          "nofield": 164,
           "validated": 100,
-          "totalEntries": 18306
+          "totalEntries": 31003
         },
         "assiduite": {
           "total": 276,
