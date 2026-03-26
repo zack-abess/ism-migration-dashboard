@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T19:35:00.583Z",
+  "generatedAt": "2026-03-26T19:40:01.436Z",
   "summary": {
     "done": 21,
     "skip": 8,
@@ -115,7 +115,7 @@
       "nbEleves": 553,
       "nbMatieres": 105,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T11:30:20.910Z",
+      "lastModified": "2026-03-26T19:39:47.108Z",
       "scrapers": {
         "classes": {
           "total": 21,
@@ -134,7 +134,7 @@
           "error": 0,
           "noperiod": 2,
           "nofield": 0,
-          "validated": 0,
+          "validated": 104,
           "totalEntries": 11817
         },
         "assiduite": {
@@ -493,7 +493,7 @@
       "nbEleves": 305,
       "nbMatieres": 139,
       "nbPeriodes": 8,
-      "lastModified": "2026-03-26T12:30:33.442Z",
+      "lastModified": "2026-03-26T19:37:12.003Z",
       "scrapers": {
         "classes": {
           "total": 27,
@@ -512,7 +512,7 @@
           "error": 0,
           "noperiod": 7,
           "nofield": 56,
-          "validated": 0,
+          "validated": 56,
           "totalEntries": 4321
         },
         "assiduite": {
