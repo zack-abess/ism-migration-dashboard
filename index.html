@@ -309,10 +309,11 @@
           <th>Année</th>
           <th>Statut</th>
           <th>Classes</th>
+          <th>Élèves</th>
+          <th>Matières</th>
+          <th>Périodes</th>
           <th>Notes</th>
           <th>Assiduité</th>
-          <th>Classes (scraper)</th>
-          <th>Élèves</th>
           <th>Dernière maj</th>
         </tr>
       </thead>
@@ -370,9 +371,12 @@
         { value: s.done, label: 'Terminées', color: 'var(--green)', sub: `${Math.round(s.done/s.total*100)}%` },
         { value: s.inProgress, label: 'En cours', color: 'var(--yellow)', sub: 'dans archive/' },
         { value: s.skip, label: 'Ignorées', color: 'var(--gray)', sub: 'dans Skip/' },
-        { value: formatNum(DATA.totalClasses), label: 'Classes totales', color: 'var(--purple)', sub: 'toutes licences' },
+        { value: formatNum(DATA.totalEleves), label: 'Élèves', color: 'var(--purple)', sub: 'toutes licences' },
+        { value: formatNum(DATA.totalClasses), label: 'Classes', color: '#06b6d4', sub: 'toutes licences' },
+        { value: formatNum(DATA.totalMatieres), label: 'Matières', color: 'var(--orange)', sub: 'uniques' },
+        { value: formatNum(DATA.totalPeriodes), label: 'Périodes / Sessions', color: '#ec4899', sub: 'uniques' },
         { value: formatNum(DATA.totalEntries.notes), label: 'Entrées notes', color: 'var(--blue)', sub: 'lignes extraites' },
-        { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--orange)', sub: 'lignes extraites' },
+        { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--green)', sub: 'lignes extraites' },
       ];
       document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
         <div class="kpi-card">
@@ -416,10 +420,11 @@
           <td>${l.year}</td>
           <td><span class="badge badge-${l.status}">${l.status === 'done' ? 'Terminé' : l.status === 'skip' ? 'Ignoré' : 'En cours'}</span></td>
           <td>${l.nbClasses}</td>
+          <td>${formatNum(l.nbEleves) || '—'}</td>
+          <td>${l.nbMatieres || '—'}</td>
+          <td>${l.nbPeriodes || '—'}</td>
           <td>${scraperBadge(l.scrapers.notes)}</td>
           <td>${scraperBadge(l.scrapers.assiduite)}</td>
-          <td>${scraperBadge(l.scrapers.classes)}</td>
-          <td>${scraperBadge(l.scrapers.pupils)}</td>
           <td style="font-size:.75rem;color:var(--text-muted)">${formatDate(l.lastModified)}</td>
         </tr>
       `).join('');

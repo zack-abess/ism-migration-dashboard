@@ -44,54 +44,83 @@ function extractSchoolAndYear(licenceName) {
   return { school: licenceName.replace(/_/g, ' '), year: 'courant' };
 }
 
-function findLatestStatsFile(licenceDir, scraperName) {
-  if (!fs.existsSync(licenceDir)) return null;
-  const files = fs.readdirSync(licenceDir)
+function findAllStatsFiles(licenceDir, scraperName) {
+  // Retourne le fichier original + tous les retries, dans l'ordre chronologique
+  if (!fs.existsSync(licenceDir)) return [];
+  return fs.readdirSync(licenceDir)
     .filter(f => f.startsWith(`stats_${scraperName}`) && f.endsWith('.xlsx'))
-    .sort();
-  // Latest = last alphabetically (retry files have timestamps)
-  return files.length > 0 ? path.join(licenceDir, files[files.length - 1]) : null;
+    .sort()
+    .map(f => path.join(licenceDir, f));
 }
 
-async function readStatsFile(filePath) {
-  if (!filePath || !fs.existsSync(filePath)) return null;
+async function readAndMergeStatsFiles(filePaths) {
+  // Lit tous les fichiers stats (original + retries) et fusionne :
+  // le retry met à jour les lignes existantes par clé unique,
+  // sans jamais dégrader un "ok" en "no_period"/"error" (lecture seule dashboard).
+  if (!filePaths || filePaths.length === 0) return null;
 
-  const wb = new ExcelJS.Workbook();
-  await wb.xlsx.readFile(filePath);
-  const ws = wb.worksheets[0];
-  if (!ws || ws.rowCount < 2) return null;
+  // Map clé -> row (le retry écrase les lignes correspondantes)
+  const merged = new Map();
 
-  // Read headers
-  const headers = {};
-  ws.getRow(1).eachCell((cell, col) => {
-    headers[String(cell.value).toLowerCase().trim()] = col;
-  });
+  for (const filePath of filePaths) {
+    if (!fs.existsSync(filePath)) continue;
 
-  const rows = [];
-  const statusCol   = headers['statut'] || headers['status'];
-  const countCol    = headers['nb entrées'] || headers['résultat'];
-  const validCol    = headers['validation'];
-  const classeCol   = headers['classe'];
-  const classeIdCol = headers['classe id'];
-  const periodeCol  = headers['période'];
-  const matiereCol  = headers['matière'];
+    const wb = new ExcelJS.Workbook();
+    await wb.xlsx.readFile(filePath);
+    const ws = wb.worksheets[0];
+    if (!ws || ws.rowCount < 2) continue;
 
-  for (let r = 2; r <= ws.rowCount; r++) {
-    const row = ws.getRow(r);
-    const status = statusCol ? String(row.getCell(statusCol).value || '').trim().toLowerCase() : '';
-    if (!status) continue; // skip empty rows
+    const headers = {};
+    ws.getRow(1).eachCell((cell, col) => {
+      headers[String(cell.value).toLowerCase().trim()] = col;
+    });
 
-    const count = countCol ? (parseInt(row.getCell(countCol).value) || 0) : 0;
-    const validation = validCol ? String(row.getCell(validCol).value || '').trim() : '';
-    const classe = classeCol ? String(row.getCell(classeCol).value || '') : '';
-    const classeId = classeIdCol ? String(row.getCell(classeIdCol).value || '') : '';
-    const periode = periodeCol ? String(row.getCell(periodeCol).value || '') : '';
-    const matiere = matiereCol ? String(row.getCell(matiereCol).value || '') : '';
+    const statusCol   = headers['statut'] || headers['status'];
+    const countCol    = headers['nb entrées'] || headers['résultat'];
+    const validCol    = headers['validation'];
+    const classeCol   = headers['classe'];
+    const classeIdCol = headers['classe id'];
+    const periodeCol  = headers['période'];
+    const periodeIdCol = headers['période id'];
+    const matiereCol  = headers['matière'];
+    const matiereIdCol = headers['matière id'];
 
-    rows.push({ status, count, validation, classe, classeId, periode, matiere });
+    for (let r = 2; r <= ws.rowCount; r++) {
+      const row = ws.getRow(r);
+      const status = statusCol ? String(row.getCell(statusCol).value || '').trim().toLowerCase() : '';
+      if (!status) continue;
+
+      const count = countCol ? (parseInt(row.getCell(countCol).value) || 0) : 0;
+      const validation = validCol ? String(row.getCell(validCol).value || '').trim() : '';
+      const classe = classeCol ? String(row.getCell(classeCol).value || '') : '';
+      const classeId = classeIdCol ? String(row.getCell(classeIdCol).value || '') : '';
+      const periode = periodeCol ? String(row.getCell(periodeCol).value || '') : '';
+      const periodeId = periodeIdCol ? String(row.getCell(periodeIdCol).value || '') : '';
+      const matiere = matiereCol ? String(row.getCell(matiereCol).value || '') : '';
+      const matiereId = matiereIdCol ? String(row.getCell(matiereIdCol).value || '') : '';
+
+      // Clé unique : classeId|periodeId|matiereId (ou classeId|periodeId pour assiduité)
+      const key = matiereId ? `${classeId}|${periodeId}|${matiereId}` : `${classeId}|${periodeId}`;
+
+      const newRow = { status, count, validation, classe, classeId, periode, matiere };
+
+      const existing = merged.get(key);
+      if (!existing) {
+        // Première occurrence
+        merged.set(key, newRow);
+      } else {
+        // Retry : ne jamais dégrader ok → failure
+        const okStatuses = new Set(['ok']);
+        if (okStatuses.has(existing.status) && !okStatuses.has(status)) {
+          // Garder l'existant (ok), ne pas écraser par une dégradation
+          continue;
+        }
+        merged.set(key, newRow);
+      }
+    }
   }
 
-  return rows;
+  return merged.size > 0 ? Array.from(merged.values()) : null;
 }
 
 function aggregateStats(rows) {
@@ -133,6 +162,32 @@ function countClasses(licenceDir) {
   } catch { return 0; }
 }
 
+function countPupils(licenceDir) {
+  const pupilsFile = path.join(licenceDir, '_pupils', 'all_pupils.json');
+  if (!fs.existsSync(pupilsFile)) return 0;
+  try {
+    const data = JSON.parse(fs.readFileSync(pupilsFile, 'utf8'));
+    return data.count || (data.rows ? data.rows.length : 0);
+  } catch { return 0; }
+}
+
+function extractNotesDetails(rows) {
+  // Extraire matières uniques, périodes uniques depuis les rows fusionnés de notes
+  if (!rows) return { nbMatieres: 0, nbPeriodes: 0, matieres: [], periodes: [] };
+  const matieres = new Set();
+  const periodes = new Set();
+  for (const row of rows) {
+    if (row.matiere) matieres.add(row.matiere);
+    if (row.periode) periodes.add(row.periode);
+  }
+  return {
+    nbMatieres: matieres.size,
+    nbPeriodes: periodes.size,
+    matieres: [...matieres].sort(),
+    periodes: [...periodes].sort(),
+  };
+}
+
 function getDirModTime(dirPath) {
   try {
     // Use most recent stats file modification time
@@ -155,7 +210,12 @@ async function main() {
     generatedAt: new Date().toISOString(),
     summary: { done: 0, skip: 0, inProgress: 0, total: 0 },
     totalClasses: 0,
+    totalEleves: 0,
+    totalMatieres: 0,
+    totalPeriodes: 0,
     totalEntries: { notes: 0, assiduite: 0, classes: 0, pupils: 0 },
+    globalMatieres: new Set(),
+    globalPeriodes: new Set(),
     schools: {},
     licences: [],
   };
@@ -175,13 +235,26 @@ async function main() {
       const nbClasses = countClasses(lic.path);
       const lastModified = getDirModTime(lic.path);
 
-      // Per-scraper stats
+      // Élèves
+      const nbEleves = countPupils(lic.path);
+      data.totalEleves += nbEleves;
+
+      // Per-scraper stats — fusionner original + tous les retries
       const scraperStats = {};
+      let notesDetails = { nbMatieres: 0, nbPeriodes: 0, matieres: [], periodes: [] };
       for (const scraper of SCRAPER_TYPES) {
-        const statsPath = findLatestStatsFile(lic.path, scraper);
-        const rows = await readStatsFile(statsPath);
+        const statsPaths = findAllStatsFiles(lic.path, scraper);
+        const rows = await readAndMergeStatsFiles(statsPaths);
         const agg = aggregateStats(rows);
         scraperStats[scraper] = agg;
+
+        // Extraire matières et périodes depuis les notes
+        if (scraper === 'notes' && rows) {
+          notesDetails = extractNotesDetails(rows);
+          // Accumuler dans les sets globaux
+          notesDetails.matieres.forEach(m => data.globalMatieres.add(m));
+          notesDetails.periodes.forEach(p => data.globalPeriodes.add(p));
+        }
 
         // Global entries total
         data.totalEntries[scraper] = (data.totalEntries[scraper] || 0) + agg.totalEntries;
@@ -194,6 +267,9 @@ async function main() {
         year,
         status: cat.status,
         nbClasses,
+        nbEleves,
+        nbMatieres: notesDetails.nbMatieres,
+        nbPeriodes: notesDetails.nbPeriodes,
         lastModified,
         scrapers: scraperStats,
       };
@@ -224,11 +300,17 @@ async function main() {
     return a.name.localeCompare(b.name);
   });
 
+  // Finaliser les totaux globaux
+  data.totalMatieres = data.globalMatieres.size;
+  data.totalPeriodes = data.globalPeriodes.size;
+  delete data.globalMatieres; // Set n'est pas sérialisable
+  delete data.globalPeriodes;
+
   // Write JSON
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2), 'utf8');
   console.log(`✅ ${OUTPUT_FILE} généré`);
   console.log(`   ${data.summary.total} licences: ${data.summary.done} done, ${data.summary.skip} skip, ${data.summary.inProgress} en cours`);
-  console.log(`   ${data.totalClasses} classes au total`);
+  console.log(`   ${data.totalClasses} classes | ${data.totalEleves} élèves | ${data.totalMatieres} matières | ${data.totalPeriodes} périodes`);
 }
 
 main().catch(err => {
