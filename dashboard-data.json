@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-26T18:45:00.742Z",
+  "generatedAt": "2026-03-26T18:50:01.342Z",
   "summary": {
-    "done": 19,
+    "done": 21,
     "skip": 8,
-    "inProgress": 9,
-    "total": 36
+    "inProgress": 8,
+    "total": 37
   },
   "totalClasses": 1262,
   "totalEntries": {
-    "notes": 190722,
-    "assiduite": 79590,
-    "classes": 7945,
+    "notes": 496684,
+    "assiduite": 86635,
+    "classes": 1295,
     "pupils": 36
   },
   "schools": {
@@ -35,17 +35,17 @@
         "courant",
         "2018-2019",
         "2019-2020",
+        "2020-2021",
         "2021-2022",
         "2023-2024",
         "2017-2018",
-        "2020-2021",
         "2022-2023",
         "2024-2025",
         "2025-2026"
       ],
-      "doneCount": 5,
+      "doneCount": 6,
       "skipCount": 0,
-      "inProgressCount": 5
+      "inProgressCount": 4
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -59,13 +59,13 @@
       "years": [
         "2022-2023",
         "2023-2024",
+        "2024-2025",
         "2025-2026",
-        "2021-2022",
-        "2024-2025"
+        "2021-2022"
       ],
-      "doneCount": 3,
+      "doneCount": 4,
       "skipCount": 0,
-      "inProgressCount": 2
+      "inProgressCount": 1
     },
     "ISM Online et ISF": {
       "years": [
@@ -93,11 +93,12 @@
     "ISM Dakar Ecole de Management": {
       "years": [
         "courant",
-        "2017-2018"
+        "2017-2018",
+        "2018-2019"
       ],
       "doneCount": 0,
       "skipCount": 0,
-      "inProgressCount": 2
+      "inProgressCount": 3
     }
   },
   "licences": [
@@ -111,14 +112,14 @@
       "lastModified": "2026-03-26T11:30:20.910Z",
       "scrapers": {
         "classes": {
-          "total": 131,
-          "ok": 131,
+          "total": 21,
+          "ok": 21,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 131
+          "totalEntries": 21
         },
         "notes": {
           "total": 617,
@@ -153,57 +154,6 @@
       }
     },
     {
-      "name": "ISM_Dakar_Ecole_de_Droit_2020-2021",
-      "displayName": "ISM Dakar Ecole de Droit 2020-2021",
-      "school": "ISM Dakar Ecole de Droit",
-      "year": "2020-2021",
-      "status": "in_progress",
-      "nbClasses": 26,
-      "lastModified": "2026-03-26T18:32:11.247Z",
-      "scrapers": {
-        "classes": {
-          "total": 167,
-          "ok": 167,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 167
-        },
-        "notes": {
-          "total": 224,
-          "ok": 200,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 24,
-          "validated": 0,
-          "totalEntries": 3503
-        },
-        "assiduite": {
-          "total": 136,
-          "ok": 103,
-          "empty": 33,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 3115
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
       "name": "ISM_Dakar_Ecole_de_Droit_2022-2023",
       "displayName": "ISM Dakar Ecole de Droit 2022-2023",
       "school": "ISM Dakar Ecole de Droit",
@@ -213,14 +163,14 @@
       "lastModified": "2026-03-26T14:28:52.821Z",
       "scrapers": {
         "classes": {
-          "total": 203,
-          "ok": 203,
+          "total": 33,
+          "ok": 33,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 203
+          "totalEntries": 33
         },
         "notes": {
           "total": 882,
@@ -264,14 +214,14 @@
       "lastModified": "2026-03-26T18:38:04.800Z",
       "scrapers": {
         "classes": {
-          "total": 299,
-          "ok": 299,
+          "total": 49,
+          "ok": 49,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 299
+          "totalEntries": 49
         },
         "notes": {
           "total": 827,
@@ -315,14 +265,14 @@
       "lastModified": "2026-03-26T17:49:43.463Z",
       "scrapers": {
         "classes": {
-          "total": 353,
-          "ok": 353,
+          "total": 58,
+          "ok": 58,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 353
+          "totalEntries": 58
         },
         "notes": {
           "total": 0,
@@ -363,17 +313,17 @@
       "year": "courant",
       "status": "in_progress",
       "nbClasses": 22,
-      "lastModified": "2026-03-26T18:22:33.017Z",
+      "lastModified": "2026-03-26T18:46:34.672Z",
       "scrapers": {
         "classes": {
-          "total": 143,
-          "ok": 143,
+          "total": 23,
+          "ok": 23,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 143
+          "totalEntries": 23
         },
         "notes": {
           "total": 0,
@@ -386,14 +336,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 256,
+          "ok": 193,
+          "empty": 63,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 7045
         },
         "pupils": {
           "total": 1,
@@ -417,14 +367,14 @@
       "lastModified": "2026-03-26T18:43:41.176Z",
       "scrapers": {
         "classes": {
-          "total": 125,
-          "ok": 125,
+          "total": 20,
+          "ok": 20,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 125
+          "totalEntries": 20
         },
         "notes": {
           "total": 0,
@@ -459,6 +409,57 @@
       }
     },
     {
+      "name": "ISM_Dakar_Ecole_de_Management_2018-2019",
+      "displayName": "ISM Dakar Ecole de Management 2018-2019",
+      "school": "ISM Dakar Ecole de Management",
+      "year": "2018-2019",
+      "status": "in_progress",
+      "nbClasses": 0,
+      "lastModified": null,
+      "scrapers": {
+        "classes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "pupils": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        }
+      }
+    },
+    {
       "name": "ISM_Online_&_ISF_2021-2022",
       "displayName": "ISM Online & ISF 2021-2022",
       "school": "ISM Online & ISF",
@@ -468,14 +469,14 @@
       "lastModified": "2026-03-26T12:30:33.442Z",
       "scrapers": {
         "classes": {
-          "total": 167,
-          "ok": 167,
+          "total": 27,
+          "ok": 27,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 167
+          "totalEntries": 27
         },
         "notes": {
           "total": 245,
@@ -510,57 +511,6 @@
       }
     },
     {
-      "name": "ISM_Online_&_ISF_2024-2025",
-      "displayName": "ISM Online & ISF 2024-2025",
-      "school": "ISM Online & ISF",
-      "year": "2024-2025",
-      "status": "in_progress",
-      "nbClasses": 92,
-      "lastModified": "2026-03-26T18:44:11.143Z",
-      "scrapers": {
-        "classes": {
-          "total": 563,
-          "ok": 563,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 563
-        },
-        "notes": {
-          "total": 76,
-          "ok": 68,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 8,
-          "validated": 0,
-          "totalEntries": 572
-        },
-        "assiduite": {
-          "total": 561,
-          "ok": 457,
-          "empty": 97,
-          "error": 0,
-          "noperiod": 7,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 6050
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
       "name": "ISM_Dakar_Ecole_d'Ingénieurs",
       "displayName": "ISM Dakar Ecole d'Ingénieurs",
       "school": "ISM Dakar Ecole d'Ingénieurs",
@@ -570,24 +520,24 @@
       "lastModified": "2026-03-26T10:11:30.637Z",
       "scrapers": {
         "classes": {
-          "total": 197,
-          "ok": 197,
+          "total": 32,
+          "ok": 32,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 197
+          "totalEntries": 32
         },
         "notes": {
-          "total": 100,
-          "ok": 92,
-          "empty": 7,
+          "total": 714,
+          "ok": 592,
+          "empty": 68,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 1,
-          "validated": 7,
-          "totalEntries": 1421
+          "noperiod": 5,
+          "nofield": 49,
+          "validated": 116,
+          "totalEntries": 13680
         },
         "assiduite": {
           "total": 116,
@@ -621,14 +571,14 @@
       "lastModified": "2026-03-26T08:39:21.111Z",
       "scrapers": {
         "classes": {
-          "total": 239,
-          "ok": 239,
+          "total": 39,
+          "ok": 39,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 239
+          "totalEntries": 39
         },
         "notes": {
           "total": 843,
@@ -672,14 +622,14 @@
       "lastModified": "2026-03-26T08:05:39.883Z",
       "scrapers": {
         "classes": {
-          "total": 191,
-          "ok": 191,
+          "total": 31,
+          "ok": 31,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 191
+          "totalEntries": 31
         },
         "notes": {
           "total": 872,
@@ -723,24 +673,24 @@
       "lastModified": "2026-03-25T23:24:09.021Z",
       "scrapers": {
         "classes": {
-          "total": 197,
-          "ok": 197,
+          "total": 32,
+          "ok": 32,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 197
+          "totalEntries": 32
         },
         "notes": {
-          "total": 105,
-          "ok": 104,
+          "total": 1169,
+          "ok": 1162,
           "empty": 0,
           "error": 0,
-          "noperiod": 1,
+          "noperiod": 7,
           "nofield": 0,
           "validated": 1,
-          "totalEntries": 2188
+          "totalEntries": 25876
         },
         "assiduite": {
           "total": 95,
@@ -774,24 +724,24 @@
       "lastModified": "2026-03-26T12:40:30.599Z",
       "scrapers": {
         "classes": {
-          "total": 329,
-          "ok": 329,
+          "total": 54,
+          "ok": 54,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 329
+          "totalEntries": 54
         },
         "notes": {
-          "total": 74,
-          "ok": 74,
-          "empty": 0,
+          "total": 1612,
+          "ok": 1375,
+          "empty": 45,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1376
+          "noperiod": 22,
+          "nofield": 170,
+          "validated": 215,
+          "totalEntries": 29456
         },
         "assiduite": {
           "total": 277,
@@ -825,14 +775,14 @@
       "lastModified": "2026-03-26T08:17:10.259Z",
       "scrapers": {
         "classes": {
-          "total": 269,
-          "ok": 269,
+          "total": 44,
+          "ok": 44,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 269
+          "totalEntries": 44
         },
         "notes": {
           "total": 1063,
@@ -876,24 +826,24 @@
       "lastModified": "2026-03-26T11:56:39.436Z",
       "scrapers": {
         "classes": {
-          "total": 311,
-          "ok": 311,
+          "total": 51,
+          "ok": 51,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 311
+          "totalEntries": 51
         },
         "notes": {
-          "total": 696,
-          "ok": 696,
+          "total": 1822,
+          "ok": 1775,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 16453
+          "noperiod": 17,
+          "nofield": 30,
+          "validated": 33,
+          "totalEntries": 47853
         },
         "assiduite": {
           "total": 183,
@@ -927,24 +877,24 @@
       "lastModified": "2026-03-26T12:46:43.790Z",
       "scrapers": {
         "classes": {
-          "total": 329,
-          "ok": 329,
+          "total": 54,
+          "ok": 54,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 329
+          "totalEntries": 54
         },
         "notes": {
-          "total": 18,
-          "ok": 0,
-          "empty": 0,
+          "total": 1972,
+          "ok": 1890,
+          "empty": 31,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 18,
-          "validated": 0,
-          "totalEntries": 0
+          "noperiod": 14,
+          "nofield": 37,
+          "validated": 51,
+          "totalEntries": 52284
         },
         "assiduite": {
           "total": 198,
@@ -978,24 +928,24 @@
       "lastModified": "2026-03-26T12:18:50.479Z",
       "scrapers": {
         "classes": {
-          "total": 354,
-          "ok": 354,
+          "total": 59,
+          "ok": 59,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 354
+          "totalEntries": 59
         },
         "notes": {
-          "total": 195,
-          "ok": 179,
-          "empty": 0,
+          "total": 881,
+          "ok": 792,
+          "empty": 13,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 16,
-          "validated": 0,
-          "totalEntries": 4241
+          "noperiod": 18,
+          "nofield": 58,
+          "validated": 58,
+          "totalEntries": 23277
         },
         "assiduite": {
           "total": 91,
@@ -1029,24 +979,24 @@
       "lastModified": "2026-03-26T13:09:00.308Z",
       "scrapers": {
         "classes": {
-          "total": 131,
-          "ok": 131,
+          "total": 21,
+          "ok": 21,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 131
+          "totalEntries": 21
         },
         "notes": {
-          "total": 28,
-          "ok": 14,
-          "empty": 14,
+          "total": 706,
+          "ok": 460,
+          "empty": 182,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 448
+          "noperiod": 6,
+          "nofield": 58,
+          "validated": 226,
+          "totalEntries": 12136
         },
         "assiduite": {
           "total": 128,
@@ -1080,24 +1030,24 @@
       "lastModified": "2026-03-26T16:51:47.778Z",
       "scrapers": {
         "classes": {
-          "total": 155,
-          "ok": 155,
+          "total": 25,
+          "ok": 25,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 155
+          "totalEntries": 25
         },
         "notes": {
-          "total": 62,
-          "ok": 48,
-          "empty": 14,
+          "total": 720,
+          "ok": 591,
+          "empty": 67,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 527
+          "noperiod": 2,
+          "nofield": 60,
+          "validated": 113,
+          "totalEntries": 18030
         },
         "assiduite": {
           "total": 136,
@@ -1131,14 +1081,14 @@
       "lastModified": "2026-03-26T17:56:00.759Z",
       "scrapers": {
         "classes": {
-          "total": 161,
-          "ok": 161,
+          "total": 26,
+          "ok": 26,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 161
+          "totalEntries": 26
         },
         "notes": {
           "total": 761,
@@ -1173,6 +1123,57 @@
       }
     },
     {
+      "name": "ISM_Dakar_Ecole_de_Droit_2020-2021",
+      "displayName": "ISM Dakar Ecole de Droit 2020-2021",
+      "school": "ISM Dakar Ecole de Droit",
+      "year": "2020-2021",
+      "status": "done",
+      "nbClasses": 26,
+      "lastModified": "2026-03-26T18:48:09.593Z",
+      "scrapers": {
+        "classes": {
+          "total": 27,
+          "ok": 27,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 27
+        },
+        "notes": {
+          "total": 846,
+          "ok": 790,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 8,
+          "nofield": 48,
+          "validated": 48,
+          "totalEntries": 27396
+        },
+        "assiduite": {
+          "total": 136,
+          "ok": 103,
+          "empty": 33,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 3115
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
       "name": "ISM_Dakar_Ecole_de_Droit_2021-2022",
       "displayName": "ISM Dakar Ecole de Droit 2021-2022",
       "school": "ISM Dakar Ecole de Droit",
@@ -1182,24 +1183,24 @@
       "lastModified": "2026-03-26T18:30:23.135Z",
       "scrapers": {
         "classes": {
-          "total": 185,
-          "ok": 185,
+          "total": 30,
+          "ok": 30,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 185
+          "totalEntries": 30
         },
         "notes": {
-          "total": 37,
-          "ok": 36,
+          "total": 884,
+          "ok": 876,
           "empty": 0,
           "error": 0,
-          "noperiod": 1,
-          "nofield": 0,
-          "validated": 1,
-          "totalEntries": 387
+          "noperiod": 7,
+          "nofield": 1,
+          "validated": 7,
+          "totalEntries": 30994
         },
         "assiduite": {
           "total": 98,
@@ -1233,24 +1234,24 @@
       "lastModified": "2026-03-26T16:31:19.888Z",
       "scrapers": {
         "classes": {
-          "total": 209,
-          "ok": 209,
+          "total": 34,
+          "ok": 34,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 209
+          "totalEntries": 34
         },
         "notes": {
-          "total": 42,
-          "ok": 42,
+          "total": 1099,
+          "ok": 957,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1168
+          "noperiod": 14,
+          "nofield": 128,
+          "validated": 128,
+          "totalEntries": 33667
         },
         "assiduite": {
           "total": 228,
@@ -1284,14 +1285,14 @@
       "lastModified": "2026-03-26T10:03:57.087Z",
       "scrapers": {
         "classes": {
-          "total": 245,
-          "ok": 245,
+          "total": 40,
+          "ok": 40,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 245
+          "totalEntries": 40
         },
         "notes": {
           "total": 263,
@@ -1335,24 +1336,24 @@
       "lastModified": "2026-03-26T16:58:52.481Z",
       "scrapers": {
         "classes": {
-          "total": 257,
-          "ok": 257,
+          "total": 42,
+          "ok": 42,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 257
+          "totalEntries": 42
         },
         "notes": {
-          "total": 109,
-          "ok": 109,
+          "total": 410,
+          "ok": 267,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 2322
+          "noperiod": 17,
+          "nofield": 126,
+          "validated": 138,
+          "totalEntries": 7151
         },
         "assiduite": {
           "total": 264,
@@ -1386,24 +1387,24 @@
       "lastModified": "2026-03-26T18:04:44.955Z",
       "scrapers": {
         "classes": {
-          "total": 449,
-          "ok": 449,
+          "total": 74,
+          "ok": 74,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 449
+          "totalEntries": 74
         },
         "notes": {
-          "total": 63,
-          "ok": 63,
+          "total": 530,
+          "ok": 245,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 566
+          "noperiod": 33,
+          "nofield": 252,
+          "validated": 282,
+          "totalEntries": 5747
         },
         "assiduite": {
           "total": 552,
@@ -1428,6 +1429,57 @@
       }
     },
     {
+      "name": "ISM_Online_&_ISF_2024-2025",
+      "displayName": "ISM Online & ISF 2024-2025",
+      "school": "ISM Online & ISF",
+      "year": "2024-2025",
+      "status": "done",
+      "nbClasses": 92,
+      "lastModified": "2026-03-26T18:48:53.852Z",
+      "scrapers": {
+        "classes": {
+          "total": 93,
+          "ok": 93,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 93
+        },
+        "notes": {
+          "total": 659,
+          "ok": 332,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 39,
+          "nofield": 288,
+          "validated": 323,
+          "totalEntries": 7392
+        },
+        "assiduite": {
+          "total": 561,
+          "ok": 457,
+          "empty": 97,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 6050
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
       "name": "ISM_Online_&_ISF_2025-2026",
       "displayName": "ISM Online & ISF 2025-2026",
       "school": "ISM Online & ISF",
@@ -1437,24 +1489,24 @@
       "lastModified": "2026-03-26T18:28:15.318Z",
       "scrapers": {
         "classes": {
-          "total": 599,
-          "ok": 599,
+          "total": 99,
+          "ok": 99,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 599
+          "totalEntries": 99
         },
         "notes": {
-          "total": 21,
-          "ok": 21,
+          "total": 651,
+          "ok": 333,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 147
+          "noperiod": 30,
+          "nofield": 288,
+          "validated": 317,
+          "totalEntries": 6342
         },
         "assiduite": {
           "total": 449,
@@ -1488,14 +1540,14 @@
       "lastModified": "2026-03-26T11:39:58.188Z",
       "scrapers": {
         "classes": {
-          "total": 77,
-          "ok": 77,
+          "total": 12,
+          "ok": 12,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 77
+          "totalEntries": 12
         },
         "notes": {
           "total": 170,
@@ -1539,23 +1591,23 @@
       "lastModified": "2026-03-26T12:02:42.844Z",
       "scrapers": {
         "classes": {
-          "total": 23,
-          "ok": 23,
+          "total": 3,
+          "ok": 3,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 23
+          "totalEntries": 3
         },
         "notes": {
-          "total": 0,
+          "total": 6,
           "ok": 0,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
+          "nofield": 6,
+          "validated": 6,
           "totalEntries": 0
         },
         "assiduite": {
@@ -1590,23 +1642,23 @@
       "lastModified": "2026-03-26T12:01:40.997Z",
       "scrapers": {
         "classes": {
-          "total": 89,
-          "ok": 89,
+          "total": 14,
+          "ok": 14,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 89
+          "totalEntries": 14
         },
         "notes": {
-          "total": 0,
+          "total": 39,
           "ok": 0,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
+          "nofield": 39,
+          "validated": 39,
           "totalEntries": 0
         },
         "assiduite": {
@@ -1641,23 +1693,23 @@
       "lastModified": "2026-03-26T12:00:24.008Z",
       "scrapers": {
         "classes": {
-          "total": 185,
-          "ok": 185,
+          "total": 30,
+          "ok": 30,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 185
+          "totalEntries": 30
         },
         "notes": {
-          "total": 61,
+          "total": 113,
           "ok": 0,
           "empty": 0,
           "error": 0,
-          "noperiod": 13,
-          "nofield": 48,
-          "validated": 61,
+          "noperiod": 26,
+          "nofield": 87,
+          "validated": 113,
           "totalEntries": 0
         },
         "assiduite": {
@@ -1692,14 +1744,14 @@
       "lastModified": "2026-03-26T11:59:38.592Z",
       "scrapers": {
         "classes": {
-          "total": 113,
-          "ok": 113,
+          "total": 18,
+          "ok": 18,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 113
+          "totalEntries": 18
         },
         "notes": {
           "total": 49,
@@ -1743,14 +1795,14 @@
       "lastModified": "2026-03-26T11:59:10.516Z",
       "scrapers": {
         "classes": {
-          "total": 107,
-          "ok": 107,
+          "total": 17,
+          "ok": 17,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 107
+          "totalEntries": 17
         },
         "notes": {
           "total": 48,
@@ -1794,14 +1846,14 @@
       "lastModified": "2026-03-26T12:36:46.647Z",
       "scrapers": {
         "classes": {
-          "total": 95,
-          "ok": 95,
+          "total": 15,
+          "ok": 15,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 95
+          "totalEntries": 15
         },
         "notes": {
           "total": 42,
@@ -1845,14 +1897,14 @@
       "lastModified": "2026-03-26T11:56:52.828Z",
       "scrapers": {
         "classes": {
-          "total": 149,
-          "ok": 149,
+          "total": 24,
+          "ok": 24,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 149
+          "totalEntries": 24
         },
         "notes": {
           "total": 55,
@@ -1896,14 +1948,14 @@
       "lastModified": "2026-03-26T11:58:05.076Z",
       "scrapers": {
         "classes": {
-          "total": 149,
-          "ok": 149,
+          "total": 24,
+          "ok": 24,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 149
+          "totalEntries": 24
         },
         "notes": {
           "total": 23,
