@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T20:00:01.200Z",
+  "generatedAt": "2026-03-26T20:05:00.666Z",
   "summary": {
     "done": 21,
     "skip": 8,
@@ -331,7 +331,7 @@
       "nbEleves": 877,
       "nbMatieres": 78,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-26T19:56:16.798Z",
+      "lastModified": "2026-03-26T20:02:46.294Z",
       "scrapers": {
         "classes": {
           "total": 23,
@@ -350,7 +350,7 @@
           "error": 0,
           "noperiod": 10,
           "nofield": 100,
-          "validated": 100,
+          "validated": 111,
           "totalEntries": 16553
         },
         "assiduite": {
