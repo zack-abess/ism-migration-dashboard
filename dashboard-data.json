@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-26T21:30:01.080Z",
+  "generatedAt": "2026-03-26T21:35:01.030Z",
   "summary": {
     "done": 26,
     "skip": 8,
-    "inProgress": 6,
-    "total": 40
+    "inProgress": 5,
+    "total": 39
   },
-  "totalClasses": 1368,
-  "totalEleves": 32720,
-  "totalMatieres": 2289,
+  "totalClasses": 1346,
+  "totalEleves": 31843,
+  "totalMatieres": 2247,
   "totalPeriodes": 50,
   "totalEntries": {
-    "notes": 612489,
-    "assiduite": 117089,
-    "classes": 1331,
-    "pupils": 40
+    "notes": 579010,
+    "assiduite": 110044,
+    "classes": 1309,
+    "pupils": 39
   },
   "schools": {
     "ISM Dakar Ecole d'Ingénieurs": {
@@ -53,7 +53,6 @@
     "ISM Dakar Ecole de Management": {
       "years": [
         "2017-2018",
-        "courant",
         "2018-2019",
         "2019-2020",
         "2020-2021",
@@ -61,7 +60,7 @@
       ],
       "doneCount": 1,
       "skipCount": 0,
-      "inProgressCount": 5
+      "inProgressCount": 4
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -149,60 +148,6 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 5166
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
-      "name": "ISM_Dakar_Ecole_de_Management",
-      "displayName": "ISM Dakar Ecole de Management",
-      "school": "ISM Dakar Ecole de Management",
-      "year": "courant",
-      "status": "in_progress",
-      "nbClasses": 22,
-      "nbEleves": 877,
-      "nbMatieres": 90,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-26T21:29:06.109Z",
-      "scrapers": {
-        "classes": {
-          "total": 22,
-          "ok": 22,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 22
-        },
-        "notes": {
-          "total": 1270,
-          "ok": 1052,
-          "empty": 36,
-          "error": 0,
-          "noperiod": 10,
-          "nofield": 172,
-          "validated": 479,
-          "totalEntries": 33479
-        },
-        "assiduite": {
-          "total": 256,
-          "ok": 193,
-          "empty": 63,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 7045
         },
         "pupils": {
           "total": 1,
