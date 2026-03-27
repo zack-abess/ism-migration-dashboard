@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-27T02:35:01.483Z",
+  "generatedAt": "2026-03-27T02:40:00.631Z",
   "summary": {
-    "done": 38,
+    "done": 39,
     "skip": 8,
     "inProgress": 12,
-    "total": 58
+    "total": 59
   },
   "totalClasses": 2039,
   "totalEleves": 52736,
@@ -12,7 +12,7 @@
   "totalPeriodes": 54,
   "totalEnseignants": 497,
   "totalEntries": {
-    "notes": 1026075,
+    "notes": 1030191,
     "assiduite": 203899,
     "classes": 1996,
     "pupils": 57
@@ -64,12 +64,12 @@
         "2021-2022",
         "2022-2023",
         "2023-2024",
-        "2024-2025",
-        "2025-2026"
+        "2025-2026",
+        "2024-2025"
       ],
-      "doneCount": 8,
+      "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 2
+      "inProgressCount": 1
     },
     "ISM Dakar Graduate School": {
       "years": [
@@ -93,11 +93,12 @@
         "courant",
         "2025-2026",
         "2017-2018",
-        "2018-2019"
+        "2018-2019",
+        "2019-2020"
       ],
       "doneCount": 2,
       "skipCount": 0,
-      "inProgressCount": 2
+      "inProgressCount": 3
     },
     "ISM Online & ISF": {
       "years": [
@@ -212,7 +213,7 @@
       "nbMatieres": 163,
       "nbMatieresGlobal": 433,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-27T02:31:39.328Z",
+      "lastModified": "2026-03-27T02:38:55.293Z",
       "scrapers": {
         "classes": {
           "total": 45,
@@ -225,14 +226,14 @@
           "totalEntries": 45
         },
         "notes": {
-          "total": 1641,
-          "ok": 1508,
+          "total": 1775,
+          "ok": 1642,
           "empty": 93,
           "error": 0,
           "noperiod": 16,
           "nofield": 24,
           "validated": 829,
-          "totalEntries": 42625
+          "totalEntries": 46741
         },
         "assiduite": {
           "total": 178,
@@ -243,62 +244,6 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 4841
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
-      "name": "ISM_Dakar_Ecole_de_Management_2025-2026",
-      "displayName": "ISM Dakar Ecole de Management 2025-2026",
-      "school": "ISM Dakar Ecole de Management",
-      "year": "2025-2026",
-      "status": "in_progress",
-      "nbClasses": 62,
-      "nbEleves": 1856,
-      "nbEnseignants": 4,
-      "nbMatieres": 128,
-      "nbMatieresGlobal": 424,
-      "nbPeriodes": 5,
-      "lastModified": "2026-03-27T02:29:21.218Z",
-      "scrapers": {
-        "classes": {
-          "total": 62,
-          "ok": 62,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 62
-        },
-        "notes": {
-          "total": 728,
-          "ok": 676,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 9,
-          "nofield": 43,
-          "validated": 109,
-          "totalEntries": 21404
-        },
-        "assiduite": {
-          "total": 109,
-          "ok": 105,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 4,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 2753
         },
         "pupils": {
           "total": 1,
@@ -324,7 +269,7 @@
       "nbMatieres": 186,
       "nbMatieresGlobal": 296,
       "nbPeriodes": 6,
-      "lastModified": "2026-03-27T02:19:10.328Z",
+      "lastModified": "2026-03-27T02:37:35.137Z",
       "scrapers": {
         "classes": {
           "total": 35,
@@ -343,7 +288,7 @@
           "error": 0,
           "noperiod": 6,
           "nofield": 118,
-          "validated": 0,
+          "validated": 117,
           "totalEntries": 6823
         },
         "assiduite": {
@@ -757,6 +702,62 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Madiba_Leadership_Institut_2019-2020",
+      "displayName": "ISM Dakar Madiba Leadership Institut 2019-2020",
+      "school": "ISM Dakar Madiba Leadership Institut",
+      "year": "2019-2020",
+      "status": "in_progress",
+      "nbClasses": 0,
+      "nbEleves": 0,
+      "nbEnseignants": 0,
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 0,
+      "nbPeriodes": 0,
+      "lastModified": null,
+      "scrapers": {
+        "classes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "pupils": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
         }
       }
     },
@@ -2259,6 +2260,62 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 6128
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Ecole_de_Management_2025-2026",
+      "displayName": "ISM Dakar Ecole de Management 2025-2026",
+      "school": "ISM Dakar Ecole de Management",
+      "year": "2025-2026",
+      "status": "done",
+      "nbClasses": 62,
+      "nbEleves": 1856,
+      "nbEnseignants": 4,
+      "nbMatieres": 128,
+      "nbMatieresGlobal": 424,
+      "nbPeriodes": 5,
+      "lastModified": "2026-03-27T02:35:39.598Z",
+      "scrapers": {
+        "classes": {
+          "total": 62,
+          "ok": 62,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 62
+        },
+        "notes": {
+          "total": 728,
+          "ok": 676,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 9,
+          "nofield": 43,
+          "validated": 109,
+          "totalEntries": 21404
+        },
+        "assiduite": {
+          "total": 109,
+          "ok": 105,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 4,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 2753
         },
         "pupils": {
           "total": 1,
