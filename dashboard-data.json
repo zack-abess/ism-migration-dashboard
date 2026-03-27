@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T14:00:01.276Z",
+  "generatedAt": "2026-03-27T14:05:01.160Z",
   "summary": {
     "done": 51,
     "skip": 8,
@@ -161,7 +161,7 @@
       "nbMatieres": 163,
       "nbMatieresGlobal": 171,
       "nbPeriodes": 15,
-      "lastModified": "2026-03-27T09:24:11.941Z",
+      "lastModified": "2026-03-27T14:02:01.442Z",
       "scrapers": {
         "classes": {
           "total": 32,
@@ -180,7 +180,7 @@
           "error": 0,
           "noperiod": 6,
           "nofield": 84,
-          "validated": 71,
+          "validated": 85,
           "totalEntries": 34441
         },
         "assiduite": {
@@ -329,7 +329,7 @@
       "nbMatieres": 517,
       "nbMatieresGlobal": 720,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-27T12:48:25.415Z",
+      "lastModified": "2026-03-27T14:01:03.048Z",
       "scrapers": {
         "classes": {
           "total": 122,
@@ -348,7 +348,7 @@
           "error": 0,
           "noperiod": 70,
           "nofield": 888,
-          "validated": 923,
+          "validated": 1161,
           "totalEntries": 56480
         },
         "assiduite": {
