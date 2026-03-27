@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T03:00:01.106Z",
+  "generatedAt": "2026-03-27T03:05:01.523Z",
   "summary": {
     "done": 40,
     "skip": 8,
@@ -8,12 +8,12 @@
   },
   "totalClasses": 2092,
   "totalEleves": 53701,
-  "totalMatieres": 3415,
-  "totalPeriodes": 54,
+  "totalMatieres": 3540,
+  "totalPeriodes": 58,
   "totalEnseignants": 505,
   "totalEntries": {
-    "notes": 1030191,
-    "assiduite": 203899,
+    "notes": 1043013,
+    "assiduite": 206895,
     "classes": 2090,
     "pupils": 59
   },
@@ -211,10 +211,10 @@
       "nbClasses": 35,
       "nbEleves": 609,
       "nbEnseignants": 4,
-      "nbMatieres": 186,
+      "nbMatieres": 229,
       "nbMatieresGlobal": 296,
       "nbPeriodes": 6,
-      "lastModified": "2026-03-27T02:37:35.137Z",
+      "lastModified": "2026-03-27T03:02:18.101Z",
       "scrapers": {
         "classes": {
           "total": 35,
@@ -227,14 +227,14 @@
           "totalEntries": 35
         },
         "notes": {
-          "total": 474,
-          "ok": 350,
+          "total": 576,
+          "ok": 432,
           "empty": 0,
           "error": 0,
           "noperiod": 6,
-          "nofield": 118,
-          "validated": 117,
-          "totalEntries": 6823
+          "nofield": 138,
+          "validated": 114,
+          "totalEntries": 8350
         },
         "assiduite": {
           "total": 198,
@@ -379,10 +379,10 @@
       "nbClasses": 47,
       "nbEleves": 892,
       "nbEnseignants": 4,
-      "nbMatieres": 0,
+      "nbMatieres": 222,
       "nbMatieresGlobal": 493,
-      "nbPeriodes": 0,
-      "lastModified": "2026-03-27T02:05:11.289Z",
+      "nbPeriodes": 17,
+      "lastModified": "2026-03-27T03:02:15.289Z",
       "scrapers": {
         "classes": {
           "total": 47,
@@ -395,14 +395,14 @@
           "totalEntries": 47
         },
         "notes": {
-          "total": 0,
-          "ok": 0,
+          "total": 813,
+          "ok": 727,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
+          "noperiod": 19,
+          "nofield": 67,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 11295
         },
         "assiduite": {
           "total": 271,
@@ -550,7 +550,7 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 124,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T02:40:37.110Z",
+      "lastModified": "2026-03-27T03:01:16.978Z",
       "scrapers": {
         "classes": {
           "total": 18,
@@ -573,14 +573,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 118,
+          "ok": 55,
+          "empty": 63,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 873
         },
         "pupils": {
           "total": 1,
@@ -606,7 +606,7 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 184,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T02:45:51.067Z",
+      "lastModified": "2026-03-27T03:03:30.059Z",
       "scrapers": {
         "classes": {
           "total": 23,
@@ -629,14 +629,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 128,
+          "ok": 66,
+          "empty": 62,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 1037
         },
         "pupils": {
           "total": 1,
@@ -662,7 +662,7 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 178,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T02:57:18.455Z",
+      "lastModified": "2026-03-27T03:03:38.819Z",
       "scrapers": {
         "classes": {
           "total": 25,
@@ -685,14 +685,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 101,
+          "ok": 57,
+          "empty": 44,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 1086
         },
         "pupils": {
           "total": 1,
