@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T04:00:01.120Z",
+  "generatedAt": "2026-03-27T04:05:01.425Z",
   "summary": {
     "done": 43,
     "skip": 8,
@@ -13,7 +13,7 @@
   "totalEnseignants": 518,
   "totalEntries": {
     "notes": 1151677,
-    "assiduite": 209089,
+    "assiduite": 210973,
     "classes": 2227,
     "pupils": 63
   },
@@ -666,7 +666,7 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 423,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T03:37:55.241Z",
+      "lastModified": "2026-03-27T04:01:38.873Z",
       "scrapers": {
         "classes": {
           "total": 34,
@@ -689,14 +689,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 193,
+          "ok": 105,
+          "empty": 84,
           "error": 0,
-          "noperiod": 0,
+          "noperiod": 4,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 1884
         },
         "pupils": {
           "total": 1,
