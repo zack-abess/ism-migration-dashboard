@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-03-27T02:25:01.043Z",
+  "generatedAt": "2026-03-27T02:30:01.241Z",
   "summary": {
-    "done": 36,
+    "done": 37,
     "skip": 8,
     "inProgress": 12,
-    "total": 56
+    "total": 57
   },
-  "totalClasses": 1998,
-  "totalEleves": 51929,
+  "totalClasses": 2016,
+  "totalEleves": 52296,
   "totalMatieres": 3415,
   "totalPeriodes": 54,
-  "totalEnseignants": 492,
+  "totalEnseignants": 496,
   "totalEntries": {
     "notes": 1026075,
     "assiduite": 203899,
     "classes": 1996,
-    "pupils": 55
+    "pupils": 56
   },
-  "uniqueEleves": 29234,
+  "uniqueEleves": 29450,
   "uniqueEnseignants": 200,
-  "uniqueMatieresGlobal": 3825,
+  "uniqueMatieresGlobal": 3853,
   "schools": {
     "ISM Dakar Ecole d'Ingénieurs": {
       "years": [
@@ -90,10 +90,11 @@
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
+        "courant",
         "2025-2026",
-        "courant"
+        "2017-2018"
       ],
-      "doneCount": 1,
+      "doneCount": 2,
       "skipCount": 0,
       "inProgressCount": 1
     },
@@ -266,7 +267,7 @@
       "nbMatieres": 128,
       "nbMatieresGlobal": 424,
       "nbPeriodes": 5,
-      "lastModified": "2026-03-27T02:05:37.994Z",
+      "lastModified": "2026-03-27T02:29:21.218Z",
       "scrapers": {
         "classes": {
           "total": 62,
@@ -285,7 +286,7 @@
           "error": 0,
           "noperiod": 9,
           "nofield": 43,
-          "validated": 98,
+          "validated": 109,
           "totalEntries": 21404
         },
         "assiduite": {
@@ -703,48 +704,48 @@
       }
     },
     {
-      "name": "ISM_Dakar_Madiba_Leadership_Institut",
-      "displayName": "ISM Dakar Madiba Leadership Institut",
+      "name": "ISM_Dakar_Madiba_Leadership_Institut_2017-2018",
+      "displayName": "ISM Dakar Madiba Leadership Institut 2017-2018",
       "school": "ISM Dakar Madiba Leadership Institut",
-      "year": "courant",
+      "year": "2017-2018",
       "status": "in_progress",
-      "nbClasses": 10,
-      "nbEleves": 325,
+      "nbClasses": 18,
+      "nbEleves": 367,
       "nbEnseignants": 4,
-      "nbMatieres": 78,
-      "nbMatieresGlobal": 108,
-      "nbPeriodes": 16,
-      "lastModified": "2026-03-27T02:00:55.903Z",
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 124,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-27T02:29:02.620Z",
       "scrapers": {
         "classes": {
-          "total": 10,
-          "ok": 10,
+          "total": 0,
+          "ok": 0,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 10
+          "totalEntries": 0
         },
         "notes": {
-          "total": 310,
-          "ok": 305,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 5,
-          "validated": 0,
-          "totalEntries": 7946
-        },
-        "assiduite": {
-          "total": 37,
-          "ok": 37,
+          "total": 0,
+          "ok": 0,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 980
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
         },
         "pupils": {
           "total": 1,
@@ -2439,6 +2440,62 @@
       }
     },
     {
+      "name": "ISM_Dakar_Madiba_Leadership_Institut",
+      "displayName": "ISM Dakar Madiba Leadership Institut",
+      "school": "ISM Dakar Madiba Leadership Institut",
+      "year": "courant",
+      "status": "done",
+      "nbClasses": 10,
+      "nbEleves": 325,
+      "nbEnseignants": 4,
+      "nbMatieres": 78,
+      "nbMatieresGlobal": 108,
+      "nbPeriodes": 16,
+      "lastModified": "2026-03-27T02:00:55.903Z",
+      "scrapers": {
+        "classes": {
+          "total": 10,
+          "ok": 10,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 10
+        },
+        "notes": {
+          "total": 310,
+          "ok": 305,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 5,
+          "validated": 0,
+          "totalEntries": 7946
+        },
+        "assiduite": {
+          "total": 37,
+          "ok": 37,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 980
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
       "name": "ISM_Dakar_Madiba_Leadership_Institut_2025-2026",
       "displayName": "ISM Dakar Madiba Leadership Institut 2025-2026",
       "school": "ISM Dakar Madiba Leadership Institut",
@@ -3280,8 +3337,8 @@
     }
   ],
   "doublons": {
-    "eleves": 18324,
-    "enseignants": 292,
-    "matieresGlobal": 12395
+    "eleves": 18475,
+    "enseignants": 296,
+    "matieresGlobal": 12491
   }
 }
