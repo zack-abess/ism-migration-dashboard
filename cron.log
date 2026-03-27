@@ -2179,3 +2179,15 @@ To github.com:zack-abess/ism-migration-dashboard.git
    64 licences: 51 done, 8 skip, 5 en cours
    2229 classes | 55621 élèves (30877 uniques) | 518 enseignants (202 uniques)
    4651 matières notes | 4156 matières globales uniques | 73 périodes
+warning: in the working copy of 'cron.log', CRLF will be replaced by LF the next time Git touches it
+[main 2fb909c] 📊 update data 2026-03-27 09:50
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+To github.com:zack-abess/ism-migration-dashboard.git
+   fe64cff..2fb909c  main -> main
+2026-03-27 09:50:09 ✅ Dashboard mis à jour et poussé.
+2026-03-27 09:55:00 🔄 Mise à jour du dashboard...
+📊 Génération des données du dashboard...
+✅ /Users/mac/Documents/Groupe ISM/schoolArt/scraper-classexpert-v2/dashboard/dashboard-data.json généré
+   64 licences: 51 done, 8 skip, 5 en cours
+   2229 classes | 55621 élèves (30877 uniques) | 518 enseignants (202 uniques)
+   4653 matières notes | 4156 matières globales uniques | 73 périodes
