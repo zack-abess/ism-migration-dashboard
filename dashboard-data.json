@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-03-27T08:35:01.335Z",
+  "generatedAt": "2026-03-27T08:40:00.780Z",
   "summary": {
-    "done": 44,
+    "done": 45,
     "skip": 8,
-    "inProgress": 12,
+    "inProgress": 11,
     "total": 64
   },
   "totalClasses": 2229,
   "totalEleves": 55621,
-  "totalMatieres": 4526,
+  "totalMatieres": 4542,
   "totalPeriodes": 73,
   "totalEnseignants": 518,
   "totalEntries": {
-    "notes": 1188292,
+    "notes": 1188843,
     "assiduite": 214033,
     "classes": 2227,
     "pupils": 63
@@ -92,18 +92,18 @@
       "years": [
         "courant",
         "2018-2019",
+        "2019-2020",
         "2025-2026",
         "2017-2018",
-        "2019-2020",
         "2020-2021",
         "2021-2022",
         "2022-2023",
         "2023-2024",
         "2024-2025"
       ],
-      "doneCount": 3,
+      "doneCount": 4,
       "skipCount": 0,
-      "inProgressCount": 7
+      "inProgressCount": 6
     },
     "ISM Online & ISF": {
       "years": [
@@ -274,7 +274,7 @@
       "nbMatieres": 306,
       "nbMatieresGlobal": 493,
       "nbPeriodes": 17,
-      "lastModified": "2026-03-27T04:22:04.550Z",
+      "lastModified": "2026-03-27T08:38:00.926Z",
       "scrapers": {
         "classes": {
           "total": 47,
@@ -293,7 +293,7 @@
           "error": 0,
           "noperiod": 19,
           "nofield": 111,
-          "validated": 67,
+          "validated": 153,
           "totalEntries": 18067
         },
         "assiduite": {
@@ -417,62 +417,6 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 873
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
-      "name": "ISM_Dakar_Madiba_Leadership_Institut_2019-2020",
-      "displayName": "ISM Dakar Madiba Leadership Institut 2019-2020",
-      "school": "ISM Dakar Madiba Leadership Institut",
-      "year": "2019-2020",
-      "status": "in_progress",
-      "nbClasses": 25,
-      "nbEleves": 474,
-      "nbEnseignants": 4,
-      "nbMatieres": 150,
-      "nbMatieresGlobal": 178,
-      "nbPeriodes": 16,
-      "lastModified": "2026-03-27T08:33:00.042Z",
-      "scrapers": {
-        "classes": {
-          "total": 25,
-          "ok": 25,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 25
-        },
-        "notes": {
-          "total": 452,
-          "ok": 405,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 3,
-          "nofield": 44,
-          "validated": 44,
-          "totalEntries": 8410
-        },
-        "assiduite": {
-          "total": 101,
-          "ok": 57,
-          "empty": 44,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1086
         },
         "pupils": {
           "total": 1,
@@ -2881,6 +2825,62 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 1037
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Madiba_Leadership_Institut_2019-2020",
+      "displayName": "ISM Dakar Madiba Leadership Institut 2019-2020",
+      "school": "ISM Dakar Madiba Leadership Institut",
+      "year": "2019-2020",
+      "status": "done",
+      "nbClasses": 25,
+      "nbEleves": 474,
+      "nbEnseignants": 4,
+      "nbMatieres": 167,
+      "nbMatieresGlobal": 178,
+      "nbPeriodes": 16,
+      "lastModified": "2026-03-27T08:37:29.979Z",
+      "scrapers": {
+        "classes": {
+          "total": 25,
+          "ok": 25,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 25
+        },
+        "notes": {
+          "total": 497,
+          "ok": 450,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 3,
+          "nofield": 44,
+          "validated": 44,
+          "totalEntries": 8961
+        },
+        "assiduite": {
+          "total": 101,
+          "ok": 57,
+          "empty": 44,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1086
         },
         "pupils": {
           "total": 1,
