@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-03-27T00:25:00.830Z",
+  "generatedAt": "2026-03-27T00:30:01.120Z",
   "summary": {
     "done": 32,
     "skip": 8,
     "inProgress": 6,
     "total": 46
   },
-  "totalClasses": 1571,
+  "totalClasses": 1606,
   "totalEleves": 40594,
   "totalMatieres": 2513,
   "totalPeriodes": 50,
   "totalEntries": {
     "notes": 865568,
     "assiduite": 143685,
-    "classes": 1443,
+    "classes": 1488,
     "pupils": 46
   },
   "schools": {
@@ -239,17 +239,17 @@
       "nbEleves": 1571,
       "nbMatieres": 0,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-26T23:54:38.561Z",
+      "lastModified": "2026-03-27T00:25:48.418Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 45,
+          "ok": 45,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 45
         },
         "notes": {
           "total": 0,
@@ -397,7 +397,7 @@
       "school": "ISM Dakar Graduate School",
       "year": "2017-2018",
       "status": "in_progress",
-      "nbClasses": 0,
+      "nbClasses": 35,
       "nbEleves": 609,
       "nbMatieres": 0,
       "nbPeriodes": 0,
