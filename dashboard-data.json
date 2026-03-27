@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-27T00:40:00.697Z",
+  "generatedAt": "2026-03-27T00:45:00.768Z",
   "summary": {
     "done": 33,
     "skip": 8,
-    "inProgress": 8,
-    "total": 49
+    "inProgress": 9,
+    "total": 50
   },
-  "totalClasses": 1683,
-  "totalEleves": 42569,
-  "totalMatieres": 2513,
+  "totalClasses": 1805,
+  "totalEleves": 47827,
+  "totalMatieres": 2634,
   "totalPeriodes": 50,
   "totalEntries": {
-    "notes": 870571,
-    "assiduite": 150738,
-    "classes": 1507,
-    "pupils": 49
+    "notes": 900727,
+    "assiduite": 181390,
+    "classes": 1629,
+    "pupils": 50
   },
   "schools": {
     "ISM Dakar Ecole d'Ingénieurs": {
@@ -109,6 +109,14 @@
       "doneCount": 0,
       "skipCount": 8,
       "inProgressCount": 0
+    },
+    "ISM-DAKAR": {
+      "years": [
+        "courant"
+      ],
+      "doneCount": 0,
+      "skipCount": 0,
+      "inProgressCount": 1
     },
     "ISM Dakar Graduate School": {
       "years": [
@@ -543,6 +551,60 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 0
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM-DAKAR",
+      "displayName": "ISM-DAKAR",
+      "school": "ISM-DAKAR",
+      "year": "courant",
+      "status": "in_progress",
+      "nbClasses": 122,
+      "nbEleves": 5258,
+      "nbMatieres": 219,
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-26T21:31:43.629Z",
+      "scrapers": {
+        "classes": {
+          "total": 122,
+          "ok": 122,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 122
+        },
+        "notes": {
+          "total": 1343,
+          "ok": 770,
+          "empty": 94,
+          "error": 0,
+          "noperiod": 70,
+          "nofield": 409,
+          "validated": 503,
+          "totalEntries": 30156
+        },
+        "assiduite": {
+          "total": 900,
+          "ok": 554,
+          "empty": 319,
+          "error": 0,
+          "noperiod": 27,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 30652
         },
         "pupils": {
           "total": 1,

@@ -20,7 +20,7 @@ const ARCHIVE_DIR = path.join(PROJECT_ROOT, 'archive_classexpert');
 const OUTPUT_FILE = path.join(__dirname, 'dashboard-data.json');
 
 const SCRAPER_TYPES = ['classes', 'notes', 'assiduite', 'pupils'];
-const IGNORE_DIRS = new Set(['_debug', '_notes', '_assiduite', '_pupils', '_global', 'ISM-DAKAR']);
+const IGNORE_DIRS = new Set(['_debug', '_notes', '_assiduite', '_pupils', '_global']);
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
