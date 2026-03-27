@@ -175,6 +175,52 @@ function countPupils(licenceDir) {
   } catch { return 0; }
 }
 
+function readPupilIds(licenceDir) {
+  // Retourne un tableau d'identifiants élèves pour le calcul de doublons
+  const pupilsFile = path.join(licenceDir, '_pupils', 'all_pupils.json');
+  if (!fs.existsSync(pupilsFile)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(pupilsFile, 'utf8'));
+    if (!data.rows) return [];
+    return data.rows.map(r => (r.Identifiant || '').trim()).filter(Boolean);
+  } catch { return []; }
+}
+
+function readGlobalData(licenceDir) {
+  // Lit les fichiers _global/ pour extraire enseignants et matières globales
+  const globalDir = path.join(licenceDir, '_global');
+  const result = { teachers: [], fields: [] };
+  if (!fs.existsSync(globalDir)) return result;
+
+  // Teachers
+  const teachFile = path.join(globalDir, 'teachers.json');
+  if (fs.existsSync(teachFile)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(teachFile, 'utf8'));
+      const rows = Array.isArray(data) ? data : (data.rows || []);
+      for (const r of rows) {
+        const nom = ((r['Professeur'] || '') + ' ' + (r['Prénom'] || '')).trim();
+        if (nom && nom !== 'Professeur') result.teachers.push(nom);
+      }
+    } catch {}
+  }
+
+  // Fields (matières globales)
+  const fieldFile = path.join(globalDir, 'fields.json');
+  if (fs.existsSync(fieldFile)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(fieldFile, 'utf8'));
+      const rows = Array.isArray(data) ? data : (data.rows || []);
+      for (const r of rows) {
+        const nom = (r['Matière'] || '').trim();
+        if (nom && nom !== 'Matière') result.fields.push(nom);
+      }
+    } catch {}
+  }
+
+  return result;
+}
+
 function extractNotesDetails(rows) {
   // Extraire matières uniques, périodes uniques depuis les rows fusionnés de notes
   if (!rows) return { nbMatieres: 0, nbPeriodes: 0, matieres: [], periodes: [] };
@@ -217,9 +263,21 @@ async function main() {
     totalEleves: 0,
     totalMatieres: 0,
     totalPeriodes: 0,
+    totalEnseignants: 0,
     totalEntries: { notes: 0, assiduite: 0, classes: 0, pupils: 0 },
-    globalMatieres: new Set(),
-    globalPeriodes: new Set(),
+    // Uniques vs doublons
+    uniqueEleves: 0,
+    uniqueEnseignants: 0,
+    uniqueMatieresGlobal: 0,
+    // Sets temporaires (non sérialisés)
+    _globalMatieres: new Set(),
+    _globalPeriodes: new Set(),
+    _allEleveIds: new Set(),
+    _allTeachers: new Set(),
+    _allFieldsGlobal: new Set(),
+    _rawEleveCount: 0,
+    _rawTeacherCount: 0,
+    _rawFieldCount: 0,
     schools: {},
     licences: [],
   };
@@ -243,6 +301,18 @@ async function main() {
       const nbEleves = countPupils(lic.path);
       data.totalEleves += nbEleves;
 
+      // Identifiants élèves pour doublons
+      const pupilIds = readPupilIds(lic.path);
+      data._rawEleveCount += pupilIds.length;
+      pupilIds.forEach(id => data._allEleveIds.add(id));
+
+      // Données globales (enseignants, matières globales)
+      const globalData = readGlobalData(lic.path);
+      data._rawTeacherCount += globalData.teachers.length;
+      globalData.teachers.forEach(t => data._allTeachers.add(t.toLowerCase()));
+      data._rawFieldCount += globalData.fields.length;
+      globalData.fields.forEach(f => data._allFieldsGlobal.add(f.toLowerCase()));
+
       // Per-scraper stats — fusionner original + tous les retries
       const scraperStats = {};
       let notesDetails = { nbMatieres: 0, nbPeriodes: 0, matieres: [], periodes: [] };
@@ -256,8 +326,8 @@ async function main() {
         if (scraper === 'notes' && rows) {
           notesDetails = extractNotesDetails(rows);
           // Accumuler dans les sets globaux
-          notesDetails.matieres.forEach(m => data.globalMatieres.add(m));
-          notesDetails.periodes.forEach(p => data.globalPeriodes.add(p));
+          notesDetails.matieres.forEach(m => data._globalMatieres.add(m));
+          notesDetails.periodes.forEach(p => data._globalPeriodes.add(p));
         }
 
         // Global entries total
@@ -272,7 +342,9 @@ async function main() {
         status: cat.status,
         nbClasses,
         nbEleves,
+        nbEnseignants: globalData.teachers.length,
         nbMatieres: notesDetails.nbMatieres,
+        nbMatieresGlobal: globalData.fields.length,
         nbPeriodes: notesDetails.nbPeriodes,
         lastModified,
         scrapers: scraperStats,
@@ -305,16 +377,36 @@ async function main() {
   });
 
   // Finaliser les totaux globaux
-  data.totalMatieres = data.globalMatieres.size;
-  data.totalPeriodes = data.globalPeriodes.size;
-  delete data.globalMatieres; // Set n'est pas sérialisable
-  delete data.globalPeriodes;
+  data.totalMatieres = data._globalMatieres.size;
+  data.totalPeriodes = data._globalPeriodes.size;
+  data.uniqueEleves = data._allEleveIds.size;
+  data.uniqueEnseignants = data._allTeachers.size;
+  data.uniqueMatieresGlobal = data._allFieldsGlobal.size;
+  data.totalEnseignants = data._rawTeacherCount;
+
+  // Doublons = total - uniques
+  data.doublons = {
+    eleves: data._rawEleveCount - data._allEleveIds.size,
+    enseignants: data._rawTeacherCount - data._allTeachers.size,
+    matieresGlobal: data._rawFieldCount - data._allFieldsGlobal.size,
+  };
+
+  // Nettoyage des sets temporaires (non sérialisables)
+  delete data._globalMatieres;
+  delete data._globalPeriodes;
+  delete data._allEleveIds;
+  delete data._allTeachers;
+  delete data._allFieldsGlobal;
+  delete data._rawEleveCount;
+  delete data._rawTeacherCount;
+  delete data._rawFieldCount;
 
   // Write JSON
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2), 'utf8');
   console.log(`✅ ${OUTPUT_FILE} généré`);
   console.log(`   ${data.summary.total} licences: ${data.summary.done} done, ${data.summary.skip} skip, ${data.summary.inProgress} en cours`);
-  console.log(`   ${data.totalClasses} classes | ${data.totalEleves} élèves | ${data.totalMatieres} matières | ${data.totalPeriodes} périodes`);
+  console.log(`   ${data.totalClasses} classes | ${data.totalEleves} élèves (${data.uniqueEleves} uniques) | ${data.totalEnseignants} enseignants (${data.uniqueEnseignants} uniques)`);
+  console.log(`   ${data.totalMatieres} matières notes | ${data.uniqueMatieresGlobal} matières globales uniques | ${data.totalPeriodes} périodes`);
 }
 
 main().catch(err => {

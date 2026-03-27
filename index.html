@@ -318,6 +318,7 @@
           <th>Statut</th>
           <th>Classes</th>
           <th>Élèves</th>
+          <th>Profs</th>
           <th>Matières</th>
           <th>Périodes</th>
           <th>Notes</th>
@@ -374,16 +375,18 @@
       document.getElementById('updatedAt').textContent = `Mis à jour: ${formatDate(DATA.generatedAt)}`;
 
       // KPI Cards
+      const dup = DATA.doublons || {};
       const kpis = [
         { value: s.total, label: 'Licences totales', color: 'var(--blue)', sub: `${Object.keys(DATA.schools).length} écoles` },
         { value: s.done, label: 'Terminées', color: 'var(--green)', sub: `${Math.round(s.done/s.total*100)}%` },
         { value: s.inProgress, label: 'En cours', color: 'var(--yellow)', sub: 'dans archive/' },
         { value: s.skip, label: 'Ignorées', color: 'var(--gray)', sub: 'dans Skip/' },
-        { value: formatNum(DATA.totalEleves), label: 'Élèves', color: 'var(--purple)', sub: 'toutes licences' },
+        { value: formatNum(DATA.totalEleves), label: 'Élèves', color: 'var(--purple)', sub: `${formatNum(DATA.uniqueEleves)} uniques · ${formatNum(dup.eleves)} doublons` },
         { value: formatNum(DATA.totalClasses), label: 'Classes', color: '#06b6d4', sub: 'toutes licences' },
-        { value: formatNum(DATA.totalMatieres), label: 'Matières', color: 'var(--orange)', sub: 'uniques' },
-        { value: formatNum(DATA.totalPeriodes), label: 'Périodes / Sessions', color: '#ec4899', sub: 'uniques' },
-        { value: formatNum(DATA.totalEntries.notes), label: 'Entrées notes', color: 'var(--blue)', sub: 'lignes extraites' },
+        { value: formatNum(DATA.totalEnseignants), label: 'Enseignants', color: '#f59e0b', sub: `${formatNum(DATA.uniqueEnseignants)} uniques · ${formatNum(dup.enseignants)} doublons` },
+        { value: formatNum(DATA.uniqueMatieresGlobal), label: 'Matières (global)', color: 'var(--orange)', sub: `${formatNum(dup.matieresGlobal)} doublons inter-licences` },
+        { value: formatNum(DATA.totalPeriodes), label: 'Périodes / Sessions', color: '#ec4899', sub: 'uniques (notes)' },
+        { value: formatNum(DATA.totalEntries.notes), label: 'Entrées notes', color: 'var(--blue)', sub: `${formatNum(DATA.totalMatieres)} matières dans notes` },
         { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--green)', sub: 'lignes extraites' },
       ];
       document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
@@ -429,6 +432,7 @@
           <td><span class="badge badge-${l.status}">${l.status === 'done' ? 'Terminé' : l.status === 'skip' ? 'Ignoré' : 'En cours'}</span></td>
           <td>${l.nbClasses}</td>
           <td>${formatNum(l.nbEleves) || '—'}</td>
+          <td>${l.nbEnseignants || '—'}</td>
           <td>${l.nbMatieres || '—'}</td>
           <td>${l.nbPeriodes || '—'}</td>
           <td>${scraperBadge(l.scrapers.notes)}</td>

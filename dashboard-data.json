@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T00:55:01.431Z",
+  "generatedAt": "2026-03-27T01:00:01.895Z",
   "summary": {
     "done": 33,
     "skip": 8,
@@ -10,12 +10,16 @@
   "totalEleves": 47827,
   "totalMatieres": 2634,
   "totalPeriodes": 50,
+  "totalEnseignants": 472,
   "totalEntries": {
     "notes": 900727,
     "assiduite": 183918,
-    "classes": 1710,
+    "classes": 1741,
     "pupils": 50
   },
+  "uniqueEleves": 26590,
+  "uniqueEnseignants": 200,
+  "uniqueMatieresGlobal": 3456,
   "schools": {
     "ISM Dakar Ecole d'Ingénieurs": {
       "years": [
@@ -140,7 +144,9 @@
       "status": "in_progress",
       "nbClasses": 32,
       "nbEleves": 1214,
+      "nbEnseignants": 4,
       "nbMatieres": 163,
+      "nbMatieresGlobal": 171,
       "nbPeriodes": 15,
       "lastModified": "2026-03-26T21:51:41.676Z",
       "scrapers": {
@@ -194,7 +200,9 @@
       "status": "in_progress",
       "nbClasses": 45,
       "nbEleves": 1571,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 433,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:25:48.418Z",
       "scrapers": {
@@ -248,7 +256,9 @@
       "status": "in_progress",
       "nbClasses": 62,
       "nbEleves": 1856,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 424,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:22:16.181Z",
       "scrapers": {
@@ -302,7 +312,9 @@
       "status": "in_progress",
       "nbClasses": 19,
       "nbEleves": 661,
+      "nbEnseignants": 38,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 139,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:31:04.982Z",
       "scrapers": {
@@ -356,7 +368,9 @@
       "status": "in_progress",
       "nbClasses": 35,
       "nbEleves": 609,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 296,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:45:35.215Z",
       "scrapers": {
@@ -410,7 +424,9 @@
       "status": "in_progress",
       "nbClasses": 22,
       "nbEleves": 640,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 234,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:47:53.051Z",
       "scrapers": {
@@ -464,7 +480,9 @@
       "status": "in_progress",
       "nbClasses": 24,
       "nbEleves": 697,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 294,
       "nbPeriodes": 0,
       "lastModified": "2026-03-27T00:52:27.674Z",
       "scrapers": {
@@ -518,19 +536,21 @@
       "status": "in_progress",
       "nbClasses": 31,
       "nbEleves": 638,
+      "nbEnseignants": 4,
       "nbMatieres": 0,
+      "nbMatieresGlobal": 308,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T00:51:35.955Z",
+      "lastModified": "2026-03-27T00:57:55.070Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 31,
+          "ok": 31,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 31
         },
         "notes": {
           "total": 0,
@@ -572,7 +592,9 @@
       "status": "in_progress",
       "nbClasses": 122,
       "nbEleves": 5258,
+      "nbEnseignants": 153,
       "nbMatieres": 219,
+      "nbMatieresGlobal": 720,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T21:31:43.629Z",
       "scrapers": {
@@ -626,7 +648,9 @@
       "status": "done",
       "nbClasses": 31,
       "nbEleves": 500,
+      "nbEnseignants": 2,
       "nbMatieres": 231,
+      "nbMatieresGlobal": 252,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T10:11:30.637Z",
       "scrapers": {
@@ -680,7 +704,9 @@
       "status": "done",
       "nbClasses": 38,
       "nbEleves": 568,
+      "nbEnseignants": 1,
       "nbMatieres": 241,
+      "nbMatieresGlobal": 302,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T08:39:21.111Z",
       "scrapers": {
@@ -734,7 +760,9 @@
       "status": "done",
       "nbClasses": 30,
       "nbEleves": 662,
+      "nbEnseignants": 4,
       "nbMatieres": 251,
+      "nbMatieresGlobal": 374,
       "nbPeriodes": 16,
       "lastModified": "2026-03-26T08:05:39.883Z",
       "scrapers": {
@@ -788,7 +816,9 @@
       "status": "done",
       "nbClasses": 31,
       "nbEleves": 727,
+      "nbEnseignants": 4,
       "nbMatieres": 372,
+      "nbMatieresGlobal": 413,
       "nbPeriodes": 13,
       "lastModified": "2026-03-25T23:24:09.021Z",
       "scrapers": {
@@ -842,7 +872,9 @@
       "status": "done",
       "nbClasses": 53,
       "nbEleves": 843,
+      "nbEnseignants": 4,
       "nbMatieres": 425,
+      "nbMatieresGlobal": 783,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T12:40:30.599Z",
       "scrapers": {
@@ -896,7 +928,9 @@
       "status": "done",
       "nbClasses": 43,
       "nbEleves": 1092,
+      "nbEnseignants": 4,
       "nbMatieres": 308,
+      "nbMatieresGlobal": 908,
       "nbPeriodes": 15,
       "lastModified": "2026-03-26T08:17:10.259Z",
       "scrapers": {
@@ -950,7 +984,9 @@
       "status": "done",
       "nbClasses": 50,
       "nbEleves": 1478,
+      "nbEnseignants": 4,
       "nbMatieres": 468,
+      "nbMatieresGlobal": 847,
       "nbPeriodes": 16,
       "lastModified": "2026-03-26T11:56:39.436Z",
       "scrapers": {
@@ -1004,7 +1040,9 @@
       "status": "done",
       "nbClasses": 53,
       "nbEleves": 1428,
+      "nbEnseignants": 4,
       "nbMatieres": 498,
+      "nbMatieresGlobal": 824,
       "nbPeriodes": 17,
       "lastModified": "2026-03-26T12:46:43.790Z",
       "scrapers": {
@@ -1058,7 +1096,9 @@
       "status": "done",
       "nbClasses": 61,
       "nbEleves": 1558,
+      "nbEnseignants": 4,
       "nbMatieres": 334,
+      "nbMatieresGlobal": 816,
       "nbPeriodes": 7,
       "lastModified": "2026-03-26T12:18:50.479Z",
       "scrapers": {
@@ -1112,7 +1152,9 @@
       "status": "done",
       "nbClasses": 20,
       "nbEleves": 614,
+      "nbEnseignants": 4,
       "nbMatieres": 108,
+      "nbMatieresGlobal": 141,
       "nbPeriodes": 15,
       "lastModified": "2026-03-26T13:09:00.308Z",
       "scrapers": {
@@ -1166,7 +1208,9 @@
       "status": "done",
       "nbClasses": 20,
       "nbEleves": 553,
+      "nbEnseignants": 4,
       "nbMatieres": 107,
+      "nbMatieresGlobal": 151,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T20:29:38.602Z",
       "scrapers": {
@@ -1220,7 +1264,9 @@
       "status": "done",
       "nbClasses": 24,
       "nbEleves": 685,
+      "nbEnseignants": 1,
       "nbMatieres": 144,
+      "nbMatieresGlobal": 210,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T16:51:47.778Z",
       "scrapers": {
@@ -1274,7 +1320,9 @@
       "status": "done",
       "nbClasses": 25,
       "nbEleves": 766,
+      "nbEnseignants": 4,
       "nbMatieres": 139,
+      "nbMatieresGlobal": 152,
       "nbPeriodes": 12,
       "lastModified": "2026-03-26T17:56:00.759Z",
       "scrapers": {
@@ -1328,7 +1376,9 @@
       "status": "done",
       "nbClasses": 26,
       "nbEleves": 954,
+      "nbEnseignants": 4,
       "nbMatieres": 139,
+      "nbMatieresGlobal": 150,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T18:48:09.593Z",
       "scrapers": {
@@ -1382,7 +1432,9 @@
       "status": "done",
       "nbClasses": 29,
       "nbEleves": 1084,
+      "nbEnseignants": 4,
       "nbMatieres": 152,
+      "nbMatieresGlobal": 174,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T18:30:23.135Z",
       "scrapers": {
@@ -1436,7 +1488,9 @@
       "status": "done",
       "nbClasses": 33,
       "nbEleves": 1091,
+      "nbEnseignants": 1,
       "nbMatieres": 169,
+      "nbMatieresGlobal": 252,
       "nbPeriodes": 16,
       "lastModified": "2026-03-26T16:31:19.888Z",
       "scrapers": {
@@ -1490,7 +1544,9 @@
       "status": "done",
       "nbClasses": 48,
       "nbEleves": 1145,
+      "nbEnseignants": 4,
       "nbMatieres": 211,
+      "nbMatieresGlobal": 262,
       "nbPeriodes": 16,
       "lastModified": "2026-03-26T20:33:46.940Z",
       "scrapers": {
@@ -1544,7 +1600,9 @@
       "status": "done",
       "nbClasses": 57,
       "nbEleves": 1245,
+      "nbEnseignants": 4,
       "nbMatieres": 153,
+      "nbMatieresGlobal": 239,
       "nbPeriodes": 10,
       "lastModified": "2026-03-26T20:17:45.787Z",
       "scrapers": {
@@ -1598,7 +1656,9 @@
       "status": "done",
       "nbClasses": 22,
       "nbEleves": 877,
+      "nbEnseignants": 48,
       "nbMatieres": 90,
+      "nbMatieresGlobal": 98,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T21:33:44.191Z",
       "scrapers": {
@@ -1652,7 +1712,9 @@
       "status": "done",
       "nbClasses": 19,
       "nbEleves": 835,
+      "nbEnseignants": 42,
       "nbMatieres": 101,
+      "nbMatieresGlobal": 131,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T21:11:28.367Z",
       "scrapers": {
@@ -1706,7 +1768,9 @@
       "status": "done",
       "nbClasses": 22,
       "nbEleves": 909,
+      "nbEnseignants": 4,
       "nbMatieres": 105,
+      "nbMatieresGlobal": 173,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T21:37:14.139Z",
       "scrapers": {
@@ -1760,7 +1824,9 @@
       "status": "done",
       "nbClasses": 23,
       "nbEleves": 961,
+      "nbEnseignants": 4,
       "nbMatieres": 114,
+      "nbMatieresGlobal": 252,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T23:38:10.241Z",
       "scrapers": {
@@ -1814,7 +1880,9 @@
       "status": "done",
       "nbClasses": 26,
       "nbEleves": 1107,
+      "nbEnseignants": 22,
       "nbMatieres": 125,
+      "nbMatieresGlobal": 175,
       "nbPeriodes": 13,
       "lastModified": "2026-03-27T00:30:56.785Z",
       "scrapers": {
@@ -1868,7 +1936,9 @@
       "status": "done",
       "nbClasses": 35,
       "nbEleves": 1269,
+      "nbEnseignants": 4,
       "nbMatieres": 169,
+      "nbMatieresGlobal": 330,
       "nbPeriodes": 13,
       "lastModified": "2026-03-27T00:21:29.824Z",
       "scrapers": {
@@ -1922,7 +1992,9 @@
       "status": "done",
       "nbClasses": 38,
       "nbEleves": 1563,
+      "nbEnseignants": 4,
       "nbMatieres": 154,
+      "nbMatieresGlobal": 362,
       "nbPeriodes": 13,
       "lastModified": "2026-03-26T23:59:16.431Z",
       "scrapers": {
@@ -1976,7 +2048,9 @@
       "status": "done",
       "nbClasses": 39,
       "nbEleves": 1614,
+      "nbEnseignants": 4,
       "nbMatieres": 129,
+      "nbMatieresGlobal": 354,
       "nbPeriodes": 13,
       "lastModified": "2026-03-27T00:09:06.305Z",
       "scrapers": {
@@ -2030,7 +2104,9 @@
       "status": "done",
       "nbClasses": 39,
       "nbEleves": 460,
+      "nbEnseignants": 4,
       "nbMatieres": 122,
+      "nbMatieresGlobal": 543,
       "nbPeriodes": 5,
       "lastModified": "2026-03-26T10:03:57.087Z",
       "scrapers": {
@@ -2084,7 +2160,9 @@
       "status": "done",
       "nbClasses": 26,
       "nbEleves": 305,
+      "nbEnseignants": 4,
       "nbMatieres": 187,
+      "nbMatieresGlobal": 214,
       "nbPeriodes": 8,
       "lastModified": "2026-03-26T20:30:30.799Z",
       "scrapers": {
@@ -2138,7 +2216,9 @@
       "status": "done",
       "nbClasses": 41,
       "nbEleves": 1018,
+      "nbEnseignants": 4,
       "nbMatieres": 195,
+      "nbMatieresGlobal": 205,
       "nbPeriodes": 10,
       "lastModified": "2026-03-26T16:58:52.481Z",
       "scrapers": {
@@ -2192,7 +2272,9 @@
       "status": "done",
       "nbClasses": 73,
       "nbEleves": 1062,
+      "nbEnseignants": 4,
       "nbMatieres": 187,
+      "nbMatieresGlobal": 213,
       "nbPeriodes": 10,
       "lastModified": "2026-03-26T18:04:44.955Z",
       "scrapers": {
@@ -2246,7 +2328,9 @@
       "status": "done",
       "nbClasses": 92,
       "nbEleves": 1241,
+      "nbEnseignants": 4,
       "nbMatieres": 268,
+      "nbMatieresGlobal": 274,
       "nbPeriodes": 9,
       "lastModified": "2026-03-26T18:48:53.852Z",
       "scrapers": {
@@ -2300,7 +2384,9 @@
       "status": "done",
       "nbClasses": 98,
       "nbEleves": 1190,
+      "nbEnseignants": 4,
       "nbMatieres": 273,
+      "nbMatieresGlobal": 273,
       "nbPeriodes": 7,
       "lastModified": "2026-03-26T18:28:15.318Z",
       "scrapers": {
@@ -2354,7 +2440,9 @@
       "status": "done",
       "nbClasses": 11,
       "nbEleves": 167,
+      "nbEnseignants": 4,
       "nbMatieres": 122,
+      "nbMatieresGlobal": 130,
       "nbPeriodes": 7,
       "lastModified": "2026-03-26T11:39:58.188Z",
       "scrapers": {
@@ -2408,7 +2496,9 @@
       "status": "skip",
       "nbClasses": 2,
       "nbEleves": 6,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:02:42.844Z",
       "scrapers": {
@@ -2462,7 +2552,9 @@
       "status": "skip",
       "nbClasses": 13,
       "nbEleves": 55,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:01:40.997Z",
       "scrapers": {
@@ -2516,7 +2608,9 @@
       "status": "skip",
       "nbClasses": 29,
       "nbEleves": 99,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 4,
       "lastModified": "2026-03-26T12:00:24.008Z",
       "scrapers": {
@@ -2570,7 +2664,9 @@
       "status": "skip",
       "nbClasses": 17,
       "nbEleves": 86,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 4,
       "lastModified": "2026-03-26T11:59:38.592Z",
       "scrapers": {
@@ -2624,7 +2720,9 @@
       "status": "skip",
       "nbClasses": 16,
       "nbEleves": 415,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 3,
       "lastModified": "2026-03-26T11:59:10.516Z",
       "scrapers": {
@@ -2678,7 +2776,9 @@
       "status": "skip",
       "nbClasses": 14,
       "nbEleves": 779,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 3,
       "lastModified": "2026-03-26T12:36:46.647Z",
       "scrapers": {
@@ -2732,7 +2832,9 @@
       "status": "skip",
       "nbClasses": 23,
       "nbEleves": 926,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 4,
       "lastModified": "2026-03-26T11:56:52.828Z",
       "scrapers": {
@@ -2786,7 +2888,9 @@
       "status": "skip",
       "nbClasses": 23,
       "nbEleves": 746,
+      "nbEnseignants": 4,
       "nbMatieres": 1,
+      "nbMatieresGlobal": 9,
       "nbPeriodes": 1,
       "lastModified": "2026-03-26T11:58:05.076Z",
       "scrapers": {
@@ -2832,5 +2936,10 @@
         }
       }
     }
-  ]
+  ],
+  "doublons": {
+    "eleves": 16874,
+    "enseignants": 272,
+    "matieresGlobal": 10612
+  }
 }
