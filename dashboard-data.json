@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-27T09:05:00.922Z",
+  "generatedAt": "2026-03-27T09:10:00.507Z",
   "summary": {
-    "done": 48,
+    "done": 49,
     "skip": 8,
-    "inProgress": 8,
+    "inProgress": 7,
     "total": 64
   },
   "totalClasses": 2229,
@@ -80,13 +80,13 @@
         "2020-2021",
         "2021-2022",
         "2023-2024",
+        "2024-2025",
         "2025-2026",
-        "2022-2023",
-        "2024-2025"
+        "2022-2023"
       ],
-      "doneCount": 8,
+      "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 2
+      "inProgressCount": 1
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -218,7 +218,7 @@
       "nbMatieres": 165,
       "nbMatieresGlobal": 425,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-27T03:54:36.234Z",
+      "lastModified": "2026-03-27T09:05:37.717Z",
       "scrapers": {
         "classes": {
           "total": 44,
@@ -237,7 +237,7 @@
           "error": 0,
           "noperiod": 24,
           "nofield": 153,
-          "validated": 0,
+          "validated": 374,
           "totalEntries": 6876
         },
         "assiduite": {
@@ -249,62 +249,6 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 7558
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
-    {
-      "name": "ISM_Dakar_Graduate_School_2024-2025",
-      "displayName": "ISM Dakar Graduate School 2024-2025",
-      "school": "ISM Dakar Graduate School",
-      "year": "2024-2025",
-      "status": "in_progress",
-      "nbClasses": 55,
-      "nbEleves": 1053,
-      "nbEnseignants": 4,
-      "nbMatieres": 356,
-      "nbMatieresGlobal": 779,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-27T09:05:00.642Z",
-      "scrapers": {
-        "classes": {
-          "total": 55,
-          "ok": 55,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 55
-        },
-        "notes": {
-          "total": 1348,
-          "ok": 1252,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 4,
-          "nofield": 92,
-          "validated": 93,
-          "totalEntries": 22993
-        },
-        "assiduite": {
-          "total": 271,
-          "ok": 204,
-          "empty": 66,
-          "error": 0,
-          "noperiod": 1,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 4024
         },
         "pupils": {
           "total": 1,
@@ -2545,6 +2489,62 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 4136
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Graduate_School_2024-2025",
+      "displayName": "ISM Dakar Graduate School 2024-2025",
+      "school": "ISM Dakar Graduate School",
+      "year": "2024-2025",
+      "status": "done",
+      "nbClasses": 55,
+      "nbEleves": 1053,
+      "nbEnseignants": 4,
+      "nbMatieres": 356,
+      "nbMatieresGlobal": 779,
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-27T09:05:00.642Z",
+      "scrapers": {
+        "classes": {
+          "total": 55,
+          "ok": 55,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 55
+        },
+        "notes": {
+          "total": 1348,
+          "ok": 1252,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 4,
+          "nofield": 92,
+          "validated": 93,
+          "totalEntries": 22993
+        },
+        "assiduite": {
+          "total": 271,
+          "ok": 204,
+          "empty": 66,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4024
         },
         "pupils": {
           "total": 1,
