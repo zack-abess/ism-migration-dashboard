@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-03-27T01:20:01.338Z",
+  "generatedAt": "2026-03-27T01:25:01.342Z",
   "summary": {
     "done": 35,
     "skip": 8,
-    "inProgress": 9,
-    "total": 52
+    "inProgress": 10,
+    "total": 53
   },
-  "totalClasses": 1842,
-  "totalEleves": 49659,
-  "totalMatieres": 3030,
+  "totalClasses": 1886,
+  "totalEleves": 50551,
+  "totalMatieres": 3062,
   "totalPeriodes": 50,
-  "totalEnseignants": 480,
+  "totalEnseignants": 484,
   "totalEntries": {
-    "notes": 929142,
-    "assiduite": 183918,
+    "notes": 958912,
+    "assiduite": 187201,
     "classes": 1803,
-    "pupils": 52
+    "pupils": 53
   },
-  "uniqueEleves": 27821,
+  "uniqueEleves": 28382,
   "uniqueEnseignants": 200,
-  "uniqueMatieresGlobal": 3622,
+  "uniqueMatieresGlobal": 3718,
   "schools": {
     "ISM Dakar Ecole d'Ingénieurs": {
       "years": [
@@ -79,11 +79,12 @@
         "2018-2019",
         "2020-2021",
         "2021-2022",
-        "2022-2023"
+        "2022-2023",
+        "2023-2024"
       ],
       "doneCount": 2,
       "skipCount": 0,
-      "inProgressCount": 5
+      "inProgressCount": 6
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -203,10 +204,10 @@
       "nbClasses": 45,
       "nbEleves": 1571,
       "nbEnseignants": 4,
-      "nbMatieres": 0,
+      "nbMatieres": 111,
       "nbMatieresGlobal": 433,
-      "nbPeriodes": 0,
-      "lastModified": "2026-03-27T00:25:48.418Z",
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-27T01:24:16.665Z",
       "scrapers": {
         "classes": {
           "total": 45,
@@ -219,14 +220,14 @@
           "totalEntries": 45
         },
         "notes": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
+          "total": 1156,
+          "ok": 1070,
+          "empty": 46,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
+          "noperiod": 16,
+          "nofield": 24,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 29770
         },
         "assiduite": {
           "total": 178,
@@ -486,7 +487,63 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 347,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T01:07:50.879Z",
+      "lastModified": "2026-03-27T01:21:23.895Z",
+      "scrapers": {
+        "classes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 143,
+          "ok": 122,
+          "empty": 20,
+          "error": 0,
+          "noperiod": 1,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 3283
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Graduate_School_2022-2023",
+      "displayName": "ISM Dakar Graduate School 2022-2023",
+      "school": "ISM Dakar Graduate School",
+      "year": "2022-2023",
+      "status": "in_progress",
+      "nbClasses": 44,
+      "nbEleves": 987,
+      "nbEnseignants": 4,
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 425,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-27T01:19:50.108Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -531,18 +588,18 @@
       }
     },
     {
-      "name": "ISM_Dakar_Graduate_School_2022-2023",
-      "displayName": "ISM Dakar Graduate School 2022-2023",
+      "name": "ISM_Dakar_Graduate_School_2023-2024",
+      "displayName": "ISM Dakar Graduate School 2023-2024",
       "school": "ISM Dakar Graduate School",
-      "year": "2022-2023",
+      "year": "2023-2024",
       "status": "in_progress",
       "nbClasses": 0,
-      "nbEleves": 987,
+      "nbEleves": 892,
       "nbEnseignants": 4,
       "nbMatieres": 0,
-      "nbMatieresGlobal": 425,
+      "nbMatieresGlobal": 493,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-27T01:19:50.108Z",
+      "lastModified": "2026-03-27T01:25:01.623Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -3052,8 +3109,8 @@
     }
   ],
   "doublons": {
-    "eleves": 17475,
-    "enseignants": 280,
-    "matieresGlobal": 11218
+    "eleves": 17803,
+    "enseignants": 284,
+    "matieresGlobal": 11615
   }
 }
