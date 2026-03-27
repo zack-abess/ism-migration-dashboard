@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T03:20:00.698Z",
+  "generatedAt": "2026-03-27T03:25:01.172Z",
   "summary": {
     "done": 43,
     "skip": 8,
     "inProgress": 13,
     "total": 64
   },
-  "totalClasses": 2193,
+  "totalClasses": 2229,
   "totalEleves": 55621,
   "totalMatieres": 3710,
   "totalPeriodes": 58,
@@ -772,7 +772,7 @@
       "school": "ISM Dakar Madiba Leadership Institut",
       "year": "2024-2025",
       "status": "in_progress",
-      "nbClasses": 0,
+      "nbClasses": 36,
       "nbEleves": 434,
       "nbEnseignants": 1,
       "nbMatieres": 0,
