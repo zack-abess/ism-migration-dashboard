@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T08:55:00.600Z",
+  "generatedAt": "2026-03-27T09:00:01.854Z",
   "summary": {
     "done": 46,
     "skip": 8,
@@ -8,11 +8,11 @@
   },
   "totalClasses": 2229,
   "totalEleves": 55621,
-  "totalMatieres": 4542,
+  "totalMatieres": 4562,
   "totalPeriodes": 73,
   "totalEnseignants": 518,
   "totalEntries": {
-    "notes": 1189003,
+    "notes": 1194532,
     "assiduite": 214033,
     "classes": 2227,
     "pupils": 63
@@ -274,7 +274,7 @@
       "nbMatieres": 356,
       "nbMatieresGlobal": 779,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-27T03:47:08.582Z",
+      "lastModified": "2026-03-27T08:58:59.349Z",
       "scrapers": {
         "classes": {
           "total": 55,
@@ -293,7 +293,7 @@
           "error": 0,
           "noperiod": 4,
           "nofield": 92,
-          "validated": 0,
+          "validated": 93,
           "totalEntries": 21470
         },
         "assiduite": {
@@ -327,10 +327,10 @@
       "nbClasses": 18,
       "nbEleves": 367,
       "nbEnseignants": 4,
-      "nbMatieres": 71,
+      "nbMatieres": 111,
       "nbMatieresGlobal": 124,
       "nbPeriodes": 20,
-      "lastModified": "2026-03-27T08:44:00.169Z",
+      "lastModified": "2026-03-27T08:56:10.688Z",
       "scrapers": {
         "classes": {
           "total": 18,
@@ -343,14 +343,14 @@
           "totalEntries": 18
         },
         "notes": {
-          "total": 232,
-          "ok": 142,
+          "total": 447,
+          "ok": 357,
           "empty": 0,
           "error": 0,
           "noperiod": 9,
           "nofield": 81,
           "validated": 81,
-          "totalEntries": 3746
+          "totalEntries": 8351
         },
         "assiduite": {
           "total": 118,
@@ -383,10 +383,10 @@
       "nbClasses": 28,
       "nbEleves": 491,
       "nbEnseignants": 4,
-      "nbMatieres": 199,
+      "nbMatieres": 222,
       "nbMatieresGlobal": 381,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-27T08:40:55.204Z",
+      "lastModified": "2026-03-27T08:58:12.147Z",
       "scrapers": {
         "classes": {
           "total": 28,
@@ -399,14 +399,14 @@
           "totalEntries": 28
         },
         "notes": {
-          "total": 525,
-          "ok": 457,
+          "total": 604,
+          "ok": 520,
           "empty": 0,
           "error": 0,
           "noperiod": 4,
-          "nofield": 64,
+          "nofield": 80,
           "validated": 64,
-          "totalEntries": 9971
+          "totalEntries": 10895
         },
         "assiduite": {
           "total": 133,
