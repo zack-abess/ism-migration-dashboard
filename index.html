@@ -597,9 +597,12 @@
       // Toutes les écoles (sans filtre)
       const filtered = schools;
 
-      // Ajuster la hauteur du canvas selon le nombre d'écoles
+      // Ajuster la hauteur du canvas selon le nombre d'écoles (50px par école)
       const canvas = document.getElementById('crossSchoolChart');
-      canvas.style.maxHeight = Math.max(300, filtered.length * 40 + 80) + 'px';
+      const chartHeight = Math.max(300, filtered.length * 50 + 100);
+      canvas.style.maxHeight = chartHeight + 'px';
+      canvas.style.height = chartHeight + 'px';
+      canvas.parentElement.style.height = chartHeight + 'px';
 
       const ctx = canvas.getContext('2d');
       if (window._crossSchoolChart) window._crossSchoolChart.destroy();
@@ -632,7 +635,21 @@
           },
           scales: {
             x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-            y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } },
+            y: {
+              stacked: true,
+              ticks: {
+                color: '#e2e8f0',
+                font: { size: 12 },
+                autoSkip: false,
+                callback: function(value, index) {
+                  const label = filtered[index].name;
+                  const total = filtered[index].totalProblems;
+                  return total === 0 ? label + ' (aucun)' : label;
+                }
+              },
+              grid: { display: false },
+              afterFit: function(axis) { axis.width = 220; }
+            },
           }
         }
       });
