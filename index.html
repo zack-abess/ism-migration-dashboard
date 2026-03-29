@@ -321,6 +321,14 @@
 
   <div class="table-section">
     <h2>Détail par licence</h2>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;align-items:center">
+      <span style="color:var(--text-muted);font-size:.8rem;font-weight:600">Légende :</span>
+      <span class="badge badge-ok">ok</span>
+      <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">vide</span>
+      <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">err</span>
+      <span class="badge badge-issues">no_per <span style="font-weight:400;opacity:.7">= pas de période</span></span>
+      <span class="badge badge-issues">no_mat <span style="font-weight:400;opacity:.7">= pas de matière</span></span>
+    </div>
     <div class="filter-bar" id="filterBar"></div>
     <table>
       <thead>
@@ -586,9 +594,8 @@
       schools.forEach(s => s.totalProblems = s.empty + s.error + s.noperiod + s.nofield);
       schools.sort((a, b) => b.totalProblems - a.totalProblems);
 
-      // Filtrer les écoles sans problèmes
-      const filtered = schools.filter(s => s.totalProblems > 0);
-      if (filtered.length === 0) return;
+      // Toutes les écoles (sans filtre)
+      const filtered = schools;
 
       // Ajuster la hauteur du canvas selon le nombre d'écoles
       const canvas = document.getElementById('crossSchoolChart');
