@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-03-29T17:05:01.008Z",
+  "generatedAt": "2026-03-29T17:10:00.484Z",
   "summary": {
     "done": 51,
     "skip": 8,
-    "inProgress": 5,
-    "total": 64
+    "inProgress": 4,
+    "total": 63
   },
   "totalClasses": 2193,
   "totalEleves": 55187,
-  "totalMatieres": 4666,
+  "totalMatieres": 4649,
   "totalPeriodes": 72,
   "totalEnseignants": 517,
   "totalEntries": {
-    "notes": 1216784,
+    "notes": 1209399,
     "assiduite": 212765,
     "classes": 2191,
     "pupils": 62
@@ -139,14 +139,6 @@
       "skipCount": 8,
       "inProgressCount": 0
     },
-    "Espace Élémentaire Rose DIENG": {
-      "years": [
-        "2025-2026"
-      ],
-      "doneCount": 0,
-      "skipCount": 0,
-      "inProgressCount": 1
-    },
     "ISM-DAKAR": {
       "years": [
         "courant"
@@ -157,62 +149,6 @@
     }
   },
   "licences": [
-    {
-      "name": "Espace_Élémentaire_Rose_DIENG_2025-2026",
-      "displayName": "Espace Élémentaire Rose DIENG 2025-2026",
-      "school": "Espace Élémentaire Rose DIENG",
-      "year": "2025-2026",
-      "status": "in_progress",
-      "nbClasses": 0,
-      "nbEleves": 0,
-      "nbEnseignants": 0,
-      "nbMatieres": 0,
-      "nbMatieresGlobal": 0,
-      "nbPeriodes": 0,
-      "lastModified": null,
-      "scrapers": {
-        "classes": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        },
-        "notes": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        },
-        "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        },
-        "pupils": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        }
-      }
-    },
     {
       "name": "ISM_Dakar_Ecole_de_Droit_2022-2023",
       "displayName": "ISM Dakar Ecole de Droit 2022-2023",
@@ -225,7 +161,7 @@
       "nbMatieres": 163,
       "nbMatieresGlobal": 171,
       "nbPeriodes": 15,
-      "lastModified": "2026-03-29T16:59:28.930Z",
+      "lastModified": "2026-03-29T17:08:07.711Z",
       "scrapers": {
         "classes": {
           "total": 32,
@@ -334,7 +270,7 @@
       "nbClasses": 35,
       "nbEleves": 468,
       "nbEnseignants": 4,
-      "nbMatieres": 256,
+      "nbMatieres": 167,
       "nbMatieresGlobal": 512,
       "nbPeriodes": 16,
       "lastModified": "2026-03-29T03:30:48.267Z",
@@ -350,14 +286,14 @@
           "totalEntries": 35
         },
         "notes": {
-          "total": 1005,
-          "ok": 745,
-          "empty": 28,
+          "total": 584,
+          "ok": 443,
+          "empty": 13,
           "error": 0,
-          "noperiod": 17,
-          "nofield": 215,
-          "validated": 394,
-          "totalEntries": 14562
+          "noperiod": 16,
+          "nofield": 112,
+          "validated": 0,
+          "totalEntries": 7177
         },
         "assiduite": {
           "total": 231,
