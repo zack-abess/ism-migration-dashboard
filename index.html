@@ -308,6 +308,13 @@
   </div>
 
   <div class="progress-section">
+    <h2>Comparaison inter-écoles — Problèmes Notes + Assiduité</h2>
+    <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
+      <canvas id="crossSchoolChart" style="max-height:500px"></canvas>
+    </div>
+  </div>
+
+  <div class="progress-section">
     <h2>Problèmes par école — Notes vs Assiduité</h2>
     <div class="charts-grid" id="schoolStatsGrid" style="margin-top:16px"></div>
   </div>
@@ -555,8 +562,73 @@
         });
       }
 
+      // Cross-school comparison chart
+      renderCrossSchoolChart();
+
       // Per-school problem charts
       renderSchoolCharts();
+    }
+
+    function renderCrossSchoolChart() {
+      const schools = Object.entries(DATA.schools).map(([name, s]) => {
+        const n = s.scrapers.notes;
+        const a = s.scrapers.assiduite;
+        return {
+          name: name.replace("ISM ", "").replace("Dakar ", ""),
+          empty:    (n.empty    || 0) + (a.empty    || 0),
+          error:    (n.error    || 0) + (a.error    || 0),
+          noperiod: (n.noperiod || 0) + (a.noperiod || 0),
+          nofield:  (n.nofield  || 0) + (a.nofield  || 0),
+        };
+      });
+
+      // Calculer total problèmes et trier desc
+      schools.forEach(s => s.totalProblems = s.empty + s.error + s.noperiod + s.nofield);
+      schools.sort((a, b) => b.totalProblems - a.totalProblems);
+
+      // Filtrer les écoles sans problèmes
+      const filtered = schools.filter(s => s.totalProblems > 0);
+      if (filtered.length === 0) return;
+
+      // Ajuster la hauteur du canvas selon le nombre d'écoles
+      const canvas = document.getElementById('crossSchoolChart');
+      canvas.style.maxHeight = Math.max(300, filtered.length * 40 + 80) + 'px';
+
+      const ctx = canvas.getContext('2d');
+      if (window._crossSchoolChart) window._crossSchoolChart.destroy();
+
+      window._crossSchoolChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: filtered.map(s => s.name),
+          datasets: [
+            { label: 'Vide',        data: filtered.map(s => s.empty),    backgroundColor: '#ef4444' },
+            { label: 'Erreur',      data: filtered.map(s => s.error),    backgroundColor: '#dc2626' },
+            { label: 'No période',  data: filtered.map(s => s.noperiod), backgroundColor: '#f97316' },
+            { label: 'No matière',  data: filtered.map(s => s.nofield),  backgroundColor: '#eab308' },
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { labels: { color: '#94a3b8', font: { size: 11 } } },
+            tooltip: {
+              callbacks: {
+                afterBody: function(items) {
+                  const idx = items[0].dataIndex;
+                  return 'Total problèmes: ' + filtered[idx].totalProblems;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+            y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } },
+          }
+        }
+      });
     }
 
     function renderSchoolCharts() {
