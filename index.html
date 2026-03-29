@@ -309,8 +309,8 @@
 
   <div class="progress-section">
     <h2>Comparaison inter-écoles — Problèmes Notes + Assiduité</h2>
-    <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
-      <canvas id="crossSchoolChart" style="max-height:500px"></canvas>
+    <div id="crossSchoolContainer" class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px;position:relative">
+      <canvas id="crossSchoolChart"></canvas>
     </div>
   </div>
 
@@ -597,12 +597,11 @@
       // Toutes les écoles (sans filtre)
       const filtered = schools;
 
-      // Ajuster la hauteur du canvas selon le nombre d'écoles (50px par école)
-      const canvas = document.getElementById('crossSchoolChart');
+      // Forcer la hauteur du container pour que chaque école ait son label
+      const container = document.getElementById('crossSchoolContainer');
       const chartHeight = Math.max(300, filtered.length * 50 + 100);
-      canvas.style.maxHeight = chartHeight + 'px';
-      canvas.style.height = chartHeight + 'px';
-      canvas.parentElement.style.height = chartHeight + 'px';
+      container.style.height = chartHeight + 'px';
+      const canvas = document.getElementById('crossSchoolChart');
 
       const ctx = canvas.getContext('2d');
       if (window._crossSchoolChart) window._crossSchoolChart.destroy();
