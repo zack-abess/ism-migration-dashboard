@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T17:45:00.880Z",
+  "generatedAt": "2026-03-29T17:50:00.526Z",
   "summary": {
     "done": 51,
     "skip": 8,
@@ -35,7 +35,48 @@
       ],
       "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 0
+      "inProgressCount": 0,
+      "nbClasses": 390,
+      "nbEleves": 8856,
+      "nbEnseignants": 31,
+      "scrapers": {
+        "notes": {
+          "ok": 10213,
+          "empty": 169,
+          "error": 0,
+          "noperiod": 123,
+          "nofield": 443,
+          "total": 10948,
+          "totalEntries": 255174
+        },
+        "assiduite": {
+          "ok": 966,
+          "empty": 328,
+          "error": 0,
+          "noperiod": 9,
+          "nofield": 0,
+          "total": 1303,
+          "totalEntries": 22624
+        },
+        "classes": {
+          "ok": 388,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 388,
+          "totalEntries": 388
+        },
+        "pupils": {
+          "ok": 9,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 9,
+          "totalEntries": 9
+        }
+      }
     },
     "ISM Dakar Ecole de Droit": {
       "years": [
@@ -52,7 +93,48 @@
       ],
       "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 1
+      "inProgressCount": 1,
+      "nbClasses": 314,
+      "nbEleves": 9351,
+      "nbEnseignants": 34,
+      "scrapers": {
+        "notes": {
+          "ok": 7847,
+          "empty": 401,
+          "error": 0,
+          "noperiod": 88,
+          "nofield": 757,
+          "total": 9093,
+          "totalEntries": 246081
+        },
+        "assiduite": {
+          "ok": 1252,
+          "empty": 379,
+          "error": 0,
+          "noperiod": 18,
+          "nofield": 0,
+          "total": 1649,
+          "totalEntries": 31386
+        },
+        "classes": {
+          "ok": 314,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 314,
+          "totalEntries": 314
+        },
+        "pupils": {
+          "ok": 10,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 10,
+          "totalEntries": 10
+        }
+      }
     },
     "ISM Dakar Ecole de Management": {
       "years": [
@@ -69,7 +151,48 @@
       ],
       "doneCount": 10,
       "skipCount": 0,
-      "inProgressCount": 0
+      "inProgressCount": 0,
+      "nbClasses": 331,
+      "nbEleves": 12562,
+      "nbEnseignants": 140,
+      "scrapers": {
+        "notes": {
+          "ok": 12560,
+          "empty": 272,
+          "error": 0,
+          "noperiod": 97,
+          "nofield": 1095,
+          "total": 14024,
+          "totalEntries": 399794
+        },
+        "assiduite": {
+          "ok": 1909,
+          "empty": 243,
+          "error": 0,
+          "noperiod": 5,
+          "nofield": 0,
+          "total": 2157,
+          "totalEntries": 62114
+        },
+        "classes": {
+          "ok": 331,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 331,
+          "totalEntries": 331
+        },
+        "pupils": {
+          "ok": 10,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 10,
+          "totalEntries": 10
+        }
+      }
     },
     "ISM Dakar Graduate School": {
       "years": [
@@ -86,7 +209,48 @@
       ],
       "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 1
+      "inProgressCount": 1,
+      "nbClasses": 314,
+      "nbEleves": 7022,
+      "nbEnseignants": 70,
+      "scrapers": {
+        "notes": {
+          "ok": 6090,
+          "empty": 55,
+          "error": 0,
+          "noperiod": 94,
+          "nofield": 781,
+          "total": 7020,
+          "totalEntries": 136853
+        },
+        "assiduite": {
+          "ok": 1397,
+          "empty": 233,
+          "error": 0,
+          "noperiod": 7,
+          "nofield": 0,
+          "total": 1637,
+          "totalEntries": 30563
+        },
+        "classes": {
+          "ok": 314,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 314,
+          "totalEntries": 314
+        },
+        "pupils": {
+          "ok": 9,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 9,
+          "totalEntries": 9
+        }
+      }
     },
     "ISM Dakar Madiba Leadership Institut": {
       "years": [
@@ -102,7 +266,48 @@
       ],
       "doneCount": 8,
       "skipCount": 0,
-      "inProgressCount": 1
+      "inProgressCount": 1,
+      "nbClasses": 244,
+      "nbEleves": 4043,
+      "nbEnseignants": 33,
+      "scrapers": {
+        "notes": {
+          "ok": 3846,
+          "empty": 39,
+          "error": 0,
+          "noperiod": 71,
+          "nofield": 698,
+          "total": 4654,
+          "totalEntries": 78782
+        },
+        "assiduite": {
+          "ok": 660,
+          "empty": 516,
+          "error": 0,
+          "noperiod": 25,
+          "nofield": 0,
+          "total": 1201,
+          "totalEntries": 10424
+        },
+        "classes": {
+          "ok": 244,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 244,
+          "totalEntries": 244
+        },
+        "pupils": {
+          "ok": 9,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 9,
+          "totalEntries": 9
+        }
+      }
     },
     "ISM Online & ISF": {
       "years": [
@@ -114,7 +319,48 @@
       ],
       "doneCount": 5,
       "skipCount": 0,
-      "inProgressCount": 0
+      "inProgressCount": 0,
+      "nbClasses": 330,
+      "nbEleves": 4816,
+      "nbEnseignants": 20,
+      "scrapers": {
+        "notes": {
+          "ok": 1431,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 126,
+          "nofield": 1038,
+          "total": 2595,
+          "totalEntries": 31293
+        },
+        "assiduite": {
+          "ok": 1603,
+          "empty": 317,
+          "error": 0,
+          "noperiod": 18,
+          "nofield": 0,
+          "total": 1938,
+          "totalEntries": 20075
+        },
+        "classes": {
+          "ok": 330,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 330,
+          "totalEntries": 330
+        },
+        "pupils": {
+          "ok": 5,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 5,
+          "totalEntries": 5
+        }
+      }
     },
     "ISM Online et ISF": {
       "years": [
@@ -122,7 +368,48 @@
       ],
       "doneCount": 1,
       "skipCount": 0,
-      "inProgressCount": 0
+      "inProgressCount": 0,
+      "nbClasses": 11,
+      "nbEleves": 167,
+      "nbEnseignants": 4,
+      "scrapers": {
+        "notes": {
+          "ok": 163,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 7,
+          "total": 170,
+          "totalEntries": 2361
+        },
+        "assiduite": {
+          "ok": 27,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 27,
+          "totalEntries": 391
+        },
+        "classes": {
+          "ok": 11,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 11,
+          "totalEntries": 11
+        },
+        "pupils": {
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 1,
+          "totalEntries": 1
+        }
+      }
     },
     "ISM HQ": {
       "years": [
@@ -137,7 +424,48 @@
       ],
       "doneCount": 0,
       "skipCount": 8,
-      "inProgressCount": 0
+      "inProgressCount": 0,
+      "nbClasses": 137,
+      "nbEleves": 3112,
+      "nbEnseignants": 32,
+      "scrapers": {
+        "notes": {
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 57,
+          "nofield": 318,
+          "total": 375,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "ok": 333,
+          "empty": 9,
+          "error": 0,
+          "noperiod": 23,
+          "nofield": 0,
+          "total": 365,
+          "totalEntries": 4536
+        },
+        "classes": {
+          "ok": 137,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 137,
+          "totalEntries": 137
+        },
+        "pupils": {
+          "ok": 8,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 8,
+          "totalEntries": 8
+        }
+      }
     },
     "ISM-DAKAR": {
       "years": [
@@ -145,7 +473,48 @@
       ],
       "doneCount": 0,
       "skipCount": 0,
-      "inProgressCount": 1
+      "inProgressCount": 1,
+      "nbClasses": 122,
+      "nbEleves": 5258,
+      "nbEnseignants": 153,
+      "scrapers": {
+        "notes": {
+          "ok": 810,
+          "empty": 86,
+          "error": 0,
+          "noperiod": 73,
+          "nofield": 364,
+          "total": 1333,
+          "totalEntries": 31339
+        },
+        "assiduite": {
+          "ok": 554,
+          "empty": 319,
+          "error": 0,
+          "noperiod": 27,
+          "nofield": 0,
+          "total": 900,
+          "totalEntries": 30652
+        },
+        "classes": {
+          "ok": 122,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 122,
+          "totalEntries": 122
+        },
+        "pupils": {
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 1,
+          "totalEntries": 1
+        }
+      }
     }
   },
   "licences": [
@@ -161,7 +530,7 @@
       "nbMatieres": 163,
       "nbMatieresGlobal": 171,
       "nbPeriodes": 15,
-      "lastModified": "2026-03-29T17:27:21.194Z",
+      "lastModified": "2026-03-29T17:47:26.146Z",
       "scrapers": {
         "classes": {
           "total": 32,
@@ -180,7 +549,7 @@
           "error": 0,
           "noperiod": 6,
           "nofield": 84,
-          "validated": 70,
+          "validated": 84,
           "totalEntries": 34111
         },
         "assiduite": {

@@ -355,12 +355,38 @@ async function main() {
 
       // Schools aggregation
       if (!data.schools[school]) {
-        data.schools[school] = { years: [], doneCount: 0, skipCount: 0, inProgressCount: 0 };
+        data.schools[school] = {
+          years: [], doneCount: 0, skipCount: 0, inProgressCount: 0,
+          nbClasses: 0, nbEleves: 0, nbEnseignants: 0,
+          scrapers: {
+            notes:     { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, totalEntries: 0 },
+            assiduite: { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, totalEntries: 0 },
+            classes:   { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, totalEntries: 0 },
+            pupils:    { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, totalEntries: 0 },
+          },
+        };
       }
-      data.schools[school].years.push(year);
-      if (cat.status === 'done') data.schools[school].doneCount++;
-      if (cat.status === 'skip') data.schools[school].skipCount++;
-      if (cat.status === 'in_progress') data.schools[school].inProgressCount++;
+      const s = data.schools[school];
+      s.years.push(year);
+      s.nbClasses += nbClasses;
+      s.nbEleves += nbEleves;
+      s.nbEnseignants += globalData.teachers.length;
+      if (cat.status === 'done') s.doneCount++;
+      if (cat.status === 'skip') s.skipCount++;
+      if (cat.status === 'in_progress') s.inProgressCount++;
+
+      // Agréger les stats scrapers par école
+      for (const scraper of SCRAPER_TYPES) {
+        const st = scraperStats[scraper];
+        const schoolSt = s.scrapers[scraper];
+        schoolSt.ok += st.ok;
+        schoolSt.empty += st.empty;
+        schoolSt.error += st.error;
+        schoolSt.noperiod += st.noperiod;
+        schoolSt.nofield += st.nofield;
+        schoolSt.total += st.total;
+        schoolSt.totalEntries += st.totalEntries;
+      }
 
       // Summary
       data.summary[cat.status === 'in_progress' ? 'inProgress' : cat.status]++;
