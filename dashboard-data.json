@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:05:01.253Z",
+  "generatedAt": "2026-03-30T19:10:01.119Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4731,11 +4731,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.32,
-      "totalNotes": 2290583,
+      "totalNotes": 2294133,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5481483.800000079,
-          "count": 472769,
+          "sum": 5519643.730000078,
+          "count": 476319,
           "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 355105,
-          "total": 472769,
-          "taux": 75.1
+          "reussi": 357457,
+          "total": 476319,
+          "taux": 75
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4899,8 +4899,8 @@
         },
         {
           "matiere": "Business English 2",
-          "moy": 11.68,
-          "count": 8916
+          "moy": 11.7,
+          "count": 8982
         },
         {
           "matiere": "Humanitaire",
@@ -4921,11 +4921,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1145294
+          "count": 1147070
         },
         "exam": {
           "moy": 11.1,
-          "count": 1145289
+          "count": 1147063
         }
       }
     },
