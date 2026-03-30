@@ -34,6 +34,29 @@ function listLicenceDirs(baseDir) {
     }));
 }
 
+// Normalise une nationalité : casse, accents, variantes orthographiques
+function normalizeNationalite(raw) {
+  if (!raw) return null;
+  // Trim, lowercase, strip accents
+  let n = raw.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // Supprimer tirets/espaces multiples
+  n = n.replace(/[\s-]+/g, ' ').trim();
+  if (!n || n.length < 2) return null;
+  // Corrections orthographiques connues
+  const fixes = {
+    'burkinabee': 'burkinabe',
+    'burkinabaise': 'burkinabe',
+    'guinnenne': 'guineenne',
+    'guinenne': 'guineenne',
+    'camerounais': 'camerounaise',
+    'equato guineenne': 'equato-guineenne',
+    'bissau guineenne': 'bissau-guineenne',
+  };
+  if (fixes[n]) n = fixes[n];
+  // Capitalize proprement : première lettre majuscule, reste minuscule
+  return n.charAt(0).toUpperCase() + n.slice(1);
+}
+
 // Normalise les variantes de noms d'écoles (erreurs de saisie, typos)
 function normalizeSchoolName(name) {
   const aliases = {
@@ -707,7 +730,10 @@ async function main() {
       if (p.exempt) businessData.demographics.exempts++;
 
       if (p.nationalite) {
-        businessData.demographics.nationalites[p.nationalite] = (businessData.demographics.nationalites[p.nationalite] || 0) + 1;
+        const natNorm = normalizeNationalite(p.nationalite);
+        if (natNorm) {
+          businessData.demographics.nationalites[natNorm] = (businessData.demographics.nationalites[natNorm] || 0) + 1;
+        }
       }
 
       if (p.dateNaissance) {
