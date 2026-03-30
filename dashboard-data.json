@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-03-30T13:55:00.747Z",
+  "generatedAt": "2026-03-30T14:00:01.804Z",
   "summary": {
     "done": 56,
     "skip": 8,
-    "inProgress": 0,
-    "total": 64
+    "inProgress": 1,
+    "total": 65
   },
   "totalClasses": 2229,
   "totalEleves": 55621,
@@ -80,11 +80,12 @@
         "2021-2022",
         "2022-2023",
         "2024-2025",
-        "2025-2026"
+        "2025-2026",
+        "2023-2024"
       ],
       "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 0,
+      "inProgressCount": 1,
       "nbClasses": 390,
       "nbEleves": 8856,
       "nbEnseignants": 31,
@@ -519,6 +520,62 @@
     }
   },
   "licences": [
+    {
+      "name": "ISM_Dakar_Ecole_d'Ingénieurs_2023-2024",
+      "displayName": "ISM Dakar Ecole d'Ingénieurs 2023-2024",
+      "school": "ISM Dakar Ecole d'Ingénieurs",
+      "year": "2023-2024",
+      "status": "in_progress",
+      "nbClasses": 0,
+      "nbEleves": 0,
+      "nbEnseignants": 0,
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 0,
+      "nbPeriodes": 0,
+      "lastModified": null,
+      "scrapers": {
+        "classes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "pupils": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        }
+      }
+    },
     {
       "name": "ISM_Dakar_Ecole_d'Ingénieurs",
       "displayName": "ISM Dakar Ecole d'Ingénieurs",
@@ -4112,6 +4169,8 @@
   "business": {
     "effectifs": {
       "ISM Dakar Ecole d'Ingénieurs": {
+        "2023-2024": 0,
+        "courant": 500,
         "2017-2018": 568,
         "2018-2019": 662,
         "2019-2020": 727,
@@ -4119,8 +4178,7 @@
         "2021-2022": 1092,
         "2022-2023": 1478,
         "2024-2025": 1428,
-        "2025-2026": 1558,
-        "2023-2024": 500
+        "2025-2026": 1558
       },
       "ISM Dakar Ecole de Droit": {
         "courant": 614,
@@ -6689,9 +6747,9 @@
     },
     "projections": {
       "ISM Dakar Ecole d'Ingénieurs": {
-        "slope": 107.3,
-        "predict2027": 1521,
-        "predict2028": 1628,
+        "slope": 90.7,
+        "predict2027": 1382,
+        "predict2028": 1472,
         "lastYear": 1558,
         "growth": 174.3
       },
