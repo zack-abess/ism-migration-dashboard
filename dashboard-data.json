@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:55:00.552Z",
+  "generatedAt": "2026-03-30T21:00:00.994Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -526,6 +526,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 53,
+        "pupils": 53,
+        "main": 53,
+        "fields": 53,
+        "notes": 13,
+        "assiduite": 51,
+        "allPupils": true
       }
     },
     {
@@ -582,6 +591,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 31,
+        "pupils": 31,
+        "main": 31,
+        "fields": 31,
+        "notes": 31,
+        "assiduite": 31,
+        "allPupils": true
       }
     },
     {
@@ -638,6 +656,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 36,
+        "pupils": 36,
+        "main": 36,
+        "fields": 36,
+        "notes": 33,
+        "assiduite": 36,
+        "allPupils": true
       }
     },
     {
@@ -694,6 +721,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 30,
+        "pupils": 30,
+        "main": 30,
+        "fields": 30,
+        "notes": 30,
+        "assiduite": 30,
+        "allPupils": true
       }
     },
     {
@@ -750,6 +786,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 31,
+        "pupils": 31,
+        "main": 31,
+        "fields": 31,
+        "notes": 30,
+        "assiduite": 30,
+        "allPupils": true
       }
     },
     {
@@ -806,6 +851,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 53,
+        "pupils": 53,
+        "main": 53,
+        "fields": 53,
+        "notes": 53,
+        "assiduite": 52,
+        "allPupils": true
       }
     },
     {
@@ -862,6 +916,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 43,
+        "pupils": 43,
+        "main": 43,
+        "fields": 43,
+        "notes": 28,
+        "assiduite": 0,
+        "allPupils": true
       }
     },
     {
@@ -918,6 +981,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 50,
+        "pupils": 50,
+        "main": 50,
+        "fields": 50,
+        "notes": 47,
+        "assiduite": 47,
+        "allPupils": true
       }
     },
     {
@@ -974,6 +1046,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 50,
+        "pupils": 50,
+        "main": 50,
+        "fields": 50,
+        "notes": 49,
+        "assiduite": 49,
+        "allPupils": true
       }
     },
     {
@@ -1030,6 +1111,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 53,
+        "pupils": 53,
+        "main": 53,
+        "fields": 53,
+        "notes": 52,
+        "assiduite": 52,
+        "allPupils": true
       }
     },
     {
@@ -1086,6 +1176,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 61,
+        "pupils": 61,
+        "main": 61,
+        "fields": 61,
+        "notes": 58,
+        "assiduite": 58,
+        "allPupils": true
       }
     },
     {
@@ -1142,6 +1241,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 20,
+        "pupils": 20,
+        "main": 20,
+        "fields": 20,
+        "notes": 20,
+        "assiduite": 20,
+        "allPupils": true
       }
     },
     {
@@ -1198,6 +1306,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 20,
+        "pupils": 20,
+        "main": 20,
+        "fields": 20,
+        "notes": 20,
+        "assiduite": 20,
+        "allPupils": true
       }
     },
     {
@@ -1254,6 +1371,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 24,
+        "pupils": 24,
+        "main": 24,
+        "fields": 24,
+        "notes": 24,
+        "assiduite": 24,
+        "allPupils": true
       }
     },
     {
@@ -1310,6 +1436,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 25,
+        "pupils": 25,
+        "main": 25,
+        "fields": 25,
+        "notes": 25,
+        "assiduite": 25,
+        "allPupils": true
       }
     },
     {
@@ -1366,6 +1501,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 26,
+        "pupils": 26,
+        "main": 26,
+        "fields": 26,
+        "notes": 26,
+        "assiduite": 26,
+        "allPupils": true
       }
     },
     {
@@ -1422,6 +1566,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 29,
+        "pupils": 29,
+        "main": 29,
+        "fields": 29,
+        "notes": 23,
+        "assiduite": 24,
+        "allPupils": true
       }
     },
     {
@@ -1478,6 +1631,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 32,
+        "pupils": 32,
+        "main": 32,
+        "fields": 32,
+        "notes": 31,
+        "assiduite": 31,
+        "allPupils": true
       }
     },
     {
@@ -1534,6 +1696,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 33,
+        "pupils": 33,
+        "main": 33,
+        "fields": 33,
+        "notes": 33,
+        "assiduite": 33,
+        "allPupils": true
       }
     },
     {
@@ -1590,6 +1761,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 48,
+        "pupils": 48,
+        "main": 48,
+        "fields": 48,
+        "notes": 46,
+        "assiduite": 42,
+        "allPupils": true
       }
     },
     {
@@ -1646,6 +1826,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 57,
+        "pupils": 57,
+        "main": 57,
+        "fields": 57,
+        "notes": 53,
+        "assiduite": 51,
+        "allPupils": true
       }
     },
     {
@@ -1702,6 +1891,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 22,
+        "pupils": 22,
+        "main": 22,
+        "fields": 22,
+        "notes": 22,
+        "assiduite": 22,
+        "allPupils": true
       }
     },
     {
@@ -1758,6 +1956,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 19,
+        "pupils": 19,
+        "main": 19,
+        "fields": 19,
+        "notes": 18,
+        "assiduite": 19,
+        "allPupils": true
       }
     },
     {
@@ -1814,6 +2021,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 22,
+        "pupils": 22,
+        "main": 22,
+        "fields": 22,
+        "notes": 20,
+        "assiduite": 22,
+        "allPupils": true
       }
     },
     {
@@ -1870,6 +2086,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 23,
+        "pupils": 23,
+        "main": 23,
+        "fields": 23,
+        "notes": 23,
+        "assiduite": 23,
+        "allPupils": true
       }
     },
     {
@@ -1926,6 +2151,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 26,
+        "pupils": 26,
+        "main": 26,
+        "fields": 26,
+        "notes": 26,
+        "assiduite": 26,
+        "allPupils": true
       }
     },
     {
@@ -1982,6 +2216,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 35,
+        "pupils": 35,
+        "main": 35,
+        "fields": 35,
+        "notes": 34,
+        "assiduite": 34,
+        "allPupils": true
       }
     },
     {
@@ -2038,6 +2281,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 38,
+        "pupils": 38,
+        "main": 38,
+        "fields": 38,
+        "notes": 38,
+        "assiduite": 38,
+        "allPupils": true
       }
     },
     {
@@ -2094,6 +2346,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 39,
+        "pupils": 39,
+        "main": 39,
+        "fields": 39,
+        "notes": 39,
+        "assiduite": 39,
+        "allPupils": true
       }
     },
     {
@@ -2150,6 +2411,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 45,
+        "pupils": 45,
+        "main": 45,
+        "fields": 45,
+        "notes": 45,
+        "assiduite": 45,
+        "allPupils": true
       }
     },
     {
@@ -2206,6 +2476,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 62,
+        "pupils": 62,
+        "main": 62,
+        "fields": 62,
+        "notes": 58,
+        "assiduite": 58,
+        "allPupils": true
       }
     },
     {
@@ -2262,6 +2541,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 19,
+        "pupils": 19,
+        "main": 19,
+        "fields": 19,
+        "notes": 19,
+        "assiduite": 19,
+        "allPupils": true
       }
     },
     {
@@ -2318,6 +2606,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 35,
+        "pupils": 35,
+        "main": 35,
+        "fields": 35,
+        "notes": 35,
+        "assiduite": 35,
+        "allPupils": true
       }
     },
     {
@@ -2374,6 +2671,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 22,
+        "pupils": 22,
+        "main": 22,
+        "fields": 22,
+        "notes": 22,
+        "assiduite": 22,
+        "allPupils": true
       }
     },
     {
@@ -2430,6 +2736,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 24,
+        "pupils": 24,
+        "main": 24,
+        "fields": 24,
+        "notes": 24,
+        "assiduite": 24,
+        "allPupils": true
       }
     },
     {
@@ -2486,6 +2801,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 31,
+        "pupils": 31,
+        "main": 31,
+        "fields": 31,
+        "notes": 30,
+        "assiduite": 30,
+        "allPupils": true
       }
     },
     {
@@ -2542,6 +2866,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 37,
+        "pupils": 37,
+        "main": 37,
+        "fields": 37,
+        "notes": 36,
+        "assiduite": 36,
+        "allPupils": true
       }
     },
     {
@@ -2598,6 +2931,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 44,
+        "pupils": 44,
+        "main": 44,
+        "fields": 44,
+        "notes": 42,
+        "assiduite": 42,
+        "allPupils": true
       }
     },
     {
@@ -2654,6 +2996,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 47,
+        "pupils": 47,
+        "main": 47,
+        "fields": 47,
+        "notes": 45,
+        "assiduite": 45,
+        "allPupils": true
       }
     },
     {
@@ -2710,6 +3061,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 55,
+        "pupils": 55,
+        "main": 55,
+        "fields": 55,
+        "notes": 54,
+        "assiduite": 54,
+        "allPupils": true
       }
     },
     {
@@ -2766,6 +3126,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 10,
+        "pupils": 10,
+        "main": 10,
+        "fields": 10,
+        "notes": 10,
+        "assiduite": 10,
+        "allPupils": true
       }
     },
     {
@@ -2822,6 +3191,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 18,
+        "pupils": 18,
+        "main": 18,
+        "fields": 18,
+        "notes": 18,
+        "assiduite": 18,
+        "allPupils": true
       }
     },
     {
@@ -2878,6 +3256,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 23,
+        "pupils": 23,
+        "main": 23,
+        "fields": 23,
+        "notes": 23,
+        "assiduite": 23,
+        "allPupils": true
       }
     },
     {
@@ -2934,6 +3321,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 25,
+        "pupils": 25,
+        "main": 25,
+        "fields": 25,
+        "notes": 25,
+        "assiduite": 25,
+        "allPupils": true
       }
     },
     {
@@ -2990,6 +3386,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 28,
+        "pupils": 28,
+        "main": 28,
+        "fields": 28,
+        "notes": 28,
+        "assiduite": 28,
+        "allPupils": true
       }
     },
     {
@@ -3046,6 +3451,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 32,
+        "pupils": 32,
+        "main": 32,
+        "fields": 32,
+        "notes": 29,
+        "assiduite": 29,
+        "allPupils": true
       }
     },
     {
@@ -3102,6 +3516,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 34,
+        "pupils": 34,
+        "main": 34,
+        "fields": 34,
+        "notes": 32,
+        "assiduite": 30,
+        "allPupils": true
       }
     },
     {
@@ -3158,6 +3581,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 35,
+        "pupils": 35,
+        "main": 35,
+        "fields": 35,
+        "notes": 34,
+        "assiduite": 24,
+        "allPupils": true
       }
     },
     {
@@ -3214,6 +3646,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 36,
+        "pupils": 36,
+        "main": 36,
+        "fields": 36,
+        "notes": 33,
+        "assiduite": 31,
+        "allPupils": true
       }
     },
     {
@@ -3270,6 +3711,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 39,
+        "pupils": 39,
+        "main": 39,
+        "fields": 39,
+        "notes": 32,
+        "assiduite": 32,
+        "allPupils": true
       }
     },
     {
@@ -3326,6 +3776,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 26,
+        "pupils": 26,
+        "main": 26,
+        "fields": 26,
+        "notes": 26,
+        "assiduite": 26,
+        "allPupils": true
       }
     },
     {
@@ -3382,6 +3841,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 41,
+        "pupils": 41,
+        "main": 41,
+        "fields": 41,
+        "notes": 29,
+        "assiduite": 41,
+        "allPupils": true
       }
     },
     {
@@ -3438,6 +3906,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 72,
+        "pupils": 72,
+        "main": 72,
+        "fields": 72,
+        "notes": 42,
+        "assiduite": 72,
+        "allPupils": true
       }
     },
     {
@@ -3494,6 +3971,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 92,
+        "pupils": 92,
+        "main": 92,
+        "fields": 92,
+        "notes": 57,
+        "assiduite": 85,
+        "allPupils": true
       }
     },
     {
@@ -3550,6 +4036,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 97,
+        "pupils": 97,
+        "main": 97,
+        "fields": 97,
+        "notes": 69,
+        "assiduite": 86,
+        "allPupils": true
       }
     },
     {
@@ -3606,6 +4101,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 11,
+        "pupils": 11,
+        "main": 11,
+        "fields": 11,
+        "notes": 11,
+        "assiduite": 11,
+        "allPupils": true
       }
     },
     {
@@ -3662,6 +4166,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 121,
+        "pupils": 121,
+        "main": 121,
+        "fields": 121,
+        "notes": 121,
+        "assiduite": 94,
+        "allPupils": true
       }
     },
     {
@@ -3718,6 +4231,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 2,
+        "pupils": 2,
+        "main": 2,
+        "fields": 2,
+        "notes": 2,
+        "assiduite": 2,
+        "allPupils": true
       }
     },
     {
@@ -3774,6 +4296,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 13,
+        "pupils": 13,
+        "main": 13,
+        "fields": 13,
+        "notes": 13,
+        "assiduite": 13,
+        "allPupils": true
       }
     },
     {
@@ -3830,6 +4361,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 29,
+        "pupils": 29,
+        "main": 29,
+        "fields": 29,
+        "notes": 29,
+        "assiduite": 29,
+        "allPupils": true
       }
     },
     {
@@ -3886,6 +4426,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 16,
+        "pupils": 16,
+        "main": 16,
+        "fields": 16,
+        "notes": 15,
+        "assiduite": 16,
+        "allPupils": true
       }
     },
     {
@@ -3942,6 +4491,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 16,
+        "pupils": 16,
+        "main": 16,
+        "fields": 16,
+        "notes": 16,
+        "assiduite": 16,
+        "allPupils": true
       }
     },
     {
@@ -3998,6 +4556,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 14,
+        "pupils": 14,
+        "main": 14,
+        "fields": 14,
+        "notes": 14,
+        "assiduite": 14,
+        "allPupils": true
       }
     },
     {
@@ -4054,6 +4621,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 23,
+        "pupils": 23,
+        "main": 23,
+        "fields": 23,
+        "notes": 16,
+        "assiduite": 23,
+        "allPupils": true
       }
     },
     {
@@ -4110,6 +4686,15 @@
           "validated": 0,
           "totalEntries": 1
         }
+      },
+      "coverage": {
+        "classes": 23,
+        "pupils": 23,
+        "main": 23,
+        "fields": 23,
+        "notes": 0,
+        "assiduite": 0,
+        "allPupils": true
       }
     }
   ],
@@ -4602,13 +5187,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.52,
-      "totalNotes": 2323597,
+      "moyenneGlobale": 11.49,
+      "totalNotes": 2328103,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2629249.7700000214,
-          "count": 222637,
-          "moy": 11.81
+          "sum": 2631713.2700000214,
+          "count": 227143,
+          "moy": 11.59
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -4643,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 174628,
-          "total": 222637,
-          "taux": 78.4
+          "reussi": 174792,
+          "total": 227143,
+          "taux": 77
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -4681,8 +5266,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.44,
-          "count": 36017
+          "moy": 11.33,
+          "count": 36347
         },
         {
           "matiere": "Business Communication",
@@ -4782,12 +5367,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.74,
-          "count": 1161838
+          "moy": 11.72,
+          "count": 1164091
         },
         "exam": {
-          "moy": 11.29,
-          "count": 1161759
+          "moy": 11.27,
+          "count": 1164012
         }
       }
     },
@@ -6540,9 +7125,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.44,
-          "count": 36017,
-          "tauxReussite": 76.5
+          "moy": 11.33,
+          "count": 36347,
+          "tauxReussite": 75.8
         },
         {
           "matiere": "Business Communication",

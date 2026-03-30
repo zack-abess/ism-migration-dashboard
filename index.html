@@ -120,6 +120,7 @@
     <div class="section"><h2>Complétude des champs élèves</h2><div id="qualityBars"></div></div>
     <div class="section"><h2>Classes à fort absentéisme (moy > 50 abs/élève)</h2><table><thead><tr><th>École</th><th>Licence</th><th>Classe</th><th>Moy. absences</th></tr></thead><tbody id="anomalyTable"></tbody></table></div>
     <div class="section"><h2>Corrélation Notes / Assiduité (par classe)</h2><p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Chaque point = 1 classe. X = absences moyennes, Y = moyenne des notes /20</p><canvas id="correlationChart" style="max-height:500px"></canvas></div>
+    <div class="section"><h2>Couverture des ressources par licence</h2><p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Pourcentage de classes couvertes par chaque ressource. Rouge = lacune importante, Orange = partiel, Vert = complet.</p><div style="overflow-x:auto"><table id="coverageTable"><thead><tr><th>Licence</th><th>Année</th><th>Classes</th><th>Pupils</th><th>Main</th><th>Fields</th><th>Notes</th><th>Assiduité</th><th>All Pupils</th></tr></thead><tbody id="coverageBody"></tbody></table></div></div>
   </div>
 
   <!-- TAB 4 PALMARÈS -->
@@ -340,6 +341,39 @@ function renderQualite(){
   dc('corr');
   if(corr.length>0){
     sc('corr',new Chart(document.getElementById('correlationChart'),{type:'scatter',data:{datasets:[{label:'Classe',data:corr.map(c=>({x:c.moyAbsences,y:c.moyNotes})),backgroundColor:corr.map(c=>c.moyNotes<10?'#ef4444':'#22c55e'),pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){const c=corr[ctx.dataIndex];return c.classe+' ('+c.school+') — Moy: '+c.moyNotes+'/20, Abs: '+c.moyAbsences;}}}},scales:{x:{title:{display:true,text:'Absences moyennes',color:'#94a3b8'},...ax()},y:{title:{display:true,text:'Moyenne /20',color:'#94a3b8'},...ax(),min:0,max:20}}}}));
+  }
+
+  // Coverage heatmap table
+  const coverageBody=document.getElementById('coverageBody');
+  if(coverageBody){
+    function cvgColor(val,total){
+      if(total===0)return'color:var(--text-muted)';
+      const pct=val/total*100;
+      if(pct>=100)return'color:var(--green);font-weight:700';
+      if(pct>=80)return'color:#eab308;font-weight:700';
+      return'color:var(--red);font-weight:700';
+    }
+    function cvgCell(val,total){
+      if(total===0)return'<td style="color:var(--text-muted);text-align:center">—</td>';
+      const pct=Math.round(val/total*100);
+      return`<td style="${cvgColor(val,total)};text-align:center">${val}/${total} <span style="font-size:.7rem;opacity:.7">(${pct}%)</span></td>`;
+    }
+    // Sort: show licences with gaps first, then by school+year
+    const lics=DATA.licences.filter(l=>l.coverage&&l.coverage.classes>0);
+    lics.sort((a,b)=>{
+      const ac=a.coverage,bc=b.coverage;
+      const aGap=(ac.classes-ac.notes)+(ac.classes-ac.assiduite)+(ac.classes-ac.pupils)+(ac.classes-ac.main)+(ac.classes-ac.fields);
+      const bGap=(bc.classes-bc.notes)+(bc.classes-bc.assiduite)+(bc.classes-bc.pupils)+(bc.classes-bc.main)+(bc.classes-bc.fields);
+      if(aGap!==bGap)return bGap-aGap;
+      return a.school.localeCompare(b.school)||a.year.localeCompare(b.year);
+    });
+    coverageBody.innerHTML=lics.map(l=>{
+      const c=l.coverage,t=c.classes;
+      const apStyle=c.allPupils?'color:var(--green);font-weight:700':'color:var(--red);font-weight:700';
+      const hasGap=c.pupils<t||c.main<t||c.fields<t||c.notes<t||c.assiduite<t||!c.allPupils;
+      const rowBg=hasGap?'background:rgba(239,68,68,0.05)':'';
+      return`<tr style="${rowBg}"><td style="font-size:.8rem">${ss(l.school)} <span style="opacity:.5">${l.name.length>40?'':'— '+l.displayName}</span></td><td>${l.year}</td><td style="text-align:center;font-weight:700">${t}</td>${cvgCell(c.pupils,t)}${cvgCell(c.main,t)}${cvgCell(c.fields,t)}${cvgCell(c.notes,t)}${cvgCell(c.assiduite,t)}<td style="${apStyle};text-align:center">${c.allPupils?'✓':'✗'}</td></tr>`;
+    }).join('');
   }
 }
 

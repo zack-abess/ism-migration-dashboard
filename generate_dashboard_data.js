@@ -570,6 +570,25 @@ async function main() {
         data.totalEntries[scraper] = (data.totalEntries[scraper] || 0) + agg.totalEntries;
       }
 
+      // Couverture ressources par classe
+      const classDirs = (() => {
+        try {
+          return fs.readdirSync(lic.path).filter(f => {
+            try { return fs.statSync(path.join(lic.path, f)).isDirectory() && !f.startsWith('_') && !f.startsWith('.'); }
+            catch { return false; }
+          });
+        } catch { return []; }
+      })();
+      const coverage = { classes: classDirs.length, pupils: 0, main: 0, fields: 0, notes: 0, assiduite: 0, allPupils: false };
+      for (const c of classDirs) {
+        if (fs.existsSync(path.join(lic.path, c, 'pupils.json'))) coverage.pupils++;
+        if (fs.existsSync(path.join(lic.path, c, 'main.json'))) coverage.main++;
+        if (fs.existsSync(path.join(lic.path, c, 'class_fields.json'))) coverage.fields++;
+        if (fs.existsSync(path.join(lic.path, '_notes', c))) coverage.notes++;
+        if (fs.existsSync(path.join(lic.path, '_assiduite', c))) coverage.assiduite++;
+      }
+      coverage.allPupils = fs.existsSync(path.join(lic.path, '_pupils', 'all_pupils.json'));
+
       const licenceData = {
         name: lic.name,
         displayName: lic.name.replace(/_/g, ' '),
@@ -584,6 +603,7 @@ async function main() {
         nbPeriodes: notesDetails.nbPeriodes,
         lastModified,
         scrapers: scraperStats,
+        coverage,
         _path: lic.path,
       };
 
