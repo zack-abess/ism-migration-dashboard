@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T20:05:00.817Z",
+  "generatedAt": "2026-03-30T20:10:01.083Z",
   "summary": {
     "done": 55,
     "skip": 8,
     "inProgress": 2,
     "total": 65
   },
-  "totalClasses": 2279,
+  "totalClasses": 2332,
   "totalEleves": 58224,
   "totalMatieres": 4686,
   "totalPeriodes": 74,
@@ -260,7 +260,7 @@
       "doneCount": 9,
       "skipCount": 0,
       "inProgressCount": 1,
-      "nbClasses": 314,
+      "nbClasses": 367,
       "nbEleves": 8167,
       "nbEnseignants": 74,
       "scrapers": {
@@ -532,7 +532,7 @@
       "nbMatieres": 353,
       "nbMatieresGlobal": 819,
       "nbPeriodes": 17,
-      "lastModified": "2026-03-30T19:59:24.471Z",
+      "lastModified": "2026-03-30T20:05:23.795Z",
       "scrapers": {
         "classes": {
           "total": 50,
@@ -551,7 +551,7 @@
           "error": 0,
           "noperiod": 19,
           "nofield": 46,
-          "validated": 0,
+          "validated": 47,
           "totalEntries": 37383
         },
         "assiduite": {
@@ -582,7 +582,7 @@
       "school": "ISM Dakar Graduate School",
       "year": "2025-2026",
       "status": "in_progress",
-      "nbClasses": 0,
+      "nbClasses": 53,
       "nbEleves": 1145,
       "nbEnseignants": 4,
       "nbMatieres": 0,
@@ -4254,46 +4254,46 @@
     },
     "demographics": {
       "sexe": {
-        "M": 21760,
-        "F": 27423,
+        "M": 21802,
+        "F": 27472,
         "inconnu": 1605
       },
-      "boursiers": 7602,
+      "boursiers": 7608,
       "redoublants": 365,
       "exempts": 150,
-      "totalPupils": 50788,
+      "totalPupils": 50879,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "TCHADIENNE": 1131,
-        "GABONAISE": 5629,
-        "TOGOLAISE": 1104,
-        "SENEGALAISE": 23828,
-        "BURKINABE": 687,
-        "GUINEENNE": 1618,
-        "IVOIRIENNE": 944,
-        "MALIENNE": 1070,
-        "NIGERIENNE": 1163,
+        "TCHADIENNE": 1135,
+        "GABONAISE": 5636,
+        "TOGOLAISE": 1106,
+        "SENEGALAISE": 23873,
+        "BURKINABE": 689,
+        "GUINEENNE": 1625,
+        "IVOIRIENNE": 945,
+        "MALIENNE": 1073,
+        "NIGERIENNE": 1167,
         "HAÏTIENNE": 15,
         "BENINOISE": 870,
         "HAITIENNE": 35,
-        "CONGOLAISE": 2320,
+        "CONGOLAISE": 2325,
         "Haitienne": 3,
         "CAMEROUN": 3,
         "BISSAU GUINEENNE": 29,
-        "CAMEROUNAISE": 507,
+        "CAMEROUNAISE": 509,
         "SENEGAL": 18,
         "SENEGLAISE": 21,
-        "MAURITANIENNE": 432,
-        "MAROCAINE": 34,
+        "MAURITANIENNE": 433,
+        "MAROCAINE": 35,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
         "CANADO-MALIENNE": 3,
-        "COMORIENNE": 123,
+        "COMORIENNE": 125,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 590,
+        "CENTRAFRICAINE": 591,
         "SENEGGALAISE": 2,
         "GUINÉENNE": 6,
         "ITALIENNE": 29,
@@ -4306,7 +4306,7 @@
         "RWANDAISE": 31,
         "ANGOLAISE": 7,
         "EQUATO GUINEENNE": 26,
-        "DJIBOUTIENNE": 304,
+        "DJIBOUTIENNE": 306,
         "CAMEROUNNAISE": 3,
         "NIGERIANNE": 15,
         "ENEGALAISE": 2,
@@ -4314,7 +4314,8 @@
         "TCHADIEENNE": 1,
         "FRANCAISE": 209,
         "BURKINABEE": 50,
-        "MALGACHE": 25,
+        "MALGACHE": 26,
+        "Française": 27,
         "GUINEENE": 5,
         "Nigérienne": 110,
         "Français": 1,
@@ -4368,7 +4369,6 @@
         "SSENEGALAISE": 2,
         "GUINEENNEE": 2,
         "Centreafricaine": 1,
-        "Française": 26,
         "CCENTRAFRICAINE": 1,
         "FRANCO-SENEGALAISE": 18,
         "HAITI": 1,
@@ -4592,11 +4592,11 @@
         "LCM3": 1
       },
       "ages": {
-        "24-25": 8128,
-        "26-30": 16035,
-        ">30": 10828,
-        "21-23": 10273,
-        "18-20": 3981,
+        "24-25": 8146,
+        "26-30": 16048,
+        ">30": 10854,
+        "21-23": 10305,
+        "18-20": 3983,
         "<18": 96
       },
       "niveaux": {
@@ -4679,6 +4679,10 @@
           "M": 5748,
           "F": 4285
         },
+        "ISM Dakar Graduate School": {
+          "M": 3029,
+          "F": 3865
+        },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
           "F": 5786
@@ -4686,10 +4690,6 @@
         "ISM Dakar Ecole de Management": {
           "M": 4639,
           "F": 7840
-        },
-        "ISM Dakar Graduate School": {
-          "M": 2987,
-          "F": 3816
         },
         "ISM Dakar Madiba Leadership Institut": {
           "M": 1696,
@@ -4714,9 +4714,9 @@
       },
       "boursiersParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": 1610,
+        "ISM Dakar Graduate School": 590,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
-        "ISM Dakar Graduate School": 584,
         "ISM Dakar Madiba Leadership Institut": 990,
         "ISM Online & ISF": 541,
         "ISM Online et ISF": 56,
@@ -4735,11 +4735,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.56,
-      "totalNotes": 2290315,
+      "totalNotes": 2290999,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6049859.860000055,
-          "count": 521922,
+          "sum": 6058812.540000056,
+          "count": 522606,
           "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
@@ -4780,9 +4780,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 392210,
-          "total": 521922,
-          "taux": 75.1
+          "reussi": 392790,
+          "total": 522606,
+          "taux": 75.2
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4925,23 +4925,28 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.78,
-          "count": 1145192
+          "count": 1145534
         },
         "exam": {
           "moy": 11.33,
-          "count": 1145123
+          "count": 1145465
         }
       }
     },
     "attendance": {
-      "totalAbsences": 1232552.6000000557,
-      "totalJustifiees": 125263.8000000003,
-      "totalNonJustifiees": 1107288.8000000527,
+      "totalAbsences": 1233288.0000000556,
+      "totalJustifiees": 125305.40000000029,
+      "totalNonJustifiees": 1107982.6000000527,
       "absencesParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
           "absences": 274442.5,
           "justifiees": 32742,
           "records": 13220
+        },
+        "ISM Dakar Graduate School": {
+          "absences": 135066.30000000173,
+          "justifiees": 10146.699999999993,
+          "records": 5858
         },
         "ISM Dakar Ecole de Droit": {
           "absences": 337811.69999999553,
@@ -4952,11 +4957,6 @@
           "absences": 344590,
           "justifiees": 44207.5,
           "records": 23756
-        },
-        "ISM Dakar Graduate School": {
-          "absences": 134330.900000002,
-          "justifiees": 10105.099999999995,
-          "records": 5819
         },
         "ISM Dakar Madiba Leadership Institut": {
           "absences": 74023,
@@ -4978,9 +4978,14 @@
         "LICENCE 2": 199,
         "LICENCE 3": 178,
         "LICENCE 1 R2": 29,
-        "MBA 1": 290,
+        "MBA 1": 291,
         "MBA 2": 256,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
+        "BP3-PRO": 2,
+        "EMBA": 7,
+        "M1 MARCHE FINANCIER ET TRADING": 1,
+        "M1 FINANCE DIGITALE": 1,
+        "M2 FINANCE DIGITALE": 1,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
@@ -5022,7 +5027,6 @@
         "E4IMPACT": 1,
         "EXECUTIVE MBA": 2,
         "E-4 IMPACT": 2,
-        "EMBA": 6,
         "MBA 1 Cours du Soir": 34,
         "MBA 1 Pétrole & Gaz": 3,
         "MBA 2 Cours du Soir": 21,
@@ -5055,7 +5059,7 @@
         "Sciences du Numérique": 49,
         "Sciences Economique Et Sociales": 6,
         "Sciences Economiques et Sociales": 5,
-        "Sciences Economiques et de Gestion": 749,
+        "Sciences Economiques et de Gestion": 755,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
@@ -5100,13 +5104,13 @@
       }
     },
     "quality": {
-      "total": 54780,
+      "total": 54871,
       "completude": {
         "sexe": 91.2,
         "nationalite": 86.9,
-        "dateNaissance": 91.5,
+        "dateNaissance": 91.6,
         "email": 78.4,
-        "telephone": 73.8
+        "telephone": 73.9
       },
       "missing": {
         "sexe": 4847,
