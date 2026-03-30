@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:55:01.288Z",
+  "generatedAt": "2026-03-30T20:00:01.105Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -8,11 +8,11 @@
   },
   "totalClasses": 2279,
   "totalEleves": 57079,
-  "totalMatieres": 4716,
-  "totalPeriodes": 73,
+  "totalMatieres": 4726,
+  "totalPeriodes": 74,
   "totalEnseignants": 522,
   "totalEntries": {
-    "notes": 1240345,
+    "notes": 1277728,
     "assiduite": 218752,
     "classes": 2277,
     "pupils": 64
@@ -91,13 +91,13 @@
       "nbEnseignants": 35,
       "scrapers": {
         "notes": {
-          "ok": 10213,
+          "ok": 11444,
           "empty": 169,
           "error": 0,
-          "noperiod": 123,
-          "nofield": 443,
-          "total": 10948,
-          "totalEntries": 255174
+          "noperiod": 142,
+          "nofield": 489,
+          "total": 12244,
+          "totalEntries": 292557
         },
         "assiduite": {
           "ok": 1164,
@@ -529,10 +529,10 @@
       "nbClasses": 50,
       "nbEleves": 1458,
       "nbEnseignants": 4,
-      "nbMatieres": 0,
+      "nbMatieres": 353,
       "nbMatieresGlobal": 819,
-      "nbPeriodes": 0,
-      "lastModified": "2026-03-30T18:57:08.451Z",
+      "nbPeriodes": 17,
+      "lastModified": "2026-03-30T19:59:24.471Z",
       "scrapers": {
         "classes": {
           "total": 50,
@@ -545,14 +545,14 @@
           "totalEntries": 50
         },
         "notes": {
-          "total": 0,
-          "ok": 0,
+          "total": 1296,
+          "ok": 1231,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
+          "noperiod": 19,
+          "nofield": 46,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 37383
         },
         "assiduite": {
           "total": 199,
@@ -4731,12 +4731,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2336858,
+      "totalNotes": 2339736,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6007313.880000055,
-          "count": 519044,
-          "moy": 11.57
+          "sum": 6049859.860000055,
+          "count": 521922,
+          "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 389492,
-          "total": 519044,
-          "taux": 75
+          "reussi": 392210,
+          "total": 521922,
+          "taux": 75.1
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4888,14 +4888,14 @@
           "count": 9519
         },
         {
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.73,
+          "count": 9428
+        },
+        {
           "matiere": "Mathématiques Financières",
           "moy": 10.47,
           "count": 9314
-        },
-        {
-          "matiere": "Responsabilité Sociale des Entreprises",
-          "moy": 11.68,
-          "count": 9304
         },
         {
           "matiere": "Business English 2",
@@ -4921,11 +4921,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1168463
+          "count": 1169902
         },
         "exam": {
-          "moy": 11.1,
-          "count": 1168395
+          "moy": 11.11,
+          "count": 1169834
         }
       }
     },
@@ -6757,10 +6757,10 @@
           "tauxReussite": 80.1
         },
         {
-          "matiere": "Mathématiques Financières",
-          "moy": 10.47,
-          "count": 9314,
-          "tauxReussite": 65.7
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.73,
+          "count": 9428,
+          "tauxReussite": 80.8
         }
       ]
     },
