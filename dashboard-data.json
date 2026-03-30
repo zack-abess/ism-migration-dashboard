@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:35:00.941Z",
+  "generatedAt": "2026-03-30T21:40:01.467Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 31,
+        "notes": 33,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5187,13 +5187,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.41,
-      "totalNotes": 2347645,
+      "moyenneGlobale": 11.4,
+      "totalNotes": 2349829,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
           "sum": 2649609.9600000214,
-          "count": 246685,
-          "moy": 10.74
+          "count": 248869,
+          "moy": 10.65
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5229,8 +5229,8 @@
       "tauxReussite": {
         "ISM Dakar Graduate School": {
           "reussi": 175967,
-          "total": 246685,
-          "taux": 71.3
+          "total": 248869,
+          "taux": 70.7
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5367,12 +5367,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.63,
-          "count": 1173861
+          "moy": 11.62,
+          "count": 1174953
         },
         "exam": {
-          "moy": 11.18,
-          "count": 1173784
+          "moy": 11.17,
+          "count": 1174876
         }
       }
     },
