@@ -224,24 +224,35 @@ function readGlobalData(licenceDir) {
 // ─── Données métier (onglet Groupe ISM) ────────────────────────────────────
 
 function readPupilsDetailed(licenceDir) {
-  // Lit all_pupils.json et retourne les détails démographiques
-  const pupilsFile = path.join(licenceDir, '_pupils', 'all_pupils.json');
-  if (!fs.existsSync(pupilsFile)) return [];
+  // Lit pupils.json de chaque classe (contient Sexe, Nationalité, Boursier, etc.)
+  // Fallback sur all_pupils.json si pas de pupils.json par classe
+  const results = [];
   try {
-    const data = JSON.parse(fs.readFileSync(pupilsFile, 'utf8'));
-    if (!data.rows) return [];
-    return data.rows.map(r => ({
-      id: (r.Identifiant || '').trim(),
-      sexe: (r.Sexe || '').trim(),
-      nationalite: (r.Nationalité || r['Nationalite'] || '').trim(),
-      dateNaissance: (r['Date de naissance'] || '').trim(),
-      niveau: (r.Niveau || '').trim(),
-      redoublant: (r.Redoublant || '').trim().toLowerCase() === 'oui',
-      boursier: (r.Boursier || '').trim().toLowerCase() === 'oui',
-      exempt: (r['Exempt des frais'] || '').trim().toLowerCase() === 'oui',
-      classe: (r.Classe || '').trim(),
-    }));
-  } catch { return []; }
+    const classDirs = fs.readdirSync(licenceDir, { withFileTypes: true })
+      .filter(d => d.isDirectory() && !d.name.startsWith('_') && !d.name.startsWith('.'));
+    for (const cd of classDirs) {
+      const pFile = path.join(licenceDir, cd.name, 'pupils.json');
+      if (!fs.existsSync(pFile)) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(pFile, 'utf8'));
+        if (!data.rows) continue;
+        for (const r of data.rows) {
+          results.push({
+            id: (r.Identifiant || '').trim(),
+            sexe: (r.Sexe || '').trim(),
+            nationalite: (r.Nationalité || r['Nationalite'] || '').trim(),
+            dateNaissance: (r['Date de naissance'] || '').trim(),
+            niveau: (r.Niveau || '').trim(),
+            redoublant: (r.Redoublant || '').trim().toLowerCase() === 'oui',
+            boursier: (r.Boursier || '').trim().toLowerCase() === 'oui',
+            exempt: (r['Exempt des frais'] || '').trim().toLowerCase() === 'oui',
+            classe: (r.Classe || cd.name).trim(),
+          });
+        }
+      } catch {}
+    }
+  } catch {}
+  return results;
 }
 
 function readClassFields(licenceDir) {
@@ -274,45 +285,53 @@ function readClassFields(licenceDir) {
   return results;
 }
 
+function parseNote(val) {
+  // Gère les virgules décimales ("10,00" → 10) et les points
+  if (val == null || val === '') return NaN;
+  const s = String(val).replace(',', '.').trim();
+  return parseFloat(s);
+}
+
 function readGradesForLicence(licenceDir) {
-  // Lit tous les fichiers de notes dans _notes/ et retourne les moyennes
+  // Lit tous les fichiers de notes dans _notes/classe/période/matière.json
   const notesDir = path.join(licenceDir, '_notes');
   if (!fs.existsSync(notesDir)) return [];
   const grades = [];
   try {
-    // _notes/ contient des sous-dossiers par classe
-    const classDirs = fs.readdirSync(notesDir, { withFileTypes: true })
-      .filter(d => d.isDirectory());
+    const classDirs = fs.readdirSync(notesDir, { withFileTypes: true }).filter(d => d.isDirectory());
     for (const cd of classDirs) {
-      const classNotesDir = path.join(notesDir, cd.name);
-      // Chaque sous-dossier contient des JSON de périodes ou matières
-      const files = fs.readdirSync(classNotesDir).filter(f => f.endsWith('.json'));
-      for (const f of files) {
-        try {
-          const data = JSON.parse(fs.readFileSync(path.join(classNotesDir, f), 'utf8'));
-          if (!data.rows || !data.headers) continue;
-          const bareme = data.barème || data.bareme || 20;
-          // Trouver les colonnes de notes dans headers
-          const noteHeaders = (data.headers || []).filter(h =>
-            h !== 'Elève' && h !== 'Élève' && h !== '#' && h !== '_db_ids' && h !== '_links'
-          );
-          for (const row of data.rows) {
-            for (const h of noteHeaders) {
-              const val = parseFloat(row[h]);
-              if (!isNaN(val) && val >= 0 && val <= bareme) {
-                grades.push({
-                  classe: data.className || cd.name,
-                  periode: data.periodName || '',
-                  matiere: data.fieldName || '',
-                  note: val,
-                  bareme,
-                  note20: bareme !== 20 ? (val / bareme * 20) : val,
-                  type: h, // CC, Examen, etc.
-                });
+      const classDir = path.join(notesDir, cd.name);
+      // Niveau période
+      const periodDirs = fs.readdirSync(classDir, { withFileTypes: true }).filter(d => d.isDirectory());
+      for (const pd of periodDirs) {
+        const periodDir = path.join(classDir, pd.name);
+        const files = fs.readdirSync(periodDir).filter(f => f.endsWith('.json'));
+        for (const f of files) {
+          try {
+            const data = JSON.parse(fs.readFileSync(path.join(periodDir, f), 'utf8'));
+            if (!data.rows || !data.headers) continue;
+            const bareme = parseNote(data.barème || data.bareme) || 20;
+            const noteHeaders = (data.headers || []).filter(h =>
+              h !== 'Elève' && h !== 'Élève' && h !== '#' && h !== '_db_ids' && h !== '_links'
+            );
+            for (const row of data.rows) {
+              for (const h of noteHeaders) {
+                const val = parseNote(row[h]);
+                if (!isNaN(val) && val >= 0 && val <= bareme) {
+                  grades.push({
+                    classe: data.className || cd.name,
+                    periode: data.periodName || '',
+                    matiere: data.fieldName || '',
+                    note: val,
+                    bareme,
+                    note20: bareme !== 20 ? (val / bareme * 20) : val,
+                    type: h,
+                  });
+                }
               }
             }
-          }
-        } catch {}
+          } catch {}
+        }
       }
     }
   } catch {}
@@ -320,7 +339,7 @@ function readGradesForLicence(licenceDir) {
 }
 
 function readAttendanceForLicence(licenceDir) {
-  // Lit les fichiers d'assiduité dans _assiduite/
+  // Lit les fichiers d'assiduité dans _assiduite/classe/PeriodId_xxx.json
   const assDir = path.join(licenceDir, '_assiduite');
   if (!fs.existsSync(assDir)) return [];
   const records = [];
@@ -335,15 +354,15 @@ function readAttendanceForLicence(licenceDir) {
           const data = JSON.parse(fs.readFileSync(path.join(classAssDir, f), 'utf8'));
           if (!data.rows) continue;
           for (const row of data.rows) {
-            const absences = parseFloat(row.absences || row['absences'] || 0) || 0;
-            const justifiees = parseFloat(row['absences justifiées'] || row['absences justifiees'] || 0) || 0;
+            const absences = parseNote(row.absences || row['absences']) || 0;
+            const justifiees = parseNote(row['absences justifiées'] || row['absences justifiees']) || 0;
             if (absences > 0 || justifiees > 0) {
               records.push({
                 classe: data.className || cd.name,
                 periode: data.periodName || '',
                 absences,
                 justifiees,
-                nonJustifiees: absences - justifiees,
+                nonJustifiees: Math.max(0, absences - justifiees),
               });
             }
           }
@@ -626,12 +645,12 @@ async function main() {
       seenIds.add(p.id);
       businessData.demographics.totalPupils++;
 
-      if (p.sexe.startsWith('M') && !p.sexe.startsWith('Ma')) businessData.demographics.sexe.M++;
+      if (p.sexe === 'Masculin' || p.sexe === 'M') businessData.demographics.sexe.M++;
       else if (p.sexe.startsWith('F') || p.sexe.startsWith('Fém')) businessData.demographics.sexe.F++;
       else businessData.demographics.sexe.inconnu++;
 
       if (!businessData.demographics.sexeParEcole[school]) businessData.demographics.sexeParEcole[school] = { M: 0, F: 0 };
-      if (p.sexe.startsWith('M') && !p.sexe.startsWith('Ma')) businessData.demographics.sexeParEcole[school].M++;
+      if (p.sexe === 'Masculin' || p.sexe === 'M') businessData.demographics.sexeParEcole[school].M++;
       else if (p.sexe.startsWith('F') || p.sexe.startsWith('Fém')) businessData.demographics.sexeParEcole[school].F++;
 
       if (p.boursier) {
