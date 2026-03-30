@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:20:00.965Z",
+  "generatedAt": "2026-03-30T15:25:01.417Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,11 +4730,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2324904,
+      "totalNotes": 2332018,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5879323.910000062,
-          "count": 507090,
+          "sum": 5957841.190000057,
+          "count": 514204,
           "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
@@ -4775,8 +4775,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 381283,
-          "total": 507090,
+          "reussi": 386566,
+          "total": 514204,
           "taux": 75.2
         },
         "ISM Dakar Ecole de Droit": {
@@ -4832,6 +4832,11 @@
           "count": 18019
         },
         {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.8,
+          "count": 17263
+        },
+        {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.7,
           "count": 17238
@@ -4840,11 +4845,6 @@
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063
-        },
-        {
-          "matiere": "Comptabilité Générale 1",
-          "moy": 10.8,
-          "count": 17015
         },
         {
           "matiere": "Introduction au Management",
@@ -4898,8 +4898,8 @@
         },
         {
           "matiere": "Business English 2",
-          "moy": 11.57,
-          "count": 8996
+          "moy": 11.54,
+          "count": 9068
         },
         {
           "matiere": "Humanitaire",
@@ -4912,19 +4912,19 @@
           "count": 8900
         },
         {
-          "matiere": "Introduction au Marketing",
-          "moy": 11.68,
-          "count": 8854
+          "matiere": "Business English 1",
+          "moy": 11.08,
+          "count": 8862
         }
       ],
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1162449
+          "count": 1166014
         },
         "exam": {
           "moy": 11.1,
-          "count": 1162455
+          "count": 1166004
         }
       }
     },
@@ -6672,6 +6672,12 @@
           "tauxReussite": 73.2
         },
         {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.8,
+          "count": 17263,
+          "tauxReussite": 71.8
+        },
+        {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.7,
           "count": 17238,
@@ -6682,12 +6688,6 @@
           "moy": 12.19,
           "count": 17063,
           "tauxReussite": 86.7
-        },
-        {
-          "matiere": "Comptabilité Générale 1",
-          "moy": 10.8,
-          "count": 17015,
-          "tauxReussite": 71.8
         },
         {
           "matiere": "Introduction au Management",
