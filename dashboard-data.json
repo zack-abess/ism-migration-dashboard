@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:25:00.549Z",
+  "generatedAt": "2026-03-30T21:30:01.095Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 27,
+        "notes": 28,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5187,13 +5187,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.42,
-      "totalNotes": 2345147,
+      "moyenneGlobale": 11.41,
+      "totalNotes": 2345653,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2644546.9800000214,
-          "count": 244187,
-          "moy": 10.83
+          "sum": 2645836.810000021,
+          "count": 244693,
+          "moy": 10.81
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 175635,
-          "total": 244187,
-          "taux": 71.9
+          "reussi": 175719,
+          "total": 244693,
+          "taux": 71.8
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5368,11 +5368,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.64,
-          "count": 1172612
+          "count": 1172865
         },
         "exam": {
           "moy": 11.19,
-          "count": 1172535
+          "count": 1172788
         }
       }
     },
@@ -7008,25 +7008,25 @@
         {
           "matiere": "Conflict Management and Decision-making",
           "moy": 0,
-          "count": 32,
+          "count": 56,
           "tauxReussite": 0
         },
         {
           "matiere": "Internationalisation Strategy",
           "moy": 0,
-          "count": 32,
+          "count": 56,
           "tauxReussite": 0
         },
         {
           "matiere": "Lean Six Sigma",
           "moy": 0,
-          "count": 32,
+          "count": 56,
           "tauxReussite": 0
         },
         {
           "matiere": "Evaluation Financière et Comptable",
           "moy": 0,
-          "count": 32,
+          "count": 56,
           "tauxReussite": 0
         }
       ],
