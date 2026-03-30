@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:35:01.173Z",
+  "generatedAt": "2026-03-30T15:40:01.196Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -8,11 +8,11 @@
   },
   "totalClasses": 2229,
   "totalEleves": 55621,
-  "totalMatieres": 4716,
-  "totalPeriodes": 73,
+  "totalMatieres": 4726,
+  "totalPeriodes": 74,
   "totalEnseignants": 518,
   "totalEntries": {
-    "notes": 1240345,
+    "notes": 1277671,
     "assiduite": 214033,
     "classes": 2227,
     "pupils": 63
@@ -91,13 +91,13 @@
       "nbEnseignants": 31,
       "scrapers": {
         "notes": {
-          "ok": 10213,
+          "ok": 11444,
           "empty": 169,
           "error": 0,
-          "noperiod": 123,
-          "nofield": 443,
-          "total": 10948,
-          "totalEntries": 255174
+          "noperiod": 142,
+          "nofield": 489,
+          "total": 12244,
+          "totalEntries": 292500
         },
         "assiduite": {
           "ok": 966,
@@ -529,10 +529,10 @@
       "nbClasses": 0,
       "nbEleves": 0,
       "nbEnseignants": 0,
-      "nbMatieres": 0,
+      "nbMatieres": 353,
       "nbMatieresGlobal": 0,
-      "nbPeriodes": 0,
-      "lastModified": null,
+      "nbPeriodes": 17,
+      "lastModified": "2026-03-30T15:37:08.434Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -545,14 +545,14 @@
           "totalEntries": 0
         },
         "notes": {
-          "total": 0,
-          "ok": 0,
+          "total": 1296,
+          "ok": 1231,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
+          "noperiod": 19,
+          "nofield": 46,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 37326
         },
         "assiduite": {
           "total": 0,
@@ -4730,12 +4730,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2339186,
+      "totalNotes": 2339772,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6049729.730000055,
-          "count": 521372,
-          "moy": 11.6
+          "sum": 6058044.510000056,
+          "count": 521958,
+          "moy": 11.61
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4775,8 +4775,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 392571,
-          "total": 521372,
+          "reussi": 393111,
+          "total": 521958,
           "taux": 75.3
         },
         "ISM Dakar Ecole de Droit": {
@@ -4920,11 +4920,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.56,
-          "count": 1169599
+          "count": 1169892
         },
         "exam": {
           "moy": 11.11,
-          "count": 1169587
+          "count": 1169880
         }
       }
     },
