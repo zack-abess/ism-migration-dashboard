@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:15:00.772Z",
+  "generatedAt": "2026-03-30T19:20:01.413Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4731,12 +4731,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.32,
-      "totalNotes": 2299767,
+      "totalNotes": 2304172,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5579413.36000008,
-          "count": 481953,
-          "moy": 11.58
+          "sum": 5627257.120000075,
+          "count": 486358,
+          "moy": 11.57
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 361286,
-          "total": 481953,
-          "taux": 75
+          "reussi": 364365,
+          "total": 486358,
+          "taux": 74.9
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4921,11 +4921,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1149893
+          "count": 1152089
         },
         "exam": {
           "moy": 11.1,
-          "count": 1149874
+          "count": 1152083
         }
       }
     },
@@ -6336,6 +6336,12 @@
         "moyAbsences": 28.1
       },
       {
+        "classe": "L2-IAGE B",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.35,
+        "moyAbsences": 28
+      },
+      {
         "classe": "M1 - JURISTE DE BANQUE ASSURANCE & COMPLIANCE",
         "school": "Ecole de Droit",
         "moyNotes": 11,
@@ -6420,6 +6426,12 @@
         "moyAbsences": 27.3
       },
       {
+        "classe": "L2-IAGE A",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.95,
+        "moyAbsences": 27.1
+      },
+      {
         "classe": "MBA1 - Passation de Marchés",
         "school": "Ecole de Droit",
         "moyNotes": 10.29,
@@ -6471,18 +6483,6 @@
         "classe": "LG1K-CF",
         "school": "Ecole de Management",
         "moyNotes": 11.21,
-        "moyAbsences": 26.3
-      },
-      {
-        "classe": "MBA 2 - Management des Energies Pétrolières et Gazières",
-        "school": "Graduate School",
-        "moyNotes": 14.57,
-        "moyAbsences": 26.3
-      },
-      {
-        "classe": "MBA1- MPSD",
-        "school": "Madiba Leadership Institut",
-        "moyNotes": 11.75,
         "moyAbsences": 26.3
       }
     ],
