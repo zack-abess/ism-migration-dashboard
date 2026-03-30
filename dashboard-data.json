@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:20:01.413Z",
+  "generatedAt": "2026-03-30T19:25:01.106Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4731,11 +4731,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.32,
-      "totalNotes": 2304172,
+      "totalNotes": 2306964,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5627257.120000075,
-          "count": 486358,
+          "sum": 5658526.170000065,
+          "count": 489150,
           "moy": 11.57
         },
         "ISM Dakar Ecole de Droit": {
@@ -4776,8 +4776,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 364365,
-          "total": 486358,
+          "reussi": 366419,
+          "total": 489150,
           "taux": 74.9
         },
         "ISM Dakar Ecole de Droit": {
@@ -4854,8 +4854,8 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.37,
-          "count": 14390
+          "moy": 10.38,
+          "count": 14428
         },
         {
           "matiere": "Service à la Communauté",
@@ -4921,11 +4921,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1152089
+          "count": 1153479
         },
         "exam": {
           "moy": 11.1,
-          "count": 1152083
+          "count": 1153485
         }
       }
     },
@@ -6084,6 +6084,12 @@
         "moyAbsences": 30.3
       },
       {
+        "classe": "L2-TTL  B",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.83,
+        "moyAbsences": 30.2
+      },
+      {
         "classe": "LDA1 - C",
         "school": "Ecole de Droit",
         "moyNotes": 9.63,
@@ -6274,6 +6280,12 @@
         "school": "Madiba Leadership Institut",
         "moyNotes": 10.37,
         "moyAbsences": 28.5
+      },
+      {
+        "classe": "L2-MOSIEF",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.68,
+        "moyAbsences": 28.4
       },
       {
         "classe": "LG2E-MI",
@@ -6471,18 +6483,6 @@
         "classe": "L1F-IA (IAGE & TTL C)",
         "school": "Ecole d'Ingénieurs",
         "moyNotes": 8.7,
-        "moyAbsences": 26.3
-      },
-      {
-        "classe": "MASTER 1 - Passation Des Marchés ",
-        "school": "Ecole de Droit",
-        "moyNotes": 7.86,
-        "moyAbsences": 26.3
-      },
-      {
-        "classe": "LG1K-CF",
-        "school": "Ecole de Management",
-        "moyNotes": 11.21,
         "moyAbsences": 26.3
       }
     ],
@@ -6716,9 +6716,9 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.37,
-          "count": 14390,
-          "tauxReussite": 63.9
+          "moy": 10.38,
+          "count": 14428,
+          "tauxReussite": 64
         },
         {
           "matiere": "Service à la Communauté",
