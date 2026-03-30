@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T14:55:00.710Z",
+  "generatedAt": "2026-03-30T15:00:01.431Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,11 +4730,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.32,
-      "totalNotes": 2303569,
+      "totalNotes": 2305176,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5619739.740000074,
-          "count": 485755,
+          "sum": 5638383.710000064,
+          "count": 487362,
           "moy": 11.57
         },
         "ISM Dakar Ecole de Droit": {
@@ -4775,8 +4775,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 363988,
-          "total": 485755,
+          "reussi": 365189,
+          "total": 487362,
           "taux": 74.9
         },
         "ISM Dakar Ecole de Droit": {
@@ -4853,8 +4853,8 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.37,
-          "count": 14390
+          "moy": 10.38,
+          "count": 14428
         },
         {
           "matiere": "Service à la Communauté",
@@ -4920,11 +4920,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1151780
+          "count": 1152586
         },
         "exam": {
           "moy": 11.09,
-          "count": 1151789
+          "count": 1152590
         }
       }
     },
@@ -6697,8 +6697,8 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.37,
-          "count": 14390,
+          "moy": 10.38,
+          "count": 14428,
           "tauxReussite": 63.9
         },
         {
