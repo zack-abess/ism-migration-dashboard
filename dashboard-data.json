@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:20:01.292Z",
+  "generatedAt": "2026-03-30T21:25:00.549Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 25,
+        "notes": 27,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5188,12 +5188,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.42,
-      "totalNotes": 2344455,
+      "totalNotes": 2345147,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2643164.4800000214,
-          "count": 243495,
-          "moy": 10.86
+          "sum": 2644546.9800000214,
+          "count": 244187,
+          "moy": 10.83
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 175547,
-          "total": 243495,
-          "taux": 72.1
+          "reussi": 175635,
+          "total": 244187,
+          "taux": 71.9
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5368,11 +5368,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.64,
-          "count": 1172266
+          "count": 1172612
         },
         "exam": {
-          "moy": 11.2,
-          "count": 1172189
+          "moy": 11.19,
+          "count": 1172535
         }
       }
     },
@@ -7006,27 +7006,27 @@
           "tauxReussite": 0
         },
         {
-          "matiere": "Management de Projets de programme et de portefeuille ",
+          "matiere": "Conflict Management and Decision-making",
           "moy": 0,
-          "count": 26,
+          "count": 32,
           "tauxReussite": 0
         },
         {
-          "matiere": "Management opérationnel- environnement de développement ( Agilité DIT Devops)",
+          "matiere": "Internationalisation Strategy",
           "moy": 0,
-          "count": 26,
+          "count": 32,
           "tauxReussite": 0
         },
         {
-          "matiere": "Gestion et contrôle de la qualité projet ",
+          "matiere": "Lean Six Sigma",
           "moy": 0,
-          "count": 26,
+          "count": 32,
           "tauxReussite": 0
         },
         {
-          "matiere": "POO2: Scala",
+          "matiere": "Evaluation Financière et Comptable",
           "moy": 0,
-          "count": 26,
+          "count": 32,
           "tauxReussite": 0
         }
       ],
