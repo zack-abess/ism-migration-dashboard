@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:25:01.106Z",
+  "generatedAt": "2026-03-30T19:30:00.759Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4731,11 +4731,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.32,
-      "totalNotes": 2306964,
+      "totalNotes": 2311143,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5658526.170000065,
-          "count": 489150,
+          "sum": 5705523.480000064,
+          "count": 493329,
           "moy": 11.57
         },
         "ISM Dakar Ecole de Droit": {
@@ -4776,8 +4776,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 366419,
-          "total": 489150,
+          "reussi": 369532,
+          "total": 493329,
           "taux": 74.9
         },
         "ISM Dakar Ecole de Droit": {
@@ -4913,19 +4913,19 @@
           "count": 8900
         },
         {
-          "matiere": "Introduction au Marketing",
-          "moy": 11.68,
-          "count": 8854
+          "matiere": "Comptabilité Analytique",
+          "moy": 10.67,
+          "count": 8857
         }
       ],
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1153479
+          "count": 1155563
         },
         "exam": {
           "moy": 11.1,
-          "count": 1153485
+          "count": 1155580
         }
       }
     },
@@ -5458,6 +5458,12 @@
         "school": "Ecole de Droit",
         "moyNotes": 12.47,
         "moyAbsences": 47
+      },
+      {
+        "classe": "L2-TTL A",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.47,
+        "moyAbsences": 46.7
       },
       {
         "classe": "MBA 1 - CCE",
@@ -6086,7 +6092,7 @@
       {
         "classe": "L2-TTL  B",
         "school": "Ecole d'Ingénieurs",
-        "moyNotes": 10.83,
+        "moyNotes": 10.98,
         "moyAbsences": 30.2
       },
       {
@@ -6478,12 +6484,6 @@
         "school": "Graduate School",
         "moyNotes": 11.47,
         "moyAbsences": 26.6
-      },
-      {
-        "classe": "L1F-IA (IAGE & TTL C)",
-        "school": "Ecole d'Ingénieurs",
-        "moyNotes": 8.7,
-        "moyAbsences": 26.3
       }
     ],
     "palmares": {
