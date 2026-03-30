@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:10:01.083Z",
+  "generatedAt": "2026-03-30T20:15:01.000Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -13,7 +13,7 @@
   "totalEnseignants": 526,
   "totalEntries": {
     "notes": 1249090,
-    "assiduite": 218752,
+    "assiduite": 223751,
     "classes": 2277,
     "pupils": 65
   },
@@ -274,13 +274,13 @@
           "totalEntries": 118132
         },
         "assiduite": {
-          "ok": 1397,
+          "ok": 1641,
           "empty": 233,
           "error": 0,
-          "noperiod": 7,
+          "noperiod": 9,
           "nofield": 0,
-          "total": 1637,
-          "totalEntries": 30563
+          "total": 1883,
+          "totalEntries": 35562
         },
         "classes": {
           "ok": 314,
@@ -588,7 +588,7 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 500,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-30T20:04:26.486Z",
+      "lastModified": "2026-03-30T20:11:50.550Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -611,14 +611,14 @@
           "totalEntries": 0
         },
         "assiduite": {
-          "total": 0,
-          "ok": 0,
+          "total": 246,
+          "ok": 244,
           "empty": 0,
           "error": 0,
-          "noperiod": 0,
+          "noperiod": 2,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 4999
         },
         "pupils": {
           "total": 1,
@@ -4254,46 +4254,46 @@
     },
     "demographics": {
       "sexe": {
-        "M": 21802,
-        "F": 27472,
+        "M": 21840,
+        "F": 27532,
         "inconnu": 1605
       },
-      "boursiers": 7608,
+      "boursiers": 7625,
       "redoublants": 365,
       "exempts": 150,
-      "totalPupils": 50879,
+      "totalPupils": 50977,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "TCHADIENNE": 1135,
-        "GABONAISE": 5636,
+        "TCHADIENNE": 1145,
+        "GABONAISE": 5647,
         "TOGOLAISE": 1106,
-        "SENEGALAISE": 23873,
-        "BURKINABE": 689,
-        "GUINEENNE": 1625,
-        "IVOIRIENNE": 945,
-        "MALIENNE": 1073,
-        "NIGERIENNE": 1167,
+        "SENEGALAISE": 23910,
+        "BURKINABE": 690,
+        "GUINEENNE": 1628,
+        "IVOIRIENNE": 947,
+        "MALIENNE": 1078,
+        "NIGERIENNE": 1171,
         "HAÏTIENNE": 15,
-        "BENINOISE": 870,
-        "HAITIENNE": 35,
-        "CONGOLAISE": 2325,
+        "BENINOISE": 873,
+        "HAITIENNE": 36,
+        "CONGOLAISE": 2329,
         "Haitienne": 3,
         "CAMEROUN": 3,
         "BISSAU GUINEENNE": 29,
-        "CAMEROUNAISE": 509,
+        "CAMEROUNAISE": 516,
         "SENEGAL": 18,
         "SENEGLAISE": 21,
-        "MAURITANIENNE": 433,
+        "MAURITANIENNE": 435,
         "MAROCAINE": 35,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
         "CANADO-MALIENNE": 3,
-        "COMORIENNE": 125,
+        "COMORIENNE": 126,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 591,
+        "CENTRAFRICAINE": 595,
         "SENEGGALAISE": 2,
         "GUINÉENNE": 6,
         "ITALIENNE": 29,
@@ -4306,7 +4306,7 @@
         "RWANDAISE": 31,
         "ANGOLAISE": 7,
         "EQUATO GUINEENNE": 26,
-        "DJIBOUTIENNE": 306,
+        "DJIBOUTIENNE": 307,
         "CAMEROUNNAISE": 3,
         "NIGERIANNE": 15,
         "ENEGALAISE": 2,
@@ -4316,7 +4316,8 @@
         "BURKINABEE": 50,
         "MALGACHE": 26,
         "Française": 27,
-        "GUINEENE": 5,
+        "GUINEENE": 6,
+        "NiGERIENNE": 1,
         "Nigérienne": 110,
         "Français": 1,
         "Guinéenne": 118,
@@ -4592,11 +4593,11 @@
         "LCM3": 1
       },
       "ages": {
-        "24-25": 8146,
-        "26-30": 16048,
-        ">30": 10854,
-        "21-23": 10305,
-        "18-20": 3983,
+        "24-25": 8168,
+        "26-30": 16068,
+        ">30": 10858,
+        "21-23": 10352,
+        "18-20": 3988,
         "<18": 96
       },
       "niveaux": {
@@ -4680,8 +4681,8 @@
           "F": 4285
         },
         "ISM Dakar Graduate School": {
-          "M": 3029,
-          "F": 3865
+          "M": 3067,
+          "F": 3925
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4714,7 +4715,7 @@
       },
       "boursiersParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": 1610,
-        "ISM Dakar Graduate School": 590,
+        "ISM Dakar Graduate School": 607,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
         "ISM Dakar Madiba Leadership Institut": 990,
@@ -4735,12 +4736,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.56,
-      "totalNotes": 2290999,
+      "totalNotes": 2293587,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6058812.540000056,
-          "count": 522606,
-          "moy": 11.59
+          "sum": 6096523.6400000565,
+          "count": 525194,
+          "moy": 11.61
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4780,9 +4781,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 392790,
-          "total": 522606,
-          "taux": 75.2
+          "reussi": 395251,
+          "total": 525194,
+          "taux": 75.3
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4894,7 +4895,7 @@
         {
           "matiere": "Responsabilité Sociale des Entreprises",
           "moy": 11.73,
-          "count": 9428
+          "count": 9448
         },
         {
           "matiere": "Mathématiques Financières",
@@ -4924,19 +4925,19 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.78,
-          "count": 1145534
+          "moy": 11.79,
+          "count": 1146828
         },
         "exam": {
           "moy": 11.33,
-          "count": 1145465
+          "count": 1146759
         }
       }
     },
     "attendance": {
-      "totalAbsences": 1233288.0000000556,
-      "totalJustifiees": 125305.40000000029,
-      "totalNonJustifiees": 1107982.6000000527,
+      "totalAbsences": 1233610.6000000557,
+      "totalJustifiees": 125335.40000000029,
+      "totalNonJustifiees": 1108275.2000000528,
       "absencesParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
           "absences": 274442.5,
@@ -4944,9 +4945,9 @@
           "records": 13220
         },
         "ISM Dakar Graduate School": {
-          "absences": 135066.30000000173,
-          "justifiees": 10146.699999999993,
-          "records": 5858
+          "absences": 135388.90000000154,
+          "justifiees": 10176.699999999993,
+          "records": 5875
         },
         "ISM Dakar Ecole de Droit": {
           "absences": 337811.69999999553,
@@ -4978,7 +4979,7 @@
         "LICENCE 2": 199,
         "LICENCE 3": 178,
         "LICENCE 1 R2": 29,
-        "MBA 1": 291,
+        "MBA 1": 298,
         "MBA 2": 256,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
         "BP3-PRO": 2,
@@ -5059,7 +5060,7 @@
         "Sciences du Numérique": 49,
         "Sciences Economique Et Sociales": 6,
         "Sciences Economiques et Sociales": 5,
-        "Sciences Economiques et de Gestion": 755,
+        "Sciences Economiques et de Gestion": 762,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
@@ -5104,12 +5105,12 @@
       }
     },
     "quality": {
-      "total": 54871,
+      "total": 54969,
       "completude": {
         "sexe": 91.2,
         "nationalite": 86.9,
         "dateNaissance": 91.6,
-        "email": 78.4,
+        "email": 78.5,
         "telephone": 73.9
       },
       "missing": {
@@ -6767,7 +6768,7 @@
         {
           "matiere": "Responsabilité Sociale des Entreprises",
           "moy": 11.73,
-          "count": 9428,
+          "count": 9448,
           "tauxReussite": 80.8
         }
       ]
