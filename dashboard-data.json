@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T22:30:01.398Z",
+  "generatedAt": "2026-03-30T22:35:00.536Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 48,
+        "notes": 51,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5187,13 +5187,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.33,
-      "totalNotes": 2365704,
+      "moyenneGlobale": 11.32,
+      "totalNotes": 2367950,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2668975.1100000218,
-          "count": 264744,
-          "moy": 10.08
+          "sum": 2669137.1100000218,
+          "count": 266990,
+          "moy": 10
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 177223,
-          "total": 264744,
-          "taux": 66.9
+          "reussi": 177234,
+          "total": 266990,
+          "taux": 66.4
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5266,8 +5266,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.04,
-          "count": 37291
+          "moy": 10.98,
+          "count": 37497
         },
         {
           "matiere": "Business Communication",
@@ -5367,12 +5367,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.55,
-          "count": 1182891
+          "moy": 11.54,
+          "count": 1184011
         },
         "exam": {
-          "moy": 11.11,
-          "count": 1182813
+          "moy": 11.09,
+          "count": 1183939
         }
       }
     },
@@ -6984,7 +6984,7 @@
         {
           "matiere": "Relations Publiques - Relations Presse…",
           "moy": 0,
-          "count": 44,
+          "count": 52,
           "tauxReussite": 0
         },
         {
@@ -7125,9 +7125,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.04,
-          "count": 37291,
-          "tauxReussite": 73.9
+          "moy": 10.98,
+          "count": 37497,
+          "tauxReussite": 73.5
         },
         {
           "matiere": "Business Communication",
