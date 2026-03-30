@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:05:01.538Z",
+  "generatedAt": "2026-03-30T02:10:00.584Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4108,5 +4108,279 @@
     "eleves": 20371,
     "enseignants": 316,
     "matieresGlobal": 15078
+  },
+  "business": {
+    "effectifs": {
+      "ISM-DAKAR": {
+        "courant": 5258
+      },
+      "ISM Dakar Ecole d'Ingénieurs": {
+        "courant": 500,
+        "2017-2018": 568,
+        "2018-2019": 662,
+        "2019-2020": 727,
+        "2020-2021": 843,
+        "2021-2022": 1092,
+        "2022-2023": 1478,
+        "2024-2025": 1428,
+        "2025-2026": 1558
+      },
+      "ISM Dakar Ecole de Droit": {
+        "courant": 614,
+        "2017-2018": 553,
+        "2018-2019": 685,
+        "2019-2020": 766,
+        "2020-2021": 954,
+        "2021-2022": 1084,
+        "2022-2023": 1214,
+        "2023-2024": 1091,
+        "2024-2025": 1145,
+        "2025-2026": 1245
+      },
+      "ISM Dakar Ecole de Management": {
+        "courant": 877,
+        "2017-2018": 835,
+        "2018-2019": 909,
+        "2019-2020": 961,
+        "2020-2021": 1107,
+        "2021-2022": 1269,
+        "2022-2023": 1563,
+        "2023-2024": 1614,
+        "2024-2025": 1571,
+        "2025-2026": 1856
+      },
+      "ISM Dakar Graduate School": {
+        "courant": 661,
+        "2017-2018": 609,
+        "2018-2019": 640,
+        "2019-2020": 697,
+        "2020-2021": 638,
+        "2021-2022": 845,
+        "2022-2023": 987,
+        "2023-2024": 892,
+        "2024-2025": 1053,
+        "2025-2026": 0
+      },
+      "ISM Dakar Madiba Leadership Institut": {
+        "courant": 325,
+        "2017-2018": 367,
+        "2018-2019": 440,
+        "2019-2020": 474,
+        "2020-2021": 491,
+        "2021-2022": 507,
+        "2022-2023": 511,
+        "2023-2024": 468,
+        "2024-2025": 434,
+        "2025-2026": 460
+      },
+      "ISM Online & ISF": {
+        "2021-2022": 305,
+        "2022-2023": 1018,
+        "2023-2024": 1062,
+        "2024-2025": 1241,
+        "2025-2026": 1190
+      },
+      "ISM Online et ISF": {
+        "2020-2021": 167
+      },
+      "ISM HQ": {
+        "2018-2019": 6,
+        "2019-2020": 55,
+        "2020-2021": 99,
+        "2021-2022": 86,
+        "2022-2023": 415,
+        "2023-2024": 779,
+        "2024-2025": 926,
+        "2025-2026": 746
+      }
+    },
+    "demographics": {
+      "sexe": {
+        "M": 0,
+        "F": 0,
+        "inconnu": 50979
+      },
+      "boursiers": 0,
+      "redoublants": 0,
+      "exempts": 0,
+      "totalPupils": 50979,
+      "nationalites": {},
+      "ages": {
+        ">30": 11404,
+        "26-30": 16146,
+        "24-25": 7923,
+        "21-23": 9737,
+        "18-20": 3864,
+        "<18": 100
+      },
+      "niveaux": {
+        "MBA2": 1990,
+        "L3": 222,
+        "L1": 605,
+        "L2": 539,
+        "MBA1": 2221,
+        "IIA - ALBI": 22,
+        "Licence 1": 1313,
+        "Licence 2": 1162,
+        "Licence 3": 1041,
+        "MBA 1": 5087,
+        "MBA 2": 4920,
+        "MBA 1 - PEL": 10,
+        "MBA 2 - EXTERNE": 164,
+        "MBA 2 - PEL": 20,
+        "LICENCE 1": 6576,
+        "LICENCE 2": 5842,
+        "LICENCE 3 - AI": 628,
+        "LICENCE 3": 4984,
+        "ISF": 101,
+        "ETUDIANT A SUPPRIMER": 25,
+        "NON INSCRITS": 1384,
+        "LICENCE 1 R2": 934,
+        "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 40,
+        "ADMIS NON INSCRITS": 2698,
+        "MBA1 Soir": 38,
+        "Master 2": 134,
+        "Master 1": 101,
+        "MBA 2-EXTERNE": 49,
+        "LICENCE 3 - AE": 70,
+        "LICENCE3": 1210,
+        "LICENCE1": 1489,
+        "LICENCE2": 1375,
+        "LICENCE 1 Cours du soir": 1,
+        "Albi licence externe": 2,
+        "CERTIFICAT": 684,
+        "LICENCE ALBI EXTERNE": 3,
+        "MBA 1 Juriste d'Affaires, Assurance et Compliance": 14,
+        "MBA 2 Juriste d'Affaires, Assurance et Compliance": 7,
+        "MBA 1 ESG Juriste d'Entreprise": 10,
+        "MBA 1 Droit International des Affaires": 16,
+        "MBA 1 Soir": 166,
+        "MBA 2 Soir": 70,
+        "MBA 2 ESG Juriste d'Entreprise": 2,
+        "MBA 2 Droit International des Affaires": 3,
+        "LICENCE 3 PROGRAMME D’ECHANGE": 1,
+        "Executive MBA": 3,
+        "Programme d'Echange": 1,
+        "E4IMPACT": 6,
+        "EXECUTIVE MBA": 34,
+        "E-4 IMPACT": 20,
+        "EMBA": 123,
+        "MBA 1 Cours du Soir": 713,
+        "MBA 1 Pétrole & Gaz": 48,
+        "MBA 2 Cours du Soir": 401,
+        "MBA 2 Pétrole & Gaz": 16,
+        "Licence 3 - EXTERNE": 38,
+        "IESA": 7,
+        "MBA 2 MPSD": 22,
+        "MBA 1 Online S1": 95,
+        "MBA 2 Online S1": 56,
+        "ICCF": 2,
+        "ROYALTIES - ACOMPTE": 1,
+        "Certificat": 1,
+        "MBA": 68,
+        "LICENCE": 41,
+        "DUPLICATA": 1192,
+        "DBA": 20,
+        "CERTIFICAT-HEC": 98
+      },
+      "sexeParEcole": {
+        "ISM-DAKAR": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Dakar Ecole d'Ingénieurs": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Dakar Ecole de Droit": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Dakar Ecole de Management": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Dakar Graduate School": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Dakar Madiba Leadership Institut": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Online & ISF": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM Online et ISF": {
+          "M": 0,
+          "F": 0
+        },
+        "ISM HQ": {
+          "M": 0,
+          "F": 0
+        }
+      },
+      "boursiersParEcole": {},
+      "redoublantsParEcole": {}
+    },
+    "academic": {
+      "moyenneGlobale": 0,
+      "totalNotes": 0,
+      "moyenneParEcole": {},
+      "tauxReussite": {},
+      "topMatieres": [],
+      "ccVsExam": {
+        "cc": {
+          "moy": 0,
+          "count": 0
+        },
+        "exam": {
+          "moy": 0,
+          "count": 0
+        }
+      }
+    },
+    "attendance": {
+      "totalAbsences": 1157904,
+      "totalJustifiees": 117836,
+      "totalNonJustifiees": 1040068,
+      "absencesParEcole": {
+        "ISM-DAKAR": {
+          "absences": 67171,
+          "justifiees": 9414,
+          "records": 4191
+        },
+        "ISM Dakar Ecole d'Ingénieurs": {
+          "absences": 201742,
+          "justifiees": 25540,
+          "records": 10724
+        },
+        "ISM Dakar Ecole de Droit": {
+          "absences": 337603,
+          "justifiees": 18810,
+          "records": 14133
+        },
+        "ISM Dakar Ecole de Management": {
+          "absences": 343803,
+          "justifiees": 44032,
+          "records": 23710
+        },
+        "ISM Dakar Graduate School": {
+          "absences": 133582,
+          "justifiees": 10080,
+          "records": 5819
+        },
+        "ISM Dakar Madiba Leadership Institut": {
+          "absences": 74003,
+          "justifiees": 9960,
+          "records": 4421
+        }
+      }
+    },
+    "structure": {
+      "niveauxDistrib": {},
+      "filieresDistrib": {}
+    }
   }
 }

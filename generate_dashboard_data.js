@@ -221,6 +221,164 @@ function readGlobalData(licenceDir) {
   return result;
 }
 
+// ─── Données métier (onglet Groupe ISM) ────────────────────────────────────
+
+function readPupilsDetailed(licenceDir) {
+  // Lit all_pupils.json et retourne les détails démographiques
+  const pupilsFile = path.join(licenceDir, '_pupils', 'all_pupils.json');
+  if (!fs.existsSync(pupilsFile)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(pupilsFile, 'utf8'));
+    if (!data.rows) return [];
+    return data.rows.map(r => ({
+      id: (r.Identifiant || '').trim(),
+      sexe: (r.Sexe || '').trim(),
+      nationalite: (r.Nationalité || r['Nationalite'] || '').trim(),
+      dateNaissance: (r['Date de naissance'] || '').trim(),
+      niveau: (r.Niveau || '').trim(),
+      redoublant: (r.Redoublant || '').trim().toLowerCase() === 'oui',
+      boursier: (r.Boursier || '').trim().toLowerCase() === 'oui',
+      exempt: (r['Exempt des frais'] || '').trim().toLowerCase() === 'oui',
+      classe: (r.Classe || '').trim(),
+    }));
+  } catch { return []; }
+}
+
+function readClassFields(licenceDir) {
+  // Lit class_fields.json dans chaque classe pour les coefficients, crédits, UE
+  if (!fs.existsSync(licenceDir)) return [];
+  const results = [];
+  try {
+    const classDirs = fs.readdirSync(licenceDir, { withFileTypes: true })
+      .filter(d => d.isDirectory() && !d.name.startsWith('_') && !d.name.startsWith('.'));
+    for (const cd of classDirs) {
+      const cfPath = path.join(licenceDir, cd.name, 'class_fields.json');
+      if (!fs.existsSync(cfPath)) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(cfPath, 'utf8'));
+        const rows = Array.isArray(data) ? data : (data.rows || []);
+        for (const r of rows) {
+          results.push({
+            classe: cd.name,
+            matiere: (r['Matière'] || '').trim(),
+            ue: (r['U.E.'] || '').trim(),
+            coefficient: parseFloat(r['Coefficient']) || 0,
+            credits: parseFloat(r['Crédits'] || r['Credits']) || 0,
+            bareme: parseFloat(r['Barème'] || r['Bareme']) || 20,
+            option: (r['Option'] || '').trim().toLowerCase() === 'oui',
+          });
+        }
+      } catch {}
+    }
+  } catch {}
+  return results;
+}
+
+function readGradesForLicence(licenceDir) {
+  // Lit tous les fichiers de notes dans _notes/ et retourne les moyennes
+  const notesDir = path.join(licenceDir, '_notes');
+  if (!fs.existsSync(notesDir)) return [];
+  const grades = [];
+  try {
+    // _notes/ contient des sous-dossiers par classe
+    const classDirs = fs.readdirSync(notesDir, { withFileTypes: true })
+      .filter(d => d.isDirectory());
+    for (const cd of classDirs) {
+      const classNotesDir = path.join(notesDir, cd.name);
+      // Chaque sous-dossier contient des JSON de périodes ou matières
+      const files = fs.readdirSync(classNotesDir).filter(f => f.endsWith('.json'));
+      for (const f of files) {
+        try {
+          const data = JSON.parse(fs.readFileSync(path.join(classNotesDir, f), 'utf8'));
+          if (!data.rows || !data.headers) continue;
+          const bareme = data.barème || data.bareme || 20;
+          // Trouver les colonnes de notes dans headers
+          const noteHeaders = (data.headers || []).filter(h =>
+            h !== 'Elève' && h !== 'Élève' && h !== '#' && h !== '_db_ids' && h !== '_links'
+          );
+          for (const row of data.rows) {
+            for (const h of noteHeaders) {
+              const val = parseFloat(row[h]);
+              if (!isNaN(val) && val >= 0 && val <= bareme) {
+                grades.push({
+                  classe: data.className || cd.name,
+                  periode: data.periodName || '',
+                  matiere: data.fieldName || '',
+                  note: val,
+                  bareme,
+                  note20: bareme !== 20 ? (val / bareme * 20) : val,
+                  type: h, // CC, Examen, etc.
+                });
+              }
+            }
+          }
+        } catch {}
+      }
+    }
+  } catch {}
+  return grades;
+}
+
+function readAttendanceForLicence(licenceDir) {
+  // Lit les fichiers d'assiduité dans _assiduite/
+  const assDir = path.join(licenceDir, '_assiduite');
+  if (!fs.existsSync(assDir)) return [];
+  const records = [];
+  try {
+    const classDirs = fs.readdirSync(assDir, { withFileTypes: true })
+      .filter(d => d.isDirectory());
+    for (const cd of classDirs) {
+      const classAssDir = path.join(assDir, cd.name);
+      const files = fs.readdirSync(classAssDir).filter(f => f.endsWith('.json'));
+      for (const f of files) {
+        try {
+          const data = JSON.parse(fs.readFileSync(path.join(classAssDir, f), 'utf8'));
+          if (!data.rows) continue;
+          for (const row of data.rows) {
+            const absences = parseFloat(row.absences || row['absences'] || 0) || 0;
+            const justifiees = parseFloat(row['absences justifiées'] || row['absences justifiees'] || 0) || 0;
+            if (absences > 0 || justifiees > 0) {
+              records.push({
+                classe: data.className || cd.name,
+                periode: data.periodName || '',
+                absences,
+                justifiees,
+                nonJustifiees: absences - justifiees,
+              });
+            }
+          }
+        } catch {}
+      }
+    }
+  } catch {}
+  return records;
+}
+
+function readClassMainInfo(licenceDir) {
+  // Lit main.json de chaque classe pour niveau, filière, domaine
+  if (!fs.existsSync(licenceDir)) return [];
+  const results = [];
+  try {
+    const classDirs = fs.readdirSync(licenceDir, { withFileTypes: true })
+      .filter(d => d.isDirectory() && !d.name.startsWith('_') && !d.name.startsWith('.'));
+    for (const cd of classDirs) {
+      const mainPath = path.join(licenceDir, cd.name, 'main.json');
+      if (!fs.existsSync(mainPath)) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(mainPath, 'utf8'));
+        results.push({
+          classe: cd.name,
+          niveau: (data.level || data.niveau || '').trim(),
+          gradeType: (data.gradeType || '').trim(),
+          area: (data.academicArea || data.area || '').trim(),
+          program: (data.program || '').trim(),
+        });
+      } catch {}
+    }
+  } catch {}
+  return results;
+}
+
 function extractNotesDetails(rows) {
   // Extraire matières uniques, périodes uniques depuis les rows fusionnés de notes
   if (!rows) return { nbMatieres: 0, nbPeriodes: 0, matieres: [], periodes: [] };
@@ -348,6 +506,7 @@ async function main() {
         nbPeriodes: notesDetails.nbPeriodes,
         lastModified,
         scrapers: scraperStats,
+        _path: lic.path,
       };
 
       data.licences.push(licenceData);
@@ -417,6 +576,171 @@ async function main() {
     matieresGlobal: data._rawFieldCount - data._allFieldsGlobal.size,
   };
 
+  // ─── Données métier (onglet Groupe ISM) ───────────────────────────────
+  console.log('📈 Extraction des données métier...');
+  const businessData = {
+    effectifs: {},
+    demographics: {
+      sexe: { M: 0, F: 0, inconnu: 0 },
+      boursiers: 0, redoublants: 0, exempts: 0, totalPupils: 0,
+      nationalites: {},
+      ages: {},
+      niveaux: {},
+      sexeParEcole: {},
+      boursiersParEcole: {},
+      redoublantsParEcole: {},
+    },
+    academic: {
+      moyenneGlobale: 0, totalNotes: 0,
+      moyenneParEcole: {},
+      tauxReussite: {},
+      topMatieres: {},
+      ccVsExam: { cc: { sum: 0, count: 0 }, exam: { sum: 0, count: 0 } },
+    },
+    attendance: {
+      totalAbsences: 0, totalJustifiees: 0, totalNonJustifiees: 0,
+      absencesParEcole: {},
+    },
+    structure: {
+      niveauxDistrib: {},
+      filieresDistrib: {},
+    },
+  };
+
+  let totalGradesSum = 0, totalGradesCount = 0;
+
+  for (const lic of data.licences) {
+    const { school, year } = lic;
+    const licDir = lic._path;
+    if (!licDir) continue;
+
+    // Effectifs par école par année
+    if (!businessData.effectifs[school]) businessData.effectifs[school] = {};
+    businessData.effectifs[school][year] = (businessData.effectifs[school][year] || 0) + lic.nbEleves;
+
+    // Démographie
+    const pupils = readPupilsDetailed(licDir);
+    const seenIds = new Set();
+    for (const p of pupils) {
+      if (seenIds.has(p.id)) continue;
+      seenIds.add(p.id);
+      businessData.demographics.totalPupils++;
+
+      if (p.sexe.startsWith('M') && !p.sexe.startsWith('Ma')) businessData.demographics.sexe.M++;
+      else if (p.sexe.startsWith('F') || p.sexe.startsWith('Fém')) businessData.demographics.sexe.F++;
+      else businessData.demographics.sexe.inconnu++;
+
+      if (!businessData.demographics.sexeParEcole[school]) businessData.demographics.sexeParEcole[school] = { M: 0, F: 0 };
+      if (p.sexe.startsWith('M') && !p.sexe.startsWith('Ma')) businessData.demographics.sexeParEcole[school].M++;
+      else if (p.sexe.startsWith('F') || p.sexe.startsWith('Fém')) businessData.demographics.sexeParEcole[school].F++;
+
+      if (p.boursier) {
+        businessData.demographics.boursiers++;
+        businessData.demographics.boursiersParEcole[school] = (businessData.demographics.boursiersParEcole[school] || 0) + 1;
+      }
+      if (p.redoublant) {
+        businessData.demographics.redoublants++;
+        businessData.demographics.redoublantsParEcole[school] = (businessData.demographics.redoublantsParEcole[school] || 0) + 1;
+      }
+      if (p.exempt) businessData.demographics.exempts++;
+
+      if (p.nationalite) {
+        businessData.demographics.nationalites[p.nationalite] = (businessData.demographics.nationalites[p.nationalite] || 0) + 1;
+      }
+
+      if (p.dateNaissance) {
+        const parts = p.dateNaissance.split('/');
+        let birthYear = null;
+        if (parts.length === 3) birthYear = parseInt(parts[2]);
+        else if (parts.length === 1) birthYear = parseInt(parts[0]);
+        if (birthYear && birthYear > 1950 && birthYear < 2015) {
+          const age = 2025 - birthYear;
+          const tranche = age < 18 ? '<18' : age <= 20 ? '18-20' : age <= 23 ? '21-23' : age <= 25 ? '24-25' : age <= 30 ? '26-30' : '>30';
+          businessData.demographics.ages[tranche] = (businessData.demographics.ages[tranche] || 0) + 1;
+        }
+      }
+
+      if (p.niveau) {
+        businessData.demographics.niveaux[p.niveau] = (businessData.demographics.niveaux[p.niveau] || 0) + 1;
+      }
+    }
+
+    // Notes
+    const grades = readGradesForLicence(licDir);
+    if (grades.length > 0) {
+      if (!businessData.academic.moyenneParEcole[school]) businessData.academic.moyenneParEcole[school] = { sum: 0, count: 0 };
+      if (!businessData.academic.tauxReussite[school]) businessData.academic.tauxReussite[school] = { reussi: 0, total: 0 };
+      for (const g of grades) {
+        totalGradesSum += g.note20;
+        totalGradesCount++;
+        businessData.academic.moyenneParEcole[school].sum += g.note20;
+        businessData.academic.moyenneParEcole[school].count++;
+        businessData.academic.tauxReussite[school].total++;
+        if (g.note20 >= 10) businessData.academic.tauxReussite[school].reussi++;
+
+        if (g.matiere) {
+          if (!businessData.academic.topMatieres[g.matiere]) businessData.academic.topMatieres[g.matiere] = { sum: 0, count: 0 };
+          businessData.academic.topMatieres[g.matiere].sum += g.note20;
+          businessData.academic.topMatieres[g.matiere].count++;
+        }
+
+        const typeLower = (g.type || '').toLowerCase();
+        if (typeLower.includes('continu') || typeLower === 'cc' || typeLower.includes('contrôle')) {
+          businessData.academic.ccVsExam.cc.sum += g.note20;
+          businessData.academic.ccVsExam.cc.count++;
+        } else if (typeLower.includes('exam') || typeLower.includes('partiel')) {
+          businessData.academic.ccVsExam.exam.sum += g.note20;
+          businessData.academic.ccVsExam.exam.count++;
+        }
+      }
+    }
+
+    // Assiduité
+    const attendance = readAttendanceForLicence(licDir);
+    if (attendance.length > 0) {
+      if (!businessData.attendance.absencesParEcole[school]) businessData.attendance.absencesParEcole[school] = { absences: 0, justifiees: 0, records: 0 };
+      for (const a of attendance) {
+        businessData.attendance.totalAbsences += a.absences;
+        businessData.attendance.totalJustifiees += a.justifiees;
+        businessData.attendance.totalNonJustifiees += a.nonJustifiees;
+        businessData.attendance.absencesParEcole[school].absences += a.absences;
+        businessData.attendance.absencesParEcole[school].justifiees += a.justifiees;
+        businessData.attendance.absencesParEcole[school].records++;
+      }
+    }
+
+    // Structure
+    const classInfos = readClassMainInfo(licDir);
+    for (const ci of classInfos) {
+      if (ci.niveau) businessData.structure.niveauxDistrib[ci.niveau] = (businessData.structure.niveauxDistrib[ci.niveau] || 0) + 1;
+      if (ci.area) businessData.structure.filieresDistrib[ci.area] = (businessData.structure.filieresDistrib[ci.area] || 0) + 1;
+    }
+  }
+
+  // Calculs finaux
+  businessData.academic.moyenneGlobale = totalGradesCount > 0 ? +(totalGradesSum / totalGradesCount).toFixed(2) : 0;
+  businessData.academic.totalNotes = totalGradesCount;
+  for (const d of Object.values(businessData.academic.moyenneParEcole)) {
+    d.moy = d.count > 0 ? +(d.sum / d.count).toFixed(2) : 0;
+  }
+  for (const d of Object.values(businessData.academic.tauxReussite)) {
+    d.taux = d.total > 0 ? +(d.reussi / d.total * 100).toFixed(1) : 0;
+  }
+  // Top 20 matières
+  businessData.academic.topMatieres = Object.entries(businessData.academic.topMatieres)
+    .map(([m, d]) => ({ matiere: m, moy: +(d.sum / d.count).toFixed(2), count: d.count }))
+    .sort((a, b) => b.count - a.count).slice(0, 20);
+  // CC vs Exam
+  const cc = businessData.academic.ccVsExam.cc;
+  const ex = businessData.academic.ccVsExam.exam;
+  businessData.academic.ccVsExam = {
+    cc: { moy: cc.count > 0 ? +(cc.sum / cc.count).toFixed(2) : 0, count: cc.count },
+    exam: { moy: ex.count > 0 ? +(ex.sum / ex.count).toFixed(2) : 0, count: ex.count },
+  };
+
+  data.business = businessData;
+  console.log(`   📈 Démographie: ${businessData.demographics.totalPupils} élèves analysés | ${totalGradesCount} notes | ${businessData.attendance.totalAbsences} absences`);
+
   // Nettoyage des sets temporaires (non sérialisables)
   delete data._globalMatieres;
   delete data._globalPeriodes;
@@ -426,6 +750,7 @@ async function main() {
   delete data._rawEleveCount;
   delete data._rawTeacherCount;
   delete data._rawFieldCount;
+  data.licences.forEach(l => delete l._path);
 
   // Write JSON
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2), 'utf8');
