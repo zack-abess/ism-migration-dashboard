@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:35:01.246Z",
+  "generatedAt": "2026-03-30T02:40:01.231Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4672,12 +4672,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2263657,
+      "totalNotes": 2264945,
       "moyenneParEcole": {
         "ISM-DAKAR": {
-          "sum": 1334112.5199999989,
-          "count": 117830,
-          "moy": 11.32
+          "sum": 1349529.7700000007,
+          "count": 119118,
+          "moy": 11.33
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 5315905.400000062,
@@ -4717,9 +4717,9 @@
       },
       "tauxReussite": {
         "ISM-DAKAR": {
-          "reussi": 87810,
-          "total": 117830,
-          "taux": 74.5
+          "reussi": 88810,
+          "total": 119118,
+          "taux": 74.6
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 344980,
@@ -4805,13 +4805,13 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.02,
-          "count": 11279
+          "moy": 12.03,
+          "count": 11371
         },
         {
           "matiere": "Comptabilité Générale 3",
           "moy": 11.1,
-          "count": 11206
+          "count": 11298
         },
         {
           "matiere": "Mathématiques : Statistiques Descriptives",
@@ -4861,12 +4861,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.55,
-          "count": 1131829
+          "moy": 11.56,
+          "count": 1132473
         },
         "exam": {
           "moy": 11.1,
-          "count": 1131828
+          "count": 1132472
         }
       }
     },
@@ -5034,6 +5034,1708 @@
         "ART, CULTURE et CIVILISATION": 7,
         "SCIENCES DE L'INFORMATION ET DE LA COMMUNICATION": 9,
         "Sciences Juridiques, Politiques et de L'Administration": 4
+      }
+    },
+    "quality": {
+      "total": 53322,
+      "completude": {
+        "sexe": 90.9,
+        "nationalite": 86.5,
+        "dateNaissance": 91.3,
+        "email": 77.8,
+        "telephone": 73.8
+      },
+      "missing": {
+        "sexe": 4845,
+        "nationalite": 7197,
+        "dateNaissance": 4627,
+        "email": 11823,
+        "telephone": 13975
+      }
+    },
+    "anomalies": {
+      "highAbsenteeism": [
+        {
+          "licence": "ISM Dakar Graduate School 2022-2023",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 2 - MRH Soir",
+          "avgAbsences": 112.5
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2019-2020",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA1 COMMUNICATION - CREATIVITE - EVENEMENTIEL",
+          "avgAbsences": 86
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - CCE",
+          "avgAbsences": 72.8
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - QHSE Soir",
+          "avgAbsences": 72.4
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2022-2023",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - Management, Vente et Relation Client",
+          "avgAbsences": 64.7
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2020-2021",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "MBA1- Actuariat Big Data et Assurance Quantitative",
+          "avgAbsences": 63.3
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2018-2019",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA1 - Communication-Créativité-Evénementiel",
+          "avgAbsences": 63.1
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2024-2025",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "L1-CDSD",
+          "avgAbsences": 61.4
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2018-2019",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA2 - MIM",
+          "avgAbsences": 60
+        },
+        {
+          "licence": "ISM Dakar Madiba Leadership Institut 2022-2023",
+          "school": "ISM Dakar Madiba Leadership Institut",
+          "classe": "MBA1- DGT",
+          "avgAbsences": 60
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2021-2022",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 MRH Soir",
+          "avgAbsences": 58.8
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - Management, Vente et Relation Client SOIR",
+          "avgAbsences": 58.4
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - Management, Vente et Relation Client",
+          "avgAbsences": 57.5
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2017-2018",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "M1 Stratégie Digitale - Spéc. UX Design",
+          "avgAbsences": 57
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2022-2023",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 2 - Management, Vente et Relation Client SOIR",
+          "avgAbsences": 57
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2017-2018",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "MBA1-IRSD/MSSI",
+          "avgAbsences": 55.8
+        },
+        {
+          "licence": "ISM Dakar Ecole de Droit 2020-2021",
+          "school": "ISM Dakar Ecole de Droit",
+          "classe": "MBA2- Passation des Marchés",
+          "avgAbsences": 53.1
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - CCE soir",
+          "avgAbsences": 52.2
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2021-2022",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 Management, Vente et Relation Client",
+          "avgAbsences": 51.4
+        },
+        {
+          "licence": "ISM Dakar Madiba Leadership Institut 2018-2019",
+          "school": "ISM Dakar Madiba Leadership Institut",
+          "classe": "Executive En CPSI",
+          "avgAbsences": 51.4
+        },
+        {
+          "licence": "ISM-DAKAR",
+          "school": "ISM-DAKAR",
+          "classe": "MBA1 Projet Part Time",
+          "avgAbsences": 51.3
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2019-2020",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA1 BANQUE-ASSURANCE",
+          "avgAbsences": 50.7
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2022-2023",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "L3-MAIE",
+          "avgAbsences": 50.4
+        },
+        {
+          "licence": "ISM Dakar Graduate School 2023-2024",
+          "school": "ISM Dakar Graduate School",
+          "classe": "MBA 1 - QHSE",
+          "avgAbsences": 50.4
+        },
+        {
+          "licence": "ISM Dakar Ecole de Droit 2018-2019",
+          "school": "ISM Dakar Ecole de Droit",
+          "classe": "LDA2 - A",
+          "avgAbsences": 50.1
+        }
+      ]
+    },
+    "correlation": [
+      {
+        "classe": "MBA 2 - MRH Soir",
+        "school": "Graduate School",
+        "moyNotes": 12.3,
+        "moyAbsences": 112.5
+      },
+      {
+        "classe": "MBA1 COMMUNICATION - CREATIVITE - EVENEMENTIEL",
+        "school": "Graduate School",
+        "moyNotes": 11.23,
+        "moyAbsences": 86
+      },
+      {
+        "classe": "MBA 1 - CCE",
+        "school": "Graduate School",
+        "moyNotes": 10.15,
+        "moyAbsences": 72.8
+      },
+      {
+        "classe": "MBA 1 - QHSE Soir",
+        "school": "Graduate School",
+        "moyNotes": 12.11,
+        "moyAbsences": 72.4
+      },
+      {
+        "classe": "MBA 1 - Management, Vente et Relation Client",
+        "school": "Graduate School",
+        "moyNotes": 11.8,
+        "moyAbsences": 64.7
+      },
+      {
+        "classe": "MBA1 - Communication-Créativité-Evénementiel",
+        "school": "Graduate School",
+        "moyNotes": 11.67,
+        "moyAbsences": 63.1
+      },
+      {
+        "classe": "L1-CDSD",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.24,
+        "moyAbsences": 61.4
+      },
+      {
+        "classe": "MBA2 - MIM",
+        "school": "Graduate School",
+        "moyNotes": 11.39,
+        "moyAbsences": 60
+      },
+      {
+        "classe": "MBA 1 MRH Soir",
+        "school": "Graduate School",
+        "moyNotes": 10.23,
+        "moyAbsences": 58.8
+      },
+      {
+        "classe": "MBA 1 - Management, Vente et Relation Client SOIR",
+        "school": "Graduate School",
+        "moyNotes": 11.11,
+        "moyAbsences": 58.4
+      },
+      {
+        "classe": "MBA 1 - Management, Vente et Relation Client",
+        "school": "Graduate School",
+        "moyNotes": 13.51,
+        "moyAbsences": 57.5
+      },
+      {
+        "classe": "MBA1-IRSD/MSSI",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.08,
+        "moyAbsences": 55.8
+      },
+      {
+        "classe": "MBA2- Passation des Marchés",
+        "school": "Ecole de Droit",
+        "moyNotes": 8.02,
+        "moyAbsences": 53.1
+      },
+      {
+        "classe": "MBA 1 - CCE soir",
+        "school": "Graduate School",
+        "moyNotes": 11.08,
+        "moyAbsences": 52.2
+      },
+      {
+        "classe": "MBA 1 Management, Vente et Relation Client",
+        "school": "Graduate School",
+        "moyNotes": 11.21,
+        "moyAbsences": 51.4
+      },
+      {
+        "classe": "Executive En CPSI",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 9.51,
+        "moyAbsences": 51.4
+      },
+      {
+        "classe": "MBA1 Projet Part Time",
+        "school": "ISM-DAKAR",
+        "moyNotes": 12.55,
+        "moyAbsences": 51.3
+      },
+      {
+        "classe": "MBA1 BANQUE-ASSURANCE",
+        "school": "Graduate School",
+        "moyNotes": 12.35,
+        "moyAbsences": 50.7
+      },
+      {
+        "classe": "L3-MAIE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11,
+        "moyAbsences": 50.4
+      },
+      {
+        "classe": "MBA 1 - QHSE",
+        "school": "Graduate School",
+        "moyNotes": 12.02,
+        "moyAbsences": 50.4
+      },
+      {
+        "classe": "LDA2 - A",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.29,
+        "moyAbsences": 50.1
+      },
+      {
+        "classe": "MBA 2 - Management, Vente et Relation Client SOIR",
+        "school": "Graduate School",
+        "moyNotes": 11.84,
+        "moyAbsences": 49.7
+      },
+      {
+        "classe": "MBA1- Droit Notarial",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.41,
+        "moyAbsences": 49.6
+      },
+      {
+        "classe": "M1 Stratégie Digitale - Big Data et Data Stratégie",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 9.92,
+        "moyAbsences": 48.6
+      },
+      {
+        "classe": "MBA1-Management Sec & SI",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.36,
+        "moyAbsences": 48.6
+      },
+      {
+        "classe": "MBA1- Droit Notarial",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.97,
+        "moyAbsences": 48.3
+      },
+      {
+        "classe": "MBA 1 - Management des Energies Pétrolières et Gazières",
+        "school": "Graduate School",
+        "moyNotes": 10.8,
+        "moyAbsences": 47.5
+      },
+      {
+        "classe": "MBA2-DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.47,
+        "moyAbsences": 47
+      },
+      {
+        "classe": "MBA 1 - CCE",
+        "school": "Graduate School",
+        "moyNotes": 10.58,
+        "moyAbsences": 46.5
+      },
+      {
+        "classe": "MBA1 - Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.16,
+        "moyAbsences": 45.7
+      },
+      {
+        "classe": "MASTER2- Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.95,
+        "moyAbsences": 45.3
+      },
+      {
+        "classe": "MBA1-DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.97,
+        "moyAbsences": 44.7
+      },
+      {
+        "classe": "MBA1 - Management, Vente et Relation Client",
+        "school": "Graduate School",
+        "moyNotes": 10.79,
+        "moyAbsences": 44.7
+      },
+      {
+        "classe": "MBA 1 - MAA",
+        "school": "Graduate School",
+        "moyNotes": 12.56,
+        "moyAbsences": 44.7
+      },
+      {
+        "classe": "LDA2C",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.33,
+        "moyAbsences": 44.3
+      },
+      {
+        "classe": "MBA 1 - GCL SOIR",
+        "school": "Graduate School",
+        "moyNotes": 12.44,
+        "moyAbsences": 44.2
+      },
+      {
+        "classe": "MBA 1 - MANAGEMENT AGROBUSINESS",
+        "school": "Graduate School",
+        "moyNotes": 10.79,
+        "moyAbsences": 44.1
+      },
+      {
+        "classe": "MBA1-DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.03,
+        "moyAbsences": 42.3
+      },
+      {
+        "classe": "MBA1 - MIM",
+        "school": "Graduate School",
+        "moyNotes": 9.17,
+        "moyAbsences": 42
+      },
+      {
+        "classe": "MBA1- DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 6.7,
+        "moyAbsences": 41.5
+      },
+      {
+        "classe": "L1-Intelligence Artificielle",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.73,
+        "moyAbsences": 41.2
+      },
+      {
+        "classe": "MBA 1 ACG",
+        "school": "Graduate School",
+        "moyNotes": 11.03,
+        "moyAbsences": 41.1
+      },
+      {
+        "classe": "MBA2- Droit Maritime",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.29,
+        "moyAbsences": 40.8
+      },
+      {
+        "classe": "MBA2 - Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.6,
+        "moyAbsences": 40.4
+      },
+      {
+        "classe": "SPRI2-A",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13,
+        "moyAbsences": 40
+      },
+      {
+        "classe": "MBA2-Management, Vente et Relation Client- EXTERNE",
+        "school": "Graduate School",
+        "moyNotes": 13.21,
+        "moyAbsences": 39.9
+      },
+      {
+        "classe": "MBA2 - Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 7.68,
+        "moyAbsences": 39.4
+      },
+      {
+        "classe": "LDA1-E",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.76,
+        "moyAbsences": 39.4
+      },
+      {
+        "classe": "L1G-IA (IAGE & TTL)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.95,
+        "moyAbsences": 39.1
+      },
+      {
+        "classe": "MBA1 - DROIT INTERNATIONAL DES AFFAIRES",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.72,
+        "moyAbsences": 39.1
+      },
+      {
+        "classe": "MBA 1 IF",
+        "school": "Graduate School",
+        "moyNotes": 11.44,
+        "moyAbsences": 38.3
+      },
+      {
+        "classe": "MBA 1 Banque-Assurance",
+        "school": "Graduate School",
+        "moyNotes": 12.16,
+        "moyAbsences": 38.2
+      },
+      {
+        "classe": "L1C - IA (GLRS & ETSE)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.69,
+        "moyAbsences": 38.1
+      },
+      {
+        "classe": "MASTER1- Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.73,
+        "moyAbsences": 38.1
+      },
+      {
+        "classe": "MBA1 - Management Aéroportuaire et Aéronautique",
+        "school": "Graduate School",
+        "moyNotes": 14,
+        "moyAbsences": 37.5
+      },
+      {
+        "classe": "LG3D-CF",
+        "school": "Ecole de Management",
+        "moyNotes": 12.38,
+        "moyAbsences": 37.3
+      },
+      {
+        "classe": "MBA2 - SPRI",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13.12,
+        "moyAbsences": 37.1
+      },
+      {
+        "classe": "MBA 2 - MAA",
+        "school": "Graduate School",
+        "moyNotes": 11.29,
+        "moyAbsences": 37
+      },
+      {
+        "classe": "MBA2-Passation de marches-EXTERNE",
+        "school": "Ecole de Droit",
+        "moyNotes": 8.16,
+        "moyAbsences": 36.6
+      },
+      {
+        "classe": "MBA 1 - QHSE",
+        "school": "Graduate School",
+        "moyNotes": 11.93,
+        "moyAbsences": 36.5
+      },
+      {
+        "classe": "MASTER2- Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.86,
+        "moyAbsences": 36.4
+      },
+      {
+        "classe": "LDA1-2R",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.93,
+        "moyAbsences": 36.3
+      },
+      {
+        "classe": "MBA 2 - MANAGEMENT AGROBUSINESS",
+        "school": "Graduate School",
+        "moyNotes": 14.37,
+        "moyAbsences": 36.1
+      },
+      {
+        "classe": "MBA2- DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.13,
+        "moyAbsences": 35.9
+      },
+      {
+        "classe": "MBA 2 - Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.23,
+        "moyAbsences": 35.9
+      },
+      {
+        "classe": "LDA1-D",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.42,
+        "moyAbsences": 35.6
+      },
+      {
+        "classe": "MBA 1 CCE",
+        "school": "Graduate School",
+        "moyNotes": 11.77,
+        "moyAbsences": 35.2
+      },
+      {
+        "classe": "MBA 1 IF Soir",
+        "school": "Graduate School",
+        "moyNotes": 10.65,
+        "moyAbsences": 34.9
+      },
+      {
+        "classe": "LDA3-B",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.32,
+        "moyAbsences": 34.7
+      },
+      {
+        "classe": "LDA2-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.55,
+        "moyAbsences": 34.5
+      },
+      {
+        "classe": "MBA 2 Management Aéroportuaire & Aéronautique",
+        "school": "Graduate School",
+        "moyNotes": 13.72,
+        "moyAbsences": 34.4
+      },
+      {
+        "classe": "MBA2 - Passation de Marchés",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.29,
+        "moyAbsences": 34.2
+      },
+      {
+        "classe": "MASTER2- Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.16,
+        "moyAbsences": 34
+      },
+      {
+        "classe": "LDA2A",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.1,
+        "moyAbsences": 33.9
+      },
+      {
+        "classe": "MBA 1 - Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.83,
+        "moyAbsences": 33.9
+      },
+      {
+        "classe": "MBA 1 - Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 8.85,
+        "moyAbsences": 33.9
+      },
+      {
+        "classe": "MBA1- DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.58,
+        "moyAbsences": 33.9
+      },
+      {
+        "classe": "MBA2 CCE",
+        "school": "Graduate School",
+        "moyNotes": 14.06,
+        "moyAbsences": 33.9
+      },
+      {
+        "classe": "MBA2- Droit Notarial et Gestion du Patrimoine",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.99,
+        "moyAbsences": 33.8
+      },
+      {
+        "classe": "MBA 1 - MRH",
+        "school": "Graduate School",
+        "moyNotes": 12.29,
+        "moyAbsences": 33.8
+      },
+      {
+        "classe": "MBA 2- Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.49,
+        "moyAbsences": 33.7
+      },
+      {
+        "classe": "LDA2-D",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.23,
+        "moyAbsences": 33.5
+      },
+      {
+        "classe": "MBA1- CLRP",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 11.63,
+        "moyAbsences": 33.5
+      },
+      {
+        "classe": "L3-MAE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.55,
+        "moyAbsences": 33.4
+      },
+      {
+        "classe": "MBA1 - Passations Des Marchés ",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.26,
+        "moyAbsences": 33.4
+      },
+      {
+        "classe": "MBA2 - Management Aéroportuaire et Aéronautique",
+        "school": "Graduate School",
+        "moyNotes": 12.21,
+        "moyAbsences": 33.2
+      },
+      {
+        "classe": "MASTER2- Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.28,
+        "moyAbsences": 33.1
+      },
+      {
+        "classe": "MBA 1 - Droit Notarial et Gestion du Patrimoine",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.39,
+        "moyAbsences": 33
+      },
+      {
+        "classe": "MBA 1 Banque-Assurance",
+        "school": "Graduate School",
+        "moyNotes": 12.67,
+        "moyAbsences": 32.9
+      },
+      {
+        "classe": "MBA2- DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 14.71,
+        "moyAbsences": 32.8
+      },
+      {
+        "classe": "MASTER 2 - MRH",
+        "school": "Graduate School",
+        "moyNotes": 13.08,
+        "moyAbsences": 32.4
+      },
+      {
+        "classe": "MASTER2 - Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.1,
+        "moyAbsences": 32.3
+      },
+      {
+        "classe": "MBA 1 Pétrole et Gaz",
+        "school": "Graduate School",
+        "moyNotes": 11.2,
+        "moyAbsences": 32.2
+      },
+      {
+        "classe": "MBA 2 Banque-Assurance",
+        "school": "Graduate School",
+        "moyNotes": 11.71,
+        "moyAbsences": 32.2
+      },
+      {
+        "classe": "MBA 2 - MRH",
+        "school": "Graduate School",
+        "moyNotes": 12.46,
+        "moyAbsences": 32.2
+      },
+      {
+        "classe": "LDA2-B",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.73,
+        "moyAbsences": 32.1
+      },
+      {
+        "classe": "LG1-CIM",
+        "school": "Ecole de Management",
+        "moyNotes": 10.93,
+        "moyAbsences": 32.1
+      },
+      {
+        "classe": "LG3-MI FULL ENGLISH",
+        "school": "Ecole de Management",
+        "moyNotes": 11.96,
+        "moyAbsences": 32.1
+      },
+      {
+        "classe": "MBA 2 MAA",
+        "school": "Graduate School",
+        "moyNotes": 12.39,
+        "moyAbsences": 32.1
+      },
+      {
+        "classe": "L1E-IA (GLRS & ETSE)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.3,
+        "moyAbsences": 32
+      },
+      {
+        "classe": "LDA 1B",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.71,
+        "moyAbsences": 32
+      },
+      {
+        "classe": "MBA2 - Droit Notarial et Gestion du Patrimoine",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.05,
+        "moyAbsences": 31.9
+      },
+      {
+        "classe": "LG1E-MI",
+        "school": "Ecole de Management",
+        "moyNotes": 9.98,
+        "moyAbsences": 31.9
+      },
+      {
+        "classe": "MBA 2 - International Management",
+        "school": "Graduate School",
+        "moyNotes": 14.54,
+        "moyAbsences": 31.8
+      },
+      {
+        "classe": "L2-MCDE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10,
+        "moyAbsences": 31.7
+      },
+      {
+        "classe": "LDA2-A",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.63,
+        "moyAbsences": 31.7
+      },
+      {
+        "classe": "MASTER1- Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.47,
+        "moyAbsences": 31.7
+      },
+      {
+        "classe": "MBA 2 Banque-Assurance",
+        "school": "Graduate School",
+        "moyNotes": 13.84,
+        "moyAbsences": 31.7
+      },
+      {
+        "classe": "L2-MCDE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.06,
+        "moyAbsences": 31.6
+      },
+      {
+        "classe": "MBA1 - Passations Des Marchés ",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.18,
+        "moyAbsences": 31.6
+      },
+      {
+        "classe": "LDA2 - B",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.67,
+        "moyAbsences": 31.4
+      },
+      {
+        "classe": "SPRI3-A",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 11.83,
+        "moyAbsences": 31.4
+      },
+      {
+        "classe": "LDA 2B",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.02,
+        "moyAbsences": 31.3
+      },
+      {
+        "classe": "Master 1 Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.78,
+        "moyAbsences": 31.2
+      },
+      {
+        "classe": "LDA3 - A",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.25,
+        "moyAbsences": 31.2
+      },
+      {
+        "classe": "M1 IDC-Big Data & Data Stratégie",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.21,
+        "moyAbsences": 31.1
+      },
+      {
+        "classe": "LDA1-E",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.96,
+        "moyAbsences": 31.1
+      },
+      {
+        "classe": "LG1H-CF",
+        "school": "Ecole de Management",
+        "moyNotes": 11.83,
+        "moyAbsences": 31.1
+      },
+      {
+        "classe": "MBA2-SPRIG EXTERNE",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13.12,
+        "moyAbsences": 31
+      },
+      {
+        "classe": "MBA2- DGT",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 10.59,
+        "moyAbsences": 31
+      },
+      {
+        "classe": "MBA 2 - Droit Notarial et Gestion du Patrimoine",
+        "school": "Ecole de Droit",
+        "moyNotes": 7.34,
+        "moyAbsences": 30.9
+      },
+      {
+        "classe": "MASTER2- Droit des Affaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.69,
+        "moyAbsences": 30.9
+      },
+      {
+        "classe": "MBA1 ACG",
+        "school": "Graduate School",
+        "moyNotes": 10.96,
+        "moyAbsences": 30.8
+      },
+      {
+        "classe": "L1 INGENIEURS - R2",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.41,
+        "moyAbsences": 30.7
+      },
+      {
+        "classe": "LDA1-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 11,
+        "moyAbsences": 30.7
+      },
+      {
+        "classe": "MBA2-ACG",
+        "school": "Graduate School",
+        "moyNotes": 11.92,
+        "moyAbsences": 30.7
+      },
+      {
+        "classe": "L3-MCDE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.11,
+        "moyAbsences": 30.6
+      },
+      {
+        "classe": "MBA2-GCL",
+        "school": "Graduate School",
+        "moyNotes": 14.59,
+        "moyAbsences": 30.5
+      },
+      {
+        "classe": "SPRI3-B",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 12.94,
+        "moyAbsences": 30.5
+      },
+      {
+        "classe": "LDA2-D",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.83,
+        "moyAbsences": 30.4
+      },
+      {
+        "classe": "MBA 2 - IF",
+        "school": "Graduate School",
+        "moyNotes": 10.88,
+        "moyAbsences": 30.4
+      },
+      {
+        "classe": "LDA2-A",
+        "school": "Ecole de Droit",
+        "moyNotes": 13.52,
+        "moyAbsences": 30.3
+      },
+      {
+        "classe": "LDA1 - C",
+        "school": "Ecole de Droit",
+        "moyNotes": 9.63,
+        "moyAbsences": 30.2
+      },
+      {
+        "classe": "LDA1-B",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.98,
+        "moyAbsences": 30.1
+      },
+      {
+        "classe": "MBA 2 - CCE",
+        "school": "Graduate School",
+        "moyNotes": 12.81,
+        "moyAbsences": 30.1
+      },
+      {
+        "classe": "MBA2 DIPLOMATIE ET GEOSTRATEGIE",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13.26,
+        "moyAbsences": 30.1
+      },
+      {
+        "classe": "L2-GLRS  B",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.11,
+        "moyAbsences": 30
+      },
+      {
+        "classe": "L3-GLRS A",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.22,
+        "moyAbsences": 30
+      },
+      {
+        "classe": "LG3-MCI B",
+        "school": "Ecole de Management",
+        "moyNotes": 10.2,
+        "moyAbsences": 29.9
+      },
+      {
+        "classe": "MBA1- DGT",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 14.04,
+        "moyAbsences": 29.9
+      },
+      {
+        "classe": "LDA2-B",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.91,
+        "moyAbsences": 29.8
+      },
+      {
+        "classe": "MBA2-SPRIG",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 12.79,
+        "moyAbsences": 29.7
+      },
+      {
+        "classe": "MBA1-Marketing Digital & Brand Content",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.86,
+        "moyAbsences": 29.6
+      },
+      {
+        "classe": "L2-TTL A",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.39,
+        "moyAbsences": 29.5
+      },
+      {
+        "classe": "L2-IDC",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.65,
+        "moyAbsences": 29.4
+      },
+      {
+        "classe": "MBA2-GCL - EXTERNE",
+        "school": "Graduate School",
+        "moyNotes": 12.82,
+        "moyAbsences": 29.4
+      },
+      {
+        "classe": "MBA1 - MRH",
+        "school": "Graduate School",
+        "moyNotes": 11.45,
+        "moyAbsences": 29.4
+      },
+      {
+        "classe": "MBA 1 Management, Vente et Relation Client SOIR",
+        "school": "Graduate School",
+        "moyNotes": 12.05,
+        "moyAbsences": 29.4
+      },
+      {
+        "classe": "MBA 2 - MANAGEMENT AGROBUSINESS",
+        "school": "Graduate School",
+        "moyNotes": 12.48,
+        "moyAbsences": 29.4
+      },
+      {
+        "classe": "MASTER1- Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.15,
+        "moyAbsences": 29.2
+      },
+      {
+        "classe": "MBA2-Banque-Assurance",
+        "school": "Graduate School",
+        "moyNotes": 13.28,
+        "moyAbsences": 29.2
+      },
+      {
+        "classe": "LIAGE 1 - R2",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 9.4,
+        "moyAbsences": 29.1
+      },
+      {
+        "classe": "Master1- Fiscalité",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.3,
+        "moyAbsences": 29.1
+      },
+      {
+        "classe": "MBA 1 - International Management",
+        "school": "Graduate School",
+        "moyNotes": 12.75,
+        "moyAbsences": 29.1
+      },
+      {
+        "classe": "SPRI2-B",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 12.97,
+        "moyAbsences": 29.1
+      },
+      {
+        "classe": "L3-TTL A",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.53,
+        "moyAbsences": 29
+      },
+      {
+        "classe": "MBA2- Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.11,
+        "moyAbsences": 29
+      },
+      {
+        "classe": "LDA1 - B",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.32,
+        "moyAbsences": 28.9
+      },
+      {
+        "classe": "LDA3-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 13.42,
+        "moyAbsences": 28.9
+      },
+      {
+        "classe": "MBA 1 - CCE soir",
+        "school": "Graduate School",
+        "moyNotes": 14.07,
+        "moyAbsences": 28.9
+      },
+      {
+        "classe": "MBA2- CLRP",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13.81,
+        "moyAbsences": 28.7
+      },
+      {
+        "classe": "MBA 1 Informatique",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.77,
+        "moyAbsences": 28.6
+      },
+      {
+        "classe": "L2-MOSIEF",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.55,
+        "moyAbsences": 28.6
+      },
+      {
+        "classe": "MBA1 - SPRI",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 10.37,
+        "moyAbsences": 28.5
+      },
+      {
+        "classe": "LG2E-MI",
+        "school": "Ecole de Management",
+        "moyNotes": 10.25,
+        "moyAbsences": 28.4
+      },
+      {
+        "classe": "MBA 2 - GCL",
+        "school": "Graduate School",
+        "moyNotes": 14.86,
+        "moyAbsences": 28.4
+      },
+      {
+        "classe": "LCM-2",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 12.17,
+        "moyAbsences": 28.4
+      },
+      {
+        "classe": "L1D - IA (MAIE & MOSIEF)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.43,
+        "moyAbsences": 28.3
+      },
+      {
+        "classe": "L3-CPD",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.22,
+        "moyAbsences": 28.3
+      },
+      {
+        "classe": "MBA2-DGEM",
+        "school": "Ecole de Droit",
+        "moyNotes": 12.87,
+        "moyAbsences": 28.3
+      },
+      {
+        "classe": "MBA1- Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 4.06,
+        "moyAbsences": 28.3
+      },
+      {
+        "classe": "MBA1-Big Data & Data Strategie",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.93,
+        "moyAbsences": 28.2
+      },
+      {
+        "classe": "MBA2-MIM",
+        "school": "Graduate School",
+        "moyNotes": 11.42,
+        "moyAbsences": 28.2
+      },
+      {
+        "classe": "DSG2 I",
+        "school": "Ecole de Management",
+        "moyNotes": 11.08,
+        "moyAbsences": 28.1
+      },
+      {
+        "classe": "M1 - JURISTE DE BANQUE ASSURANCE & COMPLIANCE",
+        "school": "Ecole de Droit",
+        "moyNotes": 11,
+        "moyAbsences": 28
+      },
+      {
+        "classe": "L3-ETSE",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.15,
+        "moyAbsences": 27.9
+      },
+      {
+        "classe": "LDA2-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.91,
+        "moyAbsences": 27.9
+      },
+      {
+        "classe": "MASTER 2 - GCL",
+        "school": "Graduate School",
+        "moyNotes": 14.63,
+        "moyAbsences": 27.8
+      },
+      {
+        "classe": "L2-GLRS",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.03,
+        "moyAbsences": 27.5
+      },
+      {
+        "classe": "L1-Cybersécurité ",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 11.08,
+        "moyAbsences": 27.5
+      },
+      {
+        "classe": "MBA 1 - Droit et Gouvernance des Energies",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.85,
+        "moyAbsences": 27.5
+      },
+      {
+        "classe": "LDA1-D",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.72,
+        "moyAbsences": 27.5
+      },
+      {
+        "classe": "MBA1- CLRP",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 13.34,
+        "moyAbsences": 27.5
+      },
+      {
+        "classe": "L1-CDSD",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.57,
+        "moyAbsences": 27.4
+      },
+      {
+        "classe": "MBA 2 - International Management",
+        "school": "Graduate School",
+        "moyNotes": 14.06,
+        "moyAbsences": 27.4
+      },
+      {
+        "classe": "MBA2 Projet",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.23,
+        "moyAbsences": 27.3
+      },
+      {
+        "classe": "LDA1-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.81,
+        "moyAbsences": 27.3
+      },
+      {
+        "classe": "BIM1 E",
+        "school": "Ecole de Management",
+        "moyNotes": 7.68,
+        "moyAbsences": 27.3
+      },
+      {
+        "classe": "MBA1 - Passation de Marchés",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.29,
+        "moyAbsences": 27.1
+      },
+      {
+        "classe": "MBA1 - Droit Maritime et Activités Portuaires",
+        "school": "Ecole de Droit",
+        "moyNotes": 10.91,
+        "moyAbsences": 27
+      },
+      {
+        "classe": "DSG3-A",
+        "school": "Ecole de Management",
+        "moyNotes": 10.88,
+        "moyAbsences": 27
+      },
+      {
+        "classe": "LDA2-C",
+        "school": "Ecole de Droit",
+        "moyNotes": 13.54,
+        "moyAbsences": 26.7
+      },
+      {
+        "classe": "LDA1-B",
+        "school": "Ecole de Droit",
+        "moyNotes": 11.8,
+        "moyAbsences": 26.6
+      },
+      {
+        "classe": "MBA 1 ACG",
+        "school": "Graduate School",
+        "moyNotes": 11.47,
+        "moyAbsences": 26.6
+      },
+      {
+        "classe": "L1F-IA (IAGE & TTL C)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 8.7,
+        "moyAbsences": 26.3
+      },
+      {
+        "classe": "MASTER 1 - Passation Des Marchés ",
+        "school": "Ecole de Droit",
+        "moyNotes": 7.86,
+        "moyAbsences": 26.3
+      },
+      {
+        "classe": "LG1K-CF",
+        "school": "Ecole de Management",
+        "moyNotes": 11.21,
+        "moyAbsences": 26.3
+      },
+      {
+        "classe": "MBA 2 - Management des Energies Pétrolières et Gazières",
+        "school": "Graduate School",
+        "moyNotes": 14.57,
+        "moyAbsences": 26.3
+      },
+      {
+        "classe": "MBA1- MPSD",
+        "school": "Madiba Leadership Institut",
+        "moyNotes": 11.75,
+        "moyAbsences": 26.3
+      },
+      {
+        "classe": "L1D - IA (MAIE & MOSIEF)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.41,
+        "moyAbsences": 26.1
+      }
+    ],
+    "palmares": {
+      "plusDifficiles": [
+        {
+          "matiere": "Management de Projets de programme et de portefeuille ",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Management opérationnel- environnement de développement ( Agilité DIT Devops)",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Gestion et contrôle de la qualité projet ",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "POO2: Scala",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Automatisation des processus(RPA, Shell BASH AIRFLOW)",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Developpement moderne avec Python (API)",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Méthodologie de déploiement - MLops et data engineering(*Certification Professionnelle AWS Machine learning)",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Analyse statistique et reporting(*Certification Professionnelle Alteryx)",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Certification Professionnelle Google-Webanalytics",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Microeconomics ",
+          "moy": 0,
+          "count": 82,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Personal Development ",
+          "moy": 0,
+          "count": 82,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Introduction à la Santé et Sécurité au Travail",
+          "moy": 0,
+          "count": 80,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Organisation et Gestion Fnancière des Evénements",
+          "moy": 0,
+          "count": 24,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Méthodologie de Rédaction de Mémoire ",
+          "moy": 0,
+          "count": 20,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Comportement Organisationnel ",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        }
+      ],
+      "plusReussies": [
+        {
+          "matiere": "Intégration thème prestashop ",
+          "moy": 19.62,
+          "count": 52,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Méthode et outils de coaching efficace",
+          "moy": 18.35,
+          "count": 20,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Méthode de recherche quantitative et qualitative",
+          "moy": 17.82,
+          "count": 28,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Gestion foncière",
+          "moy": 17.8,
+          "count": 20,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Accounting for Finance ",
+          "moy": 17.54,
+          "count": 28,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Competitive Analysis and Strategies",
+          "moy": 17.5,
+          "count": 102,
+          "tauxReussite": 98
+        },
+        {
+          "matiere": "Organization Change & Behavior",
+          "moy": 17.25,
+          "count": 62,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Value-based Marketing ",
+          "moy": 17.25,
+          "count": 62,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Analyse de la politique étrangère ",
+          "moy": 17.25,
+          "count": 28,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Mathématiques Appliquées à l'Agrobusiness 1",
+          "moy": 17.22,
+          "count": 110,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Chaîne de Valeur et Performance dans le Domaine Agroalimentaire",
+          "moy": 17.2,
+          "count": 30,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Budget local",
+          "moy": 17.1,
+          "count": 20,
+          "tauxReussite": 90
+        },
+        {
+          "matiere": "Raffinage, Stockage et Approvisionnement ",
+          "moy": 17.05,
+          "count": 22,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Développement",
+          "moy": 17,
+          "count": 26,
+          "tauxReussite": 100
+        },
+        {
+          "matiere": "Principes généraux / AHM",
+          "moy": 16.98,
+          "count": 22,
+          "tauxReussite": 100
+        }
+      ],
+      "plusEnseignees": [
+        {
+          "matiere": "Business English",
+          "moy": 11.04,
+          "count": 37173,
+          "tauxReussite": 73.9
+        },
+        {
+          "matiere": "Business Communication",
+          "moy": 11.97,
+          "count": 34560,
+          "tauxReussite": 80.1
+        },
+        {
+          "matiere": "Anglais",
+          "moy": 11.28,
+          "count": 18019,
+          "tauxReussite": 73.2
+        },
+        {
+          "matiere": "Actions de Recherche Encadrées",
+          "moy": 12.19,
+          "count": 17063,
+          "tauxReussite": 86.7
+        },
+        {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.72,
+          "count": 16944,
+          "tauxReussite": 66.2
+        },
+        {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.8,
+          "count": 16623,
+          "tauxReussite": 71.9
+        },
+        {
+          "matiere": "Introduction au Management",
+          "moy": 11.16,
+          "count": 15284,
+          "tauxReussite": 73.6
+        },
+        {
+          "matiere": "Droit des Obligations",
+          "moy": 10.37,
+          "count": 14390,
+          "tauxReussite": 63.9
+        },
+        {
+          "matiere": "Service à la Communauté",
+          "moy": 11.92,
+          "count": 13392,
+          "tauxReussite": 76
+        },
+        {
+          "matiere": "Entrepreneuriat",
+          "moy": 12.03,
+          "count": 11371,
+          "tauxReussite": 83.2
+        },
+        {
+          "matiere": "Comptabilité Générale 3",
+          "moy": 11.1,
+          "count": 11298,
+          "tauxReussite": 72.3
+        },
+        {
+          "matiere": "Mathématiques : Statistiques Descriptives",
+          "moy": 11.84,
+          "count": 10349,
+          "tauxReussite": 79.7
+        },
+        {
+          "matiere": "Microéconomie",
+          "moy": 10.94,
+          "count": 10203,
+          "tauxReussite": 71.9
+        },
+        {
+          "matiere": "Introduction au Droit",
+          "moy": 12.05,
+          "count": 9519,
+          "tauxReussite": 80.1
+        },
+        {
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.69,
+          "count": 9292,
+          "tauxReussite": 80.5
+        }
+      ]
+    },
+    "projections": {
+      "ISM Dakar Ecole d'Ingénieurs": {
+        "slope": 135.6,
+        "predict2027": 1757,
+        "predict2028": 1892,
+        "lastYear": 1558,
+        "growth": 174.3
+      },
+      "ISM Dakar Ecole de Droit": {
+        "slope": 84.3,
+        "predict2027": 1392,
+        "predict2028": 1477,
+        "lastYear": 1245,
+        "growth": 125.1
+      },
+      "ISM Dakar Ecole de Management": {
+        "slope": 130.5,
+        "predict2027": 1951,
+        "predict2028": 2082,
+        "lastYear": 1856,
+        "growth": 122.3
+      },
+      "ISM Dakar Graduate School": {
+        "slope": -7.6,
+        "predict2027": 669,
+        "predict2028": 661,
+        "lastYear": 0,
+        "growth": -100
+      },
+      "ISM Dakar Madiba Leadership Institut": {
+        "slope": 6,
+        "predict2027": 492,
+        "predict2028": 498,
+        "lastYear": 460,
+        "growth": 25.3
+      },
+      "ISM Online & ISF": {
+        "slope": 199.3,
+        "predict2027": 1561,
+        "predict2028": 1760,
+        "lastYear": 1190,
+        "growth": 290.2
+      },
+      "ISM HQ": {
+        "slope": 141.7,
+        "predict2027": 1027,
+        "predict2028": 1168,
+        "lastYear": 746,
+        "growth": 12333.3
       }
     }
   }

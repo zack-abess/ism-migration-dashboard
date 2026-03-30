@@ -247,6 +247,7 @@ function readPupilsDetailed(licenceDir) {
             boursier: (r.Boursier || '').trim().toLowerCase() === 'oui',
             exempt: (r['Exempt des frais'] || '').trim().toLowerCase() === 'oui',
             classe: (r.Classe || cd.name).trim(),
+            _raw: r,
           });
         }
       } catch {}
@@ -322,6 +323,7 @@ function readGradesForLicence(licenceDir) {
                     classe: data.className || cd.name,
                     periode: data.periodName || '',
                     matiere: data.fieldName || '',
+                    eleve: (row['Elève'] || row['Élève'] || '').trim(),
                     note: val,
                     bareme,
                     note20: bareme !== 20 ? (val / bareme * 20) : val,
@@ -654,6 +656,13 @@ async function main() {
 
   let totalGradesSum = 0, totalGradesCount = 0;
 
+  // Collecteurs pour qualité, anomalies, corrélation, palmarès
+  const quality = { total: 0, missingSexe: 0, missingNationalite: 0, missingDateNaissance: 0, missingEmail: 0, missingPhone: 0 };
+  const anomalies = { highAbsenteeism: [] };
+  const correlation = [];
+  const palmares = {};
+  function shortSchoolName(s) { return s.replace('ISM ','').replace('Dakar ',''); }
+
   for (const lic of data.licences) {
     const { school, year } = lic;
     const licDir = lic._path;
@@ -763,6 +772,64 @@ async function main() {
       if (ci.niveau) businessData.structure.niveauxDistrib[ci.niveau] = (businessData.structure.niveauxDistrib[ci.niveau] || 0) + 1;
       if (ci.area) businessData.structure.filieresDistrib[ci.area] = (businessData.structure.filieresDistrib[ci.area] || 0) + 1;
     }
+
+    // === Qualité des données (complétude) ===
+    for (const p of pupils) {
+      quality.total++;
+      if (!p.sexe) quality.missingSexe++;
+      if (!p.nationalite) quality.missingNationalite++;
+      if (!p.dateNaissance) quality.missingDateNaissance++;
+      const hasEmail = p._raw && p._raw['E-mail'] && p._raw['E-mail'].trim();
+      if (!hasEmail) quality.missingEmail++;
+      const hasPhone = p._raw && p._raw['Téléphone'] && p._raw['Téléphone'].trim();
+      if (!hasPhone) quality.missingPhone++;
+    }
+
+    // === Anomalies ===
+    // Élèves inscrits mais avec 0 notes
+    const pupilIdsInLic = new Set(pupils.map(p => p.id));
+    const pupilIdsWithGrades = new Set(grades.map(g => g.eleve).filter(Boolean));
+    // Classes avec taux d'absentéisme anormal
+    const classAbsMap = {};
+    for (const a of attendance) {
+      if (!classAbsMap[a.classe]) classAbsMap[a.classe] = { total: 0, count: 0 };
+      classAbsMap[a.classe].total += a.absences;
+      classAbsMap[a.classe].count++;
+    }
+    for (const [cls, d] of Object.entries(classAbsMap)) {
+      const avg = d.count > 0 ? d.total / d.count : 0;
+      if (avg > 50) {
+        anomalies.highAbsenteeism.push({ licence: lic.displayName, school, classe: cls, avgAbsences: +avg.toFixed(1) });
+      }
+    }
+
+    // === Corrélation notes/assiduité par classe ===
+    // Calculer moyenne notes et moyenne absences par classe pour cette licence
+    const classMoyNotes = {};
+    for (const g of grades) {
+      if (!classMoyNotes[g.classe]) classMoyNotes[g.classe] = { sum: 0, count: 0 };
+      classMoyNotes[g.classe].sum += g.note20;
+      classMoyNotes[g.classe].count++;
+    }
+    for (const [cls, nd] of Object.entries(classMoyNotes)) {
+      const ad = classAbsMap[cls];
+      if (nd.count > 10 && ad && ad.count > 5) {
+        correlation.push({
+          classe: cls, school: shortSchoolName(school),
+          moyNotes: +(nd.sum / nd.count).toFixed(2),
+          moyAbsences: +(ad.total / ad.count).toFixed(1),
+        });
+      }
+    }
+
+    // === Palmarès matières (pour plus de détails) ===
+    for (const g of grades) {
+      if (!g.matiere) continue;
+      if (!palmares[g.matiere]) palmares[g.matiere] = { sum: 0, count: 0, pass: 0 };
+      palmares[g.matiere].sum += g.note20;
+      palmares[g.matiere].count++;
+      if (g.note20 >= 10) palmares[g.matiere].pass++;
+    }
   }
 
   // Calculs finaux
@@ -786,8 +853,83 @@ async function main() {
     exam: { moy: ex.count > 0 ? +(ex.sum / ex.count).toFixed(2) : 0, count: ex.count },
   };
 
+  // === Qualité des données ===
+  businessData.quality = {
+    total: quality.total,
+    completude: {
+      sexe:          quality.total > 0 ? +((1 - quality.missingSexe / quality.total) * 100).toFixed(1) : 0,
+      nationalite:   quality.total > 0 ? +((1 - quality.missingNationalite / quality.total) * 100).toFixed(1) : 0,
+      dateNaissance:  quality.total > 0 ? +((1 - quality.missingDateNaissance / quality.total) * 100).toFixed(1) : 0,
+      email:         quality.total > 0 ? +((1 - quality.missingEmail / quality.total) * 100).toFixed(1) : 0,
+      telephone:     quality.total > 0 ? +((1 - quality.missingPhone / quality.total) * 100).toFixed(1) : 0,
+    },
+    missing: {
+      sexe: quality.missingSexe,
+      nationalite: quality.missingNationalite,
+      dateNaissance: quality.missingDateNaissance,
+      email: quality.missingEmail,
+      telephone: quality.missingPhone,
+    }
+  };
+
+  // === Anomalies ===
+  // Trier par pire absentéisme
+  anomalies.highAbsenteeism.sort((a, b) => b.avgAbsences - a.avgAbsences);
+  anomalies.highAbsenteeism = anomalies.highAbsenteeism.slice(0, 30);
+  businessData.anomalies = anomalies;
+
+  // === Corrélation notes/assiduité ===
+  // Limiter à 200 points pour le scatter
+  correlation.sort((a, b) => b.moyAbsences - a.moyAbsences);
+  businessData.correlation = correlation.slice(0, 200);
+
+  // === Palmarès complet ===
+  const palmaresArr = Object.entries(palmares)
+    .filter(([_, d]) => d.count >= 20) // au moins 20 notes
+    .map(([m, d]) => ({
+      matiere: m,
+      moy: +(d.sum / d.count).toFixed(2),
+      count: d.count,
+      tauxReussite: +(d.pass / d.count * 100).toFixed(1),
+    }));
+  // Top difficiles (plus basse moyenne)
+  businessData.palmares = {
+    plusDifficiles: [...palmaresArr].sort((a, b) => a.moy - b.moy).slice(0, 15),
+    plusReussies: [...palmaresArr].sort((a, b) => b.moy - a.moy).slice(0, 15),
+    plusEnseignees: [...palmaresArr].sort((a, b) => b.count - a.count).slice(0, 15),
+  };
+
+  // === Projections effectifs (régression linéaire simple par école) ===
+  businessData.projections = {};
+  for (const [school, years] of Object.entries(businessData.effectifs)) {
+    const pts = Object.entries(years)
+      .filter(([y]) => y !== 'courant' && y.match(/^\d{4}/))
+      .map(([y, c]) => ({ x: parseInt(y.split('-')[0]), y: c }))
+      .sort((a, b) => a.x - b.x);
+    if (pts.length >= 3) {
+      const n = pts.length;
+      const sumX = pts.reduce((s, p) => s + p.x, 0);
+      const sumY = pts.reduce((s, p) => s + p.y, 0);
+      const sumXY = pts.reduce((s, p) => s + p.x * p.y, 0);
+      const sumX2 = pts.reduce((s, p) => s + p.x * p.x, 0);
+      const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+      const intercept = (sumY - slope * sumX) / n;
+      const predict2027 = Math.round(slope * 2026 + intercept);
+      const predict2028 = Math.round(slope * 2027 + intercept);
+      businessData.projections[school] = {
+        slope: +slope.toFixed(1),
+        predict2027: Math.max(0, predict2027),
+        predict2028: Math.max(0, predict2028),
+        lastYear: pts[pts.length - 1].y,
+        growth: pts.length >= 2 ? +((pts[pts.length-1].y / pts[0].y - 1) * 100).toFixed(1) : 0,
+      };
+    }
+  }
+
   data.business = businessData;
-  console.log(`   📈 Démographie: ${businessData.demographics.totalPupils} élèves analysés | ${totalGradesCount} notes | ${businessData.attendance.totalAbsences} absences`);
+  console.log(`   📈 Démographie: ${businessData.demographics.totalPupils} élèves analysés | ${totalGradesCount} notes | ${Math.round(businessData.attendance.totalAbsences)} absences`);
+  console.log(`   🔍 Qualité: ${businessData.quality.completude.sexe}% sexe | ${businessData.quality.completude.email}% email | ${anomalies.highAbsenteeism.length} classes fort absentéisme`);
+  console.log(`   📊 Corrélation: ${correlation.length} points | Palmarès: ${palmaresArr.length} matières | ${Object.keys(businessData.projections).length} projections`);
 
   // Nettoyage des sets temporaires (non sérialisables)
   delete data._globalMatieres;
