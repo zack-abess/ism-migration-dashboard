@@ -36,198 +36,96 @@
       min-height: 100vh;
       padding: 24px;
     }
-    .header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
+    .header { text-align: center; margin-bottom: 24px; }
     .header h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
+      font-size: 1.8rem; font-weight: 700;
       background: linear-gradient(135deg, var(--blue), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       margin-bottom: 4px;
     }
-    .header .subtitle {
-      color: var(--text-muted);
-      font-size: .9rem;
+    .header .subtitle { color: var(--text-muted); font-size: .9rem; }
+    .header .updated { color: var(--text-muted); font-size: .75rem; margin-top: 4px; }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex; gap: 0; margin-bottom: 32px; border-bottom: 2px solid var(--border);
     }
-    .header .updated {
-      color: var(--text-muted);
-      font-size: .75rem;
-      margin-top: 4px;
+    .tab-btn {
+      padding: 12px 28px; border: none; background: transparent;
+      color: var(--text-muted); font-size: .95rem; font-weight: 600;
+      cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+      transition: all .2s;
     }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
 
     /* KPI Cards */
     .kpi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 32px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-bottom: 32px;
     }
     .kpi-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      transition: transform .2s, border-color .2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px; text-align: center; transition: transform .2s, border-color .2s;
     }
-    .kpi-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--blue);
-    }
-    .kpi-card .value {
-      font-size: 2.2rem;
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .kpi-card .label {
-      color: var(--text-muted);
-      font-size: .85rem;
-      font-weight: 500;
-    }
-    .kpi-card .sub {
-      color: var(--text-muted);
-      font-size: .7rem;
-      margin-top: 4px;
-    }
+    .kpi-card:hover { transform: translateY(-2px); border-color: var(--blue); }
+    .kpi-card .value { font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .kpi-card .label { color: var(--text-muted); font-size: .85rem; font-weight: 500; }
+    .kpi-card .sub { color: var(--text-muted); font-size: .7rem; margin-top: 4px; }
 
     /* Progress Bar */
     .progress-section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 32px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px; margin-bottom: 32px;
     }
-    .progress-section h2 {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
+    .progress-section h2 { font-size: 1.1rem; margin-bottom: 16px; color: var(--text); }
     .progress-bar-container {
-      background: var(--bg);
-      border-radius: 10px;
-      height: 32px;
-      overflow: hidden;
-      display: flex;
-      position: relative;
+      background: var(--bg); border-radius: 10px; height: 32px;
+      overflow: hidden; display: flex; position: relative;
     }
     .progress-segment {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: .75rem;
-      font-weight: 700;
-      color: #fff;
-      transition: width .5s ease;
-      min-width: 0;
+      height: 100%; display: flex; align-items: center; justify-content: center;
+      font-size: .75rem; font-weight: 700; color: #fff; transition: width .5s ease; min-width: 0;
     }
     .progress-segment span { white-space: nowrap; overflow: hidden; }
     .seg-done { background: var(--green); }
     .seg-skip { background: var(--gray); }
     .seg-progress { background: var(--yellow); }
-    .progress-legend {
-      display: flex;
-      gap: 24px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: .8rem;
-      color: var(--text-muted);
-    }
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
+    .progress-legend { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--text-muted); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
 
-    /* Charts Section */
+    /* Charts */
     .charts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 24px;
-      margin-bottom: 32px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 24px; margin-bottom: 32px;
     }
     .chart-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px;
     }
-    .chart-card h3 {
-      font-size: 1rem;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
+    .chart-card h3 { font-size: 1rem; margin-bottom: 16px; color: var(--text); }
 
     /* Table */
     .table-section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      overflow-x: auto;
-      margin-bottom: 32px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px; overflow-x: auto; margin-bottom: 32px;
     }
-    .table-section h2 {
-      font-size: 1.1rem;
-      margin-bottom: 16px;
-    }
-    .filter-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
+    .table-section h2 { font-size: 1.1rem; margin-bottom: 16px; }
+    .filter-bar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
     .filter-btn {
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text-muted);
-      font-size: .8rem;
-      cursor: pointer;
-      transition: all .2s;
+      padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border);
+      background: transparent; color: var(--text-muted); font-size: .8rem;
+      cursor: pointer; transition: all .2s;
     }
-    .filter-btn.active, .filter-btn:hover {
-      background: var(--blue);
-      color: #fff;
-      border-color: var(--blue);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: .85rem;
-    }
-    th {
-      text-align: left;
-      padding: 10px 12px;
-      color: var(--text-muted);
-      font-weight: 600;
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-    }
-    td {
-      padding: 10px 12px;
-      border-bottom: 1px solid rgba(51,65,85,.5);
-      vertical-align: middle;
-    }
+    .filter-btn.active, .filter-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+    table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    th { text-align: left; padding: 10px 12px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    td { padding: 10px 12px; border-bottom: 1px solid rgba(51,65,85,.5); vertical-align: middle; }
     tr:hover td { background: rgba(59,130,246,.05); }
-    .badge {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 12px;
-      font-size: .75rem;
-      font-weight: 600;
-    }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: .75rem; font-weight: 600; }
     .badge-done { background: var(--green-bg); color: var(--green); }
     .badge-skip { background: var(--gray-bg); color: var(--gray); }
     .badge-in_progress { background: var(--yellow-bg); color: var(--yellow); }
@@ -236,34 +134,7 @@
     .badge-empty { background: var(--red-bg); color: var(--red); }
     .badge-na { background: var(--gray-bg); color: var(--gray); }
 
-    .mini-bar {
-      display: flex;
-      height: 6px;
-      border-radius: 3px;
-      overflow: hidden;
-      width: 80px;
-      background: var(--bg);
-    }
-    .mini-bar .bar-ok { background: var(--green); }
-    .mini-bar .bar-err { background: var(--red); }
-    .mini-bar .bar-warn { background: var(--orange); }
-
-    .scraper-cell {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .scraper-count {
-      font-size: .7rem;
-      color: var(--text-muted);
-    }
-
-    .footer {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: .75rem;
-      padding: 16px;
-    }
+    .footer { text-align: center; color: var(--text-muted); font-size: .75rem; padding: 16px; }
 
     @media (max-width: 768px) {
       body { padding: 12px; }
@@ -275,133 +146,177 @@
 </head>
 <body>
   <div class="header">
-    <h1>Migration ClassExpert → Symfony SI</h1>
-    <div class="subtitle">Groupe ISM — Tableau de bord d'extraction des données</div>
+    <h1>Groupe ISM — Tableau de bord</h1>
+    <div class="subtitle">Migration ClassExpert → Symfony SI</div>
     <div class="updated" id="updatedAt"></div>
   </div>
 
-  <div class="kpi-grid" id="kpiGrid"></div>
-
-  <div class="progress-section">
-    <h2>Progression globale des licences</h2>
-    <div class="progress-bar-container" id="progressBar"></div>
-    <div class="progress-legend" id="progressLegend"></div>
+  <!-- Tabs -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('extraction')">Suivi Extraction</button>
+    <button class="tab-btn" onclick="switchTab('groupe')">Groupe ISM — Chiffres Clés</button>
   </div>
 
-  <div class="charts-grid">
-    <div class="chart-card">
-      <h3>Répartition par école</h3>
-      <canvas id="schoolChart"></canvas>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 1: EXTRACTION                                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="tab-extraction" class="tab-content active">
+    <div class="kpi-grid" id="kpiGrid"></div>
+    <div class="progress-section">
+      <h2>Progression globale des licences</h2>
+      <div class="progress-bar-container" id="progressBar"></div>
+      <div class="progress-legend" id="progressLegend"></div>
     </div>
-    <div class="chart-card">
-      <h3>Notes — santé extraction</h3>
-      <canvas id="chartNotes"></canvas>
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Répartition par école</h3><canvas id="schoolChart"></canvas></div>
+      <div class="chart-card"><h3>Notes — santé extraction</h3><canvas id="chartNotes"></canvas></div>
+      <div class="chart-card"><h3>Assiduité — santé extraction</h3><canvas id="chartAssiduite"></canvas></div>
     </div>
-    <div class="chart-card">
-      <h3>Assiduité — santé extraction</h3>
-      <canvas id="chartAssiduite"></canvas>
+    <div class="progress-section">
+      <h2>Comparaison inter-écoles — Problèmes Notes + Assiduité</h2>
+      <div id="crossSchoolContainer" class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px;position:relative">
+        <canvas id="crossSchoolChart"></canvas>
+      </div>
+    </div>
+    <div class="progress-section">
+      <h2>Problèmes par école — Notes vs Assiduité</h2>
+      <div class="charts-grid" id="schoolStatsGrid" style="margin-top:16px"></div>
+    </div>
+    <div class="table-section">
+      <h2>Détail par licence</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;align-items:center">
+        <span style="color:var(--text-muted);font-size:.8rem;font-weight:600">Légende :</span>
+        <span class="badge badge-ok">ok</span>
+        <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">vide</span>
+        <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">err</span>
+        <span class="badge badge-issues">no_per <span style="font-weight:400;opacity:.7">= pas de période</span></span>
+        <span class="badge badge-issues">no_mat <span style="font-weight:400;opacity:.7">= pas de matière</span></span>
+      </div>
+      <div class="filter-bar" id="filterBar"></div>
+      <table>
+        <thead><tr>
+          <th>Licence</th><th>Classes</th><th>Élèves</th><th>Profs</th>
+          <th>Matières</th><th>Périodes</th><th>Notes</th><th>Assiduité</th>
+        </tr></thead>
+        <tbody id="licenceTable"></tbody>
+      </table>
     </div>
   </div>
 
-  <div class="progress-section">
-    <h2>Comparaison inter-écoles — Problèmes Notes + Assiduité</h2>
-    <div id="crossSchoolContainer" class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px;position:relative">
-      <canvas id="crossSchoolChart"></canvas>
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 2: GROUPE ISM — CHIFFRES CLÉS                      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div id="tab-groupe" class="tab-content">
+    <div class="kpi-grid" id="bizKpiGrid"></div>
+
+    <!-- Effectifs par école par année -->
+    <div class="progress-section">
+      <h2>Évolution des effectifs par école</h2>
+      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
+        <canvas id="effectifsChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Démographie -->
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Répartition Hommes / Femmes</h3><canvas id="sexeChart"></canvas></div>
+      <div class="chart-card"><h3>Tranches d'âge</h3><canvas id="agesChart"></canvas></div>
+      <div class="chart-card"><h3>Top 15 Nationalités</h3><canvas id="natChart"></canvas></div>
+      <div class="chart-card"><h3>Répartition par niveau</h3><canvas id="niveauxChart"></canvas></div>
+    </div>
+
+    <!-- Genre par école -->
+    <div class="progress-section">
+      <h2>Répartition H/F par école</h2>
+      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
+        <canvas id="sexeEcoleChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Académique -->
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Moyenne par école (/20)</h3><canvas id="moyEcoleChart"></canvas></div>
+      <div class="chart-card"><h3>Taux de réussite par école (>=10/20)</h3><canvas id="tauxEcoleChart"></canvas></div>
+      <div class="chart-card"><h3>Contrôle Continu vs Examen</h3><canvas id="ccExamChart"></canvas></div>
+      <div class="chart-card"><h3>Top 15 Matières (par volume)</h3><canvas id="topMatChart"></canvas></div>
+    </div>
+
+    <!-- Assiduité -->
+    <div class="progress-section">
+      <h2>Absences par école</h2>
+      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
+        <canvas id="absEcoleChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Structure -->
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Classes par niveau</h3><canvas id="niveauClassChart"></canvas></div>
+      <div class="chart-card"><h3>Classes par domaine / filière</h3><canvas id="filiereChart"></canvas></div>
     </div>
   </div>
 
-  <div class="progress-section">
-    <h2>Problèmes par école — Notes vs Assiduité</h2>
-    <div class="charts-grid" id="schoolStatsGrid" style="margin-top:16px"></div>
-  </div>
-
-  <div class="table-section">
-    <h2>Détail par licence</h2>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;align-items:center">
-      <span style="color:var(--text-muted);font-size:.8rem;font-weight:600">Légende :</span>
-      <span class="badge badge-ok">ok</span>
-      <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">vide</span>
-      <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">err</span>
-      <span class="badge badge-issues">no_per <span style="font-weight:400;opacity:.7">= pas de période</span></span>
-      <span class="badge badge-issues">no_mat <span style="font-weight:400;opacity:.7">= pas de matière</span></span>
-    </div>
-    <div class="filter-bar" id="filterBar"></div>
-    <table>
-      <thead>
-        <tr>
-          <th>Licence</th>
-          <th>Classes</th>
-          <th>Élèves</th>
-          <th>Profs</th>
-          <th>Matières</th>
-          <th>Périodes</th>
-          <th>Notes</th>
-          <th>Assiduité</th>
-        </tr>
-      </thead>
-      <tbody id="licenceTable"></tbody>
-    </table>
-  </div>
-
-  <div class="footer">
-    Groupe ISM — Migration ClassExpert &middot; Dashboard auto-généré
-  </div>
+  <div class="footer">Groupe ISM — Migration ClassExpert &middot; Dashboard auto-généré</div>
 
   <script>
     let DATA = null;
     let currentFilter = 'all';
+    let currentTab = 'extraction';
+    const allCharts = {};
+
+    function destroyChart(key) { if (allCharts[key]) { allCharts[key].destroy(); delete allCharts[key]; } }
+    function storeChart(key, chart) { allCharts[key] = chart; }
+
+    function switchTab(tab) {
+      currentTab = tab;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`).classList.add('active');
+      document.getElementById('tab-' + tab).classList.add('active');
+      if (DATA) { if (tab === 'extraction') renderExtraction(); else renderGroupeISM(); }
+    }
 
     async function loadData() {
       try {
         const resp = await fetch('dashboard-data.json');
         DATA = await resp.json();
-        render();
+        document.getElementById('updatedAt').textContent = 'Mis à jour: ' + formatDate(DATA.generatedAt);
+        if (currentTab === 'extraction') renderExtraction(); else renderGroupeISM();
       } catch (e) {
-        document.body.innerHTML = '<div style="text-align:center;padding:100px;color:#ef4444;"><h2>Impossible de charger dashboard-data.json</h2><p>Lancez: node dashboard/generate_dashboard_data.js</p></div>';
+        document.body.innerHTML = '<div style="text-align:center;padding:100px;color:#ef4444;"><h2>Impossible de charger dashboard-data.json</h2></div>';
       }
     }
 
-    function formatNum(n) {
-      if (n == null) return '—';
-      return n.toLocaleString('fr-FR');
-    }
-
+    function formatNum(n) { if (n == null) return '—'; return Number(n).toLocaleString('fr-FR'); }
     function formatDate(iso) {
       if (!iso) return '—';
-      const d = new Date(iso);
-      return d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      return new Date(iso).toLocaleDateString('fr-FR', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
     }
+    function shortSchool(name) { return name.replace('ISM ','').replace('Dakar ',''); }
 
     function scraperBadge(stats) {
       if (!stats || stats.total === 0) return '<span class="badge badge-na">N/A</span>';
       const issues = stats.empty + stats.error + stats.noperiod + stats.nofield;
-      // Ligne 1: nombre d'entrées extraites
-      let html = `<div style="line-height:1.4">`;
+      let html = '<div style="line-height:1.4">';
       html += `<span style="font-weight:700;color:var(--text)">${formatNum(stats.totalEntries)}</span>`;
-      html += `<span style="color:var(--text-muted);font-size:.7rem"> entrées</span>`;
-      // Ligne 2: ok + problèmes détaillés
+      html += '<span style="color:var(--text-muted);font-size:.7rem"> entrées</span>';
       if (issues === 0) {
         html += `<br><span class="badge badge-ok">${stats.ok} ok</span>`;
       } else {
         html += `<br><span class="badge badge-ok" style="margin-right:3px">${stats.ok} ok</span>`;
-        const parts = [];
-        if (stats.empty > 0)    parts.push(`<span class="badge badge-empty">${stats.empty} vide</span>`);
-        if (stats.error > 0)    parts.push(`<span class="badge badge-empty">${stats.error} err</span>`);
-        if (stats.noperiod > 0) parts.push(`<span class="badge badge-issues">${stats.noperiod} no_per</span>`);
-        if (stats.nofield > 0)  parts.push(`<span class="badge badge-issues">${stats.nofield} no_mat</span>`);
-        html += parts.join(' ');
+        if (stats.empty > 0)    html += `<span class="badge badge-empty">${stats.empty} vide</span> `;
+        if (stats.error > 0)    html += `<span class="badge badge-empty">${stats.error} err</span> `;
+        if (stats.noperiod > 0) html += `<span class="badge badge-issues">${stats.noperiod} no_per</span> `;
+        if (stats.nofield > 0)  html += `<span class="badge badge-issues">${stats.nofield} no_mat</span> `;
       }
-      html += `</div>`;
-      return html;
+      return html + '</div>';
     }
 
-    function render() {
+    // ═══════════════════════════════════════════════════════
+    // TAB 1 — EXTRACTION
+    // ═══════════════════════════════════════════════════════
+    function renderExtraction() {
       const s = DATA.summary;
-
-      // Updated timestamp
-      document.getElementById('updatedAt').textContent = `Mis à jour: ${formatDate(DATA.generatedAt)}`;
-
-      // KPI Cards
       const dup = DATA.doublons || {};
       const kpis = [
         { value: s.total, label: 'Licences totales', color: 'var(--blue)', sub: `${Object.keys(DATA.schools).length} écoles` },
@@ -417,301 +332,361 @@
         { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--green)', sub: 'lignes extraites' },
       ];
       document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
-        <div class="kpi-card">
-          <div class="value" style="color:${k.color}">${k.value}</div>
-          <div class="label">${k.label}</div>
-          <div class="sub">${k.sub}</div>
-        </div>
-      `).join('');
+        <div class="kpi-card"><div class="value" style="color:${k.color}">${k.value}</div>
+        <div class="label">${k.label}</div><div class="sub">${k.sub}</div></div>`).join('');
 
-      // Progress Bar
-      const donePct = (s.done / s.total * 100).toFixed(1);
-      const skipPct = (s.skip / s.total * 100).toFixed(1);
-      const progressPct = (s.inProgress / s.total * 100).toFixed(1);
+      // Progress
+      const donePct = (s.done/s.total*100).toFixed(1), skipPct = (s.skip/s.total*100).toFixed(1), progressPct = (s.inProgress/s.total*100).toFixed(1);
       document.getElementById('progressBar').innerHTML = `
         <div class="progress-segment seg-done" style="width:${donePct}%"><span>${s.done} done</span></div>
         <div class="progress-segment seg-progress" style="width:${progressPct}%"><span>${s.inProgress} en cours</span></div>
-        <div class="progress-segment seg-skip" style="width:${skipPct}%"><span>${s.skip} skip</span></div>
-      `;
+        <div class="progress-segment seg-skip" style="width:${skipPct}%"><span>${s.skip} skip</span></div>`;
       document.getElementById('progressLegend').innerHTML = `
         <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Terminé (${donePct}%)</div>
         <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>En cours (${progressPct}%)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div>Ignoré (${skipPct}%)</div>
-      `;
+        <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div>Ignoré (${skipPct}%)</div>`;
 
-      // Filter buttons
+      // Filters
       const filters = [
-        { key: 'all', label: `Tous (${s.total})` },
-        { key: 'done', label: `Terminé (${s.done})` },
-        { key: 'in_progress', label: `En cours (${s.inProgress})` },
-        { key: 'skip', label: `Ignoré (${s.skip})` },
+        { key: 'all', label: `Tous (${s.total})` }, { key: 'done', label: `Terminé (${s.done})` },
+        { key: 'in_progress', label: `En cours (${s.inProgress})` }, { key: 'skip', label: `Ignoré (${s.skip})` },
       ];
       document.getElementById('filterBar').innerHTML = filters.map(f =>
-        `<button class="filter-btn ${f.key === currentFilter ? 'active' : ''}" onclick="setFilter('${f.key}')">${f.label}</button>`
-      ).join('');
+        `<button class="filter-btn ${f.key===currentFilter?'active':''}" onclick="setFilter('${f.key}')">${f.label}</button>`).join('');
 
       // Table
       const filtered = currentFilter === 'all' ? DATA.licences : DATA.licences.filter(l => l.status === currentFilter);
-      document.getElementById('licenceTable').innerHTML = filtered.map(l => `
-        <tr>
-          <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school} · ${l.year}</span></td>
-          <td>${l.nbClasses}</td>
-          <td>${formatNum(l.nbEleves) || '—'}</td>
-          <td>${l.nbEnseignants || '—'}</td>
-          <td>${l.nbMatieres || '—'}</td>
-          <td>${l.nbPeriodes || '—'}</td>
-          <td>${scraperBadge(l.scrapers.notes)}</td>
-          <td>${scraperBadge(l.scrapers.assiduite)}</td>
-        </tr>
-      `).join('');
+      document.getElementById('licenceTable').innerHTML = filtered.map(l => `<tr>
+        <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school} · ${l.year}</span></td>
+        <td>${l.nbClasses}</td><td>${formatNum(l.nbEleves)||'—'}</td><td>${l.nbEnseignants||'—'}</td>
+        <td>${l.nbMatieres||'—'}</td><td>${l.nbPeriodes||'—'}</td>
+        <td>${scraperBadge(l.scrapers.notes)}</td><td>${scraperBadge(l.scrapers.assiduite)}</td></tr>`).join('');
 
-      renderCharts();
+      renderExtractionCharts();
     }
 
-    function setFilter(f) {
-      currentFilter = f;
-      render();
-    }
+    function setFilter(f) { currentFilter = f; renderExtraction(); }
 
-    function renderCharts() {
-      // School chart (horizontal bar)
-      const schoolCtx = document.getElementById('schoolChart').getContext('2d');
+    function renderExtractionCharts() {
+      // School chart
       const schools = Object.entries(DATA.schools).map(([name, s]) => ({
-        name: name.replace("ISM ", "").replace("Dakar ", ""),
-        done: s.doneCount,
-        skip: s.skipCount,
-        inProgress: s.inProgressCount,
+        name: shortSchool(name), done: s.doneCount, skip: s.skipCount, inProgress: s.inProgressCount,
+      }));
+      destroyChart('school');
+      storeChart('school', new Chart(document.getElementById('schoolChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: schools.map(s=>s.name),
+          datasets: [
+            { label:'Terminé', data: schools.map(s=>s.done), backgroundColor:'#22c55e' },
+            { label:'En cours', data: schools.map(s=>s.inProgress), backgroundColor:'#eab308' },
+            { label:'Ignoré', data: schools.map(s=>s.skip), backgroundColor:'#64748b' },
+          ]
+        }, options: { indexAxis:'y', responsive:true,
+          plugins:{ legend:{ labels:{ color:'#94a3b8', font:{size:11} } } },
+          scales:{ x:{stacked:true,ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}},
+                   y:{stacked:true,ticks:{color:'#e2e8f0',font:{size:11}},grid:{display:false}} }
+        }
       }));
 
-      if (window._schoolChart) window._schoolChart.destroy();
-      window._schoolChart = new Chart(schoolCtx, {
-        type: 'bar',
-        data: {
-          labels: schools.map(s => s.name),
-          datasets: [
-            { label: 'Terminé', data: schools.map(s => s.done), backgroundColor: '#22c55e' },
-            { label: 'En cours', data: schools.map(s => s.inProgress), backgroundColor: '#eab308' },
-            { label: 'Ignoré', data: schools.map(s => s.skip), backgroundColor: '#64748b' },
-          ]
-        },
-        options: {
-          indexAxis: 'y',
-          responsive: true,
-          plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11 } } } },
-          scales: {
-            x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-            y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } },
-          }
-        }
+      // Donuts
+      ['notes','assiduite'].forEach(key => {
+        const cfg = key==='notes' ? {id:'chartNotes',ok:'#22c55e'} : {id:'chartAssiduite',ok:'#3b82f6'};
+        const agg = {ok:0,empty:0,error:0,noperiod:0,nofield:0,total:0,entries:0};
+        DATA.licences.forEach(l => { const st=l.scrapers[key]; if(st){agg.ok+=st.ok;agg.empty+=st.empty;agg.error+=st.error;agg.noperiod+=st.noperiod;agg.nofield+=st.nofield;agg.total+=st.total;agg.entries+=st.totalEntries;} });
+        const labels=[],values=[],colors=[];
+        if(agg.ok>0){labels.push('OK ('+agg.ok+')');values.push(agg.ok);colors.push(cfg.ok);}
+        if(agg.empty>0){labels.push('Vide ('+agg.empty+')');values.push(agg.empty);colors.push('#ef4444');}
+        if(agg.error>0){labels.push('Erreur ('+agg.error+')');values.push(agg.error);colors.push('#dc2626');}
+        if(agg.noperiod>0){labels.push('No période ('+agg.noperiod+')');values.push(agg.noperiod);colors.push('#f97316');}
+        if(agg.nofield>0){labels.push('No matière ('+agg.nofield+')');values.push(agg.nofield);colors.push('#eab308');}
+        destroyChart(key);
+        storeChart(key, new Chart(document.getElementById(cfg.id).getContext('2d'), {
+          type:'doughnut', data:{labels,datasets:[{data:values,backgroundColor:colors,borderWidth:0}]},
+          options:{responsive:true,cutout:'60%',plugins:{
+            legend:{position:'right',labels:{color:'#94a3b8',font:{size:11},padding:8}},
+            title:{display:true,text:formatNum(agg.entries)+' entrées — '+agg.total+' combinaisons',color:'#64748b',font:{size:12}}
+          }}
+        }));
       });
 
-      // Per-scraper health charts (toutes licences, pas seulement Done)
-      const scraperConfigs = [
-        { key: 'notes',     canvasId: 'chartNotes',     label: 'Notes',     colors: { ok: '#22c55e', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
-        { key: 'assiduite', canvasId: 'chartAssiduite',  label: 'Assiduité', colors: { ok: '#3b82f6', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
-      ];
-
-      for (const cfg of scraperConfigs) {
-        const agg = { ok: 0, empty: 0, error: 0, noperiod: 0, nofield: 0, total: 0, entries: 0 };
-        DATA.licences.forEach(l => {
-          const st = l.scrapers[cfg.key];
-          if (st) {
-            agg.ok += st.ok;
-            agg.empty += st.empty;
-            agg.error += st.error;
-            agg.noperiod += st.noperiod;
-            agg.nofield += st.nofield;
-            agg.total += st.total;
-            agg.entries += st.totalEntries;
-          }
-        });
-
-        const ctx = document.getElementById(cfg.canvasId).getContext('2d');
-        const chartKey = '_chart_' + cfg.key;
-        if (window[chartKey]) window[chartKey].destroy();
-
-        const labels = [];
-        const values = [];
-        const colors = [];
-
-        if (agg.ok > 0)       { labels.push('OK (' + agg.ok + ')');             values.push(agg.ok);       colors.push(cfg.colors.ok); }
-        if (agg.empty > 0)    { labels.push('Vide (' + agg.empty + ')');         values.push(agg.empty);    colors.push(cfg.colors.empty); }
-        if (agg.error > 0)    { labels.push('Erreur (' + agg.error + ')');       values.push(agg.error);    colors.push(cfg.colors.error); }
-        if (agg.noperiod > 0) { labels.push('No période (' + agg.noperiod + ')'); values.push(agg.noperiod); colors.push(cfg.colors.noperiod); }
-        if (agg.nofield > 0)  { labels.push('No matière (' + agg.nofield + ')');  values.push(agg.nofield);  colors.push(cfg.colors.nofield); }
-
-        window[chartKey] = new Chart(ctx, {
-          type: 'doughnut',
-          data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 0 }] },
-          options: {
-            responsive: true,
-            cutout: '60%',
-            plugins: {
-              legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 }, padding: 8 } },
-              title: {
-                display: true,
-                text: formatNum(agg.entries) + ' entrées — ' + agg.total + ' combinaisons',
-                color: '#64748b',
-                font: { size: 12 },
-              }
-            }
-          }
-        });
-      }
-
-      // Cross-school comparison chart
-      renderCrossSchoolChart();
-
-      // Per-school problem charts
-      renderSchoolCharts();
-    }
-
-    function renderCrossSchoolChart() {
-      const schools = Object.entries(DATA.schools).map(([name, s]) => {
-        const n = s.scrapers.notes;
-        const a = s.scrapers.assiduite;
-        return {
-          name: name.replace("ISM ", "").replace("Dakar ", ""),
-          empty:    (n.empty    || 0) + (a.empty    || 0),
-          error:    (n.error    || 0) + (a.error    || 0),
-          noperiod: (n.noperiod || 0) + (a.noperiod || 0),
-          nofield:  (n.nofield  || 0) + (a.nofield  || 0),
-        };
+      // Cross-school
+      const crossSchools = Object.entries(DATA.schools).map(([name,s])=>{
+        const n=s.scrapers.notes, a=s.scrapers.assiduite;
+        return { name:shortSchool(name), empty:(n.empty||0)+(a.empty||0), error:(n.error||0)+(a.error||0),
+          noperiod:(n.noperiod||0)+(a.noperiod||0), nofield:(n.nofield||0)+(a.nofield||0) };
       });
-
-      // Calculer total problèmes et trier desc
-      schools.forEach(s => s.totalProblems = s.empty + s.error + s.noperiod + s.nofield);
-      schools.sort((a, b) => b.totalProblems - a.totalProblems);
-
-      // Toutes les écoles (sans filtre)
-      const filtered = schools;
-
-      // Forcer la hauteur du container pour que chaque école ait son label
+      crossSchools.forEach(s=>s.totalProblems=s.empty+s.error+s.noperiod+s.nofield);
+      crossSchools.sort((a,b)=>b.totalProblems-a.totalProblems);
       const container = document.getElementById('crossSchoolContainer');
-      const chartHeight = Math.max(300, filtered.length * 50 + 100);
-      container.style.height = chartHeight + 'px';
-      const canvas = document.getElementById('crossSchoolChart');
-
-      const ctx = canvas.getContext('2d');
-      if (window._crossSchoolChart) window._crossSchoolChart.destroy();
-
-      window._crossSchoolChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: filtered.map(s => s.name),
-          datasets: [
-            { label: 'Vide',        data: filtered.map(s => s.empty),    backgroundColor: '#ef4444' },
-            { label: 'Erreur',      data: filtered.map(s => s.error),    backgroundColor: '#dc2626' },
-            { label: 'No période',  data: filtered.map(s => s.noperiod), backgroundColor: '#f97316' },
-            { label: 'No matière',  data: filtered.map(s => s.nofield),  backgroundColor: '#eab308' },
+      container.style.height = Math.max(300,crossSchools.length*50+100)+'px';
+      destroyChart('cross');
+      storeChart('cross', new Chart(document.getElementById('crossSchoolChart').getContext('2d'), {
+        type:'bar', data:{
+          labels:crossSchools.map(s=>s.name),
+          datasets:[
+            {label:'Vide',data:crossSchools.map(s=>s.empty),backgroundColor:'#ef4444'},
+            {label:'Erreur',data:crossSchools.map(s=>s.error),backgroundColor:'#dc2626'},
+            {label:'No période',data:crossSchools.map(s=>s.noperiod),backgroundColor:'#f97316'},
+            {label:'No matière',data:crossSchools.map(s=>s.nofield),backgroundColor:'#eab308'},
           ]
-        },
-        options: {
-          indexAxis: 'y',
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { labels: { color: '#94a3b8', font: { size: 11 } } },
-            tooltip: {
-              callbacks: {
-                afterBody: function(items) {
-                  const idx = items[0].dataIndex;
-                  return 'Total problèmes: ' + filtered[idx].totalProblems;
-                }
-              }
-            }
-          },
-          scales: {
-            x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-            y: {
-              stacked: true,
-              ticks: {
-                color: '#e2e8f0',
-                font: { size: 12 },
-                autoSkip: false,
-                callback: function(value, index) {
-                  const label = filtered[index].name;
-                  const total = filtered[index].totalProblems;
-                  return total === 0 ? label + ' (aucun)' : label;
-                }
-              },
-              grid: { display: false },
-              afterFit: function(axis) { axis.width = 220; }
-            },
-          }
+        }, options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+          plugins:{legend:{labels:{color:'#94a3b8',font:{size:11}}},
+            tooltip:{callbacks:{afterBody:function(items){return 'Total: '+crossSchools[items[0].dataIndex].totalProblems;}}}},
+          scales:{x:{stacked:true,ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}},
+            y:{stacked:true,ticks:{color:'#e2e8f0',font:{size:12},autoSkip:false,
+              callback:function(v,i){const l=crossSchools[i];return l.totalProblems===0?l.name+' (aucun)':l.name;}},
+              grid:{display:false},afterFit:function(a){a.width=220;}}}
         }
-      });
-    }
+      }));
 
-    function renderSchoolCharts() {
+      // Per-school charts
       const grid = document.getElementById('schoolStatsGrid');
-      const schools = Object.entries(DATA.schools)
-        .map(([name, s]) => ({ name, ...s }))
-        .sort((a, b) => {
-          // Trier par nombre total de problèmes notes (desc)
-          const aProb = a.scrapers.notes.empty + a.scrapers.notes.error + a.scrapers.notes.noperiod + a.scrapers.notes.nofield;
-          const bProb = b.scrapers.notes.empty + b.scrapers.notes.error + b.scrapers.notes.noperiod + b.scrapers.notes.nofield;
-          return bProb - aProb;
+      const schArr = Object.entries(DATA.schools).map(([name,s])=>({name,...s}))
+        .sort((a,b)=>{
+          const ap=a.scrapers.notes.empty+a.scrapers.notes.error+a.scrapers.notes.noperiod+a.scrapers.notes.nofield;
+          const bp=b.scrapers.notes.empty+b.scrapers.notes.error+b.scrapers.notes.noperiod+b.scrapers.notes.nofield;
+          return bp-ap;
         });
-
-      // Créer les canvas dynamiquement
-      grid.innerHTML = schools.map((s, i) => `
-        <div class="chart-card">
-          <h3 style="font-size:.95rem">${s.name.replace("ISM ", "")}</h3>
-          <div style="color:var(--text-muted);font-size:.75rem;margin-bottom:8px">
-            ${s.years.length} années · ${formatNum(s.nbEleves)} élèves · ${s.nbClasses} classes
-          </div>
-          <canvas id="schoolStat_${i}"></canvas>
-        </div>
-      `).join('');
-
-      // Render un bar chart par école: Notes vs Assiduité, groupé par type de problème
-      schools.forEach((s, i) => {
-        const ctx = document.getElementById('schoolStat_' + i).getContext('2d');
-        const chartKey = '_schoolStat_' + i;
-        if (window[chartKey]) window[chartKey].destroy();
-
-        const nScraper = s.scrapers.notes;
-        const aScraper = s.scrapers.assiduite;
-
-        window[chartKey] = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['OK', 'Vide', 'No période', 'No matière'],
-            datasets: [
-              {
-                label: 'Notes',
-                data: [nScraper.ok, nScraper.empty, nScraper.noperiod, nScraper.nofield],
-                backgroundColor: '#3b82f6',
-              },
-              {
-                label: 'Assiduité',
-                data: [aScraper.ok, aScraper.empty, aScraper.noperiod, aScraper.nofield],
-                backgroundColor: '#f97316',
-              },
-            ]
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              legend: { labels: { color: '#94a3b8', font: { size: 10 } } },
-              title: {
-                display: true,
-                text: `Notes: ${formatNum(nScraper.totalEntries)} entrées · Assiduité: ${formatNum(aScraper.totalEntries)} entrées`,
-                color: '#64748b',
-                font: { size: 11 },
-              }
-            },
-            scales: {
-              x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
-              y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-            }
-          }
-        });
+      grid.innerHTML = schArr.map((s,i)=>`<div class="chart-card">
+        <h3 style="font-size:.95rem">${shortSchool(s.name)}</h3>
+        <div style="color:var(--text-muted);font-size:.75rem;margin-bottom:8px">${s.years.length} années · ${formatNum(s.nbEleves)} élèves · ${s.nbClasses} classes</div>
+        <canvas id="schoolStat_${i}"></canvas></div>`).join('');
+      schArr.forEach((s,i)=>{
+        const n=s.scrapers.notes, a=s.scrapers.assiduite;
+        destroyChart('ss'+i);
+        storeChart('ss'+i, new Chart(document.getElementById('schoolStat_'+i).getContext('2d'), {
+          type:'bar', data:{labels:['OK','Vide','No période','No matière'],
+            datasets:[{label:'Notes',data:[n.ok,n.empty,n.noperiod,n.nofield],backgroundColor:'#3b82f6'},
+                      {label:'Assiduité',data:[a.ok,a.empty,a.noperiod,a.nofield],backgroundColor:'#f97316'}]},
+          options:{responsive:true,
+            plugins:{legend:{labels:{color:'#94a3b8',font:{size:10}}},
+              title:{display:true,text:`Notes: ${formatNum(n.totalEntries)} · Assiduité: ${formatNum(a.totalEntries)}`,color:'#64748b',font:{size:11}}},
+            scales:{x:{ticks:{color:'#94a3b8',font:{size:10}},grid:{display:false}},
+                    y:{ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}}}}
+        }));
       });
     }
 
-    // Auto-refresh every 60 seconds
+    // ═══════════════════════════════════════════════════════
+    // TAB 2 — GROUPE ISM
+    // ═══════════════════════════════════════════════════════
+    const SCHOOL_COLORS = ['#3b82f6','#22c55e','#f97316','#a855f7','#ef4444','#eab308','#06b6d4','#ec4899','#64748b','#10b981'];
+
+    function renderGroupeISM() {
+      const B = DATA.business;
+      if (!B) { document.getElementById('tab-groupe').innerHTML = '<p style="padding:40px;text-align:center;color:var(--text-muted)">Données métier non disponibles. Relancez generate_dashboard_data.js</p>'; return; }
+      const D = B.demographics;
+
+      // KPIs
+      const pctF = D.totalPupils > 0 ? (D.sexe.F / D.totalPupils * 100).toFixed(1) : 0;
+      const pctBours = D.totalPupils > 0 ? (D.boursiers / D.totalPupils * 100).toFixed(1) : 0;
+      const pctRedoub = D.totalPupils > 0 ? (D.redoublants / D.totalPupils * 100).toFixed(1) : 0;
+      const nbNat = Object.keys(D.nationalites).length;
+      const absJustPct = B.attendance.totalAbsences > 0 ? (B.attendance.totalJustifiees / B.attendance.totalAbsences * 100).toFixed(1) : 0;
+
+      const bizKpis = [
+        { value: formatNum(D.totalPupils), label: 'Élèves analysés', color: 'var(--purple)', sub: `sur ${formatNum(DATA.totalEleves)} total` },
+        { value: pctF + '%', label: 'Femmes', color: '#ec4899', sub: `${formatNum(D.sexe.F)} F · ${formatNum(D.sexe.M)} H` },
+        { value: formatNum(D.boursiers), label: 'Boursiers', color: 'var(--green)', sub: `${pctBours}% des élèves` },
+        { value: formatNum(D.redoublants), label: 'Redoublants', color: 'var(--orange)', sub: `${pctRedoub}%` },
+        { value: nbNat, label: 'Nationalités', color: '#06b6d4', sub: 'représentées' },
+        { value: B.academic.moyenneGlobale + '/20', label: 'Moyenne générale', color: 'var(--blue)', sub: `${formatNum(B.academic.totalNotes)} notes` },
+        { value: formatNum(Math.round(B.attendance.totalAbsences)), label: 'Absences totales', color: 'var(--red)', sub: `${absJustPct}% justifiées` },
+        { value: Object.keys(B.effectifs).length, label: 'Écoles', color: 'var(--yellow)', sub: 'avec données' },
+      ];
+      document.getElementById('bizKpiGrid').innerHTML = bizKpis.map(k => `
+        <div class="kpi-card"><div class="value" style="color:${k.color}">${k.value}</div>
+        <div class="label">${k.label}</div><div class="sub">${k.sub}</div></div>`).join('');
+
+      // ─── Effectifs par école par année (line chart) ───
+      const allYears = new Set();
+      Object.values(B.effectifs).forEach(y => Object.keys(y).forEach(yr => { if (yr !== 'courant') allYears.add(yr); }));
+      const years = [...allYears].sort();
+      const schoolNames = Object.keys(B.effectifs).filter(s => {
+        // Exclure les écoles qui n'ont que "courant"
+        return Object.keys(B.effectifs[s]).some(y => y !== 'courant');
+      });
+      const datasets = schoolNames.map((school, i) => ({
+        label: shortSchool(school),
+        data: years.map(y => B.effectifs[school][y] || 0),
+        borderColor: SCHOOL_COLORS[i % SCHOOL_COLORS.length],
+        backgroundColor: SCHOOL_COLORS[i % SCHOOL_COLORS.length] + '33',
+        tension: 0.3, fill: false, pointRadius: 4,
+      }));
+      destroyChart('effectifs');
+      storeChart('effectifs', new Chart(document.getElementById('effectifsChart').getContext('2d'), {
+        type: 'line', data: { labels: years, datasets },
+        options: { responsive: true,
+          plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11 } } } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, beginAtZero: true } }
+        }
+      }));
+
+      // ─── Sexe (donut) ───
+      destroyChart('sexe');
+      storeChart('sexe', new Chart(document.getElementById('sexeChart').getContext('2d'), {
+        type: 'doughnut', data: {
+          labels: [`Femmes (${formatNum(D.sexe.F)})`, `Hommes (${formatNum(D.sexe.M)})`, `Non renseigné (${formatNum(D.sexe.inconnu)})`],
+          datasets: [{ data: [D.sexe.F, D.sexe.M, D.sexe.inconnu], backgroundColor: ['#ec4899', '#3b82f6', '#64748b'], borderWidth: 0 }]
+        }, options: { responsive: true, cutout: '60%',
+          plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 } } } } }
+      }));
+
+      // ─── Âges (bar) ───
+      const ageOrder = ['<18', '18-20', '21-23', '24-25', '26-30', '>30'];
+      const ageData = ageOrder.map(t => D.ages[t] || 0);
+      destroyChart('ages');
+      storeChart('ages', new Chart(document.getElementById('agesChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: ageOrder, datasets: [{ data: ageData, backgroundColor: '#a855f7', borderRadius: 6 }]
+        }, options: { responsive: true, plugins: { legend: { display: false } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } } } }
+      }));
+
+      // ─── Nationalités (horizontal bar, top 15) ───
+      const nats = Object.entries(D.nationalites).sort((a, b) => b[1] - a[1]).slice(0, 15);
+      destroyChart('nat');
+      storeChart('nat', new Chart(document.getElementById('natChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: nats.map(n => n[0]),
+          datasets: [{ data: nats.map(n => n[1]), backgroundColor: '#06b6d4', borderRadius: 4 }]
+        }, options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+                    y: { ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
+      }));
+
+      // ─── Niveaux (donut) ───
+      const niveaux = Object.entries(D.niveaux).sort((a, b) => b[1] - a[1]).slice(0, 10);
+      destroyChart('niveaux');
+      storeChart('niveaux', new Chart(document.getElementById('niveauxChart').getContext('2d'), {
+        type: 'doughnut', data: {
+          labels: niveaux.map(n => n[0] + ' (' + formatNum(n[1]) + ')'),
+          datasets: [{ data: niveaux.map(n => n[1]), backgroundColor: SCHOOL_COLORS, borderWidth: 0 }]
+        }, options: { responsive: true, cutout: '50%',
+          plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 10 } } } } }
+      }));
+
+      // ─── H/F par école (stacked bar) ───
+      const sexeSchools = Object.entries(D.sexeParEcole).map(([s, d]) => ({ name: shortSchool(s), ...d }));
+      destroyChart('sexeEcole');
+      storeChart('sexeEcole', new Chart(document.getElementById('sexeEcoleChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: sexeSchools.map(s => s.name),
+          datasets: [
+            { label: 'Femmes', data: sexeSchools.map(s => s.F), backgroundColor: '#ec4899' },
+            { label: 'Hommes', data: sexeSchools.map(s => s.M), backgroundColor: '#3b82f6' },
+          ]
+        }, options: { indexAxis: 'y', responsive: true,
+          plugins: { legend: { labels: { color: '#94a3b8' } } },
+          scales: { x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+                    y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
+      }));
+
+      // ─── Moyenne par école (bar) ───
+      const moySchools = Object.entries(B.academic.moyenneParEcole)
+        .map(([s, d]) => ({ name: shortSchool(s), moy: d.moy, count: d.count }))
+        .sort((a, b) => b.moy - a.moy);
+      destroyChart('moyEcole');
+      storeChart('moyEcole', new Chart(document.getElementById('moyEcoleChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: moySchools.map(s => s.name),
+          datasets: [{ data: moySchools.map(s => s.moy), backgroundColor: moySchools.map(s => s.moy >= 10 ? '#22c55e' : '#ef4444'), borderRadius: 6 }]
+        }, options: { responsive: true, plugins: { legend: { display: false },
+          tooltip: { callbacks: { afterLabel: function(ctx) { return formatNum(moySchools[ctx.dataIndex].count) + ' notes'; } } } },
+          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 } } }
+      }));
+
+      // ─── Taux de réussite par école (bar) ───
+      const tauxSchools = Object.entries(B.academic.tauxReussite)
+        .map(([s, d]) => ({ name: shortSchool(s), taux: d.taux, reussi: d.reussi, total: d.total }))
+        .sort((a, b) => b.taux - a.taux);
+      destroyChart('tauxEcole');
+      storeChart('tauxEcole', new Chart(document.getElementById('tauxEcoleChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: tauxSchools.map(s => s.name),
+          datasets: [{ data: tauxSchools.map(s => s.taux), backgroundColor: tauxSchools.map(s => s.taux >= 70 ? '#22c55e' : s.taux >= 50 ? '#eab308' : '#ef4444'), borderRadius: 6 }]
+        }, options: { responsive: true, plugins: { legend: { display: false },
+          tooltip: { callbacks: { afterLabel: function(ctx) { const s=tauxSchools[ctx.dataIndex]; return formatNum(s.reussi)+'/'+formatNum(s.total)+' notes'; } } } },
+          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8', callback: v=>v+'%' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 100 } } }
+      }));
+
+      // ─── CC vs Examen (bar comparatif) ───
+      const ccex = B.academic.ccVsExam;
+      destroyChart('ccExam');
+      storeChart('ccExam', new Chart(document.getElementById('ccExamChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: ['Contrôle Continu', 'Examen'],
+          datasets: [{ data: [ccex.cc.moy, ccex.exam.moy],
+            backgroundColor: ['#3b82f6', '#f97316'], borderRadius: 8 }]
+        }, options: { responsive: true, plugins: { legend: { display: false },
+          tooltip: { callbacks: { afterLabel: function(ctx) { return formatNum(ctx.dataIndex===0?ccex.cc.count:ccex.exam.count)+' notes'; } } } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 } } }
+      }));
+
+      // ─── Top matières (horizontal bar) ───
+      const topMat = B.academic.topMatieres || [];
+      destroyChart('topMat');
+      storeChart('topMat', new Chart(document.getElementById('topMatChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: topMat.map(m => m.matiere.length > 30 ? m.matiere.substring(0, 28) + '…' : m.matiere),
+          datasets: [{ label: 'Moyenne', data: topMat.map(m => m.moy),
+            backgroundColor: topMat.map(m => m.moy >= 10 ? '#22c55e' : '#ef4444'), borderRadius: 4 }]
+        }, options: { indexAxis: 'y', responsive: true,
+          plugins: { legend: { display: false },
+            tooltip: { callbacks: { title: function(items) { return topMat[items[0].dataIndex].matiere; },
+              afterLabel: function(ctx) { return formatNum(topMat[ctx.dataIndex].count)+' notes'; } } } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 },
+                    y: { ticks: { color: '#e2e8f0', font: { size: 10 } }, grid: { display: false } } } }
+      }));
+
+      // ─── Absences par école (stacked bar: justifiées vs non justifiées) ───
+      const absSchools = Object.entries(B.attendance.absencesParEcole)
+        .map(([s, d]) => ({ name: shortSchool(s), justifiees: Math.round(d.justifiees), nonJust: Math.round(d.absences - d.justifiees) }))
+        .sort((a, b) => (b.justifiees + b.nonJust) - (a.justifiees + a.nonJust));
+      destroyChart('absEcole');
+      storeChart('absEcole', new Chart(document.getElementById('absEcoleChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: absSchools.map(s => s.name),
+          datasets: [
+            { label: 'Non justifiées', data: absSchools.map(s => s.nonJust), backgroundColor: '#ef4444' },
+            { label: 'Justifiées', data: absSchools.map(s => s.justifiees), backgroundColor: '#eab308' },
+          ]
+        }, options: { indexAxis: 'y', responsive: true,
+          plugins: { legend: { labels: { color: '#94a3b8' } } },
+          scales: { x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+                    y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
+      }));
+
+      // ─── Classes par niveau (bar) ───
+      const nivClasses = Object.entries(B.structure.niveauxDistrib).sort((a, b) => b[1] - a[1]).slice(0, 12);
+      destroyChart('nivClass');
+      storeChart('nivClass', new Chart(document.getElementById('niveauClassChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: nivClasses.map(n => n[0]), datasets: [{ data: nivClasses.map(n => n[1]), backgroundColor: '#a855f7', borderRadius: 6 }]
+        }, options: { responsive: true, plugins: { legend: { display: false } },
+          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } } } }
+      }));
+
+      // ─── Classes par filière (horizontal bar) ───
+      const filieres = Object.entries(B.structure.filieresDistrib).sort((a, b) => b[1] - a[1]).slice(0, 12);
+      destroyChart('filiere');
+      storeChart('filiere', new Chart(document.getElementById('filiereChart').getContext('2d'), {
+        type: 'bar', data: {
+          labels: filieres.map(f => f[0].length > 35 ? f[0].substring(0, 33) + '…' : f[0]),
+          datasets: [{ data: filieres.map(f => f[1]), backgroundColor: '#06b6d4', borderRadius: 4 }]
+        }, options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
+          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
+                    y: { ticks: { color: '#e2e8f0', font: { size: 10 } }, grid: { display: false } } } }
+      }));
+    }
+
+    // Auto-refresh
     loadData();
     setInterval(loadData, 60000);
   </script>

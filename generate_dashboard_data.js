@@ -374,7 +374,7 @@ function readAttendanceForLicence(licenceDir) {
 }
 
 function readClassMainInfo(licenceDir) {
-  // Lit main.json de chaque classe pour niveau, filière, domaine
+  // Lit main.json de chaque classe (format ASP.NET dans details{})
   if (!fs.existsSync(licenceDir)) return [];
   const results = [];
   try {
@@ -385,17 +385,43 @@ function readClassMainInfo(licenceDir) {
       if (!fs.existsSync(mainPath)) continue;
       try {
         const data = JSON.parse(fs.readFileSync(mainPath, 'utf8'));
-        results.push({
-          classe: cd.name,
-          niveau: (data.level || data.niveau || '').trim(),
-          gradeType: (data.gradeType || '').trim(),
-          area: (data.academicArea || data.area || '').trim(),
-          program: (data.program || '').trim(),
-        });
+        const det = data.details || data;
+        // Chercher les clés dans le format ASP.NET
+        let grade = '', area = '', program = '', level = '';
+        for (const [k, v] of Object.entries(det)) {
+          const val = String(v || '').trim();
+          if (k.includes('InputGrade')) grade = val;       // Licence, Master...
+          if (k.includes('InputArea')) area = val;          // Sciences et Technologies...
+          if (k.includes('InputMention')) program = val;    // filière
+          if (k.includes('InputLevel') || k.includes('Level')) level = val;
+        }
+        // Déduire le niveau depuis le nom de classe si pas trouvé
+        if (!level && grade) {
+          const classMatch = cd.name.match(/^(L|M|MBA|DBA)(\d)/i);
+          if (classMatch) level = (classMatch[1].toUpperCase() === 'L' ? 'LICENCE' : classMatch[1].toUpperCase()) + ' ' + classMatch[2];
+          else level = grade;
+        }
+        results.push({ classe: cd.name, niveau: level, gradeType: grade, area, program });
       } catch {}
     }
   } catch {}
   return results;
+}
+
+function readPupilNiveaux(licenceDir) {
+  // Lit all_pupils.json pour les niveaux (ce fichier a le champ Niveau)
+  const pupilsFile = path.join(licenceDir, '_pupils', 'all_pupils.json');
+  if (!fs.existsSync(pupilsFile)) return {};
+  try {
+    const data = JSON.parse(fs.readFileSync(pupilsFile, 'utf8'));
+    if (!data.rows) return {};
+    const niveaux = {};
+    for (const r of data.rows) {
+      const niv = (r.Niveau || '').trim();
+      if (niv) niveaux[niv] = (niveaux[niv] || 0) + 1;
+    }
+    return niveaux;
+  } catch { return {}; }
 }
 
 function extractNotesDetails(rows) {
@@ -679,9 +705,12 @@ async function main() {
         }
       }
 
-      if (p.niveau) {
-        businessData.demographics.niveaux[p.niveau] = (businessData.demographics.niveaux[p.niveau] || 0) + 1;
-      }
+    }
+
+    // Niveaux depuis all_pupils.json (ce fichier contient le champ Niveau)
+    const nivMap = readPupilNiveaux(licDir);
+    for (const [niv, cnt] of Object.entries(nivMap)) {
+      businessData.demographics.niveaux[niv] = (businessData.demographics.niveaux[niv] || 0) + cnt;
     }
 
     // Notes
