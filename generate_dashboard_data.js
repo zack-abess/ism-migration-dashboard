@@ -899,6 +899,27 @@ async function main() {
     plusEnseignees: [...palmaresArr].sort((a, b) => b.count - a.count).slice(0, 15),
   };
 
+  // === Remap "courant" → année manquante si exactement 1 trou dans la séquence ===
+  const knownYears = ['2017-2018','2018-2019','2019-2020','2020-2021','2021-2022','2022-2023','2023-2024','2024-2025','2025-2026'];
+  for (const [school, years] of Object.entries(businessData.effectifs)) {
+    if (!('courant' in years)) continue;
+    const present = Object.keys(years).filter(y => y !== 'courant');
+    // Only consider schools that have at least some year data
+    if (present.length < 2) continue;
+    const minY = Math.min(...present.map(y => parseInt(y)));
+    const maxY = Math.max(...present.map(y => parseInt(y)));
+    const relevantYears = knownYears.filter(y => {
+      const n = parseInt(y);
+      return n >= minY && n <= maxY;
+    });
+    const missing = relevantYears.filter(y => !present.includes(y));
+    if (missing.length === 1) {
+      console.log(`   🔄 Remap "courant" → "${missing[0]}" pour ${school} (${years.courant} élèves)`);
+      years[missing[0]] = years.courant;
+      delete years.courant;
+    }
+  }
+
   // === Projections effectifs (régression linéaire simple par école) ===
   businessData.projections = {};
   for (const [school, years] of Object.entries(businessData.effectifs)) {
