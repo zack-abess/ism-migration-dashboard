@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T18:20:01.455Z",
+  "generatedAt": "2026-03-30T18:25:00.724Z",
   "summary": {
     "done": 56,
     "skip": 8,
     "inProgress": 1,
     "total": 65
   },
-  "totalClasses": 2229,
+  "totalClasses": 2279,
   "totalEleves": 57079,
   "totalMatieres": 4716,
   "totalPeriodes": 73,
@@ -86,7 +86,7 @@
       "doneCount": 9,
       "skipCount": 0,
       "inProgressCount": 1,
-      "nbClasses": 390,
+      "nbClasses": 440,
       "nbEleves": 10314,
       "nbEnseignants": 35,
       "scrapers": {
@@ -526,7 +526,7 @@
       "school": "ISM Dakar Ecole d'Ingénieurs",
       "year": "2023-2024",
       "status": "in_progress",
-      "nbClasses": 0,
+      "nbClasses": 50,
       "nbEleves": 1458,
       "nbEnseignants": 4,
       "nbMatieres": 0,
@@ -4254,28 +4254,42 @@
     },
     "demographics": {
       "sexe": {
-        "M": 20919,
-        "F": 26808,
+        "M": 21030,
+        "F": 26918,
         "inconnu": 1603
       },
-      "boursiers": 7334,
-      "redoublants": 348,
+      "boursiers": 7377,
+      "redoublants": 352,
       "exempts": 150,
-      "totalPupils": 49330,
+      "totalPupils": 49551,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
+        "BISSAU GUINEENNE": 28,
+        "SENEGALAISE": 23151,
+        "TCHADIENNE": 1094,
+        "GUINEENNE": 1559,
+        "GABONAISE": 5464,
+        "BENINOISE": 853,
+        "CAMEROUNAISE": 490,
+        "MALIENNE": 1038,
+        "TOGOLAISE": 1066,
+        "SENEGLAISE": 21,
+        "NIGERIENNE": 1141,
+        "CONGOLAISE": 2265,
+        "MAURITANIENNE": 416,
+        "MAROCAINE": 33,
+        "BURKINABE": 667,
+        "SEMEGALAISE": 3,
+        "Djiboutienne": 30,
+        "IVOIRIENNE": 930,
         "GUINEENE": 5,
-        "TCHADIENNE": 1090,
-        "SENEGALAISE": 23002,
         "Nigérienne": 110,
         "Français": 1,
         "Guinéenne": 118,
         "Gabonaise": 321,
-        "MALIENNE": 1037,
-        "BURKINABE": 665,
         "Sénégalo-malienne": 3,
         "Sénégalaise": 1927,
         "Mauritanien": 3,
@@ -4287,16 +4301,9 @@
         "Togolaise": 130,
         "Congolaise": 183,
         "SENEGALISE": 10,
-        "CONGOLAISE": 2257,
         "Nigerienne": 8,
         "Senegalais": 3,
-        "TOGOLAISE": 1061,
-        "GUINEENNE": 1553,
-        "GABONAISE": 5441,
         "DJIBOUTIENNE": 301,
-        "MAURITANIENNE": 412,
-        "BENINOISE": 848,
-        "IVOIRIENNE": 929,
         "Tchadienne": 74,
         "Malienne": 80,
         "Sénégal": 3,
@@ -4304,10 +4311,8 @@
         "SENGALAISE": 20,
         "TCADIENNE": 4,
         "SENAGALAISE": 8,
-        "NIGERIENNE": 1138,
         "BISSAO-GUINEENNE": 3,
         "LIBANAISE": 10,
-        "CAMEROUNAISE": 486,
         "BISSAUGUINEENNE": 1,
         "EQUATOGUINENNE": 2,
         "COMORIENNE": 120,
@@ -4322,11 +4327,9 @@
         "ITALIENNE": 28,
         "SENEGALO-FRANCAISE": 6,
         "BISSAOGUINEENNE": 1,
-        "MAROCAINE": 32,
         "SNEGALAISE": 11,
         "SIERRA LEONAISE": 1,
         "MALGACHE": 24,
-        "SENEGLAISE": 20,
         "SENEGELAISE": 2,
         "GABONASE": 3,
         "SEEGALAISE": 3,
@@ -4360,7 +4363,6 @@
         "SENEGALO BURKINABE": 1,
         "FRANCO SENEGALAISE": 2,
         "senegalaise": 8,
-        "BISSAU GUINEENNE": 26,
         "EQUATO GUINEENNE": 23,
         "SENEGALO MAROCAINE": 1,
         "GUNEENNE": 8,
@@ -4368,7 +4370,6 @@
         "Ghanaéen": 2,
         "SYRIENNE": 2,
         "GUINÉENNE": 4,
-        "SEMEGALAISE": 2,
         "CANADO-MALIENNE": 2,
         "SENEGGALAISE": 1,
         "SENEGALLAISE": 2,
@@ -4389,7 +4390,6 @@
         "Haitienne": 2,
         "sénégalaise": 6,
         "Béninoise": 63,
-        "Djiboutienne": 29,
         "Dakar": 1,
         "Banguientrafricaine": 1,
         "Brazzaville": 2,
@@ -4591,11 +4591,11 @@
         "LCM3": 1
       },
       "ages": {
-        "26-30": 15810,
+        "26-30": 15823,
+        "21-23": 9741,
+        "24-25": 7818,
+        "18-20": 3884,
         ">30": 10746,
-        "24-25": 7789,
-        "21-23": 9608,
-        "18-20": 3838,
         "<18": 96
       },
       "niveaux": {
@@ -4671,8 +4671,8 @@
       },
       "sexeParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "M": 4907,
-          "F": 3670
+          "M": 5018,
+          "F": 3780
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4708,7 +4708,7 @@
         }
       },
       "boursiersParEcole": {
-        "ISM Dakar Ecole d'Ingénieurs": 1342,
+        "ISM Dakar Ecole d'Ingénieurs": 1385,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
         "ISM Dakar Graduate School": 584,
@@ -4719,7 +4719,7 @@
         "ISM HQ": 14
       },
       "redoublantsParEcole": {
-        "ISM Dakar Ecole d'Ingénieurs": 41,
+        "ISM Dakar Ecole d'Ingénieurs": 45,
         "ISM Dakar Ecole de Droit": 104,
         "ISM Dakar Ecole de Management": 73,
         "ISM Dakar Graduate School": 93,
@@ -4929,14 +4929,14 @@
       }
     },
     "attendance": {
-      "totalAbsences": 1160001.6000000557,
-      "totalJustifiees": 118076.80000000025,
-      "totalNonJustifiees": 1041924.8000000527,
+      "totalAbsences": 1200883.6000000557,
+      "totalJustifiees": 121848.80000000028,
+      "totalNonJustifiees": 1079034.8000000527,
       "absencesParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "absences": 201891.5,
-          "justifiees": 25555,
-          "records": 10724
+          "absences": 242773.5,
+          "justifiees": 29327,
+          "records": 12005
         },
         "ISM Dakar Ecole de Droit": {
           "absences": 337811.69999999553,
@@ -4967,6 +4967,8 @@
     },
     "structure": {
       "niveauxDistrib": {
+        "ADMIS NON INSCRITS": 30,
+        "LICENCE 1": 210,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
@@ -4976,7 +4978,6 @@
         "MBA 1 - PEL": 6,
         "MBA 2 - PEL": 5,
         "MBA 2 - EXTERNE": 13,
-        "LICENCE 1": 205,
         "LICENCE 2": 188,
         "LICENCE 3 - AI": 16,
         "LICENCE 3": 170,
@@ -4987,7 +4988,6 @@
         "NON INSCRITS": 30,
         "LICENCE 1 R2": 28,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 2,
-        "ADMIS NON INSCRITS": 29,
         "MBA1 Soir": 1,
         "Master 2": 6,
         "Master 1": 7,
@@ -5042,7 +5042,7 @@
         "DBA": 4
       },
       "filieresDistrib": {
-        "Sciences et Technologies": 225,
+        "Sciences et Technologies": 230,
         "Sciences Economiques et Gestion": 33,
         "Sciences Economiques et de Gestion": 749,
         "Stratégie Digitale": 3,
@@ -5095,12 +5095,12 @@
       }
     },
     "quality": {
-      "total": 53322,
+      "total": 53543,
       "completude": {
-        "sexe": 90.9,
-        "nationalite": 86.5,
-        "dateNaissance": 91.3,
-        "email": 77.8,
+        "sexe": 91,
+        "nationalite": 86.6,
+        "dateNaissance": 91.4,
+        "email": 77.9,
         "telephone": 73.8
       },
       "missing": {
@@ -5108,7 +5108,7 @@
         "nationalite": 7197,
         "dateNaissance": 4627,
         "email": 11823,
-        "telephone": 13975
+        "telephone": 14024
       }
     },
     "anomalies": {
@@ -5124,6 +5124,12 @@
           "school": "ISM Dakar Graduate School",
           "classe": "MBA1 COMMUNICATION - CREATIVITE - EVENEMENTIEL",
           "avgAbsences": 86
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2023-2024",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "L1H - IA (IAGE & TTL)",
+          "avgAbsences": 77.8
         },
         {
           "licence": "ISM Dakar Graduate School 2023-2024",
@@ -5214,6 +5220,12 @@
           "school": "ISM Dakar Ecole de Droit",
           "classe": "MBA2- Passation des Marchés",
           "avgAbsences": 53.1
+        },
+        {
+          "licence": "ISM Dakar Ecole d'Ingénieurs 2023-2024",
+          "school": "ISM Dakar Ecole d'Ingénieurs",
+          "classe": "L1A - IA (IAGE & TTL  A)",
+          "avgAbsences": 52.5
         },
         {
           "licence": "ISM Dakar Graduate School 2023-2024",
