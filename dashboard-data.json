@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T18:40:00.551Z",
+  "generatedAt": "2026-03-30T18:45:01.500Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4254,41 +4254,41 @@
     },
     "demographics": {
       "sexe": {
-        "M": 21441,
-        "F": 27188,
+        "M": 21531,
+        "F": 27273,
         "inconnu": 1603
       },
-      "boursiers": 7539,
-      "redoublants": 362,
+      "boursiers": 7563,
+      "redoublants": 365,
       "exempts": 150,
-      "totalPupils": 50232,
+      "totalPupils": 50407,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
         "BISSAU GUINEENNE": 29,
-        "SENEGALAISE": 23570,
-        "TCHADIENNE": 1115,
-        "GUINEENNE": 1582,
-        "GABONAISE": 5534,
-        "BENINOISE": 858,
+        "SENEGALAISE": 23661,
+        "TCHADIENNE": 1118,
+        "GUINEENNE": 1595,
+        "GABONAISE": 5562,
+        "BENINOISE": 859,
         "CAMEROUNAISE": 500,
-        "MALIENNE": 1060,
-        "TOGOLAISE": 1084,
+        "MALIENNE": 1065,
+        "TOGOLAISE": 1087,
         "SENEGLAISE": 21,
-        "NIGERIENNE": 1150,
-        "CONGOLAISE": 2293,
-        "MAURITANIENNE": 424,
+        "NIGERIENNE": 1152,
+        "CONGOLAISE": 2305,
+        "MAURITANIENNE": 429,
         "MAROCAINE": 34,
-        "BURKINABE": 676,
+        "BURKINABE": 679,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
-        "IVOIRIENNE": 934,
+        "IVOIRIENNE": 937,
         "CANADO-MALIENNE": 3,
-        "COMORIENNE": 122,
+        "COMORIENNE": 123,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 580,
+        "CENTRAFRICAINE": 582,
         "SENEGGALAISE": 2,
         "GUINÉENNE": 6,
         "HAÏTIENNE": 13,
@@ -4304,6 +4304,9 @@
         "ANGOLAISE": 7,
         "EQUATO GUINEENNE": 25,
         "DJIBOUTIENNE": 302,
+        "NIGERIANNE": 15,
+        "ENEGALAISE": 2,
+        "SENEGALO-GABONAISE": 6,
         "GUINEENE": 5,
         "Nigérienne": 110,
         "Français": 1,
@@ -4352,7 +4355,6 @@
         "SENESGALAISE": 6,
         "MARITANIENNE": 3,
         "EQUATO-GUINEENNE": 44,
-        "NIGERIANNE": 14,
         "SENEGALO-MAROCAINE": 2,
         "NIGERIANE": 9,
         "beninoise": 1,
@@ -4377,7 +4379,6 @@
         "SENEGALO-AMERICAINE": 5,
         "SENEGQLQISE": 2,
         "CAMEROUNNAISE": 2,
-        "SENEGALO-GABONAISE": 5,
         "EGYPTIENNE": 7,
         "FRANÇAISE": 8,
         "FRANCOSENEGALAISE": 1,
@@ -4466,7 +4467,6 @@
         "TOLOGAISE": 2,
         "SENEGALAISSE": 5,
         "TCHIADIENNE": 5,
-        "ENEGALAISE": 1,
         "GABOONAISE": 1,
         "CAPVERDIENNE": 10,
         "LIBERIENNE": 3,
@@ -4591,11 +4591,11 @@
         "LCM3": 1
       },
       "ages": {
-        "26-30": 15867,
-        "21-23": 10145,
-        "24-25": 7970,
-        "18-20": 3960,
-        ">30": 10750,
+        "26-30": 15904,
+        "21-23": 10203,
+        "24-25": 8041,
+        "18-20": 3961,
+        ">30": 10758,
         "<18": 96
       },
       "niveaux": {
@@ -4671,8 +4671,8 @@
       },
       "sexeParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "M": 5429,
-          "F": 4050
+          "M": 5519,
+          "F": 4135
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4708,7 +4708,7 @@
         }
       },
       "boursiersParEcole": {
-        "ISM Dakar Ecole d'Ingénieurs": 1547,
+        "ISM Dakar Ecole d'Ingénieurs": 1571,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
         "ISM Dakar Graduate School": 584,
@@ -4719,7 +4719,7 @@
         "ISM HQ": 14
       },
       "redoublantsParEcole": {
-        "ISM Dakar Ecole d'Ingénieurs": 55,
+        "ISM Dakar Ecole d'Ingénieurs": 58,
         "ISM Dakar Ecole de Droit": 104,
         "ISM Dakar Ecole de Management": 73,
         "ISM Dakar Graduate School": 93,
@@ -4970,13 +4970,13 @@
         "ADMIS NON INSCRITS": 30,
         "LICENCE 1": 215,
         "LICENCE 2": 199,
-        "LICENCE 3": 174,
+        "LICENCE 3": 178,
         "LICENCE 1 R2": 29,
+        "MBA 1": 285,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
         "Licence 3": 32,
-        "MBA 1": 282,
         "MBA 2": 248,
         "MBA 1 - PEL": 6,
         "MBA 2 - PEL": 5,
@@ -5042,18 +5042,18 @@
         "DBA": 4
       },
       "filieresDistrib": {
-        "Sciences et Technologies": 246,
+        "Sciences et Technologies": 249,
         "Sciences Economiques et Gestion": 34,
         "Sciences et Techniques": 15,
         "Sciences Economique et Sociales": 5,
+        "SCIENCES ECONOMIQUE ET SOCIALES": 4,
+        "Sciences du Numérique": 46,
         "Sciences Economiques et de Gestion": 749,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
-        "Sciences du Numérique": 43,
         "Sciences Economique Et Sociales": 5,
         "Sciences Economiques et Sociales": 4,
-        "SCIENCES ECONOMIQUE ET SOCIALES": 3,
         "Sciences Juridiques et Politiques": 27,
         "Sciences Juridiques Politiques et de l'Administration": 15,
         "Sciences Juridiques, Politiques et de l'Administration": 118,
@@ -5095,20 +5095,20 @@
       }
     },
     "quality": {
-      "total": 54224,
+      "total": 54399,
       "completude": {
         "sexe": 91.1,
-        "nationalite": 86.7,
+        "nationalite": 86.8,
         "dateNaissance": 91.5,
-        "email": 78.2,
-        "telephone": 73.8
+        "email": 78.3,
+        "telephone": 73.9
       },
       "missing": {
         "sexe": 4845,
         "nationalite": 7198,
         "dateNaissance": 4628,
         "email": 11825,
-        "telephone": 14182
+        "telephone": 14203
       }
     },
     "anomalies": {
