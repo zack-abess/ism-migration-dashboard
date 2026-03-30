@@ -3,145 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ISM Migration Dashboard — ClassExpert → Symfony</title>
+  <title>Groupe ISM — Dashboard</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --card-hover: #334155;
-      --border: #334155;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --green: #22c55e;
-      --green-bg: rgba(34,197,94,.15);
-      --yellow: #eab308;
-      --yellow-bg: rgba(234,179,8,.15);
-      --red: #ef4444;
-      --red-bg: rgba(239,68,68,.15);
-      --blue: #3b82f6;
-      --blue-bg: rgba(59,130,246,.15);
-      --purple: #a855f7;
-      --purple-bg: rgba(168,85,247,.15);
-      --orange: #f97316;
-      --orange-bg: rgba(249,115,22,.15);
-      --gray: #64748b;
-      --gray-bg: rgba(100,116,139,.15);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      padding: 24px;
-    }
-    .header { text-align: center; margin-bottom: 24px; }
-    .header h1 {
-      font-size: 1.8rem; font-weight: 700;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      margin-bottom: 4px;
-    }
-    .header .subtitle { color: var(--text-muted); font-size: .9rem; }
-    .header .updated { color: var(--text-muted); font-size: .75rem; margin-top: 4px; }
-
-    /* Tabs */
-    .tab-bar {
-      display: flex; gap: 0; margin-bottom: 32px; border-bottom: 2px solid var(--border);
-    }
-    .tab-btn {
-      padding: 12px 28px; border: none; background: transparent;
-      color: var(--text-muted); font-size: .95rem; font-weight: 600;
-      cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
-      transition: all .2s;
-    }
-    .tab-btn:hover { color: var(--text); }
-    .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-
-    /* KPI Cards */
-    .kpi-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px; margin-bottom: 32px;
-    }
-    .kpi-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
-      padding: 20px; text-align: center; transition: transform .2s, border-color .2s;
-    }
-    .kpi-card:hover { transform: translateY(-2px); border-color: var(--blue); }
-    .kpi-card .value { font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 4px; }
-    .kpi-card .label { color: var(--text-muted); font-size: .85rem; font-weight: 500; }
-    .kpi-card .sub { color: var(--text-muted); font-size: .7rem; margin-top: 4px; }
-
-    /* Progress Bar */
-    .progress-section {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px; margin-bottom: 32px;
-    }
-    .progress-section h2 { font-size: 1.1rem; margin-bottom: 16px; color: var(--text); }
-    .progress-bar-container {
-      background: var(--bg); border-radius: 10px; height: 32px;
-      overflow: hidden; display: flex; position: relative;
-    }
-    .progress-segment {
-      height: 100%; display: flex; align-items: center; justify-content: center;
-      font-size: .75rem; font-weight: 700; color: #fff; transition: width .5s ease; min-width: 0;
-    }
-    .progress-segment span { white-space: nowrap; overflow: hidden; }
-    .seg-done { background: var(--green); }
-    .seg-skip { background: var(--gray); }
-    .seg-progress { background: var(--yellow); }
-    .progress-legend { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; }
-    .legend-item { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--text-muted); }
-    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
-
-    /* Charts */
-    .charts-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 24px; margin-bottom: 32px;
-    }
-    .chart-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px;
-    }
-    .chart-card h3 { font-size: 1rem; margin-bottom: 16px; color: var(--text); }
-
-    /* Table */
-    .table-section {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px; overflow-x: auto; margin-bottom: 32px;
-    }
-    .table-section h2 { font-size: 1.1rem; margin-bottom: 16px; }
-    .filter-bar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
-    .filter-btn {
-      padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border);
-      background: transparent; color: var(--text-muted); font-size: .8rem;
-      cursor: pointer; transition: all .2s;
-    }
-    .filter-btn.active, .filter-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
-    table { width: 100%; border-collapse: collapse; font-size: .85rem; }
-    th { text-align: left; padding: 10px 12px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border); white-space: nowrap; }
-    td { padding: 10px 12px; border-bottom: 1px solid rgba(51,65,85,.5); vertical-align: middle; }
-    tr:hover td { background: rgba(59,130,246,.05); }
-    .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: .75rem; font-weight: 600; }
-    .badge-done { background: var(--green-bg); color: var(--green); }
-    .badge-skip { background: var(--gray-bg); color: var(--gray); }
-    .badge-in_progress { background: var(--yellow-bg); color: var(--yellow); }
-    .badge-ok { background: var(--green-bg); color: var(--green); }
-    .badge-issues { background: var(--orange-bg); color: var(--orange); }
-    .badge-empty { background: var(--red-bg); color: var(--red); }
-    .badge-na { background: var(--gray-bg); color: var(--gray); }
-
-    .footer { text-align: center; color: var(--text-muted); font-size: .75rem; padding: 16px; }
-
-    @media (max-width: 768px) {
-      body { padding: 12px; }
-      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-      .charts-grid { grid-template-columns: 1fr; }
-      .kpi-card .value { font-size: 1.6rem; }
-    }
+    :root{--bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--text-muted:#94a3b8;--green:#22c55e;--green-bg:rgba(34,197,94,.15);--yellow:#eab308;--yellow-bg:rgba(234,179,8,.15);--red:#ef4444;--red-bg:rgba(239,68,68,.15);--blue:#3b82f6;--blue-bg:rgba(59,130,246,.15);--purple:#a855f7;--purple-bg:rgba(168,85,247,.15);--orange:#f97316;--orange-bg:rgba(249,115,22,.15);--gray:#64748b;--gray-bg:rgba(100,116,139,.15)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:24px}
+    .header{text-align:center;margin-bottom:24px}
+    .header h1{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+    .header .subtitle{color:var(--text-muted);font-size:.9rem}
+    .header .updated{color:var(--text-muted);font-size:.75rem;margin-top:4px}
+    .tab-bar{display:flex;gap:0;margin-bottom:32px;border-bottom:2px solid var(--border);overflow-x:auto}
+    .tab-btn{padding:12px 22px;border:none;background:transparent;color:var(--text-muted);font-size:.9rem;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap}
+    .tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+    .tab-content{display:none}.tab-content.active{display:block}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:28px}
+    .kpi-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:transform .2s,border-color .2s}
+    .kpi-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+    .kpi-card .value{font-size:1.9rem;font-weight:800;line-height:1;margin-bottom:4px}
+    .kpi-card .label{color:var(--text-muted);font-size:.82rem;font-weight:500}
+    .kpi-card .sub{color:var(--text-muted);font-size:.68rem;margin-top:4px}
+    .section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:28px}
+    .section h2{font-size:1.1rem;margin-bottom:16px;color:var(--text)}
+    .charts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:20px;margin-bottom:28px}
+    .chart-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+    .chart-card h3{font-size:.95rem;margin-bottom:12px;color:var(--text)}
+    .progress-bar-container{background:var(--bg);border-radius:10px;height:32px;overflow:hidden;display:flex;position:relative}
+    .progress-segment{height:100%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;transition:width .5s ease;min-width:0}
+    .progress-segment span{white-space:nowrap;overflow:hidden}
+    .seg-done{background:var(--green)}.seg-skip{background:var(--gray)}.seg-progress{background:var(--yellow)}
+    .progress-legend{display:flex;gap:24px;margin-top:12px;flex-wrap:wrap}
+    .legend-item{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--text-muted)}
+    .legend-dot{width:10px;height:10px;border-radius:50%}
+    table{width:100%;border-collapse:collapse;font-size:.82rem}
+    th{text-align:left;padding:8px 10px;color:var(--text-muted);font-weight:600;border-bottom:1px solid var(--border);white-space:nowrap}
+    td{padding:8px 10px;border-bottom:1px solid rgba(51,65,85,.5);vertical-align:middle}
+    tr:hover td{background:rgba(59,130,246,.05)}
+    .badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.73rem;font-weight:600}
+    .badge-done{background:var(--green-bg);color:var(--green)}.badge-skip{background:var(--gray-bg);color:var(--gray)}
+    .badge-ok{background:var(--green-bg);color:var(--green)}.badge-issues{background:var(--orange-bg);color:var(--orange)}
+    .badge-empty{background:var(--red-bg);color:var(--red)}.badge-na{background:var(--gray-bg);color:var(--gray)}
+    .filter-bar{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+    .filter-btn{padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:.8rem;cursor:pointer;transition:all .2s}
+    .filter-btn.active,.filter-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+    .quality-bar{height:24px;border-radius:6px;overflow:hidden;display:flex;margin:6px 0}
+    .quality-fill{height:100%;transition:width .5s}
+    .search-box{width:100%;padding:10px 16px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:.9rem;margin-bottom:16px}
+    .search-box:focus{outline:none;border-color:var(--blue)}
+    .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:100;display:flex;align-items:center;justify-content:center}
+    .modal{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;max-width:700px;width:90%;max-height:85vh;overflow-y:auto;position:relative}
+    .modal-close{position:absolute;top:12px;right:16px;background:none;border:none;color:var(--text-muted);font-size:1.5rem;cursor:pointer}
+    .footer{text-align:center;color:var(--text-muted);font-size:.75rem;padding:16px}
+    @media(max-width:768px){body{padding:12px}.kpi-grid{grid-template-columns:repeat(2,1fr)}.charts-grid{grid-template-columns:1fr}.kpi-card .value{font-size:1.5rem}}
   </style>
 </head>
 <body>
@@ -150,545 +63,386 @@
     <div class="subtitle">Migration ClassExpert → Symfony SI</div>
     <div class="updated" id="updatedAt"></div>
   </div>
-
-  <!-- Tabs -->
   <div class="tab-bar">
-    <button class="tab-btn active" onclick="switchTab('extraction')">Suivi Extraction</button>
-    <button class="tab-btn" onclick="switchTab('groupe')">Groupe ISM — Chiffres Clés</button>
+    <button class="tab-btn active" onclick="switchTab('extraction')">Extraction</button>
+    <button class="tab-btn" onclick="switchTab('groupe')">Chiffres Clés</button>
+    <button class="tab-btn" onclick="switchTab('qualite')">Qualité</button>
+    <button class="tab-btn" onclick="switchTab('palmares')">Palmarès</button>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- TAB 1: EXTRACTION                                      -->
-  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 1 EXTRACTION -->
   <div id="tab-extraction" class="tab-content active">
     <div class="kpi-grid" id="kpiGrid"></div>
-    <div class="progress-section">
-      <h2>Progression globale des licences</h2>
-      <div class="progress-bar-container" id="progressBar"></div>
-      <div class="progress-legend" id="progressLegend"></div>
-    </div>
+    <div class="section"><h2>Progression globale</h2><div class="progress-bar-container" id="progressBar"></div><div class="progress-legend" id="progressLegend"></div></div>
     <div class="charts-grid">
       <div class="chart-card"><h3>Répartition par école</h3><canvas id="schoolChart"></canvas></div>
-      <div class="chart-card"><h3>Notes — santé extraction</h3><canvas id="chartNotes"></canvas></div>
-      <div class="chart-card"><h3>Assiduité — santé extraction</h3><canvas id="chartAssiduite"></canvas></div>
+      <div class="chart-card"><h3>Notes — santé</h3><canvas id="chartNotes"></canvas></div>
+      <div class="chart-card"><h3>Assiduité — santé</h3><canvas id="chartAssiduite"></canvas></div>
     </div>
-    <div class="progress-section">
-      <h2>Comparaison inter-écoles — Problèmes Notes + Assiduité</h2>
-      <div id="crossSchoolContainer" class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px;position:relative">
-        <canvas id="crossSchoolChart"></canvas>
-      </div>
-    </div>
-    <div class="progress-section">
-      <h2>Problèmes par école — Notes vs Assiduité</h2>
-      <div class="charts-grid" id="schoolStatsGrid" style="margin-top:16px"></div>
-    </div>
-    <div class="table-section">
+    <div class="section"><h2>Comparaison inter-écoles — Problèmes</h2><div id="crossSchoolContainer" style="position:relative"><canvas id="crossSchoolChart"></canvas></div></div>
+    <div class="section"><h2>Problèmes par école</h2><div class="charts-grid" id="schoolStatsGrid" style="margin-top:12px"></div></div>
+    <div class="section">
       <h2>Détail par licence</h2>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;align-items:center">
-        <span style="color:var(--text-muted);font-size:.8rem;font-weight:600">Légende :</span>
-        <span class="badge badge-ok">ok</span>
-        <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">vide</span>
-        <span class="badge badge-empty" style="background:var(--red-bg);color:var(--red)">err</span>
-        <span class="badge badge-issues">no_per <span style="font-weight:400;opacity:.7">= pas de période</span></span>
-        <span class="badge badge-issues">no_mat <span style="font-weight:400;opacity:.7">= pas de matière</span></span>
-      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;align-items:center"><span style="color:var(--text-muted);font-size:.78rem;font-weight:600">Légende :</span><span class="badge badge-ok">ok</span><span class="badge badge-empty">vide</span><span class="badge badge-empty">err</span><span class="badge badge-issues">no_per</span><span class="badge badge-issues">no_mat</span></div>
+      <input class="search-box" id="licSearch" placeholder="Rechercher une licence, école, année..." oninput="renderExtractionTable()">
       <div class="filter-bar" id="filterBar"></div>
-      <table>
-        <thead><tr>
-          <th>Licence</th><th>Classes</th><th>Élèves</th><th>Profs</th>
-          <th>Matières</th><th>Périodes</th><th>Notes</th><th>Assiduité</th>
-        </tr></thead>
-        <tbody id="licenceTable"></tbody>
-      </table>
+      <table><thead><tr><th>Licence</th><th>Classes</th><th>Élèves</th><th>Profs</th><th>Matières</th><th>Périodes</th><th>Notes</th><th>Assiduité</th></tr></thead><tbody id="licenceTable"></tbody></table>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════ -->
-  <!-- TAB 2: GROUPE ISM — CHIFFRES CLÉS                      -->
-  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- TAB 2 CHIFFRES CLÉS -->
   <div id="tab-groupe" class="tab-content">
     <div class="kpi-grid" id="bizKpiGrid"></div>
-
-    <!-- Effectifs par école par année -->
-    <div class="progress-section">
-      <h2>Évolution des effectifs par école</h2>
-      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
-        <canvas id="effectifsChart"></canvas>
-      </div>
-    </div>
-
-    <!-- Démographie -->
+    <div class="section"><h2>Évolution des effectifs + Projections 2027-2028</h2><canvas id="effectifsChart"></canvas></div>
     <div class="charts-grid">
-      <div class="chart-card"><h3>Répartition Hommes / Femmes</h3><canvas id="sexeChart"></canvas></div>
+      <div class="chart-card"><h3>Répartition H / F</h3><canvas id="sexeChart"></canvas></div>
       <div class="chart-card"><h3>Tranches d'âge</h3><canvas id="agesChart"></canvas></div>
       <div class="chart-card"><h3>Top 15 Nationalités</h3><canvas id="natChart"></canvas></div>
       <div class="chart-card"><h3>Répartition par niveau</h3><canvas id="niveauxChart"></canvas></div>
     </div>
-
-    <!-- Genre par école -->
-    <div class="progress-section">
-      <h2>Répartition H/F par école</h2>
-      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
-        <canvas id="sexeEcoleChart"></canvas>
-      </div>
-    </div>
-
-    <!-- Académique -->
+    <div class="section"><h2>H/F par école</h2><canvas id="sexeEcoleChart"></canvas></div>
     <div class="charts-grid">
       <div class="chart-card"><h3>Moyenne par école (/20)</h3><canvas id="moyEcoleChart"></canvas></div>
-      <div class="chart-card"><h3>Taux de réussite par école (>=10/20)</h3><canvas id="tauxEcoleChart"></canvas></div>
+      <div class="chart-card"><h3>Taux de réussite (≥10/20)</h3><canvas id="tauxEcoleChart"></canvas></div>
       <div class="chart-card"><h3>Contrôle Continu vs Examen</h3><canvas id="ccExamChart"></canvas></div>
-      <div class="chart-card"><h3>Top 15 Matières (par volume)</h3><canvas id="topMatChart"></canvas></div>
+      <div class="chart-card"><h3>Top 15 Matières (volume)</h3><canvas id="topMatChart"></canvas></div>
     </div>
-
-    <!-- Assiduité -->
-    <div class="progress-section">
-      <h2>Absences par école</h2>
-      <div class="chart-card" style="border:none;padding:0;background:transparent;margin-top:16px">
-        <canvas id="absEcoleChart"></canvas>
-      </div>
-    </div>
-
-    <!-- Structure -->
+    <div class="section"><h2>Absences par école</h2><canvas id="absEcoleChart"></canvas></div>
     <div class="charts-grid">
       <div class="chart-card"><h3>Classes par niveau</h3><canvas id="niveauClassChart"></canvas></div>
-      <div class="chart-card"><h3>Classes par domaine / filière</h3><canvas id="filiereChart"></canvas></div>
+      <div class="chart-card"><h3>Classes par filière</h3><canvas id="filiereChart"></canvas></div>
     </div>
   </div>
 
-  <div class="footer">Groupe ISM — Migration ClassExpert &middot; Dashboard auto-généré</div>
+  <!-- TAB 3 QUALITÉ -->
+  <div id="tab-qualite" class="tab-content">
+    <div class="kpi-grid" id="qualKpiGrid"></div>
+    <div class="section"><h2>Complétude des champs élèves</h2><div id="qualityBars"></div></div>
+    <div class="section"><h2>Classes à fort absentéisme (moy > 50 abs/élève)</h2><table><thead><tr><th>École</th><th>Licence</th><th>Classe</th><th>Moy. absences</th></tr></thead><tbody id="anomalyTable"></tbody></table></div>
+    <div class="section"><h2>Corrélation Notes / Assiduité (par classe)</h2><p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Chaque point = 1 classe. X = absences moyennes, Y = moyenne des notes /20</p><canvas id="correlationChart" style="max-height:500px"></canvas></div>
+  </div>
 
-  <script>
-    let DATA = null;
-    let currentFilter = 'all';
-    let currentTab = 'extraction';
-    const allCharts = {};
+  <!-- TAB 4 PALMARÈS -->
+  <div id="tab-palmares" class="tab-content">
+    <div class="section"><h2>Projections d'effectifs par école</h2><table><thead><tr><th>École</th><th>Dernier effectif</th><th>Croissance totale</th><th>Projection 2027</th><th>Projection 2028</th></tr></thead><tbody id="projTable"></tbody></table></div>
+    <div class="charts-grid">
+      <div class="chart-card"><h3>Top 15 — Matières les plus difficiles</h3><canvas id="palmDifficile"></canvas></div>
+      <div class="chart-card"><h3>Top 15 — Matières les mieux réussies</h3><canvas id="palmReussi"></canvas></div>
+    </div>
+    <div class="section"><h2>Top 15 — Matières les plus enseignées</h2><canvas id="palmVolume"></canvas></div>
+    <div class="section">
+      <h2>Recherche matière</h2>
+      <input class="search-box" id="matSearch" placeholder="Tapez un nom de matière..." oninput="searchMatiere()">
+      <div id="matResults"></div>
+    </div>
+    <div class="section">
+      <h2>Carte d'identité école</h2>
+      <p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Cliquez sur une école pour voir son détail</p>
+      <div class="charts-grid" id="schoolCards"></div>
+    </div>
+  </div>
 
-    function destroyChart(key) { if (allCharts[key]) { allCharts[key].destroy(); delete allCharts[key]; } }
-    function storeChart(key, chart) { allCharts[key] = chart; }
+  <div id="modalContainer"></div>
+  <div class="footer">Groupe ISM — Migration ClassExpert · Dashboard auto-généré</div>
 
-    function switchTab(tab) {
-      currentTab = tab;
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-      document.querySelector(`.tab-btn[onclick="switchTab('${tab}')"]`).classList.add('active');
-      document.getElementById('tab-' + tab).classList.add('active');
-      if (DATA) { if (tab === 'extraction') renderExtraction(); else renderGroupeISM(); }
-    }
+<script>
+let DATA=null,currentFilter='all',currentTab='extraction';
+const C={};
+function dc(k){if(C[k]){C[k].destroy();delete C[k];}}
+function sc(k,c){C[k]=c;}
+function switchTab(t){currentTab=t;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelector(`.tab-btn[onclick="switchTab('${t}')"]`).classList.add('active');document.getElementById('tab-'+t).classList.add('active');if(DATA)renderTab();}
+function renderTab(){({extraction:renderExtraction,groupe:renderGroupeISM,qualite:renderQualite,palmares:renderPalmares})[currentTab]();}
+async function loadData(){try{DATA=await(await fetch('dashboard-data.json')).json();document.getElementById('updatedAt').textContent='Mis à jour: '+fmtDate(DATA.generatedAt);renderTab();}catch(e){document.body.innerHTML='<div style="text-align:center;padding:100px;color:#ef4444"><h2>Impossible de charger dashboard-data.json</h2></div>';}}
+function fmtNum(n){if(n==null)return'—';return Number(n).toLocaleString('fr-FR');}
+function fmtDate(iso){if(!iso)return'—';return new Date(iso).toLocaleDateString('fr-FR',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}
+function ss(n){return n.replace('ISM ','').replace('Dakar ','');}
+const SC=['#3b82f6','#22c55e','#f97316','#a855f7','#ef4444','#eab308','#06b6d4','#ec4899','#64748b','#10b981'];
+const chartOpts={legend:{labels:{color:'#94a3b8',font:{size:11}}},tooltip:{}};
+function ax(color){return{ticks:{color:color||'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}};}
+function axH(){return{ticks:{color:'#e2e8f0',font:{size:11}},grid:{display:false}};}
 
-    async function loadData() {
-      try {
-        const resp = await fetch('dashboard-data.json');
-        DATA = await resp.json();
-        document.getElementById('updatedAt').textContent = 'Mis à jour: ' + formatDate(DATA.generatedAt);
-        if (currentTab === 'extraction') renderExtraction(); else renderGroupeISM();
-      } catch (e) {
-        document.body.innerHTML = '<div style="text-align:center;padding:100px;color:#ef4444;"><h2>Impossible de charger dashboard-data.json</h2></div>';
-      }
-    }
+function scraperBadge(st){
+  if(!st||st.total===0)return'<span class="badge badge-na">N/A</span>';
+  let h='<div style="line-height:1.4"><span style="font-weight:700;color:var(--text)">'+fmtNum(st.totalEntries)+'</span><span style="color:var(--text-muted);font-size:.7rem"> entrées</span><br>';
+  h+='<span class="badge badge-ok">'+st.ok+' ok</span> ';
+  if(st.empty>0)h+='<span class="badge badge-empty">'+st.empty+' vide</span> ';
+  if(st.error>0)h+='<span class="badge badge-empty">'+st.error+' err</span> ';
+  if(st.noperiod>0)h+='<span class="badge badge-issues">'+st.noperiod+' no_per</span> ';
+  if(st.nofield>0)h+='<span class="badge badge-issues">'+st.nofield+' no_mat</span> ';
+  return h+'</div>';
+}
 
-    function formatNum(n) { if (n == null) return '—'; return Number(n).toLocaleString('fr-FR'); }
-    function formatDate(iso) {
-      if (!iso) return '—';
-      return new Date(iso).toLocaleDateString('fr-FR', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
-    }
-    function shortSchool(name) { return name.replace('ISM ','').replace('Dakar ',''); }
+// ═══════════ TAB 1 ═══════════
+function renderExtraction(){
+  const s=DATA.summary,dup=DATA.doublons||{};
+  const kpis=[
+    {v:s.total,l:'Licences',c:'var(--blue)',s:Object.keys(DATA.schools).length+' écoles'},
+    {v:s.done,l:'Terminées',c:'var(--green)',s:Math.round(s.done/s.total*100)+'%'},
+    {v:s.inProgress,l:'En cours',c:'var(--yellow)',s:'archive/'},
+    {v:s.skip,l:'Ignorées',c:'var(--gray)',s:'Skip/'},
+    {v:fmtNum(DATA.totalEleves),l:'Élèves',c:'var(--purple)',s:fmtNum(DATA.uniqueEleves)+' uniques'},
+    {v:fmtNum(DATA.totalClasses),l:'Classes',c:'#06b6d4',s:''},
+    {v:fmtNum(DATA.totalEnseignants),l:'Enseignants',c:'#f59e0b',s:fmtNum(DATA.uniqueEnseignants)+' uniques'},
+    {v:fmtNum(DATA.totalEntries.notes),l:'Entrées notes',c:'var(--blue)',s:fmtNum(DATA.totalMatieres)+' matières'},
+    {v:fmtNum(DATA.totalEntries.assiduite),l:'Entrées assiduité',c:'var(--green)',s:''},
+  ];
+  document.getElementById('kpiGrid').innerHTML=kpis.map(k=>`<div class="kpi-card"><div class="value" style="color:${k.c}">${k.v}</div><div class="label">${k.l}</div><div class="sub">${k.s}</div></div>`).join('');
+  const dp=(s.done/s.total*100).toFixed(1),sp=(s.skip/s.total*100).toFixed(1),pp=(s.inProgress/s.total*100).toFixed(1);
+  document.getElementById('progressBar').innerHTML=`<div class="progress-segment seg-done" style="width:${dp}%"><span>${s.done} done</span></div><div class="progress-segment seg-progress" style="width:${pp}%"><span>${s.inProgress}</span></div><div class="progress-segment seg-skip" style="width:${sp}%"><span>${s.skip}</span></div>`;
+  document.getElementById('progressLegend').innerHTML=`<div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Terminé (${dp}%)</div><div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>En cours (${pp}%)</div><div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div>Ignoré (${sp}%)</div>`;
+  const filters=[{k:'all',l:`Tous (${s.total})`},{k:'done',l:`Terminé (${s.done})`},{k:'in_progress',l:`En cours (${s.inProgress})`},{k:'skip',l:`Ignoré (${s.skip})`}];
+  document.getElementById('filterBar').innerHTML=filters.map(f=>`<button class="filter-btn ${f.k===currentFilter?'active':''}" onclick="currentFilter='${f.k}';renderExtractionTable()">${f.l}</button>`).join('');
+  renderExtractionTable();
+  renderExtractionCharts();
+}
+function renderExtractionTable(){
+  const q=(document.getElementById('licSearch').value||'').toLowerCase();
+  let list=currentFilter==='all'?DATA.licences:DATA.licences.filter(l=>l.status===currentFilter);
+  if(q)list=list.filter(l=>(l.displayName+l.school+l.year).toLowerCase().includes(q));
+  document.getElementById('licenceTable').innerHTML=list.map(l=>`<tr><td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school} · ${l.year}</span></td><td>${l.nbClasses}</td><td>${fmtNum(l.nbEleves)||'—'}</td><td>${l.nbEnseignants||'—'}</td><td>${l.nbMatieres||'—'}</td><td>${l.nbPeriodes||'—'}</td><td>${scraperBadge(l.scrapers.notes)}</td><td>${scraperBadge(l.scrapers.assiduite)}</td></tr>`).join('');
+}
+function renderExtractionCharts(){
+  const schools=Object.entries(DATA.schools).map(([n,s])=>({name:ss(n),done:s.doneCount,skip:s.skipCount,inProgress:s.inProgressCount}));
+  dc('school');sc('school',new Chart(document.getElementById('schoolChart'),{type:'bar',data:{labels:schools.map(s=>s.name),datasets:[{label:'Terminé',data:schools.map(s=>s.done),backgroundColor:'#22c55e'},{label:'En cours',data:schools.map(s=>s.inProgress),backgroundColor:'#eab308'},{label:'Ignoré',data:schools.map(s=>s.skip),backgroundColor:'#64748b'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:chartOpts.legend},scales:{x:{stacked:true,...ax()},y:{stacked:true,...axH()}}}}));
+  ['notes','assiduite'].forEach(key=>{
+    const cfg=key==='notes'?{id:'chartNotes',ok:'#22c55e'}:{id:'chartAssiduite',ok:'#3b82f6'};
+    const a={ok:0,empty:0,error:0,noperiod:0,nofield:0,total:0,entries:0};
+    DATA.licences.forEach(l=>{const st=l.scrapers[key];if(st){a.ok+=st.ok;a.empty+=st.empty;a.error+=st.error;a.noperiod+=st.noperiod;a.nofield+=st.nofield;a.total+=st.total;a.entries+=st.totalEntries;}});
+    const lb=[],vl=[],cl=[];
+    if(a.ok>0){lb.push('OK ('+a.ok+')');vl.push(a.ok);cl.push(cfg.ok);}
+    if(a.empty>0){lb.push('Vide ('+a.empty+')');vl.push(a.empty);cl.push('#ef4444');}
+    if(a.error>0){lb.push('Erreur ('+a.error+')');vl.push(a.error);cl.push('#dc2626');}
+    if(a.noperiod>0){lb.push('No période ('+a.noperiod+')');vl.push(a.noperiod);cl.push('#f97316');}
+    if(a.nofield>0){lb.push('No matière ('+a.nofield+')');vl.push(a.nofield);cl.push('#eab308');}
+    dc(key);sc(key,new Chart(document.getElementById(cfg.id),{type:'doughnut',data:{labels:lb,datasets:[{data:vl,backgroundColor:cl,borderWidth:0}]},options:{responsive:true,cutout:'60%',plugins:{legend:{position:'right',labels:{color:'#94a3b8',font:{size:11}}},title:{display:true,text:fmtNum(a.entries)+' entrées',color:'#64748b',font:{size:12}}}}}));
+  });
+  // Cross-school
+  const cs=Object.entries(DATA.schools).map(([n,s])=>{const nt=s.scrapers.notes,at=s.scrapers.assiduite;return{name:ss(n),empty:(nt.empty||0)+(at.empty||0),error:(nt.error||0)+(at.error||0),noperiod:(nt.noperiod||0)+(at.noperiod||0),nofield:(nt.nofield||0)+(at.nofield||0)};});
+  cs.forEach(s=>s.tp=s.empty+s.error+s.noperiod+s.nofield);cs.sort((a,b)=>b.tp-a.tp);
+  document.getElementById('crossSchoolContainer').style.height=Math.max(300,cs.length*50+100)+'px';
+  dc('cross');sc('cross',new Chart(document.getElementById('crossSchoolChart'),{type:'bar',data:{labels:cs.map(s=>s.name),datasets:[{label:'Vide',data:cs.map(s=>s.empty),backgroundColor:'#ef4444'},{label:'Erreur',data:cs.map(s=>s.error),backgroundColor:'#dc2626'},{label:'No période',data:cs.map(s=>s.noperiod),backgroundColor:'#f97316'},{label:'No matière',data:cs.map(s=>s.nofield),backgroundColor:'#eab308'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:chartOpts.legend,tooltip:{callbacks:{afterBody:function(i){return'Total: '+cs[i[0].dataIndex].tp;}}}},scales:{x:{stacked:true,...ax()},y:{stacked:true,ticks:{color:'#e2e8f0',font:{size:12},autoSkip:false,callback:function(v,i){return cs[i].tp===0?cs[i].name+' (aucun)':cs[i].name;}},grid:{display:false},afterFit:function(a){a.width=220;}}}}}));
+  // Per-school
+  const grid=document.getElementById('schoolStatsGrid');
+  const sa=Object.entries(DATA.schools).map(([n,s])=>({name:n,...s})).sort((a,b)=>{const ap=a.scrapers.notes.empty+a.scrapers.notes.noperiod+a.scrapers.notes.nofield,bp=b.scrapers.notes.empty+b.scrapers.notes.noperiod+b.scrapers.notes.nofield;return bp-ap;});
+  grid.innerHTML=sa.map((s,i)=>`<div class="chart-card"><h3 style="font-size:.9rem">${ss(s.name)}</h3><div style="color:var(--text-muted);font-size:.72rem;margin-bottom:6px">${s.years.length} ans · ${fmtNum(s.nbEleves)} élèves</div><canvas id="ss${i}"></canvas></div>`).join('');
+  sa.forEach((s,i)=>{const n=s.scrapers.notes,a=s.scrapers.assiduite;dc('ss'+i);sc('ss'+i,new Chart(document.getElementById('ss'+i),{type:'bar',data:{labels:['OK','Vide','No pér','No mat'],datasets:[{label:'Notes',data:[n.ok,n.empty,n.noperiod,n.nofield],backgroundColor:'#3b82f6'},{label:'Assiduité',data:[a.ok,a.empty,a.noperiod,a.nofield],backgroundColor:'#f97316'}]},options:{responsive:true,plugins:{legend:{labels:{color:'#94a3b8',font:{size:10}}}},scales:{x:{ticks:{color:'#94a3b8',font:{size:9}},grid:{display:false}},y:{...ax()}}}}));});
+}
 
-    function scraperBadge(stats) {
-      if (!stats || stats.total === 0) return '<span class="badge badge-na">N/A</span>';
-      const issues = stats.empty + stats.error + stats.noperiod + stats.nofield;
-      let html = '<div style="line-height:1.4">';
-      html += `<span style="font-weight:700;color:var(--text)">${formatNum(stats.totalEntries)}</span>`;
-      html += '<span style="color:var(--text-muted);font-size:.7rem"> entrées</span>';
-      if (issues === 0) {
-        html += `<br><span class="badge badge-ok">${stats.ok} ok</span>`;
-      } else {
-        html += `<br><span class="badge badge-ok" style="margin-right:3px">${stats.ok} ok</span>`;
-        if (stats.empty > 0)    html += `<span class="badge badge-empty">${stats.empty} vide</span> `;
-        if (stats.error > 0)    html += `<span class="badge badge-empty">${stats.error} err</span> `;
-        if (stats.noperiod > 0) html += `<span class="badge badge-issues">${stats.noperiod} no_per</span> `;
-        if (stats.nofield > 0)  html += `<span class="badge badge-issues">${stats.nofield} no_mat</span> `;
-      }
-      return html + '</div>';
-    }
+// ═══════════ TAB 2 ═══════════
+function renderGroupeISM(){
+  const B=DATA.business;if(!B)return;const D=B.demographics;
+  const pF=D.totalPupils>0?(D.sexe.F/D.totalPupils*100).toFixed(1):0;
+  const pB=D.totalPupils>0?(D.boursiers/D.totalPupils*100).toFixed(1):0;
+  const pR=D.totalPupils>0?(D.redoublants/D.totalPupils*100).toFixed(1):0;
+  const nN=Object.keys(D.nationalites).length;
+  const aJ=B.attendance.totalAbsences>0?(B.attendance.totalJustifiees/B.attendance.totalAbsences*100).toFixed(1):0;
+  const bk=[
+    {v:fmtNum(D.totalPupils),l:'Élèves analysés',c:'var(--purple)',s:'sur '+fmtNum(DATA.totalEleves)},
+    {v:pF+'%',l:'Femmes',c:'#ec4899',s:fmtNum(D.sexe.F)+' F · '+fmtNum(D.sexe.M)+' H'},
+    {v:fmtNum(D.boursiers),l:'Boursiers',c:'var(--green)',s:pB+'%'},
+    {v:fmtNum(D.redoublants),l:'Redoublants',c:'var(--orange)',s:pR+'%'},
+    {v:nN,l:'Nationalités',c:'#06b6d4',s:''},
+    {v:B.academic.moyenneGlobale+'/20',l:'Moyenne générale',c:'var(--blue)',s:fmtNum(B.academic.totalNotes)+' notes'},
+    {v:fmtNum(Math.round(B.attendance.totalAbsences)),l:'Absences',c:'var(--red)',s:aJ+'% justifiées'},
+    {v:fmtNum(D.exempts),l:'Exempts frais',c:'var(--yellow)',s:''},
+  ];
+  document.getElementById('bizKpiGrid').innerHTML=bk.map(k=>`<div class="kpi-card"><div class="value" style="color:${k.c}">${k.v}</div><div class="label">${k.l}</div><div class="sub">${k.s}</div></div>`).join('');
 
-    // ═══════════════════════════════════════════════════════
-    // TAB 1 — EXTRACTION
-    // ═══════════════════════════════════════════════════════
-    function renderExtraction() {
-      const s = DATA.summary;
-      const dup = DATA.doublons || {};
-      const kpis = [
-        { value: s.total, label: 'Licences totales', color: 'var(--blue)', sub: `${Object.keys(DATA.schools).length} écoles` },
-        { value: s.done, label: 'Terminées', color: 'var(--green)', sub: `${Math.round(s.done/s.total*100)}%` },
-        { value: s.inProgress, label: 'En cours', color: 'var(--yellow)', sub: 'dans archive/' },
-        { value: s.skip, label: 'Ignorées', color: 'var(--gray)', sub: 'dans Skip/' },
-        { value: formatNum(DATA.totalEleves), label: 'Élèves', color: 'var(--purple)', sub: `${formatNum(DATA.uniqueEleves)} uniques · ${formatNum(dup.eleves)} doublons` },
-        { value: formatNum(DATA.totalClasses), label: 'Classes', color: '#06b6d4', sub: 'toutes licences' },
-        { value: formatNum(DATA.totalEnseignants), label: 'Enseignants', color: '#f59e0b', sub: `${formatNum(DATA.uniqueEnseignants)} uniques · ${formatNum(dup.enseignants)} doublons` },
-        { value: formatNum(DATA.uniqueMatieresGlobal), label: 'Matières (global)', color: 'var(--orange)', sub: `${formatNum(dup.matieresGlobal)} doublons inter-licences` },
-        { value: formatNum(DATA.totalPeriodes), label: 'Périodes / Sessions', color: '#ec4899', sub: 'uniques (notes)' },
-        { value: formatNum(DATA.totalEntries.notes), label: 'Entrées notes', color: 'var(--blue)', sub: `${formatNum(DATA.totalMatieres)} matières dans notes` },
-        { value: formatNum(DATA.totalEntries.assiduite), label: 'Entrées assiduité', color: 'var(--green)', sub: 'lignes extraites' },
-      ];
-      document.getElementById('kpiGrid').innerHTML = kpis.map(k => `
-        <div class="kpi-card"><div class="value" style="color:${k.color}">${k.value}</div>
-        <div class="label">${k.label}</div><div class="sub">${k.sub}</div></div>`).join('');
+  // Effectifs + projections
+  const allY=new Set();Object.values(B.effectifs).forEach(y=>Object.keys(y).forEach(yr=>{if(yr!=='courant')allY.add(yr);}));
+  const years=[...allY].sort();
+  const projYears=[...years,'2026-2027','2027-2028'];
+  const sNames=Object.keys(B.effectifs).filter(s=>Object.keys(B.effectifs[s]).some(y=>y!=='courant'));
+  const ds=sNames.map((s,i)=>{
+    const base=years.map(y=>B.effectifs[s][y]||0);
+    const proj=B.projections[s];
+    const extended=[...base, proj?proj.predict2027:null, proj?proj.predict2028:null];
+    return{label:ss(s),data:extended,borderColor:SC[i%SC.length],backgroundColor:SC[i%SC.length]+'33',tension:.3,fill:false,pointRadius:4,segment:{borderDash:function(ctx){return ctx.p0DataIndex>=years.length-1?[5,5]:undefined;}}};
+  });
+  dc('effectifs');sc('effectifs',new Chart(document.getElementById('effectifsChart'),{type:'line',data:{labels:projYears,datasets:ds},options:{responsive:true,plugins:{legend:chartOpts.legend},scales:{x:ax(),y:{...ax(),beginAtZero:true}}}}));
 
-      // Progress
-      const donePct = (s.done/s.total*100).toFixed(1), skipPct = (s.skip/s.total*100).toFixed(1), progressPct = (s.inProgress/s.total*100).toFixed(1);
-      document.getElementById('progressBar').innerHTML = `
-        <div class="progress-segment seg-done" style="width:${donePct}%"><span>${s.done} done</span></div>
-        <div class="progress-segment seg-progress" style="width:${progressPct}%"><span>${s.inProgress} en cours</span></div>
-        <div class="progress-segment seg-skip" style="width:${skipPct}%"><span>${s.skip} skip</span></div>`;
-      document.getElementById('progressLegend').innerHTML = `
-        <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Terminé (${donePct}%)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div>En cours (${progressPct}%)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--gray)"></div>Ignoré (${skipPct}%)</div>`;
+  // Sexe
+  dc('sexe');sc('sexe',new Chart(document.getElementById('sexeChart'),{type:'doughnut',data:{labels:['Femmes ('+fmtNum(D.sexe.F)+')','Hommes ('+fmtNum(D.sexe.M)+')','N/R ('+fmtNum(D.sexe.inconnu)+')'],datasets:[{data:[D.sexe.F,D.sexe.M,D.sexe.inconnu],backgroundColor:['#ec4899','#3b82f6','#64748b'],borderWidth:0}]},options:{responsive:true,cutout:'60%',plugins:{legend:{position:'right',labels:{color:'#94a3b8'}}}}}));
 
-      // Filters
-      const filters = [
-        { key: 'all', label: `Tous (${s.total})` }, { key: 'done', label: `Terminé (${s.done})` },
-        { key: 'in_progress', label: `En cours (${s.inProgress})` }, { key: 'skip', label: `Ignoré (${s.skip})` },
-      ];
-      document.getElementById('filterBar').innerHTML = filters.map(f =>
-        `<button class="filter-btn ${f.key===currentFilter?'active':''}" onclick="setFilter('${f.key}')">${f.label}</button>`).join('');
+  // Âges
+  const ao=['<18','18-20','21-23','24-25','26-30','>30'];
+  dc('ages');sc('ages',new Chart(document.getElementById('agesChart'),{type:'bar',data:{labels:ao,datasets:[{data:ao.map(t=>D.ages[t]||0),backgroundColor:'#a855f7',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8'},grid:{display:false}},y:ax()}}}));
 
-      // Table
-      const filtered = currentFilter === 'all' ? DATA.licences : DATA.licences.filter(l => l.status === currentFilter);
-      document.getElementById('licenceTable').innerHTML = filtered.map(l => `<tr>
-        <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school} · ${l.year}</span></td>
-        <td>${l.nbClasses}</td><td>${formatNum(l.nbEleves)||'—'}</td><td>${l.nbEnseignants||'—'}</td>
-        <td>${l.nbMatieres||'—'}</td><td>${l.nbPeriodes||'—'}</td>
-        <td>${scraperBadge(l.scrapers.notes)}</td><td>${scraperBadge(l.scrapers.assiduite)}</td></tr>`).join('');
+  // Nationalités
+  const nats=Object.entries(D.nationalites).sort((a,b)=>b[1]-a[1]).slice(0,15);
+  dc('nat');sc('nat',new Chart(document.getElementById('natChart'),{type:'bar',data:{labels:nats.map(n=>n[0]),datasets:[{data:nats.map(n=>n[1]),backgroundColor:'#06b6d4',borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:ax(),y:axH()}}}));
 
-      renderExtractionCharts();
-    }
+  // Niveaux
+  const nivs=Object.entries(D.niveaux).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  dc('niveaux');sc('niveaux',new Chart(document.getElementById('niveauxChart'),{type:'doughnut',data:{labels:nivs.map(n=>n[0]+' ('+fmtNum(n[1])+')'),datasets:[{data:nivs.map(n=>n[1]),backgroundColor:SC,borderWidth:0}]},options:{responsive:true,cutout:'50%',plugins:{legend:{position:'right',labels:{color:'#94a3b8',font:{size:10}}}}}}));
 
-    function setFilter(f) { currentFilter = f; renderExtraction(); }
+  // H/F par école
+  const se=Object.entries(D.sexeParEcole).map(([s,d])=>({name:ss(s),...d}));
+  dc('sexeEcole');sc('sexeEcole',new Chart(document.getElementById('sexeEcoleChart'),{type:'bar',data:{labels:se.map(s=>s.name),datasets:[{label:'Femmes',data:se.map(s=>s.F),backgroundColor:'#ec4899'},{label:'Hommes',data:se.map(s=>s.M),backgroundColor:'#3b82f6'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:chartOpts.legend},scales:{x:{stacked:true,...ax()},y:{stacked:true,...axH()}}}}));
 
-    function renderExtractionCharts() {
-      // School chart
-      const schools = Object.entries(DATA.schools).map(([name, s]) => ({
-        name: shortSchool(name), done: s.doneCount, skip: s.skipCount, inProgress: s.inProgressCount,
-      }));
-      destroyChart('school');
-      storeChart('school', new Chart(document.getElementById('schoolChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: schools.map(s=>s.name),
-          datasets: [
-            { label:'Terminé', data: schools.map(s=>s.done), backgroundColor:'#22c55e' },
-            { label:'En cours', data: schools.map(s=>s.inProgress), backgroundColor:'#eab308' },
-            { label:'Ignoré', data: schools.map(s=>s.skip), backgroundColor:'#64748b' },
-          ]
-        }, options: { indexAxis:'y', responsive:true,
-          plugins:{ legend:{ labels:{ color:'#94a3b8', font:{size:11} } } },
-          scales:{ x:{stacked:true,ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}},
-                   y:{stacked:true,ticks:{color:'#e2e8f0',font:{size:11}},grid:{display:false}} }
-        }
-      }));
+  // Moyennes
+  const ms=Object.entries(B.academic.moyenneParEcole).map(([s,d])=>({name:ss(s),moy:d.moy,count:d.count})).sort((a,b)=>b.moy-a.moy);
+  dc('moyEcole');sc('moyEcole',new Chart(document.getElementById('moyEcoleChart'),{type:'bar',data:{labels:ms.map(s=>s.name),datasets:[{data:ms.map(s=>s.moy),backgroundColor:ms.map(s=>s.moy>=10?'#22c55e':'#ef4444'),borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8',font:{size:10}},grid:{display:false}},y:{...ax(),min:0,max:20}}}}));
 
-      // Donuts
-      ['notes','assiduite'].forEach(key => {
-        const cfg = key==='notes' ? {id:'chartNotes',ok:'#22c55e'} : {id:'chartAssiduite',ok:'#3b82f6'};
-        const agg = {ok:0,empty:0,error:0,noperiod:0,nofield:0,total:0,entries:0};
-        DATA.licences.forEach(l => { const st=l.scrapers[key]; if(st){agg.ok+=st.ok;agg.empty+=st.empty;agg.error+=st.error;agg.noperiod+=st.noperiod;agg.nofield+=st.nofield;agg.total+=st.total;agg.entries+=st.totalEntries;} });
-        const labels=[],values=[],colors=[];
-        if(agg.ok>0){labels.push('OK ('+agg.ok+')');values.push(agg.ok);colors.push(cfg.ok);}
-        if(agg.empty>0){labels.push('Vide ('+agg.empty+')');values.push(agg.empty);colors.push('#ef4444');}
-        if(agg.error>0){labels.push('Erreur ('+agg.error+')');values.push(agg.error);colors.push('#dc2626');}
-        if(agg.noperiod>0){labels.push('No période ('+agg.noperiod+')');values.push(agg.noperiod);colors.push('#f97316');}
-        if(agg.nofield>0){labels.push('No matière ('+agg.nofield+')');values.push(agg.nofield);colors.push('#eab308');}
-        destroyChart(key);
-        storeChart(key, new Chart(document.getElementById(cfg.id).getContext('2d'), {
-          type:'doughnut', data:{labels,datasets:[{data:values,backgroundColor:colors,borderWidth:0}]},
-          options:{responsive:true,cutout:'60%',plugins:{
-            legend:{position:'right',labels:{color:'#94a3b8',font:{size:11},padding:8}},
-            title:{display:true,text:formatNum(agg.entries)+' entrées — '+agg.total+' combinaisons',color:'#64748b',font:{size:12}}
-          }}
-        }));
-      });
+  // Taux réussite
+  const ts=Object.entries(B.academic.tauxReussite).map(([s,d])=>({name:ss(s),taux:d.taux})).sort((a,b)=>b.taux-a.taux);
+  dc('tauxEcole');sc('tauxEcole',new Chart(document.getElementById('tauxEcoleChart'),{type:'bar',data:{labels:ts.map(s=>s.name),datasets:[{data:ts.map(s=>s.taux),backgroundColor:ts.map(s=>s.taux>=70?'#22c55e':s.taux>=50?'#eab308':'#ef4444'),borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8',font:{size:10}},grid:{display:false}},y:{...ax(),min:0,max:100,ticks:{color:'#94a3b8',callback:v=>v+'%'}}}}}));
 
-      // Cross-school
-      const crossSchools = Object.entries(DATA.schools).map(([name,s])=>{
-        const n=s.scrapers.notes, a=s.scrapers.assiduite;
-        return { name:shortSchool(name), empty:(n.empty||0)+(a.empty||0), error:(n.error||0)+(a.error||0),
-          noperiod:(n.noperiod||0)+(a.noperiod||0), nofield:(n.nofield||0)+(a.nofield||0) };
-      });
-      crossSchools.forEach(s=>s.totalProblems=s.empty+s.error+s.noperiod+s.nofield);
-      crossSchools.sort((a,b)=>b.totalProblems-a.totalProblems);
-      const container = document.getElementById('crossSchoolContainer');
-      container.style.height = Math.max(300,crossSchools.length*50+100)+'px';
-      destroyChart('cross');
-      storeChart('cross', new Chart(document.getElementById('crossSchoolChart').getContext('2d'), {
-        type:'bar', data:{
-          labels:crossSchools.map(s=>s.name),
-          datasets:[
-            {label:'Vide',data:crossSchools.map(s=>s.empty),backgroundColor:'#ef4444'},
-            {label:'Erreur',data:crossSchools.map(s=>s.error),backgroundColor:'#dc2626'},
-            {label:'No période',data:crossSchools.map(s=>s.noperiod),backgroundColor:'#f97316'},
-            {label:'No matière',data:crossSchools.map(s=>s.nofield),backgroundColor:'#eab308'},
-          ]
-        }, options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-          plugins:{legend:{labels:{color:'#94a3b8',font:{size:11}}},
-            tooltip:{callbacks:{afterBody:function(items){return 'Total: '+crossSchools[items[0].dataIndex].totalProblems;}}}},
-          scales:{x:{stacked:true,ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}},
-            y:{stacked:true,ticks:{color:'#e2e8f0',font:{size:12},autoSkip:false,
-              callback:function(v,i){const l=crossSchools[i];return l.totalProblems===0?l.name+' (aucun)':l.name;}},
-              grid:{display:false},afterFit:function(a){a.width=220;}}}
-        }
-      }));
+  // CC vs Exam
+  const ce=B.academic.ccVsExam;
+  dc('ccExam');sc('ccExam',new Chart(document.getElementById('ccExamChart'),{type:'bar',data:{labels:['CC ('+fmtNum(ce.cc.count)+')','Examen ('+fmtNum(ce.exam.count)+')'],datasets:[{data:[ce.cc.moy,ce.exam.moy],backgroundColor:['#3b82f6','#f97316'],borderRadius:8}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8'},grid:{display:false}},y:{...ax(),min:0,max:20}}}}));
 
-      // Per-school charts
-      const grid = document.getElementById('schoolStatsGrid');
-      const schArr = Object.entries(DATA.schools).map(([name,s])=>({name,...s}))
-        .sort((a,b)=>{
-          const ap=a.scrapers.notes.empty+a.scrapers.notes.error+a.scrapers.notes.noperiod+a.scrapers.notes.nofield;
-          const bp=b.scrapers.notes.empty+b.scrapers.notes.error+b.scrapers.notes.noperiod+b.scrapers.notes.nofield;
-          return bp-ap;
-        });
-      grid.innerHTML = schArr.map((s,i)=>`<div class="chart-card">
-        <h3 style="font-size:.95rem">${shortSchool(s.name)}</h3>
-        <div style="color:var(--text-muted);font-size:.75rem;margin-bottom:8px">${s.years.length} années · ${formatNum(s.nbEleves)} élèves · ${s.nbClasses} classes</div>
-        <canvas id="schoolStat_${i}"></canvas></div>`).join('');
-      schArr.forEach((s,i)=>{
-        const n=s.scrapers.notes, a=s.scrapers.assiduite;
-        destroyChart('ss'+i);
-        storeChart('ss'+i, new Chart(document.getElementById('schoolStat_'+i).getContext('2d'), {
-          type:'bar', data:{labels:['OK','Vide','No période','No matière'],
-            datasets:[{label:'Notes',data:[n.ok,n.empty,n.noperiod,n.nofield],backgroundColor:'#3b82f6'},
-                      {label:'Assiduité',data:[a.ok,a.empty,a.noperiod,a.nofield],backgroundColor:'#f97316'}]},
-          options:{responsive:true,
-            plugins:{legend:{labels:{color:'#94a3b8',font:{size:10}}},
-              title:{display:true,text:`Notes: ${formatNum(n.totalEntries)} · Assiduité: ${formatNum(a.totalEntries)}`,color:'#64748b',font:{size:11}}},
-            scales:{x:{ticks:{color:'#94a3b8',font:{size:10}},grid:{display:false}},
-                    y:{ticks:{color:'#94a3b8'},grid:{color:'rgba(51,65,85,.3)'}}}}
-        }));
-      });
-    }
+  // Top matières
+  const tm=B.academic.topMatieres||[];
+  dc('topMat');sc('topMat',new Chart(document.getElementById('topMatChart'),{type:'bar',data:{labels:tm.map(m=>m.matiere.length>28?m.matiere.substring(0,26)+'…':m.matiere),datasets:[{data:tm.map(m=>m.moy),backgroundColor:tm.map(m=>m.moy>=10?'#22c55e':'#ef4444'),borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{title:function(i){return tm[i[0].dataIndex].matiere;},afterLabel:function(c){return fmtNum(tm[c.dataIndex].count)+' notes';}}}},scales:{x:{...ax(),min:0,max:20},y:axH()}}}));
 
-    // ═══════════════════════════════════════════════════════
-    // TAB 2 — GROUPE ISM
-    // ═══════════════════════════════════════════════════════
-    const SCHOOL_COLORS = ['#3b82f6','#22c55e','#f97316','#a855f7','#ef4444','#eab308','#06b6d4','#ec4899','#64748b','#10b981'];
+  // Absences
+  const abs=Object.entries(B.attendance.absencesParEcole).map(([s,d])=>({name:ss(s),j:Math.round(d.justifiees),nj:Math.round(d.absences-d.justifiees)})).sort((a,b)=>(b.j+b.nj)-(a.j+a.nj));
+  dc('absEcole');sc('absEcole',new Chart(document.getElementById('absEcoleChart'),{type:'bar',data:{labels:abs.map(s=>s.name),datasets:[{label:'Non justifiées',data:abs.map(s=>s.nj),backgroundColor:'#ef4444'},{label:'Justifiées',data:abs.map(s=>s.j),backgroundColor:'#eab308'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:chartOpts.legend},scales:{x:{stacked:true,...ax()},y:{stacked:true,...axH()}}}}));
 
-    function renderGroupeISM() {
-      const B = DATA.business;
-      if (!B) { document.getElementById('tab-groupe').innerHTML = '<p style="padding:40px;text-align:center;color:var(--text-muted)">Données métier non disponibles. Relancez generate_dashboard_data.js</p>'; return; }
-      const D = B.demographics;
+  // Structure
+  const nc=Object.entries(B.structure.niveauxDistrib).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  dc('nivClass');sc('nivClass',new Chart(document.getElementById('niveauClassChart'),{type:'bar',data:{labels:nc.map(n=>n[0]),datasets:[{data:nc.map(n=>n[1]),backgroundColor:'#a855f7',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8',font:{size:9}},grid:{display:false}},y:ax()}}}));
+  const fl=Object.entries(B.structure.filieresDistrib).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  dc('filiere');sc('filiere',new Chart(document.getElementById('filiereChart'),{type:'bar',data:{labels:fl.map(f=>f[0].length>30?f[0].substring(0,28)+'…':f[0]),datasets:[{data:fl.map(f=>f[1]),backgroundColor:'#06b6d4',borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:ax(),y:axH()}}}));
+}
 
-      // KPIs
-      const pctF = D.totalPupils > 0 ? (D.sexe.F / D.totalPupils * 100).toFixed(1) : 0;
-      const pctBours = D.totalPupils > 0 ? (D.boursiers / D.totalPupils * 100).toFixed(1) : 0;
-      const pctRedoub = D.totalPupils > 0 ? (D.redoublants / D.totalPupils * 100).toFixed(1) : 0;
-      const nbNat = Object.keys(D.nationalites).length;
-      const absJustPct = B.attendance.totalAbsences > 0 ? (B.attendance.totalJustifiees / B.attendance.totalAbsences * 100).toFixed(1) : 0;
+// ═══════════ TAB 3 QUALITÉ ═══════════
+function renderQualite(){
+  const B=DATA.business;if(!B||!B.quality)return;
+  const Q=B.quality,comp=Q.completude,miss=Q.missing;
+  const avgComp=Object.values(comp).length>0?(Object.values(comp).reduce((a,b)=>a+b,0)/Object.values(comp).length).toFixed(1):0;
+  const qk=[
+    {v:avgComp+'%',l:'Complétude moyenne',c:'var(--green)',s:'tous champs'},
+    {v:comp.sexe+'%',l:'Sexe renseigné',c:comp.sexe>90?'var(--green)':'var(--orange)',s:fmtNum(miss.sexe)+' manquants'},
+    {v:comp.email+'%',l:'Email renseigné',c:comp.email>90?'var(--green)':'var(--orange)',s:fmtNum(miss.email)+' manquants'},
+    {v:comp.telephone+'%',l:'Téléphone',c:comp.telephone>90?'var(--green)':'var(--orange)',s:fmtNum(miss.telephone)+' manquants'},
+    {v:comp.nationalite+'%',l:'Nationalité',c:comp.nationalite>90?'var(--green)':'var(--orange)',s:fmtNum(miss.nationalite)+' manquants'},
+    {v:comp.dateNaissance+'%',l:'Date naissance',c:comp.dateNaissance>90?'var(--green)':'var(--orange)',s:fmtNum(miss.dateNaissance)+' manquants'},
+    {v:(B.anomalies?.highAbsenteeism?.length||0),l:'Classes à risque',c:'var(--red)',s:'absentéisme > 50'},
+    {v:B.correlation?.length||0,l:'Points corrélation',c:'var(--blue)',s:'classes analysées'},
+  ];
+  document.getElementById('qualKpiGrid').innerHTML=qk.map(k=>`<div class="kpi-card"><div class="value" style="color:${k.c}">${k.v}</div><div class="label">${k.l}</div><div class="sub">${k.s}</div></div>`).join('');
 
-      const bizKpis = [
-        { value: formatNum(D.totalPupils), label: 'Élèves analysés', color: 'var(--purple)', sub: `sur ${formatNum(DATA.totalEleves)} total` },
-        { value: pctF + '%', label: 'Femmes', color: '#ec4899', sub: `${formatNum(D.sexe.F)} F · ${formatNum(D.sexe.M)} H` },
-        { value: formatNum(D.boursiers), label: 'Boursiers', color: 'var(--green)', sub: `${pctBours}% des élèves` },
-        { value: formatNum(D.redoublants), label: 'Redoublants', color: 'var(--orange)', sub: `${pctRedoub}%` },
-        { value: nbNat, label: 'Nationalités', color: '#06b6d4', sub: 'représentées' },
-        { value: B.academic.moyenneGlobale + '/20', label: 'Moyenne générale', color: 'var(--blue)', sub: `${formatNum(B.academic.totalNotes)} notes` },
-        { value: formatNum(Math.round(B.attendance.totalAbsences)), label: 'Absences totales', color: 'var(--red)', sub: `${absJustPct}% justifiées` },
-        { value: Object.keys(B.effectifs).length, label: 'Écoles', color: 'var(--yellow)', sub: 'avec données' },
-      ];
-      document.getElementById('bizKpiGrid').innerHTML = bizKpis.map(k => `
-        <div class="kpi-card"><div class="value" style="color:${k.color}">${k.value}</div>
-        <div class="label">${k.label}</div><div class="sub">${k.sub}</div></div>`).join('');
+  // Barres de complétude
+  const fields=[{k:'sexe',l:'Sexe'},{k:'nationalite',l:'Nationalité'},{k:'dateNaissance',l:'Date de naissance'},{k:'email',l:'E-mail'},{k:'telephone',l:'Téléphone'}];
+  document.getElementById('qualityBars').innerHTML=fields.map(f=>{
+    const pct=comp[f.k];const color=pct>90?'var(--green)':pct>70?'var(--yellow)':'var(--red)';
+    return`<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:.85rem">${f.l}</span><span style="font-size:.85rem;font-weight:700;color:${color}">${pct}%</span></div><div class="quality-bar" style="background:var(--bg)"><div class="quality-fill" style="width:${pct}%;background:${color}"></div></div><div style="font-size:.7rem;color:var(--text-muted)">${fmtNum(miss[f.k])} manquants sur ${fmtNum(Q.total)}</div></div>`;
+  }).join('');
 
-      // ─── Effectifs par école par année (line chart) ───
-      const allYears = new Set();
-      Object.values(B.effectifs).forEach(y => Object.keys(y).forEach(yr => { if (yr !== 'courant') allYears.add(yr); }));
-      const years = [...allYears].sort();
-      const schoolNames = Object.keys(B.effectifs).filter(s => {
-        // Exclure les écoles qui n'ont que "courant"
-        return Object.keys(B.effectifs[s]).some(y => y !== 'courant');
-      });
-      const datasets = schoolNames.map((school, i) => ({
-        label: shortSchool(school),
-        data: years.map(y => B.effectifs[school][y] || 0),
-        borderColor: SCHOOL_COLORS[i % SCHOOL_COLORS.length],
-        backgroundColor: SCHOOL_COLORS[i % SCHOOL_COLORS.length] + '33',
-        tension: 0.3, fill: false, pointRadius: 4,
-      }));
-      destroyChart('effectifs');
-      storeChart('effectifs', new Chart(document.getElementById('effectifsChart').getContext('2d'), {
-        type: 'line', data: { labels: years, datasets },
-        options: { responsive: true,
-          plugins: { legend: { labels: { color: '#94a3b8', font: { size: 11 } } } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, beginAtZero: true } }
-        }
-      }));
+  // Anomalies table
+  const anom=B.anomalies?.highAbsenteeism||[];
+  document.getElementById('anomalyTable').innerHTML=anom.map(a=>`<tr><td>${ss(a.school)}</td><td style="font-size:.78rem">${a.licence}</td><td>${a.classe}</td><td style="color:var(--red);font-weight:700">${a.avgAbsences}</td></tr>`).join('')||'<tr><td colspan="4" style="text-align:center;color:var(--text-muted)">Aucune anomalie détectée</td></tr>';
 
-      // ─── Sexe (donut) ───
-      destroyChart('sexe');
-      storeChart('sexe', new Chart(document.getElementById('sexeChart').getContext('2d'), {
-        type: 'doughnut', data: {
-          labels: [`Femmes (${formatNum(D.sexe.F)})`, `Hommes (${formatNum(D.sexe.M)})`, `Non renseigné (${formatNum(D.sexe.inconnu)})`],
-          datasets: [{ data: [D.sexe.F, D.sexe.M, D.sexe.inconnu], backgroundColor: ['#ec4899', '#3b82f6', '#64748b'], borderWidth: 0 }]
-        }, options: { responsive: true, cutout: '60%',
-          plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 11 } } } } }
-      }));
+  // Corrélation scatter
+  const corr=B.correlation||[];
+  dc('corr');
+  if(corr.length>0){
+    sc('corr',new Chart(document.getElementById('correlationChart'),{type:'scatter',data:{datasets:[{label:'Classe',data:corr.map(c=>({x:c.moyAbsences,y:c.moyNotes})),backgroundColor:corr.map(c=>c.moyNotes<10?'#ef4444':'#22c55e'),pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){const c=corr[ctx.dataIndex];return c.classe+' ('+c.school+') — Moy: '+c.moyNotes+'/20, Abs: '+c.moyAbsences;}}}},scales:{x:{title:{display:true,text:'Absences moyennes',color:'#94a3b8'},...ax()},y:{title:{display:true,text:'Moyenne /20',color:'#94a3b8'},...ax(),min:0,max:20}}}}));
+  }
+}
 
-      // ─── Âges (bar) ───
-      const ageOrder = ['<18', '18-20', '21-23', '24-25', '26-30', '>30'];
-      const ageData = ageOrder.map(t => D.ages[t] || 0);
-      destroyChart('ages');
-      storeChart('ages', new Chart(document.getElementById('agesChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: ageOrder, datasets: [{ data: ageData, backgroundColor: '#a855f7', borderRadius: 6 }]
-        }, options: { responsive: true, plugins: { legend: { display: false } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } } } }
-      }));
+// ═══════════ TAB 4 PALMARÈS ═══════════
+function renderPalmares(){
+  const B=DATA.business;if(!B)return;
+  const P=B.palmares||{};
 
-      // ─── Nationalités (horizontal bar, top 15) ───
-      const nats = Object.entries(D.nationalites).sort((a, b) => b[1] - a[1]).slice(0, 15);
-      destroyChart('nat');
-      storeChart('nat', new Chart(document.getElementById('natChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: nats.map(n => n[0]),
-          datasets: [{ data: nats.map(n => n[1]), backgroundColor: '#06b6d4', borderRadius: 4 }]
-        }, options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-                    y: { ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
-      }));
+  // Projections table
+  const proj=B.projections||{};
+  document.getElementById('projTable').innerHTML=Object.entries(proj).map(([s,d])=>{
+    const gc=d.growth>=0?'var(--green)':'var(--red)';
+    return`<tr><td>${ss(s)}</td><td>${fmtNum(d.lastYear)}</td><td style="color:${gc};font-weight:700">${d.growth>=0?'+':''}${d.growth}%</td><td style="font-weight:700">${fmtNum(d.predict2027)}</td><td style="font-weight:700">${fmtNum(d.predict2028)}</td></tr>`;
+  }).join('')||'<tr><td colspan="5" style="text-align:center;color:var(--text-muted)">Pas assez de données</td></tr>';
 
-      // ─── Niveaux (donut) ───
-      const niveaux = Object.entries(D.niveaux).sort((a, b) => b[1] - a[1]).slice(0, 10);
-      destroyChart('niveaux');
-      storeChart('niveaux', new Chart(document.getElementById('niveauxChart').getContext('2d'), {
-        type: 'doughnut', data: {
-          labels: niveaux.map(n => n[0] + ' (' + formatNum(n[1]) + ')'),
-          datasets: [{ data: niveaux.map(n => n[1]), backgroundColor: SCHOOL_COLORS, borderWidth: 0 }]
-        }, options: { responsive: true, cutout: '50%',
-          plugins: { legend: { position: 'right', labels: { color: '#94a3b8', font: { size: 10 } } } } }
-      }));
+  // Difficiles
+  const diff=P.plusDifficiles||[];
+  dc('palmDiff');sc('palmDiff',new Chart(document.getElementById('palmDifficile'),{type:'bar',data:{labels:diff.map(m=>m.matiere.length>25?m.matiere.substring(0,23)+'…':m.matiere),datasets:[{data:diff.map(m=>m.moy),backgroundColor:diff.map(m=>m.moy<10?'#ef4444':'#eab308'),borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{title:function(i){return diff[i[0].dataIndex].matiere;},afterLabel:function(c){const m=diff[c.dataIndex];return'Réussite: '+m.tauxReussite+'% | '+fmtNum(m.count)+' notes';}}}},scales:{x:{...ax(),min:0,max:20},y:axH()}}}));
 
-      // ─── H/F par école (stacked bar) ───
-      const sexeSchools = Object.entries(D.sexeParEcole).map(([s, d]) => ({ name: shortSchool(s), ...d }));
-      destroyChart('sexeEcole');
-      storeChart('sexeEcole', new Chart(document.getElementById('sexeEcoleChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: sexeSchools.map(s => s.name),
-          datasets: [
-            { label: 'Femmes', data: sexeSchools.map(s => s.F), backgroundColor: '#ec4899' },
-            { label: 'Hommes', data: sexeSchools.map(s => s.M), backgroundColor: '#3b82f6' },
-          ]
-        }, options: { indexAxis: 'y', responsive: true,
-          plugins: { legend: { labels: { color: '#94a3b8' } } },
-          scales: { x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-                    y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
-      }));
+  // Réussies
+  const reu=P.plusReussies||[];
+  dc('palmReu');sc('palmReu',new Chart(document.getElementById('palmReussi'),{type:'bar',data:{labels:reu.map(m=>m.matiere.length>25?m.matiere.substring(0,23)+'…':m.matiere),datasets:[{data:reu.map(m=>m.moy),backgroundColor:'#22c55e',borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{title:function(i){return reu[i[0].dataIndex].matiere;},afterLabel:function(c){const m=reu[c.dataIndex];return'Réussite: '+m.tauxReussite+'% | '+fmtNum(m.count)+' notes';}}}},scales:{x:{...ax(),min:0,max:20},y:axH()}}}));
 
-      // ─── Moyenne par école (bar) ───
-      const moySchools = Object.entries(B.academic.moyenneParEcole)
-        .map(([s, d]) => ({ name: shortSchool(s), moy: d.moy, count: d.count }))
-        .sort((a, b) => b.moy - a.moy);
-      destroyChart('moyEcole');
-      storeChart('moyEcole', new Chart(document.getElementById('moyEcoleChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: moySchools.map(s => s.name),
-          datasets: [{ data: moySchools.map(s => s.moy), backgroundColor: moySchools.map(s => s.moy >= 10 ? '#22c55e' : '#ef4444'), borderRadius: 6 }]
-        }, options: { responsive: true, plugins: { legend: { display: false },
-          tooltip: { callbacks: { afterLabel: function(ctx) { return formatNum(moySchools[ctx.dataIndex].count) + ' notes'; } } } },
-          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 } } }
-      }));
+  // Volume
+  const vol=P.plusEnseignees||[];
+  dc('palmVol');sc('palmVol',new Chart(document.getElementById('palmVolume'),{type:'bar',data:{labels:vol.map(m=>m.matiere.length>30?m.matiere.substring(0,28)+'…':m.matiere),datasets:[{label:'Nombre de notes',data:vol.map(m=>m.count),backgroundColor:'#3b82f6',borderRadius:4},{label:'Moyenne /20',data:vol.map(m=>m.moy),backgroundColor:'#22c55e',borderRadius:4,yAxisID:'y1'}]},options:{indexAxis:'y',responsive:true,plugins:{legend:chartOpts.legend,tooltip:{callbacks:{title:function(i){return vol[i[0].dataIndex].matiere;}}}},scales:{x:{position:'bottom',...ax()},x1:{position:'top',min:0,max:20,...ax()},y:axH()}}}));
 
-      // ─── Taux de réussite par école (bar) ───
-      const tauxSchools = Object.entries(B.academic.tauxReussite)
-        .map(([s, d]) => ({ name: shortSchool(s), taux: d.taux, reussi: d.reussi, total: d.total }))
-        .sort((a, b) => b.taux - a.taux);
-      destroyChart('tauxEcole');
-      storeChart('tauxEcole', new Chart(document.getElementById('tauxEcoleChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: tauxSchools.map(s => s.name),
-          datasets: [{ data: tauxSchools.map(s => s.taux), backgroundColor: tauxSchools.map(s => s.taux >= 70 ? '#22c55e' : s.taux >= 50 ? '#eab308' : '#ef4444'), borderRadius: 6 }]
-        }, options: { responsive: true, plugins: { legend: { display: false },
-          tooltip: { callbacks: { afterLabel: function(ctx) { const s=tauxSchools[ctx.dataIndex]; return formatNum(s.reussi)+'/'+formatNum(s.total)+' notes'; } } } },
-          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8', callback: v=>v+'%' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 100 } } }
-      }));
+  // Cartes école
+  const schoolCards=document.getElementById('schoolCards');
+  schoolCards.innerHTML=Object.entries(DATA.schools).map(([name,s])=>{
+    const B2=DATA.business;
+    const moy=B2.academic.moyenneParEcole[name];
+    const taux=B2.academic.tauxReussite[name];
+    const abs=B2.attendance.absencesParEcole[name];
+    const gen=B2.demographics.sexeParEcole[name];
+    const proj=B2.projections[name];
+    return`<div class="chart-card" style="cursor:pointer" onclick="showSchoolModal('${name.replace(/'/g,"\\'")}')">
+      <h3>${ss(name)}</h3>
+      <div style="color:var(--text-muted);font-size:.75rem;line-height:1.6">
+        ${s.years.length} années · ${fmtNum(s.nbEleves)} élèves · ${s.nbClasses} classes · ${s.nbEnseignants} profs<br>
+        ${gen?'H: '+fmtNum(gen.M)+' · F: '+fmtNum(gen.F):'—'}<br>
+        Moy: ${moy?moy.moy+'/20':'—'} · Réussite: ${taux?taux.taux+'%':'—'}<br>
+        Absences: ${abs?fmtNum(Math.round(abs.absences)):'—'}${proj?' · Proj 2027: '+fmtNum(proj.predict2027):''}
+      </div>
+    </div>`;
+  }).join('');
+}
 
-      // ─── CC vs Examen (bar comparatif) ───
-      const ccex = B.academic.ccVsExam;
-      destroyChart('ccExam');
-      storeChart('ccExam', new Chart(document.getElementById('ccExamChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: ['Contrôle Continu', 'Examen'],
-          datasets: [{ data: [ccex.cc.moy, ccex.exam.moy],
-            backgroundColor: ['#3b82f6', '#f97316'], borderRadius: 8 }]
-        }, options: { responsive: true, plugins: { legend: { display: false },
-          tooltip: { callbacks: { afterLabel: function(ctx) { return formatNum(ctx.dataIndex===0?ccex.cc.count:ccex.exam.count)+' notes'; } } } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 } } }
-      }));
+function searchMatiere(){
+  const q=(document.getElementById('matSearch').value||'').toLowerCase().trim();
+  const res=document.getElementById('matResults');
+  if(q.length<2){res.innerHTML='';return;}
+  const B=DATA.business;if(!B)return;
+  // Chercher dans les palmarès
+  const all=[...(B.palmares.plusDifficiles||[]),...(B.palmares.plusReussies||[]),...(B.palmares.plusEnseignees||[])];
+  const seen=new Set();const matches=[];
+  for(const m of all){if(!seen.has(m.matiere)&&m.matiere.toLowerCase().includes(q)){seen.add(m.matiere);matches.push(m);}}
+  matches.sort((a,b)=>b.count-a.count);
+  if(matches.length===0){res.innerHTML='<p style="color:var(--text-muted);padding:10px">Aucun résultat</p>';return;}
+  res.innerHTML='<table><thead><tr><th>Matière</th><th>Moyenne</th><th>Taux réussite</th><th>Notes</th></tr></thead><tbody>'+
+    matches.slice(0,20).map(m=>`<tr><td>${m.matiere}</td><td style="color:${m.moy>=10?'var(--green)':'var(--red)';};font-weight:700">${m.moy}/20</td><td>${m.tauxReussite}%</td><td>${fmtNum(m.count)}</td></tr>`).join('')+'</tbody></table>';
+}
 
-      // ─── Top matières (horizontal bar) ───
-      const topMat = B.academic.topMatieres || [];
-      destroyChart('topMat');
-      storeChart('topMat', new Chart(document.getElementById('topMatChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: topMat.map(m => m.matiere.length > 30 ? m.matiere.substring(0, 28) + '…' : m.matiere),
-          datasets: [{ label: 'Moyenne', data: topMat.map(m => m.moy),
-            backgroundColor: topMat.map(m => m.moy >= 10 ? '#22c55e' : '#ef4444'), borderRadius: 4 }]
-        }, options: { indexAxis: 'y', responsive: true,
-          plugins: { legend: { display: false },
-            tooltip: { callbacks: { title: function(items) { return topMat[items[0].dataIndex].matiere; },
-              afterLabel: function(ctx) { return formatNum(topMat[ctx.dataIndex].count)+' notes'; } } } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' }, min: 0, max: 20 },
-                    y: { ticks: { color: '#e2e8f0', font: { size: 10 } }, grid: { display: false } } } }
-      }));
+function showSchoolModal(name){
+  const s=DATA.schools[name];if(!s)return;
+  const B=DATA.business;
+  const moy=B.academic.moyenneParEcole[name];
+  const taux=B.academic.tauxReussite[name];
+  const abs=B.attendance.absencesParEcole[name];
+  const gen=B.demographics.sexeParEcole[name];
+  const proj=B.projections[name];
+  const bours=B.demographics.boursiersParEcole[name]||0;
+  const redoub=B.demographics.redoublantsParEcole[name]||0;
+  const eff=B.effectifs[name]||{};
+  const effHtml=Object.entries(eff).filter(([y])=>y!=='courant').sort((a,b)=>a[0].localeCompare(b[0])).map(([y,c])=>`<tr><td>${y}</td><td>${fmtNum(c)}</td></tr>`).join('');
 
-      // ─── Absences par école (stacked bar: justifiées vs non justifiées) ───
-      const absSchools = Object.entries(B.attendance.absencesParEcole)
-        .map(([s, d]) => ({ name: shortSchool(s), justifiees: Math.round(d.justifiees), nonJust: Math.round(d.absences - d.justifiees) }))
-        .sort((a, b) => (b.justifiees + b.nonJust) - (a.justifiees + a.nonJust));
-      destroyChart('absEcole');
-      storeChart('absEcole', new Chart(document.getElementById('absEcoleChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: absSchools.map(s => s.name),
-          datasets: [
-            { label: 'Non justifiées', data: absSchools.map(s => s.nonJust), backgroundColor: '#ef4444' },
-            { label: 'Justifiées', data: absSchools.map(s => s.justifiees), backgroundColor: '#eab308' },
-          ]
-        }, options: { indexAxis: 'y', responsive: true,
-          plugins: { legend: { labels: { color: '#94a3b8' } } },
-          scales: { x: { stacked: true, ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-                    y: { stacked: true, ticks: { color: '#e2e8f0', font: { size: 11 } }, grid: { display: false } } } }
-      }));
+  const lics=DATA.licences.filter(l=>l.school===name);
+  const licHtml=lics.map(l=>`<tr><td>${l.displayName}</td><td>${l.year}</td><td>${l.nbClasses}</td><td>${fmtNum(l.nbEleves)}</td></tr>`).join('');
 
-      // ─── Classes par niveau (bar) ───
-      const nivClasses = Object.entries(B.structure.niveauxDistrib).sort((a, b) => b[1] - a[1]).slice(0, 12);
-      destroyChart('nivClass');
-      storeChart('nivClass', new Chart(document.getElementById('niveauClassChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: nivClasses.map(n => n[0]), datasets: [{ data: nivClasses.map(n => n[1]), backgroundColor: '#a855f7', borderRadius: 6 }]
-        }, options: { responsive: true, plugins: { legend: { display: false } },
-          scales: { x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } } } }
-      }));
+  document.getElementById('modalContainer').innerHTML=`<div class="modal-overlay" onclick="if(event.target===this)closeModal()"><div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2 style="margin-bottom:16px">${name}</h2>
+    <div class="kpi-grid" style="margin-bottom:20px">
+      <div class="kpi-card"><div class="value" style="color:var(--purple)">${fmtNum(s.nbEleves)}</div><div class="label">Élèves</div></div>
+      <div class="kpi-card"><div class="value" style="color:#06b6d4">${s.nbClasses}</div><div class="label">Classes</div></div>
+      <div class="kpi-card"><div class="value" style="color:#f59e0b">${s.nbEnseignants}</div><div class="label">Profs</div></div>
+      <div class="kpi-card"><div class="value" style="color:var(--blue)">${moy?moy.moy:'—'}</div><div class="label">Moyenne /20</div></div>
+      <div class="kpi-card"><div class="value" style="color:${taux&&taux.taux>=70?'var(--green)':'var(--red)'}">${taux?taux.taux+'%':'—'}</div><div class="label">Réussite</div></div>
+      <div class="kpi-card"><div class="value" style="color:var(--red)">${abs?fmtNum(Math.round(abs.absences)):'—'}</div><div class="label">Absences</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+      <div><h3 style="font-size:.9rem;margin-bottom:8px">Genre</h3><p style="font-size:.85rem">Femmes: ${gen?fmtNum(gen.F):'—'} · Hommes: ${gen?fmtNum(gen.M):'—'}</p></div>
+      <div><h3 style="font-size:.9rem;margin-bottom:8px">Parcours</h3><p style="font-size:.85rem">Boursiers: ${fmtNum(bours)} · Redoublants: ${fmtNum(redoub)}</p></div>
+    </div>
+    ${proj?`<div style="margin-bottom:16px"><h3 style="font-size:.9rem;margin-bottom:8px">Projections</h3><p style="font-size:.85rem">Croissance: <span style="color:${proj.growth>=0?'var(--green)':'var(--red)'};font-weight:700">${proj.growth>=0?'+':''}${proj.growth}%</span> · 2027: <strong>${fmtNum(proj.predict2027)}</strong> · 2028: <strong>${fmtNum(proj.predict2028)}</strong></p></div>`:''}
+    ${effHtml?`<div style="margin-bottom:16px"><h3 style="font-size:.9rem;margin-bottom:8px">Effectifs par année</h3><table><thead><tr><th>Année</th><th>Élèves</th></tr></thead><tbody>${effHtml}</tbody></table></div>`:''}
+    <h3 style="font-size:.9rem;margin-bottom:8px">Licences (${lics.length})</h3>
+    <table><thead><tr><th>Licence</th><th>Année</th><th>Classes</th><th>Élèves</th></tr></thead><tbody>${licHtml}</tbody></table>
+  </div></div>`;
+}
+function closeModal(){document.getElementById('modalContainer').innerHTML='';}
 
-      // ─── Classes par filière (horizontal bar) ───
-      const filieres = Object.entries(B.structure.filieresDistrib).sort((a, b) => b[1] - a[1]).slice(0, 12);
-      destroyChart('filiere');
-      storeChart('filiere', new Chart(document.getElementById('filiereChart').getContext('2d'), {
-        type: 'bar', data: {
-          labels: filieres.map(f => f[0].length > 35 ? f[0].substring(0, 33) + '…' : f[0]),
-          datasets: [{ data: filieres.map(f => f[1]), backgroundColor: '#06b6d4', borderRadius: 4 }]
-        }, options: { indexAxis: 'y', responsive: true, plugins: { legend: { display: false } },
-          scales: { x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(51,65,85,.3)' } },
-                    y: { ticks: { color: '#e2e8f0', font: { size: 10 } }, grid: { display: false } } } }
-      }));
-    }
-
-    // Auto-refresh
-    loadData();
-    setInterval(loadData, 60000);
-  </script>
+loadData();setInterval(loadData,60000);
+</script>
 </body>
 </html>
