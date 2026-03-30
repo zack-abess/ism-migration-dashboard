@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T03:25:00.786Z",
+  "generatedAt": "2026-03-30T03:30:01.602Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -484,8 +484,8 @@
           "empty": 275,
           "error": 0,
           "noperiod": 74,
-          "nofield": 886,
-          "total": 2883,
+          "nofield": 898,
+          "total": 2895,
           "totalEntries": 59007
         },
         "assiduite": {
@@ -531,7 +531,7 @@
       "nbMatieres": 466,
       "nbMatieresGlobal": 720,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-30T03:18:26.405Z",
+      "lastModified": "2026-03-30T03:28:20.059Z",
       "scrapers": {
         "classes": {
           "total": 122,
@@ -544,12 +544,12 @@
           "totalEntries": 122
         },
         "notes": {
-          "total": 2883,
+          "total": 2895,
           "ok": 1648,
           "empty": 275,
           "error": 0,
           "noperiod": 74,
-          "nofield": 886,
+          "nofield": 898,
           "validated": 1330,
           "totalEntries": 59007
         },
