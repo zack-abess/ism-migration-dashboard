@@ -400,7 +400,7 @@ function searchMatiere(){
   matches.sort((a,b)=>b.count-a.count);
   if(matches.length===0){res.innerHTML='<p style="color:var(--text-muted);padding:10px">Aucun résultat</p>';return;}
   res.innerHTML='<table><thead><tr><th>Matière</th><th>Moyenne</th><th>Taux réussite</th><th>Notes</th></tr></thead><tbody>'+
-    matches.slice(0,20).map(m=>`<tr><td>${m.matiere}</td><td style="color:${m.moy>=10?'var(--green)':'var(--red)';};font-weight:700">${m.moy}/20</td><td>${m.tauxReussite}%</td><td>${fmtNum(m.count)}</td></tr>`).join('')+'</tbody></table>';
+    matches.slice(0,20).map(m=>`<tr><td>${m.matiere}</td><td style="color:${m.moy>=10?'var(--green)':'var(--red)'};font-weight:700">${m.moy}/20</td><td>${m.tauxReussite}%</td><td>${fmtNum(m.count)}</td></tr>`).join('')+'</tbody></table>';
 }
 
 function showSchoolModal(name){

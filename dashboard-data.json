@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:45:00.763Z",
+  "generatedAt": "2026-03-30T02:50:00.637Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4672,12 +4672,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2264945,
+      "totalNotes": 2268919,
       "moyenneParEcole": {
         "ISM-DAKAR": {
-          "sum": 1349529.7700000007,
-          "count": 119118,
-          "moy": 11.33
+          "sum": 1396050.9800000053,
+          "count": 123092,
+          "moy": 11.34
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 5315905.400000062,
@@ -4717,8 +4717,8 @@
       },
       "tauxReussite": {
         "ISM-DAKAR": {
-          "reussi": 88810,
-          "total": 119118,
+          "reussi": 91772,
+          "total": 123092,
           "taux": 74.6
         },
         "ISM Dakar Ecole d'Ingénieurs": {
@@ -4805,13 +4805,13 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.03,
-          "count": 11371
+          "moy": 12.07,
+          "count": 11645
         },
         {
           "matiere": "Comptabilité Générale 3",
           "moy": 11.1,
-          "count": 11298
+          "count": 11434
         },
         {
           "matiere": "Mathématiques : Statistiques Descriptives",
@@ -4834,6 +4834,11 @@
           "count": 9292
         },
         {
+          "matiere": "Mathématiques Financières",
+          "moy": 10.3,
+          "count": 8912
+        },
+        {
           "matiere": "Humanitaire",
           "moy": 13.05,
           "count": 8907
@@ -4852,21 +4857,16 @@
           "matiere": "Développement Personnel ",
           "moy": 10.54,
           "count": 8807
-        },
-        {
-          "matiere": "Mathématiques : Analyses Combinatoires et Calculs des Probabilités",
-          "moy": 11.61,
-          "count": 8650
         }
       ],
       "ccVsExam": {
         "cc": {
           "moy": 11.56,
-          "count": 1132473
+          "count": 1134460
         },
         "exam": {
           "moy": 11.1,
-          "count": 1132472
+          "count": 1134459
         }
       }
     },
@@ -6651,15 +6651,15 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.03,
-          "count": 11371,
-          "tauxReussite": 83.2
+          "moy": 12.07,
+          "count": 11645,
+          "tauxReussite": 83.5
         },
         {
           "matiere": "Comptabilité Générale 3",
           "moy": 11.1,
-          "count": 11298,
-          "tauxReussite": 72.3
+          "count": 11434,
+          "tauxReussite": 72.2
         },
         {
           "matiere": "Mathématiques : Statistiques Descriptives",
