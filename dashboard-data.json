@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T03:00:01.738Z",
+  "generatedAt": "2026-03-30T03:05:01.026Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -8,11 +8,11 @@
   },
   "totalClasses": 2229,
   "totalEleves": 55621,
-  "totalMatieres": 4707,
+  "totalMatieres": 4716,
   "totalPeriodes": 73,
   "totalEnseignants": 518,
   "totalEntries": {
-    "notes": 1234777,
+    "notes": 1240345,
     "assiduite": 214033,
     "classes": 2227,
     "pupils": 63
@@ -480,13 +480,13 @@
       "nbEnseignants": 153,
       "scrapers": {
         "notes": {
-          "ok": 1488,
-          "empty": 239,
+          "ok": 1648,
+          "empty": 275,
           "error": 0,
           "noperiod": 74,
-          "nofield": 841,
-          "total": 2642,
-          "totalEntries": 53439
+          "nofield": 886,
+          "total": 2883,
+          "totalEntries": 59007
         },
         "assiduite": {
           "ok": 554,
@@ -528,10 +528,10 @@
       "nbClasses": 122,
       "nbEleves": 5258,
       "nbEnseignants": 153,
-      "nbMatieres": 456,
+      "nbMatieres": 466,
       "nbMatieresGlobal": 720,
       "nbPeriodes": 13,
-      "lastModified": "2026-03-30T02:05:01.298Z",
+      "lastModified": "2026-03-30T03:03:38.151Z",
       "scrapers": {
         "classes": {
           "total": 122,
@@ -544,14 +544,14 @@
           "totalEntries": 122
         },
         "notes": {
-          "total": 2642,
-          "ok": 1488,
-          "empty": 239,
+          "total": 2883,
+          "ok": 1648,
+          "empty": 275,
           "error": 0,
           "noperiod": 74,
-          "nofield": 841,
+          "nofield": 886,
           "validated": 1089,
-          "totalEntries": 53439
+          "totalEntries": 59007
         },
         "assiduite": {
           "total": 900,
@@ -4672,11 +4672,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2274117,
+      "totalNotes": 2274697,
       "moyenneParEcole": {
         "ISM-DAKAR": {
-          "sum": 1455493.5900000047,
-          "count": 128290,
+          "sum": 1462465.4700000046,
+          "count": 128870,
           "moy": 11.35
         },
         "ISM Dakar Ecole d'Ingénieurs": {
@@ -4717,9 +4717,9 @@
       },
       "tauxReussite": {
         "ISM-DAKAR": {
-          "reussi": 95473,
-          "total": 128290,
-          "taux": 74.4
+          "reussi": 95954,
+          "total": 128870,
+          "taux": 74.5
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 344980,
@@ -4805,8 +4805,8 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.11,
-          "count": 11989
+          "moy": 12.12,
+          "count": 12047
         },
         {
           "matiere": "Comptabilité Générale 3",
@@ -4829,14 +4829,14 @@
           "count": 9519
         },
         {
+          "matiere": "Mathématiques Financières",
+          "moy": 10.47,
+          "count": 9314
+        },
+        {
           "matiere": "Responsabilité Sociale des Entreprises",
           "moy": 11.69,
           "count": 9292
-        },
-        {
-          "matiere": "Mathématiques Financières",
-          "moy": 10.44,
-          "count": 9256
         },
         {
           "matiere": "Humanitaire",
@@ -4862,11 +4862,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.56,
-          "count": 1137059
+          "count": 1137349
         },
         "exam": {
           "moy": 11.1,
-          "count": 1137058
+          "count": 1137348
         }
       }
     },
@@ -6651,8 +6651,8 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.11,
-          "count": 11989,
+          "moy": 12.12,
+          "count": 12047,
           "tauxReussite": 83.9
         },
         {
@@ -6680,10 +6680,10 @@
           "tauxReussite": 80.1
         },
         {
-          "matiere": "Responsabilité Sociale des Entreprises",
-          "moy": 11.69,
-          "count": 9292,
-          "tauxReussite": 80.5
+          "matiere": "Mathématiques Financières",
+          "moy": 10.47,
+          "count": 9314,
+          "tauxReussite": 65.7
         }
       ]
     },
