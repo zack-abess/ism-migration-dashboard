@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T22:25:01.201Z",
+  "generatedAt": "2026-03-30T22:30:01.398Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 46,
+        "notes": 48,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5188,12 +5188,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2364734,
+      "totalNotes": 2365704,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2667770.110000022,
-          "count": 263774,
-          "moy": 10.11
+          "sum": 2668975.1100000218,
+          "count": 264744,
+          "moy": 10.08
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 177148,
-          "total": 263774,
-          "taux": 67.2
+          "reussi": 177223,
+          "total": 264744,
+          "taux": 66.9
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5266,8 +5266,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.07,
-          "count": 37221
+          "moy": 11.04,
+          "count": 37291
         },
         {
           "matiere": "Business Communication",
@@ -5368,11 +5368,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1182406
+          "count": 1182891
         },
         "exam": {
           "moy": 11.11,
-          "count": 1182328
+          "count": 1182813
         }
       }
     },
@@ -6982,6 +6982,12 @@
           "tauxReussite": 0
         },
         {
+          "matiere": "Relations Publiques - Relations Presse…",
+          "moy": 0,
+          "count": 44,
+          "tauxReussite": 0
+        },
+        {
           "matiere": "Management des Réseaux de Distribution du Pétole et du Gaz",
           "moy": 0,
           "count": 82,
@@ -7019,12 +7025,6 @@
         },
         {
           "matiere": "Lean Six Sigma",
-          "moy": 0,
-          "count": 56,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Evaluation Financière et Comptable",
           "moy": 0,
           "count": 56,
           "tauxReussite": 0
@@ -7125,9 +7125,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.07,
-          "count": 37221,
-          "tauxReussite": 74
+          "moy": 11.04,
+          "count": 37291,
+          "tauxReussite": 73.9
         },
         {
           "matiere": "Business Communication",
