@@ -577,7 +577,7 @@ function renderAudit(){
   document.getElementById('ueDoublonTable').innerHTML=(A.ue.duplicateGroups||[]).slice(0,50).map(g=>'<tr><td><strong>'+g.canonical+'</strong></td><td>'+g.variants.map(v=>v.name).join(', ')+'</td><td>'+g.variants.map(v=>v.count).join(', ')+'</td></tr>').join('')||'<tr><td colspan="3" style="text-align:center;color:var(--text-muted)">Aucun doublon UE</td></tr>';
 
   // Période anomalies
-  document.getElementById('periodAnomalyTable').innerHTML=(A.periodes.anomalies||[]).map(a=>`<tr><td>${a.licence}</td><td>${a.school}</td><td>${a.year}</td><td>${a.periodCount}</td><td>${a.expected}</td><td><span class="badge" style="background:${a.issue==='excess'?'var(--orange-bg)':'var(--red-bg)'},color:${a.issue==='excess'?'var(--orange)':'var(--red)'}">${a.issue==='excess'?'Excédent':'Déficit'}</span></td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune anomalie de période</td></tr>';
+  document.getElementById('periodAnomalyTable').innerHTML=(A.periodes.anomalies||[]).map(a=>'<tr><td>'+a.licence+'</td><td>'+a.school+'</td><td>'+a.year+'</td><td>'+a.periodCount+'</td><td>'+a.expected+'</td><td><span class="badge" style="background:'+(a.issue==='excess'?'var(--orange-bg)':'var(--red-bg)')+',color:'+(a.issue==='excess'?'var(--orange)':'var(--red)')+'">'+( a.issue==='excess'?'Excédent':'Déficit')+'</span></td></tr>').join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune anomalie de période</td></tr>';
 
   document.getElementById('toDeleteList').textContent=(A.periodes.toDelete||[]).join(', ')||'Aucune';
   document.getElementById('toDeleteList').parentElement.querySelector('h3').textContent='À supprimer ('+A.periodes.toDelete.length+')';
@@ -585,7 +585,7 @@ function renderAudit(){
   document.getElementById('placeholderList').parentElement.querySelector('h3').textContent='Placeholders XXXX ('+A.periodes.placeholders.length+')';
 
   // Notes uniformes
-  document.getElementById('uniformGradesTable').innerHTML=(A.notes.uniformGrades||[]).map(n=>`<tr><td>${n.licence}</td><td>${n.classe}</td><td>${n.matiere}</td><td style="font-weight:700">${n.grade}</td><td>${n.type}</td><td>${n.studentCount}</td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune note uniforme</td></tr>';
+  document.getElementById('uniformGradesTable').innerHTML=(A.notes.uniformGrades||[]).map(n=>'<tr><td>'+n.licence+'</td><td>'+n.classe+'</td><td>'+n.matiere+'</td><td style="font-weight:700">'+n.grade+'</td><td>'+n.type+'</td><td>'+n.studentCount+'</td></tr>').join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune note uniforme</td></tr>';
 
   // Élèves complétude
   const comp=A.eleves.completude;
@@ -594,21 +594,17 @@ function renderAudit(){
   document.getElementById('completudeCharts').innerHTML=fields.map(f=>{
     const d=comp[f];
     const barColor=d.pct>=80?'var(--green)':d.pct>=50?'var(--yellow)':'var(--red)';
-    return \`<div class="chart-card">
-      <h3>\${labels[f]}</h3>
-      <div style="margin-bottom:8px"><strong style="color:\${barColor}">\${d.pct}%</strong><span style="color:var(--text-muted);font-size:.8rem"> \${fmtNum(d.filled)}/\${fmtNum(d.total)}</span></div>
-      <div class="quality-bar"><div class="quality-fill" style="width:\${d.pct}%;background:\${barColor}"></div></div>
-    </div>\`;
+    return '<div class="chart-card"><h3>'+labels[f]+'</h3><div style="margin-bottom:8px"><strong style="color:'+barColor+'">'+d.pct+'%</strong><span style="color:var(--text-muted);font-size:.8rem"> '+fmtNum(d.filled)+'/'+fmtNum(d.total)+'</span></div><div class="quality-bar"><div class="quality-fill" style="width:'+d.pct+'%;background:'+barColor+'"></div></div></div>';
   }).join('');
 
   // Suspicious DOB
   document.getElementById('suspiciousDOBTable').innerHTML=(A.eleves.suspiciousDOB||[]).map(s=>{
     const badge=s.issue==='too young'?'<span class="badge badge-empty">Trop jeune</span>':s.issue==='too old'?'<span class="badge badge-empty">Trop âgé</span>':'<span class="badge badge-empty">Future</span>';
-    return \`<tr><td>\${s.eleve}</td><td>\${s.dob}</td><td>\${s.classe}</td><td>\${s.licence}</td><td>\${badge}</td></tr>\`;
+    return '<tr><td>'+s.eleve+'</td><td>'+s.dob+'</td><td>'+s.classe+'</td><td>'+s.licence+'</td><td>'+badge+'</td></tr>';
   }).join('')||'<tr><td colspan="5" style="text-align:center;color:var(--text-muted)">Aucune DOB suspecte</td></tr>';
 
   // Admin classes
-  document.getElementById('adminClassList').innerHTML=(A.classes.administrative||[]).map(c=>\`<div>• \${c}</div>\`).join('')||'Aucune classe administrative';
+  document.getElementById('adminClassList').innerHTML=(A.classes.administrative||[]).map(c=>'<div>• '+c+'</div>').join('')||'Aucune classe administrative';
 }
 
 loadData();loadAuditData();setInterval(loadData,1800000);setInterval(loadAuditData,1800000);setInterval(()=>location.reload(),7200000);
