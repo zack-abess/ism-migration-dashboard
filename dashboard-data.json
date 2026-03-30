@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:30:00.787Z",
+  "generatedAt": "2026-03-30T15:35:01.173Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,12 +4730,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2336750,
+      "totalNotes": 2339186,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6013407.550000055,
-          "count": 518936,
-          "moy": 11.59
+          "sum": 6049729.730000055,
+          "count": 521372,
+          "moy": 11.6
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4775,9 +4775,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 390277,
-          "total": 518936,
-          "taux": 75.2
+          "reussi": 392571,
+          "total": 521372,
+          "taux": 75.3
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4887,14 +4887,14 @@
           "count": 9519
         },
         {
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.69,
+          "count": 9428
+        },
+        {
           "matiere": "Mathématiques Financières",
           "moy": 10.47,
           "count": 9314
-        },
-        {
-          "matiere": "Responsabilité Sociale des Entreprises",
-          "moy": 11.69,
-          "count": 9292
         },
         {
           "matiere": "Business English 2",
@@ -4919,12 +4919,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.55,
-          "count": 1168381
+          "moy": 11.56,
+          "count": 1169599
         },
         "exam": {
-          "moy": 11.1,
-          "count": 1168369
+          "moy": 11.11,
+          "count": 1169587
         }
       }
     },
@@ -6738,10 +6738,10 @@
           "tauxReussite": 80.1
         },
         {
-          "matiere": "Mathématiques Financières",
-          "moy": 10.47,
-          "count": 9314,
-          "tauxReussite": 65.7
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.69,
+          "count": 9428,
+          "tauxReussite": 80.6
         }
       ]
     },
