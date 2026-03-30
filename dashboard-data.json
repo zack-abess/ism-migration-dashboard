@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:00:00.994Z",
+  "generatedAt": "2026-03-30T21:05:01.124Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 13,
+        "notes": 16,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5187,13 +5187,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.49,
-      "totalNotes": 2328103,
+      "moyenneGlobale": 11.48,
+      "totalNotes": 2330577,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2631713.2700000214,
-          "count": 227143,
-          "moy": 11.59
+          "sum": 2631743.2700000214,
+          "count": 229617,
+          "moy": 11.46
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,9 +5228,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 174792,
-          "total": 227143,
-          "taux": 77
+          "reussi": 174794,
+          "total": 229617,
+          "taux": 76.1
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
@@ -5266,8 +5266,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.33,
-          "count": 36347
+          "moy": 11.28,
+          "count": 36519
         },
         {
           "matiere": "Business Communication",
@@ -5367,12 +5367,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.72,
-          "count": 1164091
+          "moy": 11.71,
+          "count": 1165328
         },
         "exam": {
-          "moy": 11.27,
-          "count": 1164012
+          "moy": 11.26,
+          "count": 1165249
         }
       }
     },
@@ -6982,6 +6982,30 @@
           "tauxReussite": 0
         },
         {
+          "matiere": "Management des Réseaux de Distribution du Pétole et du Gaz",
+          "moy": 0,
+          "count": 82,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Economie du Pétrole, du Gaz et de l’Energie",
+          "moy": 0,
+          "count": 102,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Marchés et Trading Pétrolier et Gazier",
+          "moy": 0,
+          "count": 102,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Finance Energétique et Analyse des Investissements (VAN, TRI)",
+          "moy": 0,
+          "count": 102,
+          "tauxReussite": 0
+        },
+        {
           "matiere": "Management de Projets de programme et de portefeuille ",
           "moy": 0,
           "count": 26,
@@ -7001,30 +7025,6 @@
         },
         {
           "matiere": "POO2: Scala",
-          "moy": 0,
-          "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Automatisation des processus(RPA, Shell BASH AIRFLOW)",
-          "moy": 0,
-          "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Developpement moderne avec Python (API)",
-          "moy": 0,
-          "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Méthodologie de déploiement - MLops et data engineering(*Certification Professionnelle AWS Machine learning)",
-          "moy": 0,
-          "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Analyse statistique et reporting(*Certification Professionnelle Alteryx)",
           "moy": 0,
           "count": 26,
           "tauxReussite": 0
@@ -7125,9 +7125,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.33,
-          "count": 36347,
-          "tauxReussite": 75.8
+          "moy": 11.28,
+          "count": 36519,
+          "tauxReussite": 75.4
         },
         {
           "matiere": "Business Communication",
