@@ -1,0 +1,3754 @@
+{
+  "generatedAt": "2026-03-30T23:48:54.450Z",
+  "summary": {
+    "totalIssues": 220484,
+    "critical": 96345,
+    "warning": 123934,
+    "info": 205
+  },
+  "matieres": {
+    "totalOccurrences": 104669,
+    "uniqueCount": 3766,
+    "duplicateGroups": [
+      {
+        "canonical": "Business English",
+        "variants": [
+          {
+            "name": "Business English",
+            "count": 1899
+          },
+          {
+            "name": "Business english",
+            "count": 9
+          },
+          {
+            "name": "business English",
+            "count": 9
+          }
+        ],
+        "totalCount": 1917
+      },
+      {
+        "canonical": "Introduction au Droit",
+        "variants": [
+          {
+            "name": "Introduction au Droit",
+            "count": 707
+          },
+          {
+            "name": "Introduction au droit",
+            "count": 31
+          },
+          {
+            "name": "introduction au droit",
+            "count": 1
+          }
+        ],
+        "totalCount": 739
+      },
+      {
+        "canonical": "Developpement Personnel",
+        "variants": [
+          {
+            "name": "Développement Personnel",
+            "count": 603
+          },
+          {
+            "name": "Développement personnel",
+            "count": 96
+          }
+        ],
+        "totalCount": 699
+      },
+      {
+        "canonical": "Introduction au Management",
+        "variants": [
+          {
+            "name": "Introduction au Management",
+            "count": 642
+          },
+          {
+            "name": "Introduction au management",
+            "count": 11
+          }
+        ],
+        "totalCount": 653
+      },
+      {
+        "canonical": "Analyse Financiere",
+        "variants": [
+          {
+            "name": "Analyse Financière",
+            "count": 458
+          },
+          {
+            "name": "Analyse financière",
+            "count": 83
+          },
+          {
+            "name": "Analyse financiére",
+            "count": 12
+          }
+        ],
+        "totalCount": 553
+      },
+      {
+        "canonical": "Droit des Obligations",
+        "variants": [
+          {
+            "name": "Droit des Obligations",
+            "count": 472
+          },
+          {
+            "name": "Droit des obligations",
+            "count": 6
+          }
+        ],
+        "totalCount": 478
+      },
+      {
+        "canonical": "Management Strategique",
+        "variants": [
+          {
+            "name": "Management Stratégique",
+            "count": 261
+          },
+          {
+            "name": "Management stratégique",
+            "count": 180
+          },
+          {
+            "name": "Management Strategique",
+            "count": 24
+          }
+        ],
+        "totalCount": 465
+      },
+      {
+        "canonical": "Business English 1",
+        "variants": [
+          {
+            "name": "Business English 1",
+            "count": 395
+          },
+          {
+            "name": "Business english 1",
+            "count": 1
+          }
+        ],
+        "totalCount": 396
+      },
+      {
+        "canonical": "Ethique des Affaires et Management",
+        "variants": [
+          {
+            "name": "Ethique des Affaires et Management",
+            "count": 329
+          },
+          {
+            "name": "Ethique des affaires et management",
+            "count": 19
+          }
+        ],
+        "totalCount": 348
+      },
+      {
+        "canonical": "Gestion Budgetaire",
+        "variants": [
+          {
+            "name": "Gestion Budgétaire",
+            "count": 328
+          },
+          {
+            "name": "Gestion budgétaire",
+            "count": 20
+          }
+        ],
+        "totalCount": 348
+      },
+      {
+        "canonical": "Economie Generale",
+        "variants": [
+          {
+            "name": "Economie Générale",
+            "count": 200
+          },
+          {
+            "name": "Économie Générale",
+            "count": 138
+          },
+          {
+            "name": "Economie générale",
+            "count": 3
+          }
+        ],
+        "totalCount": 341
+      },
+      {
+        "canonical": "Comptabilite Analytique",
+        "variants": [
+          {
+            "name": "Comptabilité Analytique",
+            "count": 329
+          },
+          {
+            "name": "Comptabilité analytique",
+            "count": 8
+          }
+        ],
+        "totalCount": 337
+      },
+      {
+        "canonical": "Comptabilite des Societes",
+        "variants": [
+          {
+            "name": "Comptabilité des Sociétés",
+            "count": 237
+          },
+          {
+            "name": "Comptabilité des sociétés",
+            "count": 95
+          }
+        ],
+        "totalCount": 332
+      },
+      {
+        "canonical": "Psychosociologie des Organisations",
+        "variants": [
+          {
+            "name": "Psychosociologie des Organisations",
+            "count": 322
+          },
+          {
+            "name": "Psychosociologie des organisations",
+            "count": 9
+          }
+        ],
+        "totalCount": 331
+      },
+      {
+        "canonical": "Management des Processus",
+        "variants": [
+          {
+            "name": "Management des Processus",
+            "count": 321
+          },
+          {
+            "name": "Management des processus",
+            "count": 1
+          }
+        ],
+        "totalCount": 322
+      },
+      {
+        "canonical": "Comptabilite Generale",
+        "variants": [
+          {
+            "name": "Comptabilité Générale",
+            "count": 234
+          },
+          {
+            "name": "Comptabilité générale",
+            "count": 86
+          }
+        ],
+        "totalCount": 320
+      },
+      {
+        "canonical": "Mathematiques : Suites Numeriques & Systemes d'Equation",
+        "variants": [
+          {
+            "name": "Mathématiques : Suites Numériques & Systèmes d'Equation",
+            "count": 299
+          },
+          {
+            "name": "Mathématiques : Suites Numériques & Systémes d'Equation",
+            "count": 16
+          }
+        ],
+        "totalCount": 315
+      },
+      {
+        "canonical": "Techniques et Pratiques Bancaires",
+        "variants": [
+          {
+            "name": "Techniques et Pratiques Bancaires",
+            "count": 287
+          },
+          {
+            "name": "Techniques et pratiques bancaires",
+            "count": 2
+          }
+        ],
+        "totalCount": 289
+      },
+      {
+        "canonical": "Etude de Marche",
+        "variants": [
+          {
+            "name": "Etude de Marché",
+            "count": 271
+          },
+          {
+            "name": "Etude de marché",
+            "count": 7
+          }
+        ],
+        "totalCount": 278
+      },
+      {
+        "canonical": "Fondamentaux du Management",
+        "variants": [
+          {
+            "name": "Fondamentaux du Management",
+            "count": 235
+          },
+          {
+            "name": "Fondamentaux du management",
+            "count": 30
+          }
+        ],
+        "totalCount": 265
+      },
+      {
+        "canonical": "CMS WordPress",
+        "variants": [
+          {
+            "name": "CMS WordPress",
+            "count": 220
+          },
+          {
+            "name": "CMS Wordpress",
+            "count": 35
+          }
+        ],
+        "totalCount": 255
+      },
+      {
+        "canonical": "Pratiques Societaires",
+        "variants": [
+          {
+            "name": "Pratiques sociétaires",
+            "count": 195
+          },
+          {
+            "name": "Pratiques Sociétaires",
+            "count": 58
+          }
+        ],
+        "totalCount": 253
+      },
+      {
+        "canonical": "Droit du Numerique",
+        "variants": [
+          {
+            "name": "Droit du Numérique",
+            "count": 239
+          },
+          {
+            "name": "Droit du numérique",
+            "count": 8
+          }
+        ],
+        "totalCount": 247
+      },
+      {
+        "canonical": "Contrats Speciaux",
+        "variants": [
+          {
+            "name": "Contrats spéciaux",
+            "count": 193
+          },
+          {
+            "name": "Contrats Spéciaux",
+            "count": 53
+          }
+        ],
+        "totalCount": 246
+      },
+      {
+        "canonical": "Leadership",
+        "variants": [
+          {
+            "name": "Leadership",
+            "count": 241
+          },
+          {
+            "name": "leadership",
+            "count": 1
+          }
+        ],
+        "totalCount": 242
+      },
+      {
+        "canonical": "Comptabilite de Gestion",
+        "variants": [
+          {
+            "name": "Comptabilité de Gestion",
+            "count": 223
+          },
+          {
+            "name": "Comptabilité de gestion",
+            "count": 5
+          }
+        ],
+        "totalCount": 228
+      },
+      {
+        "canonical": "Finances Publiques",
+        "variants": [
+          {
+            "name": "Finances Publiques",
+            "count": 139
+          },
+          {
+            "name": "Finances publiques",
+            "count": 87
+          }
+        ],
+        "totalCount": 226
+      },
+      {
+        "canonical": "Gestion de la Production",
+        "variants": [
+          {
+            "name": "Gestion de la Production",
+            "count": 175
+          },
+          {
+            "name": "Gestion de la production",
+            "count": 42
+          }
+        ],
+        "totalCount": 217
+      },
+      {
+        "canonical": "Anglais Juridique",
+        "variants": [
+          {
+            "name": "Anglais Juridique",
+            "count": 194
+          },
+          {
+            "name": "Anglais juridique",
+            "count": 14
+          }
+        ],
+        "totalCount": 208
+      },
+      {
+        "canonical": "Econometrie Appliquee a la Gestion",
+        "variants": [
+          {
+            "name": "Econométrie Appliquée à la Gestion",
+            "count": 157
+          },
+          {
+            "name": "Econometrie appliquée à la gestion",
+            "count": 44
+          }
+        ],
+        "totalCount": 201
+      },
+      {
+        "canonical": "Management Strategique des entreprises",
+        "variants": [
+          {
+            "name": "Management Stratégique des Entreprises",
+            "count": 188
+          },
+          {
+            "name": "Management Stratégique des entreprises",
+            "count": 10
+          }
+        ],
+        "totalCount": 198
+      },
+      {
+        "canonical": "Droit Penal des Affaires",
+        "variants": [
+          {
+            "name": "Droit Pénal des Affaires",
+            "count": 184
+          },
+          {
+            "name": "Droit pénal des affaires",
+            "count": 2
+          }
+        ],
+        "totalCount": 186
+      },
+      {
+        "canonical": "Anglais des affaires",
+        "variants": [
+          {
+            "name": "Anglais des Affaires",
+            "count": 129
+          },
+          {
+            "name": "Anglais des affaires",
+            "count": 42
+          }
+        ],
+        "totalCount": 171
+      },
+      {
+        "canonical": "humanitaire",
+        "variants": [
+          {
+            "name": "Humanitaire",
+            "count": 164
+          },
+          {
+            "name": "humanitaire",
+            "count": 6
+          }
+        ],
+        "totalCount": 170
+      },
+      {
+        "canonical": "Audit et Diagnostic Organisationnel",
+        "variants": [
+          {
+            "name": "Audit et Diagnostic Organisationnel",
+            "count": 139
+          },
+          {
+            "name": "Audit et diagnostic organisationnel",
+            "count": 20
+          },
+          {
+            "name": "Audit et Diagnostic organisationnel",
+            "count": 6
+          }
+        ],
+        "totalCount": 165
+      },
+      {
+        "canonical": "Droit des Organisations Internationales",
+        "variants": [
+          {
+            "name": "Droit des organisations internationales",
+            "count": 102
+          },
+          {
+            "name": "Droit des Organisations Internationales",
+            "count": 61
+          }
+        ],
+        "totalCount": 163
+      },
+      {
+        "canonical": "Intelligence Economique",
+        "variants": [
+          {
+            "name": "Intelligence économique",
+            "count": 84
+          },
+          {
+            "name": "Intelligence Economique",
+            "count": 79
+          }
+        ],
+        "totalCount": 163
+      },
+      {
+        "canonical": "Droit Fiscal des Affaires",
+        "variants": [
+          {
+            "name": "Droit fiscal des affaires",
+            "count": 90
+          },
+          {
+            "name": "Droit Fiscal des Affaires",
+            "count": 59
+          },
+          {
+            "name": "Droit fiscal des Affaires",
+            "count": 12
+          }
+        ],
+        "totalCount": 161
+      },
+      {
+        "canonical": "Droit du Travail",
+        "variants": [
+          {
+            "name": "Droit du Travail",
+            "count": 99
+          },
+          {
+            "name": "Droit du travail",
+            "count": 56
+          }
+        ],
+        "totalCount": 155
+      },
+      {
+        "canonical": "Economie Politique",
+        "variants": [
+          {
+            "name": "Economie politique",
+            "count": 116
+          },
+          {
+            "name": "Economie Politique",
+            "count": 35
+          }
+        ],
+        "totalCount": 151
+      },
+      {
+        "canonical": "Obligations Juridiques et Fiscales des Entreprises",
+        "variants": [
+          {
+            "name": "Obligations Juridiques et Fiscales des Entreprises",
+            "count": 141
+          },
+          {
+            "name": "Obligations juridiques et fiscales des entreprises",
+            "count": 9
+          }
+        ],
+        "totalCount": 150
+      },
+      {
+        "canonical": "Strategie des Entreprises",
+        "variants": [
+          {
+            "name": "Stratégie des Entreprises",
+            "count": 100
+          },
+          {
+            "name": "Stratégie des entreprises",
+            "count": 50
+          }
+        ],
+        "totalCount": 150
+      },
+      {
+        "canonical": "Management Interculturel",
+        "variants": [
+          {
+            "name": "Management Interculturel",
+            "count": 126
+          },
+          {
+            "name": "Management interculturel",
+            "count": 17
+          }
+        ],
+        "totalCount": 143
+      },
+      {
+        "canonical": "Management des Organisations",
+        "variants": [
+          {
+            "name": "Management des organisations",
+            "count": 80
+          },
+          {
+            "name": "Management des Organisations",
+            "count": 60
+          }
+        ],
+        "totalCount": 140
+      },
+      {
+        "canonical": "Administration des Ressources Humaines",
+        "variants": [
+          {
+            "name": "Administration des Ressources Humaines",
+            "count": 127
+          },
+          {
+            "name": "Administration des ressources humaines",
+            "count": 8
+          }
+        ],
+        "totalCount": 135
+      },
+      {
+        "canonical": "Strategie de Communication et de Digitalisation",
+        "variants": [
+          {
+            "name": "Stratégie de communication et de digitalisation",
+            "count": 127
+          },
+          {
+            "name": "Stratégie de Communication et de Digitalisation",
+            "count": 8
+          }
+        ],
+        "totalCount": 135
+      },
+      {
+        "canonical": "Marketing Digital",
+        "variants": [
+          {
+            "name": "Marketing Digital",
+            "count": 117
+          },
+          {
+            "name": "Marketing digital",
+            "count": 11
+          }
+        ],
+        "totalCount": 128
+      },
+      {
+        "canonical": "Introduction a la Geopolitique des Affaires",
+        "variants": [
+          {
+            "name": "Introduction à la Géopolitique des Affaires",
+            "count": 108
+          },
+          {
+            "name": "Introduction à la géopolitique des affaires",
+            "count": 16
+          }
+        ],
+        "totalCount": 124
+      },
+      {
+        "canonical": "Droit des Biens",
+        "variants": [
+          {
+            "name": "Droit des biens",
+            "count": 102
+          },
+          {
+            "name": "Droit des Biens",
+            "count": 20
+          }
+        ],
+        "totalCount": 122
+      },
+      {
+        "canonical": "Sociologie Politique",
+        "variants": [
+          {
+            "name": "Sociologie politique",
+            "count": 61
+          },
+          {
+            "name": "Sociologie Politique",
+            "count": 60
+          }
+        ],
+        "totalCount": 121
+      },
+      {
+        "canonical": "Droit Constitutionnel",
+        "variants": [
+          {
+            "name": "Droit constitutionnel",
+            "count": 82
+          },
+          {
+            "name": "Droit Constitutionnel",
+            "count": 33
+          }
+        ],
+        "totalCount": 115
+      },
+      {
+        "canonical": "Acquisition des Ressources Humaines",
+        "variants": [
+          {
+            "name": "Acquisition des Ressources Humaines",
+            "count": 103
+          },
+          {
+            "name": "Acquisition des ressources humaines",
+            "count": 10
+          }
+        ],
+        "totalCount": 113
+      },
+      {
+        "canonical": "Management de la Qualite",
+        "variants": [
+          {
+            "name": "Management de la Qualité",
+            "count": 105
+          },
+          {
+            "name": "Management de la qualité",
+            "count": 7
+          }
+        ],
+        "totalCount": 112
+      },
+      {
+        "canonical": "Droit des Personnes et de la Famille",
+        "variants": [
+          {
+            "name": "Droit des personnes et de la famille",
+            "count": 63
+          },
+          {
+            "name": "Droit des Personnes et de la Famille",
+            "count": 40
+          }
+        ],
+        "totalCount": 103
+      },
+      {
+        "canonical": "Initiation aux Techniques Quantitatives de Gestion 2",
+        "variants": [
+          {
+            "name": "Initiation aux Techniques Quantitatives de Gestion 2",
+            "count": 93
+          },
+          {
+            "name": "Initiation aux techniques quantitatives de gestion 2",
+            "count": 10
+          }
+        ],
+        "totalCount": 103
+      },
+      {
+        "canonical": "Redaction d’Actes",
+        "variants": [
+          {
+            "name": "Rédaction d’actes",
+            "count": 92
+          },
+          {
+            "name": "Rédaction d’Actes",
+            "count": 6
+          }
+        ],
+        "totalCount": 98
+      },
+      {
+        "canonical": "Social Media",
+        "variants": [
+          {
+            "name": "Social média",
+            "count": 75
+          },
+          {
+            "name": "Social Media",
+            "count": 14
+          },
+          {
+            "name": "Social Média",
+            "count": 8
+          }
+        ],
+        "totalCount": 97
+      },
+      {
+        "canonical": "Fiscalite des Entreprises",
+        "variants": [
+          {
+            "name": "Fiscalité des Entreprises",
+            "count": 79
+          },
+          {
+            "name": "Fiscalité des entreprises",
+            "count": 15
+          }
+        ],
+        "totalCount": 94
+      },
+      {
+        "canonical": "Strategie d'entreprise",
+        "variants": [
+          {
+            "name": "Stratégie d'Entreprise",
+            "count": 82
+          },
+          {
+            "name": "Stratégie d'entreprise",
+            "count": 12
+          }
+        ],
+        "totalCount": 94
+      },
+      {
+        "canonical": "Droit International Public",
+        "variants": [
+          {
+            "name": "Droit international public",
+            "count": 77
+          },
+          {
+            "name": "Droit International Public",
+            "count": 16
+          }
+        ],
+        "totalCount": 93
+      },
+      {
+        "canonical": "Droit des suretes",
+        "variants": [
+          {
+            "name": "Droit des Sûretés",
+            "count": 64
+          },
+          {
+            "name": "Droit des Suretés",
+            "count": 25
+          },
+          {
+            "name": "Droit des sûretés",
+            "count": 4
+          }
+        ],
+        "totalCount": 93
+      },
+      {
+        "canonical": "E-Commerce",
+        "variants": [
+          {
+            "name": "E-Commerce",
+            "count": 51
+          },
+          {
+            "name": "E-commerce",
+            "count": 40
+          }
+        ],
+        "totalCount": 91
+      },
+      {
+        "canonical": "Developpement Durable",
+        "variants": [
+          {
+            "name": "Développement Durable",
+            "count": 90
+          },
+          {
+            "name": "Développement durable",
+            "count": 1
+          }
+        ],
+        "totalCount": 91
+      },
+      {
+        "canonical": "Communication Digitale",
+        "variants": [
+          {
+            "name": "Communication Digitale",
+            "count": 73
+          },
+          {
+            "name": "Communication digitale",
+            "count": 17
+          }
+        ],
+        "totalCount": 90
+      },
+      {
+        "canonical": "Redaction et Soutenance de Memoire",
+        "variants": [
+          {
+            "name": "Rédaction et soutenance de mémoire",
+            "count": 52
+          },
+          {
+            "name": "Rédaction et Soutenance de Mémoire",
+            "count": 37
+          }
+        ],
+        "totalCount": 89
+      },
+      {
+        "canonical": "Introduction a la Science Politique",
+        "variants": [
+          {
+            "name": "Introduction à la Science Politique",
+            "count": 49
+          },
+          {
+            "name": "Introduction à la science politique",
+            "count": 40
+          }
+        ],
+        "totalCount": 89
+      },
+      {
+        "canonical": "Strategie de Communication",
+        "variants": [
+          {
+            "name": "Stratégie de Communication",
+            "count": 76
+          },
+          {
+            "name": "Stratégie de communication",
+            "count": 13
+          }
+        ],
+        "totalCount": 89
+      },
+      {
+        "canonical": "Droit Constitutionnel 2",
+        "variants": [
+          {
+            "name": "Droit Constitutionnel 2",
+            "count": 44
+          },
+          {
+            "name": "Droit constitutionnel 2",
+            "count": 44
+          }
+        ],
+        "totalCount": 88
+      },
+      {
+        "canonical": "Communication Politique",
+        "variants": [
+          {
+            "name": "Communication politique",
+            "count": 67
+          },
+          {
+            "name": "Communication Politique",
+            "count": 19
+          }
+        ],
+        "totalCount": 86
+      },
+      {
+        "canonical": "Gestion Budgetaire et Tableau de Bord",
+        "variants": [
+          {
+            "name": "Gestion Budgétaire et Tableau de Bord",
+            "count": 80
+          },
+          {
+            "name": "Gestion Budgétaire et Tableau de bord",
+            "count": 3
+          },
+          {
+            "name": "Gestion budgétaire et tableau de bord",
+            "count": 2
+          }
+        ],
+        "totalCount": 85
+      },
+      {
+        "canonical": "Conception Graphique et Multimedia 2 : Illustrator",
+        "variants": [
+          {
+            "name": "Conception Graphique et Multimédia 2 : Illustrator",
+            "count": 50
+          },
+          {
+            "name": "Conception Graphique et Multimedia 2 : Illustrator",
+            "count": 32
+          }
+        ],
+        "totalCount": 82
+      },
+      {
+        "canonical": "Droit des Assurances",
+        "variants": [
+          {
+            "name": "Droit des Assurances",
+            "count": 70
+          },
+          {
+            "name": "Droit des assurances",
+            "count": 12
+          }
+        ],
+        "totalCount": 82
+      },
+      {
+        "canonical": "Grand Oral",
+        "variants": [
+          {
+            "name": "Grand Oral",
+            "count": 66
+          },
+          {
+            "name": "Grand oral",
+            "count": 16
+          }
+        ],
+        "totalCount": 82
+      },
+      {
+        "canonical": "Introduction a la Sociologie",
+        "variants": [
+          {
+            "name": "Introduction à la sociologie",
+            "count": 47
+          },
+          {
+            "name": "Introduction à la Sociologie",
+            "count": 33
+          }
+        ],
+        "totalCount": 80
+      },
+      {
+        "canonical": "Introduction aux Relations Internationales",
+        "variants": [
+          {
+            "name": "Introduction aux relations internationales",
+            "count": 58
+          },
+          {
+            "name": "Introduction aux Relations Internationales",
+            "count": 21
+          },
+          {
+            "name": "introduction aux relations internationales",
+            "count": 1
+          }
+        ],
+        "totalCount": 80
+      },
+      {
+        "canonical": "Systeme Politique Senegalais",
+        "variants": [
+          {
+            "name": "Système politique sénégalais",
+            "count": 74
+          },
+          {
+            "name": "Système Politique Sénégalais",
+            "count": 5
+          }
+        ],
+        "totalCount": 79
+      },
+      {
+        "canonical": "English for IT",
+        "variants": [
+          {
+            "name": "English for IT",
+            "count": 68
+          },
+          {
+            "name": "English For IT",
+            "count": 11
+          }
+        ],
+        "totalCount": 79
+      },
+      {
+        "canonical": "Droit Commun des Societes Commerciales",
+        "variants": [
+          {
+            "name": "Droit commun des sociétés commerciales",
+            "count": 47
+          },
+          {
+            "name": "Droit Commun des Sociétés Commerciales",
+            "count": 30
+          }
+        ],
+        "totalCount": 77
+      },
+      {
+        "canonical": "Droit Administratif",
+        "variants": [
+          {
+            "name": "Droit Administratif",
+            "count": 54
+          },
+          {
+            "name": "Droit administratif",
+            "count": 22
+          }
+        ],
+        "totalCount": 76
+      },
+      {
+        "canonical": "Redaction et Soutenance Memoire",
+        "variants": [
+          {
+            "name": "Rédaction et soutenance mémoire",
+            "count": 54
+          },
+          {
+            "name": "Rédaction et Soutenance Mémoire",
+            "count": 19
+          },
+          {
+            "name": "Rédaction et Soutenance mémoire",
+            "count": 2
+          }
+        ],
+        "totalCount": 75
+      },
+      {
+        "canonical": "Electricite et Electromagnetisme",
+        "variants": [
+          {
+            "name": "Electricité et Electromagnétisme",
+            "count": 50
+          },
+          {
+            "name": "Electricité et Électromagnétisme",
+            "count": 24
+          }
+        ],
+        "totalCount": 74
+      },
+      {
+        "canonical": "Histoire des Idees Politiques",
+        "variants": [
+          {
+            "name": "Histoire des idées politiques",
+            "count": 53
+          },
+          {
+            "name": "Histoire des Idées Politiques",
+            "count": 21
+          }
+        ],
+        "totalCount": 74
+      },
+      {
+        "canonical": "FinTech",
+        "variants": [
+          {
+            "name": "FinTech",
+            "count": 64
+          },
+          {
+            "name": "Fintech",
+            "count": 9
+          }
+        ],
+        "totalCount": 73
+      },
+      {
+        "canonical": "Audit et Controle Interne",
+        "variants": [
+          {
+            "name": "Audit et Contrôle Interne",
+            "count": 64
+          },
+          {
+            "name": "Audit et contrôle interne",
+            "count": 7
+          }
+        ],
+        "totalCount": 71
+      },
+      {
+        "canonical": "Management & Negociation - RH - Competences",
+        "variants": [
+          {
+            "name": "Management & négociation - RH - compétences",
+            "count": 58
+          },
+          {
+            "name": "Management & Négociation - RH - Compétences",
+            "count": 6
+          },
+          {
+            "name": "management & négociation - RH - compétences",
+            "count": 6
+          }
+        ],
+        "totalCount": 70
+      },
+      {
+        "canonical": "Droit Bancaire",
+        "variants": [
+          {
+            "name": "Droit bancaire",
+            "count": 50
+          },
+          {
+            "name": "Droit Bancaire",
+            "count": 20
+          }
+        ],
+        "totalCount": 70
+      },
+      {
+        "canonical": "Marketing International",
+        "variants": [
+          {
+            "name": "Marketing International",
+            "count": 68
+          },
+          {
+            "name": "Marketing international",
+            "count": 2
+          }
+        ],
+        "totalCount": 70
+      },
+      {
+        "canonical": "Lecture et Analyse des Etats financiers",
+        "variants": [
+          {
+            "name": "Lecture et Analyse des Etats Financiers",
+            "count": 57
+          },
+          {
+            "name": "Lecture et analyse des états financiers",
+            "count": 5
+          },
+          {
+            "name": "Lecture et Analyse des Etats financiers",
+            "count": 4
+          },
+          {
+            "name": "Lecture et Analyse des états financiers",
+            "count": 3
+          }
+        ],
+        "totalCount": 69
+      },
+      {
+        "canonical": "Organisation et Controle de l'Administration",
+        "variants": [
+          {
+            "name": "Organisation et Contrôle de l'administration",
+            "count": 32
+          },
+          {
+            "name": "Organisation et Contrôle de l'Administration",
+            "count": 28
+          },
+          {
+            "name": "Organisation et contrôle de l'administration",
+            "count": 8
+          }
+        ],
+        "totalCount": 68
+      },
+      {
+        "canonical": "Economie Internationale",
+        "variants": [
+          {
+            "name": "Economie internationale",
+            "count": 38
+          },
+          {
+            "name": "Economie Internationale",
+            "count": 30
+          }
+        ],
+        "totalCount": 68
+      },
+      {
+        "canonical": "Ethique des Affaires et Gouvernance des Entreprises",
+        "variants": [
+          {
+            "name": "Ethique des Affaires et Gouvernance des Entreprises",
+            "count": 64
+          },
+          {
+            "name": "Ethique des affaires et Gouvernance des Entreprises",
+            "count": 4
+          }
+        ],
+        "totalCount": 68
+      },
+      {
+        "canonical": "Entrepreneuriat Social",
+        "variants": [
+          {
+            "name": "Entrepreneuriat Social",
+            "count": 52
+          },
+          {
+            "name": "Entrepreneuriat social",
+            "count": 15
+          }
+        ],
+        "totalCount": 67
+      },
+      {
+        "canonical": "Management Strategique 1",
+        "variants": [
+          {
+            "name": "Management Stratégique 1",
+            "count": 53
+          },
+          {
+            "name": "Management stratégique 1",
+            "count": 12
+          }
+        ],
+        "totalCount": 65
+      },
+      {
+        "canonical": "Communication institutionnelle",
+        "variants": [
+          {
+            "name": "Communication institutionnelle",
+            "count": 59
+          },
+          {
+            "name": "communication institutionnelle",
+            "count": 4
+          },
+          {
+            "name": "Communication Institutionnelle",
+            "count": 1
+          }
+        ],
+        "totalCount": 64
+      },
+      {
+        "canonical": "Marketing des Services",
+        "variants": [
+          {
+            "name": "Marketing des Services",
+            "count": 60
+          },
+          {
+            "name": "Marketing des services",
+            "count": 2
+          }
+        ],
+        "totalCount": 62
+      },
+      {
+        "canonical": "Fondamentaux des Relations Internationales",
+        "variants": [
+          {
+            "name": "Fondamentaux des Relations Internationales",
+            "count": 34
+          },
+          {
+            "name": "Fondamentaux des relations internationales",
+            "count": 28
+          }
+        ],
+        "totalCount": 62
+      },
+      {
+        "canonical": "Contentieux des Affaires",
+        "variants": [
+          {
+            "name": "Contentieux des Affaires",
+            "count": 57
+          },
+          {
+            "name": "Contentieux des affaires",
+            "count": 4
+          }
+        ],
+        "totalCount": 61
+      },
+      {
+        "canonical": "Marketing Strategique",
+        "variants": [
+          {
+            "name": "Marketing Stratégique",
+            "count": 52
+          },
+          {
+            "name": "Marketing stratégique",
+            "count": 8
+          }
+        ],
+        "totalCount": 60
+      },
+      {
+        "canonical": "Chaine Logistique Globale",
+        "variants": [
+          {
+            "name": "Chaine Logistique Globale",
+            "count": 58
+          },
+          {
+            "name": "Chaîne Logistique Globale",
+            "count": 2
+          }
+        ],
+        "totalCount": 60
+      },
+      {
+        "canonical": "Negociations Internationales",
+        "variants": [
+          {
+            "name": "Négociations internationales",
+            "count": 51
+          },
+          {
+            "name": "Négociations Internationales",
+            "count": 8
+          }
+        ],
+        "totalCount": 59
+      }
+    ],
+    "emptyCoefficient": 7139,
+    "emptyBareme": 7139,
+    "emptyCredits": 7139,
+    "emptyProfesseur": 102467,
+    "emptyUE": 50287,
+    "percentEmptyUE": 48
+  },
+  "periodes": {
+    "totalUnique": 71,
+    "anomalies": [
+      {
+        "licence": "L1-IDC",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1A-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1B-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1C-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-ETSE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-GLRS",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-IAGE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-IDC",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-MAE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-TTL",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L3-GLRS",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L3-IAGE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L3-MAE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L3-MCDE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "M1UX_Design",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "M2_Big_Data_et_Data_Stratégie",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "M2_Marketing_Digital_et_Brand_Content",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "M2_Ux_Design",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-Big_Data_&_Data_Strategie",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-IRSD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-Management_Sec_&_SI",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-Marketing_Digital_&_Brand_Content",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-Projet_FT",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-Projet_PT",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA1-_QHSE_PEL",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA2-Management_Sec_&_SI",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA2-Projet",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA2-Projet_G2",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA2-_IRSD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "MBA2-_Marketing_Digital_et_E-Business",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2018-2019",
+        "year": null,
+        "periodCount": 15,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "ADMIS_NON_INSCRITS",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1-CDSD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1-D",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1-_CPD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1A_-_IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1B_-_IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1C_-_IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1E-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1F-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1G-IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L1H_-_IA",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-CDSD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-CPD",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-ETSE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-GLRS_A",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-GLRS_B",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-IAGE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-MAIE",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-MOSIEF",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      },
+      {
+        "licence": "L2-TTL",
+        "school": "ISM_Dakar_Ecole_d'Ingénieurs_2021-2022",
+        "year": null,
+        "periodCount": 14,
+        "expected": 12,
+        "issue": "excess"
+      }
+    ],
+    "toDelete": [
+      "A supprimer"
+    ],
+    "placeholders": [
+      "XXXX",
+      "XXXXX",
+      "XXXXXX",
+      "XXXXXXXXXX"
+    ]
+  },
+  "notes": {
+    "totalFiles": 52548,
+    "populatedFiles": 47747,
+    "emptyFiles": 4801,
+    "uniformGrades": [
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Contrats spéciaux",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Droit Social",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Finances Publiques",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Comptabilité Générale",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Droit Comptable",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Méthodologie Universitaire",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Ethique des Affaires",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER1-_Droit_des_Affaires_Soir",
+        "classe": "MASTER1- Droit des Affaires Soir",
+        "matiere": "Leadership",
+        "grade": "0,00",
+        "studentCount": 89,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Fondements de la RSE et Développement Durable",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Comptabilité des Sociétés Commerciales",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Comptabilité de Gestion ",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Stratégie d'Investissement et de Financement",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Gestion Budgétaire",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Techniques Comptables Approfondies",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Leadership & Management",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Leadership et Management",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Techniques Comptables Approfondies",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Stratégie d'Investissement et de Financement",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Gestion Budgétaire",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Fondements de la RSE et Développement Durable",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Comptabilité des Sociétés Commerciales",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Comptabilité de Gestion ",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Fiscalité des Entreprises",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Audit Organisationnel et des Systèmes d'Information",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Business English",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Progiciels de Gestion Intégrés (ERP) : SAP",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Normes internationales comptables IAS / IFRS / US GAAP (Niveau 1)",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Audit et Cartographie des Risques",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Méthodologie de l’Audit et Contrôle Interne",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Progiciels de Gestion Intégrés (ERP): SAP",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Normes internationales comptables IAS / IFRS / US GAAP (Niveau 1)",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Méthodologie de l’Audit et Contrôle Interne",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Fiscalité des Entreprises",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Business English",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Audit Organisationnel et des Systèmes d'Information",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_ACG_Soir",
+        "classe": "MASTER 1 - ACG Soir",
+        "matiere": "Audit et Cartographie des Risques",
+        "grade": "0,00",
+        "studentCount": 79,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Fondements de la RSE et Développement Durable",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Techniques Comptables Approfondies",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Applications Financières sur EXCEL -VBA ",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Statistiques et Data Visualisation (Eviews, Stata)",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Droit de l'Ingénierie Financière",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Fiscalité des Produits Financiers",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Leadership & Management",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Leadership et Management",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Techniques Comptables Approfondies",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Statistiques et Data Visualisation (Eviews, Stata)",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Fondements de la RSE et Développement Durable",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Fiscalité des Produits Financiers",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Droit de l'Ingénierie Financière",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      },
+      {
+        "licence": "MASTER_1_-_IF_Soir",
+        "classe": "MASTER 1 - IF Soir",
+        "matiere": "Applications Financières sur EXCEL -VBA ",
+        "grade": "0,00",
+        "studentCount": 68,
+        "type": "CC"
+      }
+    ]
+  },
+  "eleves": {
+    "completude": {
+      "nom": {
+        "filled": 55925,
+        "total": 55925,
+        "pct": 100
+      },
+      "sexe": {
+        "filled": 51078,
+        "total": 55925,
+        "pct": 91
+      },
+      "dateNaissance": {
+        "filled": 51293,
+        "total": 55925,
+        "pct": 92
+      },
+      "nationalite": {
+        "filled": 48725,
+        "total": 55925,
+        "pct": 87
+      },
+      "email": {
+        "filled": 44085,
+        "total": 55925,
+        "pct": 79
+      },
+      "telephone": {
+        "filled": 41554,
+        "total": 55925,
+        "pct": 74
+      },
+      "identifiant": {
+        "filled": 52165,
+        "total": 55925,
+        "pct": 93
+      }
+    },
+    "suspiciousDOB": [],
+    "malformedEmails": 194,
+    "duplicateIds": 40808
+  },
+  "classes": {
+    "totalClasses": 2326,
+    "administrative": [
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "LG1-Administration_des_Affaires",
+      "LG3-Administration_des_Affaires",
+      "ADMIS_NON_INSCRITS",
+      "LG1-Administration_des_Affaires",
+      "LG1-Administration_des_Affaires-R2",
+      "LG1-Administration_des_Affaires_B",
+      "LG2-Administration_des_Affaires",
+      "LG2-Administration_des_Affaires_B",
+      "LG3-Administration_des_Affaires",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "MASTER_1_-_BUSINESS_ADMINISTRATION",
+      "MASTER_1_-_BUSINESS_ADMINISTRATION_SOIR",
+      "MASTER_2_-_BUSINESS_ADMINISTRATION",
+      "ADMIS_NON_INSCRITS",
+      "LG3-Administration_des_Affaires_Soir",
+      "MASTER_1_-_BUSINESS_ADMINISTRATION",
+      "MASTER_1_-_BUSINESS_ADMINISTRATION_SOIR",
+      "MASTER_2_-_BUSINESS_ADMINISTRATION",
+      "MASTER_2_-_BUSINESS_ADMINISTRATION_SOIR",
+      "MBA1-_Administration_des_Projets_Cultures",
+      "ADMIS_NON_INSCRITS",
+      "MBA1-_Administration_des_Projets_Cultures",
+      "ADMIS_NON_INSCRITS",
+      "MBA1_-_Administration_des_Projets_Cultures",
+      "MBA2_-_Administration_des_Projets_Culturels",
+      "ADMIS_NON_INSCRITS",
+      "MBA1_-_Administration_des_Projets_Cultures",
+      "MBA2_-_Administration_des_Projets_Culturels",
+      "ADMIS_NON_INSCRITS",
+      "MBA1_-_Administration_des_Projets_Cultures",
+      "MBA2_-_Administration_des_Projets_Culturels",
+      "ADMIS_NON_INSCRITS",
+      "MBA2_-_Administration_des_Projets_Culturels",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "ADMIS_NON_INSCRITS",
+      "CERTIFICAT_-_PILOTAGE_DE_L'ADMINISTRATION_DU_PERSONNEL",
+      "M2_-_BUSINESS_ADMINISTRATION",
+      "ADMIS_NON_INSCRITS",
+      "Certificat_-_Pilotage_de_l'administration_et_du_personnel",
+      "Inscription_admin_(Paiement_assurance)",
+      "ADMIS_NON_INSCRITS",
+      "DOCTORATE_IN_BUSINESS_ADMINITRATION_(DBA)",
+      "ADMIS_NON_INSCRITS",
+      "DOCTORATE_IN_BUSINESS_ADMINITRATION_(DBA)"
+    ],
+    "emptyClasses": 255
+  },
+  "ue": {
+    "totalOccurrences": 54382,
+    "uniqueCount": 7644,
+    "emptyCount": 0,
+    "duplicateGroups": [
+      {
+        "canonical": "MGT 111 - Management Organisationnel - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "MGT 111 - Management Organisationnel - Semestre 1 / Session 1",
+            "count": 148
+          },
+          {
+            "name": "MGT 111 - Management organisationnel - Semestre 1 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "MGT 111 - Management Organisationnel - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "MGT 111 - Management Organisationnel - Semestre 1 / Session 2",
+            "count": 124
+          },
+          {
+            "name": "MGT 111 - Management organisationnel - Semestre 1 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "MGT 111 - Management Organisationnel - Semestre 1",
+        "variants": [
+          {
+            "name": "MGT 111 - Management Organisationnel - Semestre 1",
+            "count": 109
+          },
+          {
+            "name": "MGT 111 - Management organisationnel - Semestre 1",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session 1",
+        "variants": [
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session 1",
+            "count": 98
+          },
+          {
+            "name": "COM 123 - Outils de communication et technologies de l'information - Semestre 2 / Session 1",
+            "count": 8
+          },
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'information - Semestre 2 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LIA111 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LIA111 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 1",
+            "count": 49
+          },
+          {
+            "name": "LIA111 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 1",
+            "count": 41
+          }
+        ]
+      },
+      {
+        "canonical": "LIA111 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LIA111 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 2",
+            "count": 43
+          },
+          {
+            "name": "LIA111 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 1 / Session 2",
+            "count": 41
+          }
+        ]
+      },
+      {
+        "canonical": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session 2",
+            "count": 72
+          },
+          {
+            "name": "COM 123 - Outils de communication et technologies de l'information - Semestre 2 / Session 2",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "LIA121 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 1",
+        "variants": [
+          {
+            "name": "LIA121 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 1",
+            "count": 50
+          },
+          {
+            "name": "LIA121 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 1",
+            "count": 27
+          }
+        ]
+      },
+      {
+        "canonical": "LG113 - UE3. Maitrise des Techniques - Traitement de Donnees - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LG113 - UE3. Maîtrise des Techniques - Traitement de Données - Semestre 1 / Session 1",
+            "count": 56
+          },
+          {
+            "name": "LG113 - UE3. Maitrise des Techniques - Traitement de Données - Semestre 1 / Session 1",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "canonical": "LG113 - UE3. Maitrise des Techniques - Traitement de Donnees - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LG113 - UE3. Maîtrise des Techniques - Traitement de Données - Semestre 1 / Session 2",
+            "count": 56
+          },
+          {
+            "name": "LG113 - UE3. Maitrise des Techniques - Traitement de Données - Semestre 1 / Session 2",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "canonical": "LIA121 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "LIA121 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 2",
+            "count": 46
+          },
+          {
+            "name": "LIA121 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 2 / Session 2",
+            "count": 27
+          }
+        ]
+      },
+      {
+        "canonical": "MGT 231 - Environnement des organisations - Semestre 3",
+        "variants": [
+          {
+            "name": "MGT 231 - Environnement des Organisations - Semestre 3",
+            "count": 40
+          },
+          {
+            "name": "MGT 231 - Environnement des organisations - Semestre 3",
+            "count": 28
+          }
+        ]
+      },
+      {
+        "canonical": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2",
+        "variants": [
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2",
+            "count": 38
+          },
+          {
+            "name": "COM 123 - Outils de communication et technologies de l'information - Semestre 2",
+            "count": 23
+          },
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'information - Semestre 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "DSG121 - Concepts et Techniques de Gestion 2 - Semestre 2",
+        "variants": [
+          {
+            "name": "DSG121 - Concepts et Techniques de Gestion 2 - Semestre 2",
+            "count": 35
+          },
+          {
+            "name": "DSG121 - Concepts et techniques de Gestion 2 - Semestre 2",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "canonical": "DSG121 - Concepts et Techniques de Gestion 2 - Semestre 2 - Rattrapage",
+        "variants": [
+          {
+            "name": "DSG121 - Concepts et Techniques de Gestion 2 - Semestre 2 - Rattrapage",
+            "count": 35
+          },
+          {
+            "name": "DSG121 - Concepts et techniques de Gestion 2 - Semestre 2 - Rattrapage",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "canonical": "MGT 231 - Management Organisationnel - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "MGT 231 - Management Organisationnel - Semestre 3 / Session 1",
+            "count": 52
+          },
+          {
+            "name": "MGT 231 - Management organisationnel - Semestre 3 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "MGT 231 - Management Organisationnel - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "MGT 231 - Management Organisationnel - Semestre 3 / Session 2",
+            "count": 49
+          },
+          {
+            "name": "MGT 231 - Management organisationnel - Semestre 3 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "MGT111 - Management organisationnel - Semestre 1",
+        "variants": [
+          {
+            "name": "MGT111 - Management Organisationnel - Semestre 1",
+            "count": 34
+          },
+          {
+            "name": "MGT111 - Management organisationnel - Semestre 1",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD112 - DESIGN (Graphique - Web) - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LCPD112 - Design (Graphique - Web) - Semestre 1 / Session 1",
+            "count": 30
+          },
+          {
+            "name": "LCPD112 - DESIGN (Graphique - Web) - Semestre 1 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA113 - Economie-Gestion-Outils de Base 1 - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LDA113 - Economie-Gestion-Outils de Base 1 - Semestre 1 / Session 1",
+            "count": 24
+          },
+          {
+            "name": "LDA113 - Economie-Gestion-Outils de base 1 - Semestre 1 / Session 1",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "canonical": "LDA113 - Economie-Gestion-Outils de Base 1 - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LDA113 - Economie-Gestion-Outils de Base 1 - Semestre 1 / Session 2",
+            "count": 24
+          },
+          {
+            "name": "LDA113 - Economie-Gestion-Outils de base 1 - Semestre 1 / Session 2",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 361 - Pratique de la Science politique - Semestre 6 / Session 2",
+        "variants": [
+          {
+            "name": "SPRI 361 - Pratique de la science politique - Semestre 6 / Session 2",
+            "count": 18
+          },
+          {
+            "name": "SPRI 361 - Pratique de la Science politique - Semestre 6 / Session 2",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "canonical": "UE 112 - Initiation au management public - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "UE 112 - Initiation au Management Public - Semestre 1 / Session 1",
+            "count": 17
+          },
+          {
+            "name": "UE 112 - Initiation au management public - Semestre 1 / Session 1",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "canonical": "UE 112 - Initiation au management public - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "UE 112 - Initiation au Management Public - Semestre 1 / Session 2",
+            "count": 17
+          },
+          {
+            "name": "UE 112 - Initiation au management public - Semestre 1 / Session 2",
+            "count": 16
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD112 - DESIGN (Graphique - Web) - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LCPD112 - Design (Graphique - Web) - Semestre 1 / Session 2",
+            "count": 24
+          },
+          {
+            "name": "LCPD112 - DESIGN (Graphique - Web) - Semestre 1 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS363 - Conception et Developpement - Semestre 6 / Session 1",
+        "variants": [
+          {
+            "name": "GLRS363 - Conception et Développement - Semestre 6 / Session 1",
+            "count": 20
+          },
+          {
+            "name": "GLRS363 - Conception et Développement - Semestre 6 / session 1",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "canonical": "LDA241 - Droit Prive 2 - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "LDA241 - Droit Privé 2 - Semestre 4 / Session 1",
+            "count": 23
+          },
+          {
+            "name": "LDA241 - Droit privé 2 - Semestre 4 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA241 - Droit Prive 2 - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "LDA241 - Droit Privé 2 - Semestre 4 / Session 2",
+            "count": 23
+          },
+          {
+            "name": "LDA241 - Droit privé 2 - Semestre 4 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD361 - Design - Semestre 6 / Session 1",
+        "variants": [
+          {
+            "name": "LCPD361 - Design - Semestre 6 / Session 1",
+            "count": 24
+          },
+          {
+            "name": "LCPD361 - Design - Semestre 6 / session 1",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "canonical": "LDA111 - Initiation au Droit Prive 1 - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LDA111 - Initiation au Droit Privé 1 - Semestre 1 / Session 1",
+            "count": 19
+          },
+          {
+            "name": "LDA111 - Initiation au droit privé 1 - Semestre 1 / Session 1",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "canonical": "LDA111 - Initiation au Droit Prive 1 - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LDA111 - Initiation au Droit Privé 1 - Semestre 1 / Session 2",
+            "count": 19
+          },
+          {
+            "name": "LDA111 - Initiation au droit privé 1 - Semestre 1 / Session 2",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 112 - Droit Public et Droit International - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "MBA 112 - Droit Public et Droit International - Semestre 1 / Session 1",
+            "count": 26
+          },
+          {
+            "name": "MBA 112 - Droit Public et Droit international - Semestre 1 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LDA231 - Droit Prive 1 - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "LDA231 - Droit Privé 1 - Semestre 3 / Session 1",
+            "count": 21
+          },
+          {
+            "name": "LDA231 - Droit privé 1 - Semestre 3 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA231 - Droit Prive 1 - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "LDA231 - Droit Privé 1 - Semestre 3 / Session 2",
+            "count": 21
+          },
+          {
+            "name": "LDA231 - Droit privé 1 - Semestre 3 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LIA231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "LIA231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 25
+          },
+          {
+            "name": "LIA231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "CCM 112 - Customer knowledge management / Gestion de la connaissance du client - Semestre 1",
+        "variants": [
+          {
+            "name": "CCM 112 - Customer Knowledge Management / Gestion de la Connaissance du Client - Semestre 1",
+            "count": 21
+          },
+          {
+            "name": "CCM 112 - Customer knowledge management / Gestion de la connaissance du client - Semestre 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 232 - Techniques et Pratiques Comptables - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "ACG 232 - Techniques et Pratiques Comptables - Semestre 3 / Session 1",
+            "count": 22
+          },
+          {
+            "name": "ACG 232 - Techniques et pratiques comptables - Semestre 3 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "GLRS231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 22
+          },
+          {
+            "name": "GLRS231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LDA112 - Initiation au Droit Public 1 - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LDA112 - Initiation au Droit Public 1 - Semestre 1 / Session 1",
+            "count": 18
+          },
+          {
+            "name": "LDA112 - Initiation au droit public 1 - Semestre 1 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA112 - Initiation au Droit Public 1 - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "LDA112 - Initiation au Droit Public 1 - Semestre 1 / Session 2",
+            "count": 18
+          },
+          {
+            "name": "LDA112 - Initiation au droit public 1 - Semestre 1 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "TTL231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "TTL231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 18
+          },
+          {
+            "name": "TTL231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD361 - Design - Semestre 6 / Session 2",
+        "variants": [
+          {
+            "name": "LCPD361 - Design - Semestre 6 / Session 2",
+            "count": 19
+          },
+          {
+            "name": "LCPD361 - Design - Semestre 6 / session 2",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 232 - Techniques et Pratiques Comptables - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "ACG 232 - Techniques et Pratiques Comptables - Semestre 3 / Session 2",
+            "count": 21
+          },
+          {
+            "name": "ACG 232 - Techniques et pratiques comptables - Semestre 3 / Session 2",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "LSPRI 124 - Langues vivantes et Service a la communaute - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "LSPRI 124 - Langues vivantes et Service à la communauté - Semestre 2 / Session 2",
+            "count": 18
+          },
+          {
+            "name": "LSPRI 124 - Langues vivantes et service à la communauté - Semestre 2 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 121 - Management- gestion - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "MBA 121 - Management- Gestion - Semestre 2 / Session 2",
+            "count": 16
+          },
+          {
+            "name": "MBA 121 - Management- gestion - Semestre 2 / Session 2",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 122 - Droit Public et Droit international - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "MBA 122 - Droit Public et Droit international - Semestre 2 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "MBA 122 - Droit Public et Droit International - Semestre 2 / Session 2",
+            "count": 12
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 243 - Analyse electorale - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "SPRI 243 - Analyse électorale - Semestre 4 / Session 2",
+            "count": 22
+          },
+          {
+            "name": "SPRI 243 - Analyse electorale - Semestre 4 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LDA242 - Droit Public 2 - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "LDA242 - Droit Public 2 - Semestre 4 / Session 1",
+            "count": 17
+          },
+          {
+            "name": "LDA242 - Droit public 2 - Semestre 4 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA242 - Droit Public 2 - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "LDA242 - Droit Public 2 - Semestre 4 / Session 2",
+            "count": 17
+          },
+          {
+            "name": "LDA242 - Droit public 2 - Semestre 4 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LIA231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "LIA231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 21
+          },
+          {
+            "name": "LIA231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LDA243 - Economie-Gestion-Outils de Base 4 - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "LDA243 - Economie-Gestion-Outils de Base 4 - Semestre 4 / Session 1",
+            "count": 17
+          },
+          {
+            "name": "LDA243 - Economie-Gestion-Outils de base 4 - Semestre 4 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA243 - Economie-Gestion-Outils de Base 4 - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "LDA243 - Economie-Gestion-Outils de Base 4 - Semestre 4 / Session 2",
+            "count": 17
+          },
+          {
+            "name": "LDA243 - Economie-Gestion-Outils de base 4 - Semestre 4 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "CCM 121 - Marketing operationnel - Semestre 2",
+        "variants": [
+          {
+            "name": "CCM 121 - Marketing Opérationnel - Semestre 2",
+            "count": 16
+          },
+          {
+            "name": "CCM 121 - Marketing opérationnel - Semestre 2",
+            "count": 7
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 113 - Utilisation de l'Information Comptable et Financiere - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "ACG 113 - Utilisation de l'Information Comptable et Financière - Semestre 1 / Session 1",
+            "count": 21
+          },
+          {
+            "name": "ACG 113 - Utilisation de l'information comptable et financière - Semestre 1 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 113 - Utilisation de l'Information Comptable et Financiere - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "ACG 113 - Utilisation de l'Information Comptable et Financière - Semestre 1 / Session 2",
+            "count": 21
+          },
+          {
+            "name": "ACG 113 - Utilisation de l'information comptable et financière - Semestre 1 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "GLRS241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 17
+          },
+          {
+            "name": "GLRS241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "GLRS241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 17
+          },
+          {
+            "name": "GLRS241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "canonical": "MAE241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "MAE241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "MAE241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "canonical": "MAE241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "MAE241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "MAE241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS351 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+        "variants": [
+          {
+            "name": "GLRS351 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+            "count": 16
+          },
+          {
+            "name": "GLRS351 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session - Rattrapage",
+        "variants": [
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'Information - Semestre 2 / Session - Rattrapage",
+            "count": 20
+          },
+          {
+            "name": "COM 123 - Outils de Communication et Technologies de l'information - Semestre 2 / Session - Rattrapage",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "MAE231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "MAE231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 11
+          },
+          {
+            "name": "MAE231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 1",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "canonical": "MSG111 - Management strategique et Operationnel - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "MSG111 - Management Stratégique et Opérationnel - Semestre 1 / Session 1",
+            "count": 15
+          },
+          {
+            "name": "MSG111 - Management stratégique et Opérationnel - Semestre 1 / Session 1",
+            "count": 3
+          },
+          {
+            "name": "MSG111 - management Stratégique et Opérationnel - Semestre 1 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "TTL354 - Organisation et Gestion des activites de TransporT - Semestre 5 / Session 1",
+        "variants": [
+          {
+            "name": "TTL354 - Organisation et Gestion des activités de Transport - Semestre 5 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "TTL354 - Organisation et Gestion des Activités de Transport - Semestre 5 / Session 1",
+            "count": 6
+          },
+          {
+            "name": "TTL354 - Organisation et Gestion des activités de TransporT - Semestre 5 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 122 - Relations Publiques - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "MBA 122 - Relations publiques - Semestre 2 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "MBA 122 - Relations Publiques - Semestre 2 / Session 2",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 233 - Droit public - Semestre 3 / session 1",
+        "variants": [
+          {
+            "name": "SPRI 233 - Droit public - Semestre 3 / session 1",
+            "count": 12
+          },
+          {
+            "name": "SPRI 233 - Droit public - Semestre 3 / Session 1",
+            "count": 9
+          }
+        ]
+      },
+      {
+        "canonical": "MRH112 - Management du stress - Semestre 1",
+        "variants": [
+          {
+            "name": "MRH112 - Management du Stress - Semestre 1",
+            "count": 13
+          },
+          {
+            "name": "MRH112 - Management du stress - Semestre 1",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "GLRS231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 18
+          },
+          {
+            "name": "GLRS231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "LDA233 - Economie-Gestion-Outils de Base 3 - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "LDA233 - Economie-Gestion-Outils de Base 3 - Semestre 3 / Session 1",
+            "count": 14
+          },
+          {
+            "name": "LDA233 - Economie-Gestion-Outils de base 3 - Semestre 3 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA233 - Economie-Gestion-Outils de Base 3 - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "LDA233 - Economie-Gestion-Outils de Base 3 - Semestre 3 / Session 2",
+            "count": 14
+          },
+          {
+            "name": "LDA233 - Economie-Gestion-Outils de base 3 - Semestre 3 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LIA351 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+        "variants": [
+          {
+            "name": "LIA351 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "LIA351 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 5 / Session 1",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "TTL231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "TTL231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 14
+          },
+          {
+            "name": "TTL231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ETSE363 - Reseaux de Telecommunications - Semestre 6 / Session 1",
+        "variants": [
+          {
+            "name": "ETSE363 - Réseaux de Télécommunications - Semestre 6 / Session 1",
+            "count": 16
+          },
+          {
+            "name": "ETSE363 - Réseaux de Télécommunications - Semestre 6 / session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS363 - Conception et Developpement - Semestre 6 / Session 2",
+        "variants": [
+          {
+            "name": "GLRS363 - Conception et Développement - Semestre 6 / Session 2",
+            "count": 10
+          },
+          {
+            "name": "GLRS363 - Conception et Développement - Semestre 6 / session 2",
+            "count": 10
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 232 - Administration Publique - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "MBA 232 - Administration Publique - Semestre 3 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "MBA 232 - Administration publique - Semestre 3 / session 1",
+            "count": 4
+          },
+          {
+            "name": "MBA 232 - Administration Publique - Semestre 3 / session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "MAE231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "MAE231 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 11
+          },
+          {
+            "name": "MAE231 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 3 / Session 2",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "canonical": "MSG122 - Techniques Quantitatives et Gestion de l'Information dans les Projets - Semestre 2 / Session 1",
+        "variants": [
+          {
+            "name": "MSG122 - Techniques Quantitatives et Gestion de l'Information dans les Projets - Semestre 2 / Session 1",
+            "count": 16
+          },
+          {
+            "name": "MSG122 - Techniques Quantitatives et Gestion de l'information dans les Projets - Semestre 2 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "LIA241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "LIA241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 15
+          },
+          {
+            "name": "LIA241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "LIA241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "LIA241 - Maîtrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 15
+          },
+          {
+            "name": "LIA241 - Maitrise des Attitudes et des Comportements Professionnels - Semestre 4 / Session 2",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "MRH121 - Droit du Travail - Semestre 2",
+        "variants": [
+          {
+            "name": "MRH121 - Droit du travail - Semestre 2",
+            "count": 15
+          },
+          {
+            "name": "MRH121 - Droit du Travail - Semestre 2",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 112 - Information Comptable, Decision et Controle - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "ACG 112 - Information Comptable, Décision et Contrôle - Semestre 1 / Session 1",
+            "count": 16
+          },
+          {
+            "name": "ACG 112 - Information comptable, décision et contrôle - Semestre 1 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 112 - Information Comptable, Decision et Controle - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "ACG 112 - Information Comptable, Décision et Contrôle - Semestre 1 / Session 2",
+            "count": 16
+          },
+          {
+            "name": "ACG 112 - Information comptable, décision et contrôle - Semestre 1 / Session 2",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "LDA232 - Droit Public 1 - Semestre 3 / Session 1",
+        "variants": [
+          {
+            "name": "LDA232 - Droit Public 1 - Semestre 3 / Session 1",
+            "count": 14
+          },
+          {
+            "name": "LDA232 - Droit public 1 - Semestre 3 / Session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "LDA232 - Droit Public 1 - Semestre 3 / Session 2",
+        "variants": [
+          {
+            "name": "LDA232 - Droit Public 1 - Semestre 3 / Session 2",
+            "count": 14
+          },
+          {
+            "name": "LDA232 - Droit public 1 - Semestre 3 / Session 2",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "LDA244 - Service a la Communaute - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "LDA244 - Service à la communauté - Semestre 4 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "LDA244 - Service à la Communauté - Semestre 4 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "LDA244 - Service a la Communaute - Semestre 4 / Session 2",
+        "variants": [
+          {
+            "name": "LDA244 - Service à la communauté - Semestre 4 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "LDA244 - Service à la Communauté - Semestre 4 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "GLRS361 - Communication et Comportements Professionnels - Semestre 6 / Session 1",
+        "variants": [
+          {
+            "name": "GLRS361 - Communication et Comportements Professionnels - Semestre 6 / Session 1",
+            "count": 14
+          },
+          {
+            "name": "GLRS361 - Communication et Comportements Professionnels - Semestre 6 / session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "LCDSD116 - PROFESSIONNALISATION - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LCDSD116 - Professionnalisation - Semestre 1 / Session 1",
+            "count": 15
+          },
+          {
+            "name": "LCDSD116 - PROFESSIONNALISATION - Semestre 1 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD113 - DESIGN (Motion Video) - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "LCPD113 - Design (Motion Vidéo) - Semestre 1 / Session 1",
+            "count": 15
+          },
+          {
+            "name": "LCPD113 - DESIGN (Motion Vidéo) - Semestre 1 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "LCPD364 - Strategie digitale - Semestre 6 / Session 1",
+        "variants": [
+          {
+            "name": "LCPD364 - Stratégie digitale - Semestre 6 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "LCPD364 - Stratégie Digitale - Semestre 6 / session 1",
+            "count": 3
+          },
+          {
+            "name": "LCPD364 - Stratégie Digitale - Semestre 6 / Session 1",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "canonical": "BA 113 - Techniques Comptables et Financieres - Semestre 1 / Session 1",
+        "variants": [
+          {
+            "name": "BA 113 - Techniques Comptables et Financières - Semestre 1 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "BA 113 - Techniques comptables et financières - Semestre 1 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "BA 113 - Techniques Comptables et Financieres - Semestre 1 / Session 2",
+        "variants": [
+          {
+            "name": "BA 113 - Techniques Comptables et Financières - Semestre 1 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "BA 113 - Techniques comptables et financières - Semestre 1 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ING 121 - Finance d'Entreprise - Semestre 2 / Session 1",
+        "variants": [
+          {
+            "name": "ING 121 - Finance d'Entreprise - Semestre 2 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "ING 121 - Finance d'entreprise - Semestre 2 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ING 121 - Finance d'Entreprise - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "ING 121 - Finance d'Entreprise - Semestre 2 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "ING 121 - Finance d'entreprise - Semestre 2 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 121 - Procedures d'Audit - Semestre 2 / Session 1",
+        "variants": [
+          {
+            "name": "ACG 121 - Procédures d'Audit - Semestre 2 / Session 1",
+            "count": 12
+          },
+          {
+            "name": "ACG 121 - Procédures d'audit - Semestre 2 / Session 1",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "ACG 121 - Procedures d'Audit - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "ACG 121 - Procédures d'Audit - Semestre 2 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "ACG 121 - Procédures d'audit - Semestre 2 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "MBA 123 - Communication et Medias - Semestre 2 / Session 2",
+        "variants": [
+          {
+            "name": "MBA 123 - Communication et médias - Semestre 2 / Session 2",
+            "count": 12
+          },
+          {
+            "name": "MBA 123 - Communication et Médias - Semestre 2 / Session 2",
+            "count": 6
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 234 - Regulation internationale - Semestre 3 / session 1",
+        "variants": [
+          {
+            "name": "SPRI 234 - Régulation internationale - Semestre 3 / session 1",
+            "count": 8
+          },
+          {
+            "name": "SPRI 234 - Régulation internationale - Semestre 3 / Session 1",
+            "count": 6
+          },
+          {
+            "name": "SPRI 234 - Régulation Internationale - Semestre 3 / session 1",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 243 - Analyse electorale - Semestre 4 / Session 1",
+        "variants": [
+          {
+            "name": "SPRI 243 - Analyse électorale - Semestre 4 / Session 1",
+            "count": 16
+          },
+          {
+            "name": "SPRI 243 - Analyse electorale - Semestre 4 / Session 1",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "canonical": "SPRI 235 - Pensees politiques et pouvoir - Semestre 3 / session 1",
+        "variants": [
+          {
+            "name": "SPRI 235 - Pensées politiques et pouvoir - Semestre 3 / session 1",
+            "count": 12
+          },
+          {
+            "name": "SPRI 235 - Pensées politiques et pouvoir - Semestre 3 / Session 1",
+            "count": 6
+          }
+        ]
+      }
+    ]
+  }
+}

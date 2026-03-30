@@ -68,6 +68,7 @@
     <button class="tab-btn" onclick="switchTab('groupe')">Chiffres Clés</button>
     <button class="tab-btn" onclick="switchTab('qualite')">Qualité</button>
     <button class="tab-btn" onclick="switchTab('palmares')">Palmarès</button>
+    <button class="tab-btn" onclick="switchTab('audit')">Audit</button>
   </div>
 
   <!-- TAB 1 EXTRACTION -->
@@ -143,6 +144,61 @@
     </div>
   </div>
 
+  <!-- TAB 5 AUDIT -->
+  <div id="tab-audit" class="tab-content">
+    <div class="kpi-grid" id="auditKpiGrid"></div>
+
+    <div class="section">
+      <h2>Matières — Doublons</h2>
+      <input class="search-box" id="matDoublonSearch" placeholder="Rechercher une matière..." oninput="filterAuditTable('matDoublonSearch', 'matDoublonTable')">
+      <div style="overflow-x:auto">
+        <table><thead><tr><th>Matière canonique</th><th>Variantes</th><th>Total</th></tr></thead><tbody id="matDoublonTable"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>UE — Couverture</h2>
+      <div class="kpi-grid" id="ueStatsGrid"></div>
+      <div style="overflow-x:auto">
+        <table><thead><tr><th>UE canonique</th><th>Variantes</th><th>Variantes (count)</th></tr></thead><tbody id="ueDoublonTable"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Périodes — Anomalies</h2>
+      <div style="overflow-x:auto">
+        <table><thead><tr><th>Licence</th><th>École</th><th>Année</th><th>Périodes trouvées</th><th>Attendu</th><th>Anomalie</th></tr></thead><tbody id="periodAnomalyTable"></tbody></table>
+      </div>
+      <h3 style="margin-top:20px;color:var(--text-muted);font-size:.9rem">À supprimer ({count})</h3>
+      <div id="toDeleteList" style="color:var(--text-muted);font-size:.85rem;line-height:1.8"></div>
+      <h3 style="margin-top:20px;color:var(--text-muted);font-size:.9rem">Placeholders XXXX ({count})</h3>
+      <div id="placeholderList" style="color:var(--text-muted);font-size:.85rem;line-height:1.8"></div>
+    </div>
+
+    <div class="section">
+      <h2>Notes — Grades uniformes</h2>
+      <p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Matières avec la même note pour tous les élèves (risque de non-remplissage)</p>
+      <div style="overflow-x:auto">
+        <table><thead><tr><th>Licence</th><th>Classe</th><th>Matière</th><th>Grade</th><th>Type</th><th>Élèves</th></tr></thead><tbody id="uniformGradesTable"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Élèves — Complétude</h2>
+      <div id="completudeCharts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px"></div>
+      <h3 style="margin-top:20px;color:var(--text);font-size:.95rem">DOB Suspectes</h3>
+      <p style="color:var(--text-muted);font-size:.8rem;margin-bottom:12px">Trop jeune (&lt;15 ans) ou trop âgé (&gt;50 ans) relativement à l'année de la licence</p>
+      <div style="overflow-x:auto">
+        <table><thead><tr><th>Élève</th><th>DOB</th><th>Classe</th><th>École</th><th>Anomalie</th></tr></thead><tbody id="suspiciousDOBTable"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Classes administratives</h2>
+      <div id="adminClassList" style="color:var(--text-muted);font-size:.9rem;line-height:1.8"></div>
+    </div>
+  </div>
+
   <div id="modalContainer"></div>
   <div class="footer">Groupe ISM — Migration ClassExpert · Dashboard auto-généré</div>
 
@@ -151,8 +207,8 @@ let DATA=null,currentFilter='all',currentTab='extraction';
 const C={};
 function dc(k){if(C[k]){C[k].destroy();delete C[k];}}
 function sc(k,c){C[k]=c;}
-function switchTab(t){currentTab=t;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelector(`.tab-btn[onclick="switchTab('${t}')"]`).classList.add('active');document.getElementById('tab-'+t).classList.add('active');if(DATA)renderTab();}
-function renderTab(){({extraction:renderExtraction,groupe:renderGroupeISM,qualite:renderQualite,palmares:renderPalmares})[currentTab]();}
+function switchTab(t){currentTab=t;document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelector(`.tab-btn[onclick="switchTab('${t}')"]`).classList.add('active');document.getElementById('tab-'+t).classList.add('active');if(DATA||t==='audit')renderTab();}
+function renderTab(){({extraction:renderExtraction,groupe:renderGroupeISM,qualite:renderQualite,palmares:renderPalmares,audit:renderAudit})[currentTab]();}
 async function loadData(){try{DATA=await(await fetch('dashboard-data.json')).json();document.getElementById('updatedAt').textContent='Mis à jour: '+fmtDate(DATA.generatedAt);renderTab();}catch(e){document.body.innerHTML='<div style="text-align:center;padding:100px;color:#ef4444"><h2>Impossible de charger dashboard-data.json</h2></div>';}}
 function fmtNum(n){if(n==null)return'—';return Number(n).toLocaleString('fr-FR');}
 function fmtDate(iso){if(!iso)return'—';return new Date(iso).toLocaleDateString('fr-FR',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}
@@ -477,7 +533,85 @@ function showSchoolModal(name){
 }
 function closeModal(){document.getElementById('modalContainer').innerHTML='';}
 
-loadData();setInterval(loadData,1800000);setInterval(()=>location.reload(),7200000);
+// ═══════════ TAB 5 AUDIT ═══════════
+let AUDIT_DATA=null;
+async function loadAuditData(){
+  try{
+    AUDIT_DATA=await(await fetch('audit-data.json')).json();
+    if(currentTab==='audit')renderAudit();
+  }catch(e){
+    console.error('Failed to load audit-data.json',e);
+  }
+}
+function filterAuditTable(searchId,tableId){
+  const q=(document.getElementById(searchId).value||'').toLowerCase();
+  const rows=document.querySelectorAll(`#${tableId} tr`);
+  rows.forEach(row=>{
+    const text=row.textContent.toLowerCase();
+    row.style.display=text.includes(q)?'':'none';
+  });
+}
+function renderAudit(){
+  if(!AUDIT_DATA){loadAuditData();return;}
+  const A=AUDIT_DATA;
+
+  // KPI cards
+  const kpis=[
+    {v:A.summary.totalIssues,l:'Total issues',c:'var(--red)'},
+    {v:A.summary.critical,l:'Critiques',c:'var(--red)'},
+    {v:A.summary.warning,l:'Avertissements',c:'var(--yellow)'},
+    {v:A.summary.info,l:'Info',c:'var(--blue)'},
+  ];
+  document.getElementById('auditKpiGrid').innerHTML=kpis.map(k=>`<div class="kpi-card"><div class="value" style="color:${k.c}">${fmtNum(k.v)}</div><div class="label">${k.l}</div></div>`).join('');
+
+  // Matière doublons
+  document.getElementById('matDoublonTable').innerHTML=(A.matieres.duplicateGroups||[]).map(g=>`<tr><td><strong>${g.canonical}</strong></td><td>${g.variants.map(v=>'<span style="color:var(--text-muted);font-size:.85rem">'+v.name+' ('+v.count+')</span>').join('<br>')}</td><td><strong>${g.totalCount}</strong></td></tr>`).join('')||'<tr><td colspan="3" style="text-align:center;color:var(--text-muted)">Aucun doublon</td></tr>';
+
+  // UE stats
+  const ueStats=[
+    {v:A.ue.totalOccurrences,l:'Total occurrences'},
+    {v:A.ue.uniqueCount,l:'Uniques'},
+    {v:A.ue.emptyCount,l:'Vides'},
+  ];
+  document.getElementById('ueStatsGrid').innerHTML=ueStats.map(k=>'<div class="kpi-card"><div class="value" style="color:var(--blue)">'+fmtNum(k.v)+'</div><div class="label">'+k.l+'</div></div>').join('');
+  document.getElementById('ueDoublonTable').innerHTML=(A.ue.duplicateGroups||[]).slice(0,50).map(g=>'<tr><td><strong>'+g.canonical+'</strong></td><td>'+g.variants.map(v=>v.name).join(', ')+'</td><td>'+g.variants.map(v=>v.count).join(', ')+'</td></tr>').join('')||'<tr><td colspan="3" style="text-align:center;color:var(--text-muted)">Aucun doublon UE</td></tr>';
+
+  // Période anomalies
+  document.getElementById('periodAnomalyTable').innerHTML=(A.periodes.anomalies||[]).map(a=>`<tr><td>${a.licence}</td><td>${a.school}</td><td>${a.year}</td><td>${a.periodCount}</td><td>${a.expected}</td><td><span class="badge" style="background:${a.issue==='excess'?'var(--orange-bg)':'var(--red-bg)'},color:${a.issue==='excess'?'var(--orange)':'var(--red)'}">${a.issue==='excess'?'Excédent':'Déficit'}</span></td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune anomalie de période</td></tr>';
+
+  document.getElementById('toDeleteList').textContent=(A.periodes.toDelete||[]).join(', ')||'Aucune';
+  document.getElementById('toDeleteList').parentElement.querySelector('h3').textContent='À supprimer ('+A.periodes.toDelete.length+')';
+  document.getElementById('placeholderList').textContent=(A.periodes.placeholders||[]).join(', ')||'Aucune';
+  document.getElementById('placeholderList').parentElement.querySelector('h3').textContent='Placeholders XXXX ('+A.periodes.placeholders.length+')';
+
+  // Notes uniformes
+  document.getElementById('uniformGradesTable').innerHTML=(A.notes.uniformGrades||[]).map(n=>`<tr><td>${n.licence}</td><td>${n.classe}</td><td>${n.matiere}</td><td style="font-weight:700">${n.grade}</td><td>${n.type}</td><td>${n.studentCount}</td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;color:var(--text-muted)">Aucune note uniforme</td></tr>';
+
+  // Élèves complétude
+  const comp=A.eleves.completude;
+  const fields=['nom','sexe','dateNaissance','nationalite','email','telephone','identifiant'];
+  const labels={nom:'Nom',sexe:'Sexe',dateNaissance:'DOB',nationalite:'Nationalité',email:'Email',telephone:'Téléphone',identifiant:'Identifiant'};
+  document.getElementById('completudeCharts').innerHTML=fields.map(f=>{
+    const d=comp[f];
+    const barColor=d.pct>=80?'var(--green)':d.pct>=50?'var(--yellow)':'var(--red)';
+    return \`<div class="chart-card">
+      <h3>\${labels[f]}</h3>
+      <div style="margin-bottom:8px"><strong style="color:\${barColor}">\${d.pct}%</strong><span style="color:var(--text-muted);font-size:.8rem"> \${fmtNum(d.filled)}/\${fmtNum(d.total)}</span></div>
+      <div class="quality-bar"><div class="quality-fill" style="width:\${d.pct}%;background:\${barColor}"></div></div>
+    </div>\`;
+  }).join('');
+
+  // Suspicious DOB
+  document.getElementById('suspiciousDOBTable').innerHTML=(A.eleves.suspiciousDOB||[]).map(s=>{
+    const badge=s.issue==='too young'?'<span class="badge badge-empty">Trop jeune</span>':s.issue==='too old'?'<span class="badge badge-empty">Trop âgé</span>':'<span class="badge badge-empty">Future</span>';
+    return \`<tr><td>\${s.eleve}</td><td>\${s.dob}</td><td>\${s.classe}</td><td>\${s.licence}</td><td>\${badge}</td></tr>\`;
+  }).join('')||'<tr><td colspan="5" style="text-align:center;color:var(--text-muted)">Aucune DOB suspecte</td></tr>';
+
+  // Admin classes
+  document.getElementById('adminClassList').innerHTML=(A.classes.administrative||[]).map(c=>\`<div>• \${c}</div>\`).join('')||'Aucune classe administrative';
+}
+
+loadData();loadAuditData();setInterval(loadData,1800000);setInterval(loadAuditData,1800000);setInterval(()=>location.reload(),7200000);
 </script>
 </body>
 </html>
