@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-03-30T20:00:01.105Z",
+  "generatedAt": "2026-03-30T20:05:00.817Z",
   "summary": {
-    "done": 56,
+    "done": 55,
     "skip": 8,
-    "inProgress": 1,
+    "inProgress": 2,
     "total": 65
   },
   "totalClasses": 2279,
-  "totalEleves": 57079,
-  "totalMatieres": 4726,
+  "totalEleves": 58224,
+  "totalMatieres": 4686,
   "totalPeriodes": 74,
-  "totalEnseignants": 522,
+  "totalEnseignants": 526,
   "totalEntries": {
-    "notes": 1277728,
+    "notes": 1249090,
     "assiduite": 218752,
     "classes": 2277,
-    "pupils": 64
+    "pupils": 65
   },
-  "uniqueEleves": 31139,
+  "uniqueEleves": 31850,
   "uniqueEnseignants": 202,
-  "uniqueMatieresGlobal": 4160,
+  "uniqueMatieresGlobal": 4207,
   "schools": {
     "ISM-DAKAR": {
       "years": [
@@ -257,21 +257,21 @@
         "2024-2025",
         "2025-2026"
       ],
-      "doneCount": 10,
+      "doneCount": 9,
       "skipCount": 0,
-      "inProgressCount": 0,
+      "inProgressCount": 1,
       "nbClasses": 314,
-      "nbEleves": 7022,
-      "nbEnseignants": 70,
+      "nbEleves": 8167,
+      "nbEnseignants": 74,
       "scrapers": {
         "notes": {
-          "ok": 6561,
+          "ok": 5441,
           "empty": 70,
           "error": 0,
-          "noperiod": 94,
-          "nofield": 941,
-          "total": 7666,
-          "totalEntries": 146770
+          "noperiod": 85,
+          "nofield": 901,
+          "total": 6497,
+          "totalEntries": 118132
         },
         "assiduite": {
           "ok": 1397,
@@ -292,13 +292,13 @@
           "totalEntries": 314
         },
         "pupils": {
-          "ok": 9,
+          "ok": 10,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
-          "total": 9,
-          "totalEntries": 9
+          "total": 10,
+          "totalEntries": 10
         }
       }
     },
@@ -563,6 +563,62 @@
           "nofield": 0,
           "validated": 0,
           "totalEntries": 4719
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
+      "name": "ISM_Dakar_Graduate_School_2025-2026",
+      "displayName": "ISM Dakar Graduate School 2025-2026",
+      "school": "ISM Dakar Graduate School",
+      "year": "2025-2026",
+      "status": "in_progress",
+      "nbClasses": 0,
+      "nbEleves": 1145,
+      "nbEnseignants": 4,
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 500,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-30T20:04:26.486Z",
+      "scrapers": {
+        "classes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "notes": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
+        },
+        "assiduite": {
+          "total": 0,
+          "ok": 0,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 0
         },
         "pupils": {
           "total": 1,
@@ -2705,62 +2761,6 @@
       }
     },
     {
-      "name": "ISM_Dakar_Graduate_School_2025-2026",
-      "displayName": "ISM Dakar Graduate School 2025-2026",
-      "school": "ISM Dakar Graduate School",
-      "year": "2025-2026",
-      "status": "done",
-      "nbClasses": 0,
-      "nbEleves": 0,
-      "nbEnseignants": 0,
-      "nbMatieres": 304,
-      "nbMatieresGlobal": 0,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-27T03:11:07.232Z",
-      "scrapers": {
-        "classes": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        },
-        "notes": {
-          "total": 1169,
-          "ok": 1120,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 9,
-          "nofield": 40,
-          "validated": 0,
-          "totalEntries": 28638
-        },
-        "assiduite": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        },
-        "pupils": {
-          "total": 0,
-          "ok": 0,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 0
-        }
-      }
-    },
-    {
       "name": "ISM_Dakar_Madiba_Leadership_Institut",
       "displayName": "ISM Dakar Madiba Leadership Institut",
       "school": "ISM Dakar Madiba Leadership Institut",
@@ -4162,9 +4162,9 @@
     }
   ],
   "doublons": {
-    "eleves": 21566,
-    "enseignants": 320,
-    "matieresGlobal": 15893
+    "eleves": 22000,
+    "enseignants": 324,
+    "matieresGlobal": 16346
   },
   "business": {
     "effectifs": {
@@ -4179,6 +4179,18 @@
         "2022-2023": 1478,
         "2024-2025": 1428,
         "2025-2026": 1558
+      },
+      "ISM Dakar Graduate School": {
+        "2025-2026": 1145,
+        "courant": 661,
+        "2017-2018": 609,
+        "2018-2019": 640,
+        "2019-2020": 697,
+        "2020-2021": 638,
+        "2021-2022": 845,
+        "2022-2023": 987,
+        "2023-2024": 892,
+        "2024-2025": 1053
       },
       "ISM Dakar Ecole de Droit": {
         "courant": 614,
@@ -4203,18 +4215,6 @@
         "2023-2024": 1614,
         "2024-2025": 1571,
         "2025-2026": 1856
-      },
-      "ISM Dakar Graduate School": {
-        "courant": 661,
-        "2017-2018": 609,
-        "2018-2019": 640,
-        "2019-2020": 697,
-        "2020-2021": 638,
-        "2021-2022": 845,
-        "2022-2023": 987,
-        "2023-2024": 892,
-        "2024-2025": 1053,
-        "2025-2026": 0
       },
       "ISM Dakar Madiba Leadership Institut": {
         "courant": 325,
@@ -4601,14 +4601,23 @@
       },
       "niveaux": {
         "ADMIS NON INSCRITS": 2716,
-        "NON INSCRITS": 1503,
+        "NON INSCRITS": 1527,
         "LICENCE 1": 6953,
         "LICENCE 2": 6137,
         "LICENCE 3": 5252,
         "LICENCE 1 R2": 997,
-        "MBA 1": 5263,
-        "MBA 2": 5102,
+        "MBA 1": 5453,
+        "MBA 2": 5311,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 52,
+        "BP3-PRO": 16,
+        "EMBA": 141,
+        "MBA 1 Cours du Soir": 1089,
+        "M1 MARCHE FINANCIER ET TRADING": 6,
+        "M1 FINANCE DIGITALE": 19,
+        "MBA 1 Pétrole & Gaz": 75,
+        "MBA 2 Cours du Soir": 629,
+        "M2 FINANCE DIGITALE": 5,
+        "MBA 2 Pétrole & Gaz": 43,
         "IIA - ALBI": 22,
         "Licence 1": 1315,
         "Licence 2": 1193,
@@ -4647,11 +4656,6 @@
         "E4IMPACT": 6,
         "EXECUTIVE MBA": 34,
         "E-4 IMPACT": 20,
-        "EMBA": 123,
-        "MBA 1 Cours du Soir": 713,
-        "MBA 1 Pétrole & Gaz": 48,
-        "MBA 2 Cours du Soir": 401,
-        "MBA 2 Pétrole & Gaz": 16,
         "Licence 3 - EXTERNE": 38,
         "IESA": 7,
         "MBA 2 MPSD": 22,
@@ -4730,8 +4734,8 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.33,
-      "totalNotes": 2339736,
+      "moyenneGlobale": 11.56,
+      "totalNotes": 2290315,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6049859.860000055,
@@ -4749,9 +4753,9 @@
           "moy": 11.53
         },
         "ISM Dakar Graduate School": {
-          "sum": 2665677.860000026,
-          "count": 264552,
-          "moy": 10.08
+          "sum": 2626446.680000021,
+          "count": 215131,
+          "moy": 12.21
         },
         "ISM Dakar Madiba Leadership Institut": {
           "sum": 2243795.2500000075,
@@ -4791,9 +4795,9 @@
           "taux": 76.6
         },
         "ISM Dakar Graduate School": {
-          "reussi": 176996,
-          "total": 264552,
-          "taux": 66.9
+          "reussi": 174461,
+          "total": 215131,
+          "taux": 81.1
         },
         "ISM Dakar Madiba Leadership Institut": {
           "reussi": 149824,
@@ -4819,8 +4823,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.04,
-          "count": 37173
+          "moy": 11.62,
+          "count": 35329
         },
         {
           "matiere": "Business Communication",
@@ -4920,12 +4924,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.55,
-          "count": 1169902
+          "moy": 11.78,
+          "count": 1145192
         },
         "exam": {
-          "moy": 11.11,
-          "count": 1169834
+          "moy": 11.33,
+          "count": 1145123
         }
       }
     },
@@ -6561,21 +6565,21 @@
           "tauxReussite": 0
         },
         {
-          "matiere": "Organisation et Gestion Fnancière des Evénements",
-          "moy": 0,
-          "count": 24,
-          "tauxReussite": 0
-        },
-        {
           "matiere": "Méthodologie de Rédaction de Mémoire ",
           "moy": 0,
           "count": 20,
           "tauxReussite": 0
         },
         {
-          "matiere": "Comportement Organisationnel ",
+          "matiere": "Diplomatie d'entreprise et Stratégie d'influence",
           "moy": 0,
-          "count": 26,
+          "count": 42,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Intelligence économique et Stratégique",
+          "moy": 0,
+          "count": 42,
           "tauxReussite": 0
         }
       ],
@@ -6674,9 +6678,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.04,
-          "count": 37173,
-          "tauxReussite": 73.9
+          "moy": 11.62,
+          "count": 35329,
+          "tauxReussite": 77.8
         },
         {
           "matiere": "Business Communication",
@@ -6772,6 +6776,13 @@
         "lastYear": 1558,
         "growth": 174.3
       },
+      "ISM Dakar Graduate School": {
+        "slope": 68.7,
+        "predict2027": 1178,
+        "predict2028": 1246,
+        "lastYear": 1145,
+        "growth": 88
+      },
       "ISM Dakar Ecole de Droit": {
         "slope": 84.3,
         "predict2027": 1392,
@@ -6785,13 +6796,6 @@
         "predict2028": 2082,
         "lastYear": 1856,
         "growth": 122.3
-      },
-      "ISM Dakar Graduate School": {
-        "slope": -7.6,
-        "predict2027": 669,
-        "predict2028": 661,
-        "lastYear": 0,
-        "growth": -100
       },
       "ISM Dakar Madiba Leadership Institut": {
         "slope": 6,
