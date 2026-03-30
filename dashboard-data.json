@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:45:00.768Z",
+  "generatedAt": "2026-03-30T20:50:00.808Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4683,9 +4683,14 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.55,
-      "totalNotes": 2316091,
+      "moyenneGlobale": 11.53,
+      "totalNotes": 2321193,
       "moyenneParEcole": {
+        "ISM Dakar Graduate School": {
+          "sum": 2628863.7700000214,
+          "count": 220233,
+          "moy": 11.94
+        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
           "count": 547698,
@@ -4700,11 +4705,6 @@
           "sum": 8565258.230000312,
           "count": 743012,
           "moy": 11.53
-        },
-        "ISM Dakar Graduate School": {
-          "sum": 2626446.680000021,
-          "count": 215131,
-          "moy": 12.21
         },
         "ISM Dakar Madiba Leadership Institut": {
           "sum": 2243795.2500000075,
@@ -4723,6 +4723,11 @@
         }
       },
       "tauxReussite": {
+        "ISM Dakar Graduate School": {
+          "reussi": 174604,
+          "total": 220233,
+          "taux": 79.3
+        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
           "total": 547698,
@@ -4737,11 +4742,6 @@
           "reussi": 569127,
           "total": 743012,
           "taux": 76.6
-        },
-        "ISM Dakar Graduate School": {
-          "reussi": 174461,
-          "total": 215131,
-          "taux": 81.1
         },
         "ISM Dakar Madiba Leadership Institut": {
           "reussi": 149824,
@@ -4762,8 +4762,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.61,
-          "count": 35477
+          "moy": 11.5,
+          "count": 35823
         },
         {
           "matiere": "Business Communication",
@@ -4863,12 +4863,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.78,
-          "count": 1158085
+          "moy": 11.75,
+          "count": 1160636
         },
         "exam": {
-          "moy": 11.33,
-          "count": 1158006
+          "moy": 11.3,
+          "count": 1160557
         }
       }
     },
@@ -6436,6 +6436,48 @@
     "palmares": {
       "plusDifficiles": [
         {
+          "matiere": "Comportement Organisationnel ",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Rédaction & Soutenance Business Plan",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Informatique Appliquée : Excel",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Management de la Qualité ",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Introduction à la FinTech",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Introduction au Marché Financier",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Droit du travail ",
+          "moy": 0,
+          "count": 30,
+          "tauxReussite": 0
+        },
+        {
           "matiere": "Management de Projets de programme et de portefeuille ",
           "moy": 0,
           "count": 26,
@@ -6481,48 +6523,6 @@
           "matiere": "Analyse statistique et reporting(*Certification Professionnelle Alteryx)",
           "moy": 0,
           "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Certification Professionnelle Google-Webanalytics",
-          "moy": 0,
-          "count": 26,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Microeconomics ",
-          "moy": 0,
-          "count": 82,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Personal Development ",
-          "moy": 0,
-          "count": 82,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Introduction à la Santé et Sécurité au Travail",
-          "moy": 0,
-          "count": 80,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Méthodologie de Rédaction de Mémoire ",
-          "moy": 0,
-          "count": 20,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Diplomatie d'entreprise et Stratégie d'influence",
-          "moy": 0,
-          "count": 42,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Intelligence économique et Stratégique",
-          "moy": 0,
-          "count": 42,
           "tauxReussite": 0
         }
       ],
@@ -6621,9 +6621,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.61,
-          "count": 35477,
-          "tauxReussite": 77.7
+          "moy": 11.5,
+          "count": 35823,
+          "tauxReussite": 76.9
         },
         {
           "matiere": "Business Communication",
