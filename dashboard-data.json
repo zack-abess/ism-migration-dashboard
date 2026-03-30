@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T18:55:00.534Z",
+  "generatedAt": "2026-03-30T19:00:00.734Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -14,7 +14,7 @@
   "totalEntries": {
     "notes": 1240345,
     "assiduite": 218752,
-    "classes": 2227,
+    "classes": 2277,
     "pupils": 64
   },
   "uniqueEleves": 31139,
@@ -109,13 +109,13 @@
           "totalEntries": 27343
         },
         "classes": {
-          "ok": 388,
+          "ok": 438,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
-          "total": 388,
-          "totalEntries": 388
+          "total": 438,
+          "totalEntries": 438
         },
         "pupils": {
           "ok": 10,
@@ -532,17 +532,17 @@
       "nbMatieres": 0,
       "nbMatieresGlobal": 819,
       "nbPeriodes": 0,
-      "lastModified": "2026-03-30T18:28:40.067Z",
+      "lastModified": "2026-03-30T18:57:08.451Z",
       "scrapers": {
         "classes": {
-          "total": 0,
-          "ok": 0,
+          "total": 50,
+          "ok": 50,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 50
         },
         "notes": {
           "total": 0,
@@ -4254,48 +4254,51 @@
     },
     "demographics": {
       "sexe": {
-        "M": 21676,
-        "F": 27383,
-        "inconnu": 1603
+        "M": 21760,
+        "F": 27423,
+        "inconnu": 1605
       },
       "boursiers": 7602,
       "redoublants": 365,
       "exempts": 150,
-      "totalPupils": 50662,
+      "totalPupils": 50788,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
+        "TCHADIENNE": 1131,
+        "GABONAISE": 5629,
+        "TOGOLAISE": 1104,
+        "SENEGALAISE": 23828,
+        "BURKINABE": 687,
+        "GUINEENNE": 1618,
+        "IVOIRIENNE": 944,
+        "MALIENNE": 1070,
+        "NIGERIENNE": 1163,
+        "HAÏTIENNE": 15,
+        "BENINOISE": 870,
+        "HAITIENNE": 35,
+        "CONGOLAISE": 2320,
+        "Haitienne": 3,
+        "CAMEROUN": 3,
         "BISSAU GUINEENNE": 29,
-        "SENEGALAISE": 23773,
-        "TCHADIENNE": 1126,
-        "GUINEENNE": 1610,
-        "GABONAISE": 5608,
-        "BENINOISE": 865,
-        "CAMEROUNAISE": 504,
-        "MALIENNE": 1068,
-        "TOGOLAISE": 1102,
+        "CAMEROUNAISE": 507,
+        "SENEGAL": 18,
         "SENEGLAISE": 21,
-        "NIGERIENNE": 1161,
-        "CONGOLAISE": 2317,
         "MAURITANIENNE": 432,
         "MAROCAINE": 34,
-        "BURKINABE": 680,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
-        "IVOIRIENNE": 941,
         "CANADO-MALIENNE": 3,
         "COMORIENNE": 123,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 589,
+        "CENTRAFRICAINE": 590,
         "SENEGGALAISE": 2,
         "GUINÉENNE": 6,
-        "HAÏTIENNE": 13,
         "ITALIENNE": 29,
         "FRANCO SENEGALAISE": 3,
         "Senegalaise": 37,
-        "HAITIENNE": 34,
         "SENEGALAIS": 10,
         "ALGERIENNE": 12,
         "Sénégalaise": 1928,
@@ -4338,7 +4341,6 @@
         "BISSAUGUINEENNE": 1,
         "EQUATOGUINENNE": 2,
         "GUINEEN": 6,
-        "SENEGAL": 16,
         "GABONNAISE": 32,
         "TOGALAISE": 3,
         "NIGERIENE": 7,
@@ -4389,7 +4391,6 @@
         "Burkinabé": 61,
         "Malgache": 3,
         "Camerounaise": 31,
-        "Haitienne": 2,
         "sénégalaise": 6,
         "Béninoise": 63,
         "Dakar": 1,
@@ -4548,7 +4549,6 @@
         "BISSAU-GUINÉENNE": 2,
         "NIGIENNE": 1,
         "GANBONAISE": 5,
-        "CAMEROUN": 2,
         "GABONIAISE": 2,
         "SENEGALALISE": 3,
         "FRANCO-CONGOLAISE": 1,
@@ -4592,11 +4592,11 @@
         "LCM3": 1
       },
       "ages": {
-        "26-30": 16018,
-        "21-23": 10225,
-        "24-25": 8114,
-        "18-20": 3961,
-        ">30": 10804,
+        "24-25": 8128,
+        "26-30": 16035,
+        ">30": 10828,
+        "21-23": 10273,
+        "18-20": 3981,
         "<18": 96
       },
       "niveaux": {
@@ -4672,8 +4672,8 @@
       },
       "sexeParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "M": 5664,
-          "F": 4245
+          "M": 5748,
+          "F": 4285
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4731,12 +4731,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2274697,
+      "totalNotes": 2283308,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5315905.400000062,
-          "count": 456883,
-          "moy": 11.64
+          "sum": 5406969.300000079,
+          "count": 465494,
+          "moy": 11.62
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 344980,
-          "total": 456883,
-          "taux": 75.5
+          "reussi": 350577,
+          "total": 465494,
+          "taux": 75.3
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4833,19 +4833,19 @@
           "count": 18019
         },
         {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.71,
+          "count": 17096
+        },
+        {
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063
         },
         {
-          "matiere": "Comptabilité Générale 2",
-          "moy": 10.72,
-          "count": 16944
-        },
-        {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.8,
-          "count": 16623
+          "moy": 10.78,
+          "count": 16809
         },
         {
           "matiere": "Introduction au Management",
@@ -4920,12 +4920,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.56,
-          "count": 1137349
+          "moy": 11.55,
+          "count": 1141658
         },
         "exam": {
           "moy": 11.1,
-          "count": 1137348
+          "count": 1141650
         }
       }
     },
@@ -4968,6 +4968,7 @@
     },
     "structure": {
       "niveauxDistrib": {
+        "NON INSCRITS": 32,
         "ADMIS NON INSCRITS": 30,
         "LICENCE 1": 215,
         "LICENCE 2": 199,
@@ -4975,6 +4976,7 @@
         "LICENCE 1 R2": 29,
         "MBA 1": 290,
         "MBA 2": 256,
+        "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
@@ -4987,8 +4989,6 @@
         "ETUDIANT A SUPPRIMER": 1,
         "MBA 1 ONLINE S1": 5,
         "MBA 2 ONLINE S1": 3,
-        "NON INSCRITS": 30,
-        "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 2,
         "MBA1 Soir": 1,
         "Master 2": 6,
         "Master 1": 7,
@@ -5044,7 +5044,7 @@
       },
       "filieresDistrib": {
         "Sciences et Technologies": 255,
-        "Sciences Economiques et Gestion": 36,
+        "Sciences Economiques et Gestion": 37,
         "Sciences et Techniques": 15,
         "Sciences Economique et Sociales": 5,
         "SCIENCES ECONOMIQUE ET SOCIALES": 4,
@@ -5096,20 +5096,20 @@
       }
     },
     "quality": {
-      "total": 54654,
+      "total": 54780,
       "completude": {
-        "sexe": 91.1,
-        "nationalite": 86.8,
+        "sexe": 91.2,
+        "nationalite": 86.9,
         "dateNaissance": 91.5,
         "email": 78.4,
-        "telephone": 73.9
+        "telephone": 73.8
       },
       "missing": {
-        "sexe": 4845,
-        "nationalite": 7198,
-        "dateNaissance": 4628,
-        "email": 11826,
-        "telephone": 14251
+        "sexe": 4847,
+        "nationalite": 7200,
+        "dateNaissance": 4631,
+        "email": 11831,
+        "telephone": 14345
       }
     },
     "anomalies": {
@@ -5362,6 +5362,12 @@
         "school": "Ecole de Droit",
         "moyNotes": 8.02,
         "moyAbsences": 53.1
+      },
+      {
+        "classe": "L1A - IA (IAGE & TTL  A)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.08,
+        "moyAbsences": 52.5
       },
       {
         "classe": "MBA 1 - CCE soir",
@@ -6478,12 +6484,6 @@
         "school": "Madiba Leadership Institut",
         "moyNotes": 11.75,
         "moyAbsences": 26.3
-      },
-      {
-        "classe": "L1D - IA (MAIE & MOSIEF)",
-        "school": "Ecole d'Ingénieurs",
-        "moyNotes": 12.41,
-        "moyAbsences": 26.1
       }
     ],
     "palmares": {
@@ -6691,22 +6691,22 @@
           "tauxReussite": 73.2
         },
         {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.71,
+          "count": 17096,
+          "tauxReussite": 66.1
+        },
+        {
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063,
           "tauxReussite": 86.7
         },
         {
-          "matiere": "Comptabilité Générale 2",
-          "moy": 10.72,
-          "count": 16944,
-          "tauxReussite": 66.2
-        },
-        {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.8,
-          "count": 16623,
-          "tauxReussite": 71.9
+          "moy": 10.78,
+          "count": 16809,
+          "tauxReussite": 71.7
         },
         {
           "matiere": "Introduction au Management",
