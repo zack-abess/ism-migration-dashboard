@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:00:00.734Z",
+  "generatedAt": "2026-03-30T19:05:01.253Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,13 +4730,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.33,
-      "totalNotes": 2283308,
+      "moyenneGlobale": 11.32,
+      "totalNotes": 2290583,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5406969.300000079,
-          "count": 465494,
-          "moy": 11.62
+          "sum": 5481483.800000079,
+          "count": 472769,
+          "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 350577,
-          "total": 465494,
-          "taux": 75.3
+          "reussi": 355105,
+          "total": 472769,
+          "taux": 75.1
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4835,7 +4835,7 @@
         {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.71,
-          "count": 17096
+          "count": 17274
         },
         {
           "matiere": "Actions de Recherche Encadrées",
@@ -4844,8 +4844,8 @@
         },
         {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.78,
-          "count": 16809
+          "moy": 10.75,
+          "count": 16984
         },
         {
           "matiere": "Introduction au Management",
@@ -4898,6 +4898,11 @@
           "count": 9292
         },
         {
+          "matiere": "Business English 2",
+          "moy": 11.68,
+          "count": 8916
+        },
+        {
           "matiere": "Humanitaire",
           "moy": 13.05,
           "count": 8907
@@ -4911,21 +4916,16 @@
           "matiere": "Introduction au Marketing",
           "moy": 11.68,
           "count": 8854
-        },
-        {
-          "matiere": "Développement Personnel ",
-          "moy": 10.54,
-          "count": 8807
         }
       ],
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1141658
+          "count": 1145294
         },
         "exam": {
           "moy": 11.1,
-          "count": 1141650
+          "count": 1145289
         }
       }
     },
@@ -5366,7 +5366,7 @@
       {
         "classe": "L1A - IA (IAGE & TTL  A)",
         "school": "Ecole d'Ingénieurs",
-        "moyNotes": 10.08,
+        "moyNotes": 10.17,
         "moyAbsences": 52.5
       },
       {
@@ -6693,7 +6693,7 @@
         {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.71,
-          "count": 17096,
+          "count": 17274,
           "tauxReussite": 66.1
         },
         {
@@ -6704,9 +6704,9 @@
         },
         {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.78,
-          "count": 16809,
-          "tauxReussite": 71.7
+          "moy": 10.75,
+          "count": 16984,
+          "tauxReussite": 71.2
         },
         {
           "matiere": "Introduction au Management",
