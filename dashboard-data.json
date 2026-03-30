@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T19:45:00.940Z",
+  "generatedAt": "2026-03-30T19:50:00.964Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,13 +4730,13 @@
       }
     },
     "academic": {
-      "moyenneGlobale": 11.33,
-      "totalNotes": 2327006,
+      "moyenneGlobale": 11.32,
+      "totalNotes": 2334623,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5900812.00000006,
-          "count": 509192,
-          "moy": 11.59
+          "sum": 5978069.940000052,
+          "count": 516809,
+          "moy": 11.57
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4776,9 +4776,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 382571,
-          "total": 509192,
-          "taux": 75.1
+          "reussi": 387531,
+          "total": 516809,
+          "taux": 75
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4835,17 +4835,17 @@
         {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.71,
-          "count": 17274
+          "count": 17478
+        },
+        {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.72,
+          "count": 17182
         },
         {
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063
-        },
-        {
-          "matiere": "Comptabilité Générale 1",
-          "moy": 10.75,
-          "count": 16984
         },
         {
           "matiere": "Introduction au Management",
@@ -4899,8 +4899,8 @@
         },
         {
           "matiere": "Business English 2",
-          "moy": 11.7,
-          "count": 8982
+          "moy": 11.56,
+          "count": 9186
         },
         {
           "matiere": "Humanitaire",
@@ -4921,11 +4921,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1163524
+          "count": 1167345
         },
         "exam": {
           "moy": 11.1,
-          "count": 1163482
+          "count": 1167278
         }
       }
     },
@@ -5656,6 +5656,12 @@
         "school": "Graduate School",
         "moyNotes": 11.93,
         "moyAbsences": 36.5
+      },
+      {
+        "classe": "LIAGE 1 - R2",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 9.18,
+        "moyAbsences": 36.4
       },
       {
         "classe": "MASTER2- Fiscalité",
@@ -6478,12 +6484,6 @@
         "school": "Ecole de Droit",
         "moyNotes": 11.8,
         "moyAbsences": 26.6
-      },
-      {
-        "classe": "MBA 1 ACG",
-        "school": "Graduate School",
-        "moyNotes": 11.47,
-        "moyAbsences": 26.6
       }
     ],
     "palmares": {
@@ -6693,20 +6693,20 @@
         {
           "matiere": "Comptabilité Générale 2",
           "moy": 10.71,
-          "count": 17274,
-          "tauxReussite": 66.1
+          "count": 17478,
+          "tauxReussite": 66.2
+        },
+        {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.72,
+          "count": 17182,
+          "tauxReussite": 71
         },
         {
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063,
           "tauxReussite": 86.7
-        },
-        {
-          "matiere": "Comptabilité Générale 1",
-          "moy": 10.75,
-          "count": 16984,
-          "tauxReussite": 71.2
         },
         {
           "matiere": "Introduction au Management",
