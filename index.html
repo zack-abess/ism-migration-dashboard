@@ -301,10 +301,6 @@
       <h3>Assiduité — santé extraction</h3>
       <canvas id="chartAssiduite"></canvas>
     </div>
-    <div class="chart-card">
-      <h3>Classes — santé extraction</h3>
-      <canvas id="chartClasses"></canvas>
-    </div>
   </div>
 
   <div class="progress-section">
@@ -334,8 +330,6 @@
       <thead>
         <tr>
           <th>Licence</th>
-          <th>Année</th>
-          <th>Statut</th>
           <th>Classes</th>
           <th>Élèves</th>
           <th>Profs</th>
@@ -343,7 +337,6 @@
           <th>Périodes</th>
           <th>Notes</th>
           <th>Assiduité</th>
-          <th>Dernière maj</th>
         </tr>
       </thead>
       <tbody id="licenceTable"></tbody>
@@ -461,9 +454,7 @@
       const filtered = currentFilter === 'all' ? DATA.licences : DATA.licences.filter(l => l.status === currentFilter);
       document.getElementById('licenceTable').innerHTML = filtered.map(l => `
         <tr>
-          <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school}</span></td>
-          <td>${l.year}</td>
-          <td><span class="badge badge-${l.status}">${l.status === 'done' ? 'Terminé' : l.status === 'skip' ? 'Ignoré' : 'En cours'}</span></td>
+          <td><strong>${l.displayName}</strong><br><span style="color:var(--text-muted);font-size:.7rem">${l.school} · ${l.year}</span></td>
           <td>${l.nbClasses}</td>
           <td>${formatNum(l.nbEleves) || '—'}</td>
           <td>${l.nbEnseignants || '—'}</td>
@@ -471,7 +462,6 @@
           <td>${l.nbPeriodes || '—'}</td>
           <td>${scraperBadge(l.scrapers.notes)}</td>
           <td>${scraperBadge(l.scrapers.assiduite)}</td>
-          <td style="font-size:.75rem;color:var(--text-muted)">${formatDate(l.lastModified)}</td>
         </tr>
       `).join('');
 
@@ -519,7 +509,6 @@
       const scraperConfigs = [
         { key: 'notes',     canvasId: 'chartNotes',     label: 'Notes',     colors: { ok: '#22c55e', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
         { key: 'assiduite', canvasId: 'chartAssiduite',  label: 'Assiduité', colors: { ok: '#3b82f6', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
-        { key: 'classes',   canvasId: 'chartClasses',    label: 'Classes',   colors: { ok: '#a855f7', empty: '#ef4444', error: '#dc2626', noperiod: '#f97316', nofield: '#eab308' } },
       ];
 
       for (const cfg of scraperConfigs) {
@@ -688,16 +677,16 @@
         window[chartKey] = new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: ['OK', 'Vide', 'Erreur', 'No période', 'No matière'],
+            labels: ['OK', 'Vide', 'No période', 'No matière'],
             datasets: [
               {
                 label: 'Notes',
-                data: [nScraper.ok, nScraper.empty, nScraper.error, nScraper.noperiod, nScraper.nofield],
+                data: [nScraper.ok, nScraper.empty, nScraper.noperiod, nScraper.nofield],
                 backgroundColor: '#3b82f6',
               },
               {
                 label: 'Assiduité',
-                data: [aScraper.ok, aScraper.empty, aScraper.error, aScraper.noperiod, aScraper.nofield],
+                data: [aScraper.ok, aScraper.empty, aScraper.noperiod, aScraper.nofield],
                 backgroundColor: '#f97316',
               },
             ]
