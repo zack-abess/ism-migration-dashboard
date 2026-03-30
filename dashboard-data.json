@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:15:01.000Z",
+  "generatedAt": "2026-03-30T20:20:00.817Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4254,48 +4254,48 @@
     },
     "demographics": {
       "sexe": {
-        "M": 21840,
-        "F": 27532,
+        "M": 21930,
+        "F": 27672,
         "inconnu": 1605
       },
-      "boursiers": 7625,
+      "boursiers": 7635,
       "redoublants": 365,
       "exempts": 150,
-      "totalPupils": 50977,
+      "totalPupils": 51207,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "TCHADIENNE": 1145,
-        "GABONAISE": 5647,
-        "TOGOLAISE": 1106,
-        "SENEGALAISE": 23910,
-        "BURKINABE": 690,
-        "GUINEENNE": 1628,
-        "IVOIRIENNE": 947,
-        "MALIENNE": 1078,
-        "NIGERIENNE": 1171,
+        "TCHADIENNE": 1149,
+        "GABONAISE": 5663,
+        "TOGOLAISE": 1107,
+        "SENEGALAISE": 24046,
+        "BURKINABE": 693,
+        "GUINEENNE": 1638,
+        "IVOIRIENNE": 950,
+        "MALIENNE": 1084,
+        "NIGERIENNE": 1174,
         "HAÏTIENNE": 15,
-        "BENINOISE": 873,
+        "BENINOISE": 880,
         "HAITIENNE": 36,
-        "CONGOLAISE": 2329,
+        "CONGOLAISE": 2348,
         "Haitienne": 3,
         "CAMEROUN": 3,
         "BISSAU GUINEENNE": 29,
-        "CAMEROUNAISE": 516,
+        "CAMEROUNAISE": 518,
         "SENEGAL": 18,
         "SENEGLAISE": 21,
-        "MAURITANIENNE": 435,
+        "MAURITANIENNE": 440,
         "MAROCAINE": 35,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
         "CANADO-MALIENNE": 3,
-        "COMORIENNE": 126,
+        "COMORIENNE": 128,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 595,
+        "CENTRAFRICAINE": 603,
         "SENEGGALAISE": 2,
-        "GUINÉENNE": 6,
+        "GUINÉENNE": 7,
         "ITALIENNE": 29,
         "FRANCO SENEGALAISE": 3,
         "Senegalaise": 37,
@@ -4316,8 +4316,12 @@
         "BURKINABEE": 50,
         "MALGACHE": 26,
         "Française": 27,
+        "FRANÇAISE": 9,
         "GUINEENE": 6,
+        "comorienne": 1,
         "NiGERIENNE": 1,
+        "BISSAU - GUINEENE": 1,
+        "GAMBIENNE": 19,
         "Nigérienne": 110,
         "Français": 1,
         "Guinéenne": 118,
@@ -4377,14 +4381,12 @@
         "senegalaise": 8,
         "SENEGALO MAROCAINE": 1,
         "GUNEENNE": 8,
-        "GAMBIENNE": 18,
         "Ghanaéen": 2,
         "SYRIENNE": 2,
         "SENEGALLAISE": 2,
         "SENEGALO-AMERICAINE": 5,
         "SENEGQLQISE": 2,
         "EGYPTIENNE": 7,
-        "FRANÇAISE": 8,
         "FRANCOSENEGALAISE": 1,
         "CONGOALAISE": 1,
         "GINEENNE": 1,
@@ -4593,11 +4595,11 @@
         "LCM3": 1
       },
       "ages": {
-        "24-25": 8168,
-        "26-30": 16068,
-        ">30": 10858,
-        "21-23": 10352,
-        "18-20": 3988,
+        "24-25": 8216,
+        "26-30": 16111,
+        ">30": 10885,
+        "21-23": 10456,
+        "18-20": 3996,
         "<18": 96
       },
       "niveaux": {
@@ -4681,8 +4683,8 @@
           "F": 4285
         },
         "ISM Dakar Graduate School": {
-          "M": 3067,
-          "F": 3925
+          "M": 3157,
+          "F": 4065
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4715,7 +4717,7 @@
       },
       "boursiersParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": 1610,
-        "ISM Dakar Graduate School": 607,
+        "ISM Dakar Graduate School": 617,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
         "ISM Dakar Madiba Leadership Institut": 990,
@@ -4736,12 +4738,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.56,
-      "totalNotes": 2293587,
+      "totalNotes": 2297896,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6096523.6400000565,
-          "count": 525194,
-          "moy": 11.61
+          "sum": 6151473.850000042,
+          "count": 529503,
+          "moy": 11.62
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4781,8 +4783,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 395251,
-          "total": 525194,
+          "reussi": 398775,
+          "total": 529503,
           "taux": 75.3
         },
         "ISM Dakar Ecole de Droit": {
@@ -4824,8 +4826,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.62,
-          "count": 35329
+          "moy": 11.61,
+          "count": 35477
         },
         {
           "matiere": "Business Communication",
@@ -4926,11 +4928,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.79,
-          "count": 1146828
+          "count": 1148983
         },
         "exam": {
-          "moy": 11.33,
-          "count": 1146759
+          "moy": 11.34,
+          "count": 1148913
         }
       }
     },
@@ -4979,11 +4981,12 @@
         "LICENCE 2": 199,
         "LICENCE 3": 178,
         "LICENCE 1 R2": 29,
-        "MBA 1": 298,
+        "MBA 1": 302,
         "MBA 2": 256,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
         "BP3-PRO": 2,
         "EMBA": 7,
+        "MBA 1 Cours du Soir": 38,
         "M1 MARCHE FINANCIER ET TRADING": 1,
         "M1 FINANCE DIGITALE": 1,
         "M2 FINANCE DIGITALE": 1,
@@ -5028,7 +5031,6 @@
         "E4IMPACT": 1,
         "EXECUTIVE MBA": 2,
         "E-4 IMPACT": 2,
-        "MBA 1 Cours du Soir": 34,
         "MBA 1 Pétrole & Gaz": 3,
         "MBA 2 Cours du Soir": 21,
         "MBA 2 Pétrole & Gaz": 3,
@@ -5060,7 +5062,7 @@
         "Sciences du Numérique": 49,
         "Sciences Economique Et Sociales": 6,
         "Sciences Economiques et Sociales": 5,
-        "Sciences Economiques et de Gestion": 762,
+        "Sciences Economiques et de Gestion": 770,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
@@ -5105,20 +5107,20 @@
       }
     },
     "quality": {
-      "total": 54969,
+      "total": 55199,
       "completude": {
         "sexe": 91.2,
-        "nationalite": 86.9,
+        "nationalite": 87,
         "dateNaissance": 91.6,
-        "email": 78.5,
-        "telephone": 73.9
+        "email": 78.6,
+        "telephone": 74
       },
       "missing": {
         "sexe": 4847,
         "nationalite": 7200,
         "dateNaissance": 4631,
-        "email": 11831,
-        "telephone": 14345
+        "email": 11832,
+        "telephone": 14354
       }
     },
     "anomalies": {
@@ -5379,6 +5381,12 @@
         "moyAbsences": 52.5
       },
       {
+        "classe": "M1 IRSD",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 12.76,
+        "moyAbsences": 52.4
+      },
+      {
         "classe": "MBA 1 - CCE soir",
         "school": "Graduate School",
         "moyNotes": 11.08,
@@ -5527,6 +5535,12 @@
         "school": "Graduate School",
         "moyNotes": 10.79,
         "moyAbsences": 44.1
+      },
+      {
+        "classe": "M1 Projet Part Time",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 13.56,
+        "moyAbsences": 43.3
       },
       {
         "classe": "MBA1-DGEM",
@@ -6481,18 +6495,6 @@
         "school": "Ecole de Management",
         "moyNotes": 10.88,
         "moyAbsences": 27
-      },
-      {
-        "classe": "LDA2-C",
-        "school": "Ecole de Droit",
-        "moyNotes": 13.54,
-        "moyAbsences": 26.7
-      },
-      {
-        "classe": "LDA1-B",
-        "school": "Ecole de Droit",
-        "moyNotes": 11.8,
-        "moyAbsences": 26.6
       }
     ],
     "palmares": {
@@ -6683,9 +6685,9 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.62,
-          "count": 35329,
-          "tauxReussite": 77.8
+          "moy": 11.61,
+          "count": 35477,
+          "tauxReussite": 77.7
         },
         {
           "matiere": "Business Communication",
