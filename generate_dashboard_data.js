@@ -34,14 +34,22 @@ function listLicenceDirs(baseDir) {
     }));
 }
 
+// Normalise les variantes de noms d'écoles (erreurs de saisie, typos)
+function normalizeSchoolName(name) {
+  const aliases = {
+    'ISM Online et ISF': 'ISM Online & ISF',
+  };
+  return aliases[name] || name;
+}
+
 function extractSchoolAndYear(licenceName) {
   // Pattern: ISM_Dakar_Ecole_d'Ingénieurs_2019-2020
   const match = licenceName.match(/^(.+?)_(\d{4}-\d{4})$/);
   if (match) {
-    return { school: match[1].replace(/_/g, ' '), year: match[2] };
+    return { school: normalizeSchoolName(match[1].replace(/_/g, ' ')), year: match[2] };
   }
   // No year suffix — current/generic
-  return { school: licenceName.replace(/_/g, ' '), year: 'courant' };
+  return { school: normalizeSchoolName(licenceName.replace(/_/g, ' ')), year: 'courant' };
 }
 
 function findAllStatsFiles(licenceDir, scraperName) {
