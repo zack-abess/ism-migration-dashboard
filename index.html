@@ -97,7 +97,7 @@
     <div class="charts-grid">
       <div class="chart-card"><h3>Répartition H / F</h3><canvas id="sexeChart"></canvas></div>
       <div class="chart-card"><h3>Tranches d'âge</h3><canvas id="agesChart"></canvas></div>
-      <div class="chart-card"><h3>Top 15 Nationalités</h3><canvas id="natChart"></canvas></div>
+      <div class="chart-card"><h3>Top 30 Nationalités</h3><div id="natChartWrap" style="position:relative;width:100%"><canvas id="natChart"></canvas></div></div>
       <div class="chart-card"><h3>Répartition par niveau</h3><canvas id="niveauxChart"></canvas></div>
     </div>
     <div class="section"><h2>H/F par école</h2><canvas id="sexeEcoleChart"></canvas></div>
@@ -270,8 +270,9 @@ function renderGroupeISM(){
   dc('ages');sc('ages',new Chart(document.getElementById('agesChart'),{type:'bar',data:{labels:ao,datasets:[{data:ao.map(t=>D.ages[t]||0),backgroundColor:'#a855f7',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#94a3b8'},grid:{display:false}},y:ax()}}}));
 
   // Nationalités
-  const nats=Object.entries(D.nationalites).sort((a,b)=>b[1]-a[1]).slice(0,15);
-  dc('nat');sc('nat',new Chart(document.getElementById('natChart'),{type:'bar',data:{labels:nats.map(n=>n[0]),datasets:[{data:nats.map(n=>n[1]),backgroundColor:'#06b6d4',borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false}},scales:{x:ax(),y:axH()}}}));
+  const nats=Object.entries(D.nationalites).sort((a,b)=>b[1]-a[1]).slice(0,30);
+  document.getElementById('natChartWrap').style.height=(nats.length*32+40)+'px';
+  dc('nat');sc('nat',new Chart(document.getElementById('natChart'),{type:'bar',data:{labels:nats.map(n=>n[0]),datasets:[{data:nats.map(n=>n[1]),backgroundColor:'#06b6d4',borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:ax(),y:{...axH(),ticks:{autoSkip:false,color:'#94a3b8',font:{size:11}},afterFit:function(axis){axis.width=160;}}}}}));
 
   // Niveaux
   const nivs=Object.entries(D.niveaux).sort((a,b)=>b[1]-a[1]).slice(0,10);
@@ -476,7 +477,7 @@ function showSchoolModal(name){
 }
 function closeModal(){document.getElementById('modalContainer').innerHTML='';}
 
-loadData();setInterval(loadData,60000);
+loadData();setInterval(loadData,1800000);setInterval(()=>location.reload(),7200000);
 </script>
 </body>
 </html>
