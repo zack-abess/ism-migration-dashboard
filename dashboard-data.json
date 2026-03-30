@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-30T22:50:00.445Z",
+  "generatedAt": "2026-03-30T22:55:00.574Z",
   "summary": {
-    "done": 56,
+    "done": 57,
     "skip": 8,
-    "inProgress": 1,
+    "inProgress": 0,
     "total": 65
   },
   "totalClasses": 2332,
@@ -257,9 +257,9 @@
         "2024-2025",
         "2025-2026"
       ],
-      "doneCount": 9,
+      "doneCount": 10,
       "skipCount": 0,
-      "inProgressCount": 1,
+      "inProgressCount": 0,
       "nbClasses": 367,
       "nbEleves": 8167,
       "nbEnseignants": 74,
@@ -472,71 +472,6 @@
     }
   },
   "licences": [
-    {
-      "name": "ISM_Dakar_Graduate_School_2025-2026",
-      "displayName": "ISM Dakar Graduate School 2025-2026",
-      "school": "ISM Dakar Graduate School",
-      "year": "2025-2026",
-      "status": "in_progress",
-      "nbClasses": 53,
-      "nbEleves": 1145,
-      "nbEnseignants": 4,
-      "nbMatieres": 317,
-      "nbMatieresGlobal": 500,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-30T22:49:47.063Z",
-      "scrapers": {
-        "classes": {
-          "total": 53,
-          "ok": 53,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 53
-        },
-        "notes": {
-          "total": 1288,
-          "ok": 1202,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 14,
-          "nofield": 72,
-          "validated": 72,
-          "totalEntries": 30194
-        },
-        "assiduite": {
-          "total": 246,
-          "ok": 244,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 2,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 4999
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      },
-      "coverage": {
-        "classes": 53,
-        "pupils": 53,
-        "main": 53,
-        "fields": 53,
-        "notes": 51,
-        "assiduite": 51,
-        "allPupils": true
-      }
-    },
     {
       "name": "ISM_Dakar_Ecole_d'Ingénieurs",
       "displayName": "ISM Dakar Ecole d'Ingénieurs",
@@ -3073,6 +3008,71 @@
       }
     },
     {
+      "name": "ISM_Dakar_Graduate_School_2025-2026",
+      "displayName": "ISM Dakar Graduate School 2025-2026",
+      "school": "ISM Dakar Graduate School",
+      "year": "2025-2026",
+      "status": "done",
+      "nbClasses": 53,
+      "nbEleves": 1145,
+      "nbEnseignants": 4,
+      "nbMatieres": 317,
+      "nbMatieresGlobal": 500,
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-30T22:49:47.063Z",
+      "scrapers": {
+        "classes": {
+          "total": 53,
+          "ok": 53,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 53
+        },
+        "notes": {
+          "total": 1288,
+          "ok": 1202,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 14,
+          "nofield": 72,
+          "validated": 72,
+          "totalEntries": 30194
+        },
+        "assiduite": {
+          "total": 246,
+          "ok": 244,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 2,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 4999
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      },
+      "coverage": {
+        "classes": 53,
+        "pupils": 53,
+        "main": 53,
+        "fields": 53,
+        "notes": 51,
+        "assiduite": 51,
+        "allPupils": true
+      }
+    },
+    {
       "name": "ISM_Dakar_Madiba_Leadership_Institut",
       "displayName": "ISM Dakar Madiba Leadership Institut",
       "school": "ISM Dakar Madiba Leadership Institut",
@@ -4705,18 +4705,6 @@
   },
   "business": {
     "effectifs": {
-      "ISM Dakar Graduate School": {
-        "2025-2026": 1145,
-        "courant": 661,
-        "2017-2018": 609,
-        "2018-2019": 640,
-        "2019-2020": 697,
-        "2020-2021": 638,
-        "2021-2022": 845,
-        "2022-2023": 987,
-        "2023-2024": 892,
-        "2024-2025": 1053
-      },
       "ISM Dakar Ecole d'Ingénieurs": {
         "courant": 500,
         "2017-2018": 568,
@@ -4752,6 +4740,18 @@
         "2023-2024": 1614,
         "2024-2025": 1571,
         "2025-2026": 1856
+      },
+      "ISM Dakar Graduate School": {
+        "courant": 661,
+        "2017-2018": 609,
+        "2018-2019": 640,
+        "2019-2020": 697,
+        "2020-2021": 638,
+        "2021-2022": 845,
+        "2022-2023": 987,
+        "2023-2024": 892,
+        "2024-2025": 1053,
+        "2025-2026": 1145
       },
       "ISM Dakar Madiba Leadership Institut": {
         "courant": 325,
@@ -4802,58 +4802,51 @@
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "Guineenne": 1823,
-        "Congolaise": 2572,
-        "Djiboutienne": 341,
-        "Tchadienne": 1249,
-        "Gabonaise": 6071,
-        "Senegalaise": 26439,
-        "Centrafricaine": 670,
-        "Ivoirienne": 1033,
-        "Burkinabe": 812,
-        "Nigerienne": 1311,
-        "Togolaise": 1247,
-        "Camerounaise": 560,
-        "Malienne": 1177,
-        "Francaise": 246,
-        "Comorienne": 143,
-        "Malgache": 29,
-        "Mauritanienne": 500,
-        "Beninoise": 957,
-        "Haitienne": 59,
-        "Marocaine": 37,
         "Guineene": 6,
-        "Bissau guineene": 1,
-        "Snegalaise": 12,
-        "Sengalaise": 24,
-        "Capverdienne": 14,
-        "Americaine": 56,
-        "Equato-guineenne": 81,
-        "Maurit": 2,
-        "Sierra leonnaise": 2,
-        "Gambienne": 22,
+        "Tchadienne": 1249,
+        "Senegalaise": 26439,
+        "Nigerienne": 1311,
         "Francais": 2,
+        "Guineenne": 1823,
+        "Gabonaise": 6071,
+        "Malienne": 1177,
+        "Burkinabe": 812,
         "Senegalo malienne": 3,
         "Mauritanien": 3,
         "Senegalais": 34,
+        "Capverdienne": 14,
         "Gabonais": 1,
+        "Centrafricaine": 670,
+        "Togolaise": 1247,
+        "Congolaise": 2572,
         "Senegalise": 10,
+        "Djiboutienne": 341,
+        "Mauritanienne": 500,
+        "Beninoise": 957,
+        "Ivoirienne": 1033,
         "Senegal": 21,
+        "Sengalaise": 24,
         "Tcadienne": 4,
         "Senagalaise": 8,
         "Bissao guineenne": 3,
         "Libanaise": 10,
+        "Camerounaise": 560,
         "Bissauguineenne": 1,
         "Equatoguinenne": 2,
+        "Comorienne": 143,
         "Guineen": 6,
         "Gabonnaise": 33,
         "Togalaise": 3,
         "Nigeriene": 7,
         "Centafricaine": 3,
+        "Francaise": 246,
         "Italienne": 29,
         "Senegalo francaise": 6,
         "Bissaoguineenne": 1,
+        "Marocaine": 37,
+        "Snegalaise": 12,
         "Sierra leonaise": 1,
+        "Malgache": 29,
         "Seneglaise": 21,
         "Senegelaise": 2,
         "Gabonase": 3,
@@ -4865,6 +4858,7 @@
         "Sebnegalaise": 3,
         "Senesgalaise": 6,
         "Maritanienne": 3,
+        "Equato-guineenne": 81,
         "Nigerianne": 18,
         "Senegalo marocaine": 3,
         "Nigeriane": 10,
@@ -4873,6 +4867,7 @@
         "Angolaise": 7,
         "Equatoguineenne": 5,
         "Algerienne": 12,
+        "Haitienne": 59,
         "Ssenegalaise": 2,
         "Guineennee": 2,
         "Centreafricaine": 3,
@@ -4890,6 +4885,7 @@
         "Senegalo gabonaise": 6,
         "Tchadieenne": 1,
         "Guneenne": 8,
+        "Gambienne": 22,
         "Ghanaeen": 2,
         "Syrienne": 2,
         "Senegallaise": 2,
@@ -4916,6 +4912,7 @@
         "Gaboanaise": 4,
         "Nigeerienne": 1,
         "Gbaonaise": 2,
+        "Americaine": 56,
         "Equato guinenne": 2,
         "Bukinabe": 2,
         "Coumerounaise": 1,
@@ -5008,7 +5005,10 @@
         "Chedienne": 2,
         "Congo gabonaise": 1,
         "Gabo?aise": 1,
+        "Maurit": 2,
+        "Sierra leonnaise": 2,
         "Americo senegalaise": 1,
+        "Bissau guineene": 1,
         "Ghaneene": 3,
         "Turque": 2,
         "Indienne": 1,
@@ -5050,30 +5050,20 @@
         "Lcm3": 1
       },
       "ages": {
+        "26-30": 16293,
         ">30": 10969,
         "24-25": 8398,
         "21-23": 10727,
-        "26-30": 16293,
         "18-20": 4002,
         "<18": 96
       },
       "niveaux": {
-        "NON INSCRITS": 1527,
-        "BP3-PRO": 16,
-        "EMBA": 141,
-        "MBA 1": 5453,
-        "MBA 1 Cours du Soir": 1089,
-        "M1 MARCHE FINANCIER ET TRADING": 6,
-        "M1 FINANCE DIGITALE": 19,
-        "MBA 1 Pétrole & Gaz": 75,
-        "MBA 2": 5311,
-        "MBA 2 Cours du Soir": 629,
-        "M2 FINANCE DIGITALE": 5,
-        "MBA 2 Pétrole & Gaz": 43,
         "IIA - ALBI": 22,
         "Licence 1": 1315,
         "Licence 2": 1193,
         "Licence 3": 1106,
+        "MBA 1": 5453,
+        "MBA 2": 5311,
         "MBA 1 - PEL": 10,
         "MBA 2 - EXTERNE": 164,
         "MBA 2 - PEL": 20,
@@ -5083,6 +5073,7 @@
         "LICENCE 3": 5252,
         "ISF": 101,
         "ETUDIANT A SUPPRIMER": 25,
+        "NON INSCRITS": 1527,
         "LICENCE 1 R2": 997,
         "ADMIS NON INSCRITS": 2716,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 52,
@@ -5114,6 +5105,15 @@
         "E4IMPACT": 6,
         "EXECUTIVE MBA": 34,
         "E-4 IMPACT": 20,
+        "EMBA": 141,
+        "MBA 1 Cours du Soir": 1089,
+        "MBA 1 Pétrole & Gaz": 75,
+        "MBA 2 Cours du Soir": 629,
+        "MBA 2 Pétrole & Gaz": 43,
+        "BP3-PRO": 16,
+        "M1 MARCHE FINANCIER ET TRADING": 6,
+        "M1 FINANCE DIGITALE": 19,
+        "M2 FINANCE DIGITALE": 5,
         "Licence 3 - EXTERNE": 38,
         "IESA": 7,
         "MBA 2 MPSD": 22,
@@ -5133,10 +5133,6 @@
         "DBA": 22
       },
       "sexeParEcole": {
-        "ISM Dakar Graduate School": {
-          "M": 3433,
-          "F": 4515
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "M": 5748,
           "F": 4285
@@ -5148,6 +5144,10 @@
         "ISM Dakar Ecole de Management": {
           "M": 4639,
           "F": 7840
+        },
+        "ISM Dakar Graduate School": {
+          "M": 3433,
+          "F": 4515
         },
         "ISM Dakar Madiba Leadership Institut": {
           "M": 1696,
@@ -5167,20 +5167,20 @@
         }
       },
       "boursiersParEcole": {
-        "ISM Dakar Graduate School": 650,
         "ISM Dakar Ecole d'Ingénieurs": 1610,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
+        "ISM Dakar Graduate School": 650,
         "ISM Dakar Madiba Leadership Institut": 990,
         "ISM Online & ISF": 597,
         "ISM-DAKAR": 27,
         "ISM HQ": 14
       },
       "redoublantsParEcole": {
-        "ISM Dakar Graduate School": 96,
         "ISM Dakar Ecole d'Ingénieurs": 58,
         "ISM Dakar Ecole de Droit": 104,
         "ISM Dakar Ecole de Management": 73,
+        "ISM Dakar Graduate School": 96,
         "ISM Dakar Madiba Leadership Institut": 22,
         "ISM-DAKAR": 1,
         "ISM HQ": 14
@@ -5190,11 +5190,6 @@
       "moyenneGlobale": 11.32,
       "totalNotes": 2367950,
       "moyenneParEcole": {
-        "ISM Dakar Graduate School": {
-          "sum": 2669137.1100000218,
-          "count": 266990,
-          "moy": 10
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
           "count": 547698,
@@ -5209,6 +5204,11 @@
           "sum": 8565258.230000312,
           "count": 743012,
           "moy": 11.53
+        },
+        "ISM Dakar Graduate School": {
+          "sum": 2669137.110000026,
+          "count": 266990,
+          "moy": 10
         },
         "ISM Dakar Madiba Leadership Institut": {
           "sum": 2243795.2500000075,
@@ -5227,11 +5227,6 @@
         }
       },
       "tauxReussite": {
-        "ISM Dakar Graduate School": {
-          "reussi": 177234,
-          "total": 266990,
-          "taux": 66.4
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 410498,
           "total": 547698,
@@ -5246,6 +5241,11 @@
           "reussi": 569127,
           "total": 743012,
           "taux": 76.6
+        },
+        "ISM Dakar Graduate School": {
+          "reussi": 177234,
+          "total": 266990,
+          "taux": 66.4
         },
         "ISM Dakar Madiba Leadership Institut": {
           "reussi": 149824,
@@ -5377,15 +5377,10 @@
       }
     },
     "attendance": {
-      "totalAbsences": 1233610.6000000557,
-      "totalJustifiees": 125335.40000000029,
-      "totalNonJustifiees": 1108275.2000000528,
+      "totalAbsences": 1233610.6000000562,
+      "totalJustifiees": 125335.4000000003,
+      "totalNonJustifiees": 1108275.200000053,
       "absencesParEcole": {
-        "ISM Dakar Graduate School": {
-          "absences": 135388.90000000154,
-          "justifiees": 10176.699999999993,
-          "records": 5875
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "absences": 274442.5,
           "justifiees": 32742,
@@ -5401,6 +5396,11 @@
           "justifiees": 44207.5,
           "records": 23756
         },
+        "ISM Dakar Graduate School": {
+          "absences": 135388.9000000019,
+          "justifiees": 10176.699999999993,
+          "records": 5875
+        },
         "ISM Dakar Madiba Leadership Institut": {
           "absences": 74023,
           "justifiees": 9966.5,
@@ -5415,22 +5415,12 @@
     },
     "structure": {
       "niveauxDistrib": {
-        "NON INSCRITS": 35,
-        "BP3-PRO": 2,
-        "EMBA": 7,
-        "MBA 1": 302,
-        "MBA 1 Cours du Soir": 44,
-        "M1 MARCHE FINANCIER ET TRADING": 1,
-        "M1 FINANCE DIGITALE": 1,
-        "MBA 1 Pétrole & Gaz": 4,
-        "MBA 2": 268,
-        "MBA 2 Cours du Soir": 29,
-        "M2 FINANCE DIGITALE": 1,
-        "MBA 2 Pétrole & Gaz": 4,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
         "Licence 3": 32,
+        "MBA 1": 302,
+        "MBA 2": 268,
         "MBA 1 - PEL": 6,
         "MBA 2 - PEL": 5,
         "MBA 2 - EXTERNE": 13,
@@ -5442,6 +5432,7 @@
         "ETUDIANT A SUPPRIMER": 1,
         "MBA 1 ONLINE S1": 5,
         "MBA 2 ONLINE S1": 3,
+        "NON INSCRITS": 35,
         "LICENCE 1 R2": 29,
         "ADMIS NON INSCRITS": 30,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
@@ -5474,7 +5465,16 @@
         "E4IMPACT": 1,
         "EXECUTIVE MBA": 2,
         "E-4 IMPACT": 2,
+        "EMBA": 7,
+        "MBA 1 Cours du Soir": 44,
+        "MBA 1 Pétrole & Gaz": 4,
+        "MBA 2 Cours du Soir": 29,
+        "MBA 2 Pétrole & Gaz": 4,
         "CERTIFICAT EN GESTION DE PATRIMOINE": 1,
+        "BP3-PRO": 2,
+        "M1 MARCHE FINANCIER ET TRADING": 1,
+        "M1 FINANCE DIGITALE": 1,
+        "M2 FINANCE DIGITALE": 1,
         "Licence 3 - EXTERNE": 2,
         "IESA": 1,
         "MBA 2 MPSD": 4,
@@ -5494,10 +5494,9 @@
         "DBA": 4
       },
       "filieresDistrib": {
-        "Sciences Economiques et de Gestion": 797,
-        "Sciences Economiques de Gestion": 8,
         "Sciences et Technologies": 255,
         "Sciences Economiques et Gestion": 37,
+        "Sciences Economiques et de Gestion": 797,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
@@ -5520,6 +5519,7 @@
         "Sciences Economique et de Gestion": 1,
         "Sciences humaines et sociales": 2,
         "Sciences de l'information et de la communication": 58,
+        "Sciences Economiques de Gestion": 8,
         "Sciences de Gestion": 5,
         "Sciences Economiques et de Gestion tion": 1,
         "Science Economique et de Gestion": 2,
@@ -6940,93 +6940,93 @@
     "palmares": {
       "plusDifficiles": [
         {
-          "matiere": "Comportement Organisationnel ",
+          "matiere": "Management de Projets de programme et de portefeuille ",
           "moy": 0,
           "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Rédaction & Soutenance Business Plan",
+          "matiere": "Management opérationnel- environnement de développement ( Agilité DIT Devops)",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Informatique Appliquée : Excel",
+          "matiere": "Gestion et contrôle de la qualité projet ",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Management de la Qualité ",
+          "matiere": "POO2: Scala",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Introduction à la FinTech",
+          "matiere": "Automatisation des processus(RPA, Shell BASH AIRFLOW)",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Introduction au Marché Financier",
+          "matiere": "Developpement moderne avec Python (API)",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Droit du travail ",
+          "matiere": "Méthodologie de déploiement - MLops et data engineering(*Certification Professionnelle AWS Machine learning)",
           "moy": 0,
-          "count": 30,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Relations Publiques - Relations Presse…",
+          "matiere": "Analyse statistique et reporting(*Certification Professionnelle Alteryx)",
           "moy": 0,
-          "count": 52,
+          "count": 26,
           "tauxReussite": 0
         },
         {
-          "matiere": "Management des Réseaux de Distribution du Pétole et du Gaz",
+          "matiere": "Certification Professionnelle Google-Webanalytics",
+          "moy": 0,
+          "count": 26,
+          "tauxReussite": 0
+        },
+        {
+          "matiere": "Microeconomics ",
           "moy": 0,
           "count": 82,
           "tauxReussite": 0
         },
         {
-          "matiere": "Economie du Pétrole, du Gaz et de l’Energie",
+          "matiere": "Personal Development ",
           "moy": 0,
-          "count": 102,
+          "count": 82,
           "tauxReussite": 0
         },
         {
-          "matiere": "Marchés et Trading Pétrolier et Gazier",
+          "matiere": "Introduction à la Santé et Sécurité au Travail",
           "moy": 0,
-          "count": 102,
+          "count": 80,
           "tauxReussite": 0
         },
         {
-          "matiere": "Finance Energétique et Analyse des Investissements (VAN, TRI)",
+          "matiere": "Organisation et Gestion Fnancière des Evénements",
           "moy": 0,
-          "count": 102,
+          "count": 24,
           "tauxReussite": 0
         },
         {
-          "matiere": "Conflict Management and Decision-making",
+          "matiere": "Méthodologie de Rédaction de Mémoire ",
           "moy": 0,
-          "count": 56,
+          "count": 20,
           "tauxReussite": 0
         },
         {
-          "matiere": "Internationalisation Strategy",
+          "matiere": "Comportement Organisationnel ",
           "moy": 0,
-          "count": 56,
-          "tauxReussite": 0
-        },
-        {
-          "matiere": "Lean Six Sigma",
-          "moy": 0,
-          "count": 56,
+          "count": 26,
           "tauxReussite": 0
         }
       ],
@@ -7216,13 +7216,6 @@
       ]
     },
     "projections": {
-      "ISM Dakar Graduate School": {
-        "slope": 68.7,
-        "predict2027": 1178,
-        "predict2028": 1246,
-        "lastYear": 1145,
-        "growth": 88
-      },
       "ISM Dakar Ecole d'Ingénieurs": {
         "slope": 139.3,
         "predict2027": 1787,
@@ -7243,6 +7236,13 @@
         "predict2028": 2082,
         "lastYear": 1856,
         "growth": 122.3
+      },
+      "ISM Dakar Graduate School": {
+        "slope": 68.7,
+        "predict2027": 1178,
+        "predict2028": 1246,
+        "lastYear": 1145,
+        "growth": 88
       },
       "ISM Dakar Madiba Leadership Institut": {
         "slope": 6,
