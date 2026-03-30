@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:05:01.124Z",
+  "generatedAt": "2026-03-30T21:10:00.649Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -532,7 +532,7 @@
         "pupils": 53,
         "main": 53,
         "fields": 53,
-        "notes": 16,
+        "notes": 18,
         "assiduite": 51,
         "allPupils": true
       }
@@ -5188,12 +5188,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.48,
-      "totalNotes": 2330577,
+      "totalNotes": 2330839,
       "moyenneParEcole": {
         "ISM Dakar Graduate School": {
-          "sum": 2631743.2700000214,
-          "count": 229617,
-          "moy": 11.46
+          "sum": 2632824.0200000214,
+          "count": 229879,
+          "moy": 11.45
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 6334730.920000092,
@@ -5228,8 +5228,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Graduate School": {
-          "reussi": 174794,
-          "total": 229617,
+          "reussi": 174859,
+          "total": 229879,
           "taux": 76.1
         },
         "ISM Dakar Ecole d'Ingénieurs": {
@@ -5266,8 +5266,8 @@
       "topMatieres": [
         {
           "matiere": "Business English",
-          "moy": 11.28,
-          "count": 36519
+          "moy": 11.27,
+          "count": 36537
         },
         {
           "matiere": "Business Communication",
@@ -5367,12 +5367,12 @@
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.71,
-          "count": 1165328
+          "moy": 11.7,
+          "count": 1165459
         },
         "exam": {
           "moy": 11.26,
-          "count": 1165249
+          "count": 1165380
         }
       }
     },
@@ -7125,8 +7125,8 @@
       "plusEnseignees": [
         {
           "matiere": "Business English",
-          "moy": 11.28,
-          "count": 36519,
+          "moy": 11.27,
+          "count": 36537,
           "tauxReussite": 75.4
         },
         {
