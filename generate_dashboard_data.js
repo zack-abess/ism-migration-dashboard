@@ -34,26 +34,183 @@ function listLicenceDirs(baseDir) {
     }));
 }
 
-// Normalise une nationalité : casse, accents, variantes orthographiques
+// Normalise une nationalité : casse, accents, variantes orthographiques, fuzzy matching
 function normalizeNationalite(raw) {
   if (!raw) return null;
   // Trim, lowercase, strip accents
   let n = raw.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  // Supprimer tirets/espaces multiples
-  n = n.replace(/[\s-]+/g, ' ').trim();
-  if (!n || n.length < 2) return null;
-  // Corrections orthographiques connues
-  const fixes = {
-    'burkinabee': 'burkinabe',
-    'burkinabaise': 'burkinabe',
-    'guinnenne': 'guineenne',
-    'guinenne': 'guineenne',
-    'camerounais': 'camerounaise',
-    'equato guineenne': 'equato-guineenne',
-    'bissau guineenne': 'bissau-guineenne',
+  // Supprimer caractères spéciaux (?, /, +, chiffres isolés)
+  n = n.replace(/[?]/g, '').replace(/[\s-]+/g, ' ').trim();
+
+  // Rejeter les données invalides : numéros, emails, codes, trop court
+  if (!n || n.length < 3) return null;
+  if (/^\d+$/.test(n)) return null;                          // Numéros purs (1999, 77, 784483604)
+  if (n.includes('@')) return null;                           // Emails
+  if (/^\d.*\d$/.test(n) && /\d/.test(n)) return null;       // Numéros avec texte
+  if (n.length > 40) return null;                             // Trop long = invalide
+
+  // Rejeter noms de villes / données aberrantes
+  const garbage = ['dakar','niamey','brazzaville','conakry','pikine','djibouti','cameroun',
+    'maroc','gabon','senegal','haiti','mauritanie','notarial','lcm3','congo gabonaise',
+    'banguientrafricaine'];
+  // Villes → mapper vers nationalité connue si possible
+  const cityToNat = {
+    'dakar': 'Senegalaise', 'pikine': 'Senegalaise', 'senegal': 'Senegalaise',
+    'niamey': 'Nigerienne', 'conakry': 'Guineenne', 'brazzaville': 'Congolaise',
+    'djibouti': 'Djiboutienne', 'cameroun': 'Camerounaise', 'maroc': 'Marocaine',
+    'gabon': 'Gabonaise', 'haiti': 'Haitienne', 'mauritanie': 'Mauritanienne',
   };
-  if (fixes[n]) n = fixes[n];
-  // Capitalize proprement : première lettre majuscule, reste minuscule
+  if (cityToNat[n]) return cityToNat[n];
+  if (garbage.includes(n)) return null;
+
+  // Double nationalités → garder la première
+  if (n.includes('/')) n = n.split('/')[0].trim();
+
+  // Masculin → féminin
+  const mascFem = {
+    'senegalais': 'senegalaise', 'francais': 'francaise', 'tchadien': 'tchadienne',
+    'mauritanien': 'mauritanienne', 'togolais': 'togolaise', 'gabonais': 'gabonaise',
+    'malien': 'malienne', 'ivoirien': 'ivoirienne', 'guineen': 'guineenne',
+    'camerounais': 'camerounaise', 'malagasy': 'malgache', 'liberian': 'liberienne',
+    'sierra leonean': 'sierra leonaise', 'israeli': 'israelienne',
+  };
+  if (mascFem[n]) n = mascFem[n];
+
+  // Mapping explicite des typos connues vers la forme canonique
+  const canon = {
+    // Sénégalaise
+    'senegalaise': 'Senegalaise', 'sengalaise': 'Senegalaise', 'snegalaise': 'Senegalaise',
+    'senegalise': 'Senegalaise', 'senagalaise': 'Senegalaise', 'sensegalaise': 'Senegalaise',
+    'senesgalaise': 'Senegalaise', 'sengealaise': 'Senegalaise', 'senegalaisse': 'Senegalaise',
+    'seegalaise': 'Senegalaise', 'sebnegalaise': 'Senegalaise', 'semegalaise': 'Senegalaise',
+    'sengegalaise': 'Senegalaise', 'genegalaise': 'Senegalaise', 'senegalaiase': 'Senegalaise',
+    'senegalaoise': 'Senegalaise', 'senegalaiseq': 'Senegalaise', 'senegalause': 'Senegalaise',
+    'senegelaise': 'Senegalaise', 'ssenegalaise': 'Senegalaise', 'seneggalaise': 'Senegalaise',
+    'enegalaise': 'Senegalaise', 'senegallaise': 'Senegalaise', 'senegqlqise': 'Senegalaise',
+    'sennegalaise': 'Senegalaise', 'senealaise': 'Senegalaise', 'senenegalaise': 'Senegalaise',
+    'senegalaisea': 'Senegalaise', 'senegalaiise': 'Senegalaise', 'senegaaise': 'Senegalaise',
+    'seneglaise': 'Senegalaise', 'senegalalise': 'Senegalaise', 'senegalaise069926805+905': 'Senegalaise',
+    'se?egalaise': 'Senegalaise', 'seegalaise': 'Senegalaise',
+    // Gabonaise
+    'gabonaise': 'Gabonaise', 'gabonnaise': 'Gabonaise', 'ganbonaise': 'Gabonaise',
+    'gaboanaise': 'Gabonaise', 'gaonaise': 'Gabonaise', 'gabonase': 'Gabonaise',
+    'gabonaisea': 'Gabonaise', 'gabonaoise': 'Gabonaise', 'gbaonaise': 'Gabonaise',
+    'gaboniaise': 'Gabonaise', 'gaboonaise': 'Gabonaise', 'gabo?aise': 'Gabonaise',
+    // Congolaise
+    'congolaise': 'Congolaise', 'cobgolaise': 'Congolaise', 'congoalaise': 'Congolaise',
+    'conogolaise': 'Congolaise', 'congolazise': 'Congolaise', 'congolaiise': 'Congolaise',
+    'congalaise': 'Congolaise', 'cngolaise': 'Congolaise',
+    // Guinéenne
+    'guineenne': 'Guineenne', 'guneenne': 'Guineenne', 'guineene': 'Guineenne',
+    'guineennee': 'Guineenne', 'guineennne': 'Guineenne', 'guinneenne': 'Guineenne',
+    'guieenne': 'Guineenne', 'guineeene': 'Guineenne', 'gineenne': 'Guineenne',
+    // Nigérienne
+    'nigerienne': 'Nigerienne', 'nigerianne': 'Nigerienne', 'nigeriane': 'Nigerienne',
+    'nigeriene': 'Nigerienne', 'nigerinenne': 'Nigerienne', 'nigrienne': 'Nigerienne',
+    'niegrienne': 'Nigerienne', 'nigerrienne': 'Nigerienne', 'nigeerienne': 'Nigerienne',
+    'nigereienne': 'Nigerienne', 'nigierienne': 'Nigerienne', 'nigienne': 'Nigerienne',
+    // Tchadienne
+    'tchadienne': 'Tchadienne', 'tchiadienne': 'Tchadienne', 'tcadienne': 'Tchadienne',
+    'tchedienne': 'Tchadienne', 'tchadiennne': 'Tchadienne', 'chedienne': 'Tchadienne',
+    'thiadienne': 'Tchadienne', 'tchadiene': 'Tchadienne', 'tchadieenne': 'Tchadienne',
+    // Togolaise
+    'togolaise': 'Togolaise', 'togalaise': 'Togolaise', 'tologaise': 'Togolaise',
+    'togolaiase': 'Togolaise',
+    // Malienne
+    'malienne': 'Malienne',
+    // Ivoirienne
+    'ivoirienne': 'Ivoirienne', 'ivroirienne': 'Ivoirienne', 'ivoiriennne': 'Ivoirienne',
+    // Béninoise
+    'beninoise': 'Beninoise', 'beniinoise': 'Beninoise',
+    // Burkinabé
+    'burkinabe': 'Burkinabe', 'burkinabee': 'Burkinabe', 'burkinabaise': 'Burkinabe',
+    'bukinabe': 'Burkinabe', 'brkinabee': 'Burkinabe',
+    // Centrafricaine
+    'centrafricaine': 'Centrafricaine', 'centrefricaine': 'Centrafricaine',
+    'centafricaine': 'Centrafricaine', 'centreafricaine': 'Centrafricaine',
+    'centrfricaine': 'Centrafricaine', 'cenrtafricaine': 'Centrafricaine',
+    'centrrafricaine': 'Centrafricaine', 'centrafriacaine': 'Centrafricaine',
+    'centrafriciane': 'Centrafricaine', 'ccentrafricaine': 'Centrafricaine',
+    'centraficaine': 'Centrafricaine', 'centre afrcaine': 'Centrafricaine',
+    // Camerounaise
+    'camerounaise': 'Camerounaise', 'camerounnaise': 'Camerounaise',
+    'camerounaire': 'Camerounaise', 'cameroonaise': 'Camerounaise',
+    'cameerounaise': 'Camerounaise', 'cmerounaise': 'Camerounaise',
+    'coumerounaise': 'Camerounaise', 'cameroune': 'Camerounaise',
+    // Mauritanienne
+    'mauritanienne': 'Mauritanienne', 'maritanienne': 'Mauritanienne',
+    'mauritatienne': 'Mauritanienne', 'mauritannie': 'Mauritanienne',
+    'mauritaniene': 'Mauritanienne', 'maurit': 'Mauritanienne',
+    // Djiboutienne
+    'djiboutienne': 'Djiboutienne', 'djboutienne': 'Djiboutienne',
+    'djouboutienne': 'Djiboutienne', 'djiboutieenne': 'Djiboutienne',
+    // Française
+    'francaise': 'Francaise',
+    // Comorienne
+    'comorienne': 'Comorienne',
+    // Haïtienne
+    'haitienne': 'Haitienne', 'haitenne': 'Haitienne',
+    // Équato-guinéenne
+    'equato guineenne': 'Equato-guineenne', 'equatoguineenne': 'Equato-guineenne',
+    'equatoguinenne': 'Equato-guineenne', 'equato guinenne': 'Equato-guineenne',
+    'ecuato guineenne': 'Equato-guineenne', 'equato guineene': 'Equato-guineenne',
+    'equato guineen': 'Equato-guineenne', 'equatoguineen': 'Equato-guineenne',
+    // Bissau-guinéenne
+    'bissau guineenne': 'Bissau-guineenne', 'bissao guineenne': 'Bissau-guineenne',
+    'bissauguineenne': 'Bissau-guineenne', 'bissaoguineenne': 'Bissau-guineenne',
+    'bissau guineen': 'Bissau-guineenne', 'bissau guineene': 'Bissau-guineenne',
+    // Cap-Verdienne
+    'capverdienne': 'Cap-verdienne', 'cap verdienne': 'Cap-verdienne', 'cap verdien': 'Cap-verdienne',
+    // Autres
+    'americaine': 'Americaine', 'ameracaine': 'Americaine',
+    'marocaine': 'Marocaine', 'rwandaise': 'Rwandaise', 'rwandaide': 'Rwandaise',
+    'ghaneenne': 'Ghaneenne', 'ghaneene': 'Ghaneenne', 'ghanaeen': 'Ghaneenne', 'ghananeenne': 'Ghaneenne',
+    'sierra leonnaise': 'Sierra-leonaise', 'sierra leonaise': 'Sierra-leonaise',
+    'liberienne': 'Liberienne', 'zimbabweene': 'Zimbabweenne',
+  };
+
+  // Nettoyer le ? résiduel
+  n = n.replace(/\?/g, '');
+
+  if (canon[n]) return canon[n];
+
+  // Double nationalités type "franco senegalaise" / "senegalo X" → regrouper
+  if (/^(franco|senegalo|italo|americano|canado|maroco|americo|centrafricano|congolaise |portugaise |canadien)/.test(n)) {
+    return 'Double nationalite';
+  }
+
+  // Fuzzy: si le mot ressemble à une nationalité connue (distance de Levenshtein ≤ 2)
+  const references = ['senegalaise','gabonaise','congolaise','guineenne','nigerienne','tchadienne',
+    'togolaise','malienne','ivoirienne','beninoise','burkinabe','centrafricaine','camerounaise',
+    'mauritanienne','djiboutienne','francaise','comorienne','haitienne','americaine','marocaine',
+    'rwandaise','malgache','gambienne','ghaneenne','algerienne','capverdienne','libanaise',
+    'angolaise','egyptienne','burundaise','tunisienne','liberienne','espagnole','italienne',
+    'canadienne','suisse','portugaise','allemande','syrienne','japonaise','turque','indienne',
+    'chinoise','russe','indonesienne','saoudienne','jordanienne','hollandaise'];
+
+  function levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    const dp = Array.from({length: m+1}, () => Array(n+1).fill(0));
+    for (let i = 0; i <= m; i++) dp[i][0] = i;
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+    for (let i = 1; i <= m; i++)
+      for (let j = 1; j <= n; j++)
+        dp[i][j] = Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(a[i-1]!==b[j-1]?1:0));
+    return dp[m][n];
+  }
+
+  // Seuil adaptatif : mots courts → distance 1, mots longs → distance 2-3
+  const maxDist = n.length <= 6 ? 1 : n.length <= 10 ? 2 : 3;
+  let bestMatch = null, bestDist = maxDist + 1;
+  for (const ref of references) {
+    const d = levenshtein(n, ref);
+    if (d < bestDist) { bestDist = d; bestMatch = ref; }
+  }
+  if (bestMatch && bestDist <= maxDist) {
+    return bestMatch.charAt(0).toUpperCase() + bestMatch.slice(1);
+  }
+
+  // Si on arrive ici, capitaliser et retourner tel quel
   return n.charAt(0).toUpperCase() + n.slice(1);
 }
 
