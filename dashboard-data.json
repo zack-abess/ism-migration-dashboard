@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T17:05:22.827Z",
+  "generatedAt": "2026-03-30T18:20:01.455Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -7,19 +7,19 @@
     "total": 65
   },
   "totalClasses": 2229,
-  "totalEleves": 55621,
-  "totalMatieres": 4726,
-  "totalPeriodes": 74,
-  "totalEnseignants": 518,
+  "totalEleves": 57079,
+  "totalMatieres": 4716,
+  "totalPeriodes": 73,
+  "totalEnseignants": 522,
   "totalEntries": {
-    "notes": 1277671,
+    "notes": 1240345,
     "assiduite": 214033,
     "classes": 2227,
-    "pupils": 63
+    "pupils": 64
   },
-  "uniqueEleves": 30877,
+  "uniqueEleves": 31139,
   "uniqueEnseignants": 202,
-  "uniqueMatieresGlobal": 4156,
+  "uniqueMatieresGlobal": 4160,
   "schools": {
     "ISM-DAKAR": {
       "years": [
@@ -87,17 +87,17 @@
       "skipCount": 0,
       "inProgressCount": 1,
       "nbClasses": 390,
-      "nbEleves": 8856,
-      "nbEnseignants": 31,
+      "nbEleves": 10314,
+      "nbEnseignants": 35,
       "scrapers": {
         "notes": {
-          "ok": 11444,
+          "ok": 10213,
           "empty": 169,
           "error": 0,
-          "noperiod": 142,
-          "nofield": 489,
-          "total": 12244,
-          "totalEntries": 292500
+          "noperiod": 123,
+          "nofield": 443,
+          "total": 10948,
+          "totalEntries": 255174
         },
         "assiduite": {
           "ok": 966,
@@ -118,13 +118,13 @@
           "totalEntries": 388
         },
         "pupils": {
-          "ok": 9,
+          "ok": 10,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
-          "total": 9,
-          "totalEntries": 9
+          "total": 10,
+          "totalEntries": 10
         }
       }
     },
@@ -527,12 +527,12 @@
       "year": "2023-2024",
       "status": "in_progress",
       "nbClasses": 0,
-      "nbEleves": 0,
-      "nbEnseignants": 0,
-      "nbMatieres": 353,
-      "nbMatieresGlobal": 0,
-      "nbPeriodes": 17,
-      "lastModified": "2026-03-30T15:37:08.434Z",
+      "nbEleves": 1458,
+      "nbEnseignants": 4,
+      "nbMatieres": 0,
+      "nbMatieresGlobal": 819,
+      "nbPeriodes": 0,
+      "lastModified": "2026-03-30T18:19:21.174Z",
       "scrapers": {
         "classes": {
           "total": 0,
@@ -545,14 +545,14 @@
           "totalEntries": 0
         },
         "notes": {
-          "total": 1296,
-          "ok": 1231,
+          "total": 0,
+          "ok": 0,
           "empty": 0,
           "error": 0,
-          "noperiod": 19,
-          "nofield": 46,
+          "noperiod": 0,
+          "nofield": 0,
           "validated": 0,
-          "totalEntries": 37326
+          "totalEntries": 0
         },
         "assiduite": {
           "total": 0,
@@ -565,14 +565,14 @@
           "totalEntries": 0
         },
         "pupils": {
-          "total": 0,
-          "ok": 0,
+          "total": 1,
+          "ok": 1,
           "empty": 0,
           "error": 0,
           "noperiod": 0,
           "nofield": 0,
           "validated": 0,
-          "totalEntries": 0
+          "totalEntries": 1
         }
       }
     },
@@ -4162,14 +4162,14 @@
     }
   ],
   "doublons": {
-    "eleves": 20371,
-    "enseignants": 316,
-    "matieresGlobal": 15078
+    "eleves": 21566,
+    "enseignants": 320,
+    "matieresGlobal": 15893
   },
   "business": {
     "effectifs": {
       "ISM Dakar Ecole d'Ingénieurs": {
-        "2023-2024": 0,
+        "2023-2024": 1458,
         "courant": 500,
         "2017-2018": 568,
         "2018-2019": 662,
@@ -4599,25 +4599,25 @@
         "<18": 96
       },
       "niveaux": {
+        "ADMIS NON INSCRITS": 2716,
+        "NON INSCRITS": 1503,
+        "LICENCE 1": 6953,
+        "LICENCE 2": 6137,
+        "LICENCE 3": 5252,
+        "LICENCE 1 R2": 997,
+        "MBA 1": 5263,
+        "MBA 2": 5102,
+        "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 52,
         "IIA - ALBI": 22,
         "Licence 1": 1315,
         "Licence 2": 1193,
         "Licence 3": 1106,
-        "MBA 1": 5101,
-        "MBA 2": 4951,
         "MBA 1 - PEL": 10,
         "MBA 2 - EXTERNE": 164,
         "MBA 2 - PEL": 20,
-        "LICENCE 1": 6576,
-        "LICENCE 2": 5842,
         "LICENCE 3 - AI": 628,
-        "LICENCE 3": 4984,
         "ISF": 101,
         "ETUDIANT A SUPPRIMER": 25,
-        "NON INSCRITS": 1389,
-        "LICENCE 1 R2": 934,
-        "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 40,
-        "ADMIS NON INSCRITS": 2700,
         "MBA1 Soir": 38,
         "Master 2": 138,
         "Master 1": 103,
@@ -4730,12 +4730,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2339772,
+      "totalNotes": 2274697,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6058044.510000056,
-          "count": 521958,
-          "moy": 11.61
+          "sum": 5315905.400000062,
+          "count": 456883,
+          "moy": 11.64
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4775,9 +4775,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 393111,
-          "total": 521958,
-          "taux": 75.3
+          "reussi": 344980,
+          "total": 456883,
+          "taux": 75.5
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4832,19 +4832,19 @@
           "count": 18019
         },
         {
+          "matiere": "Actions de Recherche Encadrées",
+          "moy": 12.19,
+          "count": 17063
+        },
+        {
           "matiere": "Comptabilité Générale 2",
-          "moy": 10.66,
-          "count": 17442
+          "moy": 10.72,
+          "count": 16944
         },
         {
           "matiere": "Comptabilité Générale 1",
           "moy": 10.8,
-          "count": 17263
-        },
-        {
-          "matiere": "Actions de Recherche Encadrées",
-          "moy": 12.19,
-          "count": 17063
+          "count": 16623
         },
         {
           "matiere": "Introduction au Management",
@@ -4853,8 +4853,8 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.38,
-          "count": 14428
+          "moy": 10.37,
+          "count": 14390
         },
         {
           "matiere": "Service à la Communauté",
@@ -4887,19 +4887,14 @@
           "count": 9519
         },
         {
-          "matiere": "Responsabilité Sociale des Entreprises",
-          "moy": 11.69,
-          "count": 9428
-        },
-        {
           "matiere": "Mathématiques Financières",
           "moy": 10.47,
           "count": 9314
         },
         {
-          "matiere": "Business English 2",
-          "moy": 11.53,
-          "count": 9146
+          "matiere": "Responsabilité Sociale des Entreprises",
+          "moy": 11.69,
+          "count": 9292
         },
         {
           "matiere": "Humanitaire",
@@ -4912,19 +4907,24 @@
           "count": 8900
         },
         {
-          "matiere": "Business English 1",
-          "moy": 11.08,
-          "count": 8862
+          "matiere": "Introduction au Marketing",
+          "moy": 11.68,
+          "count": 8854
+        },
+        {
+          "matiere": "Développement Personnel ",
+          "moy": 10.54,
+          "count": 8807
         }
       ],
       "ccVsExam": {
         "cc": {
           "moy": 11.56,
-          "count": 1169892
+          "count": 1137349
         },
         "exam": {
-          "moy": 11.11,
-          "count": 1169880
+          "moy": 11.1,
+          "count": 1137348
         }
       }
     },
@@ -6672,22 +6672,22 @@
           "tauxReussite": 73.2
         },
         {
-          "matiere": "Comptabilité Générale 2",
-          "moy": 10.66,
-          "count": 17442,
-          "tauxReussite": 65.9
-        },
-        {
-          "matiere": "Comptabilité Générale 1",
-          "moy": 10.8,
-          "count": 17263,
-          "tauxReussite": 71.8
-        },
-        {
           "matiere": "Actions de Recherche Encadrées",
           "moy": 12.19,
           "count": 17063,
           "tauxReussite": 86.7
+        },
+        {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.72,
+          "count": 16944,
+          "tauxReussite": 66.2
+        },
+        {
+          "matiere": "Comptabilité Générale 1",
+          "moy": 10.8,
+          "count": 16623,
+          "tauxReussite": 71.9
         },
         {
           "matiere": "Introduction au Management",
@@ -6697,8 +6697,8 @@
         },
         {
           "matiere": "Droit des Obligations",
-          "moy": 10.38,
-          "count": 14428,
+          "moy": 10.37,
+          "count": 14390,
           "tauxReussite": 63.9
         },
         {
@@ -6738,18 +6738,18 @@
           "tauxReussite": 80.1
         },
         {
-          "matiere": "Responsabilité Sociale des Entreprises",
-          "moy": 11.69,
-          "count": 9428,
-          "tauxReussite": 80.6
+          "matiere": "Mathématiques Financières",
+          "moy": 10.47,
+          "count": 9314,
+          "tauxReussite": 65.7
         }
       ]
     },
     "projections": {
       "ISM Dakar Ecole d'Ingénieurs": {
-        "slope": 90.7,
-        "predict2027": 1382,
-        "predict2028": 1472,
+        "slope": 139.3,
+        "predict2027": 1787,
+        "predict2028": 1926,
         "lastYear": 1558,
         "growth": 174.3
       },
