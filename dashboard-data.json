@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:25:01.417Z",
+  "generatedAt": "2026-03-30T15:30:00.787Z",
   "summary": {
     "done": 56,
     "skip": 8,
@@ -4730,11 +4730,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2332018,
+      "totalNotes": 2336750,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 5957841.190000057,
-          "count": 514204,
+          "sum": 6013407.550000055,
+          "count": 518936,
           "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
@@ -4775,8 +4775,8 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 386566,
-          "total": 514204,
+          "reussi": 390277,
+          "total": 518936,
           "taux": 75.2
         },
         "ISM Dakar Ecole de Droit": {
@@ -4832,14 +4832,14 @@
           "count": 18019
         },
         {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.66,
+          "count": 17442
+        },
+        {
           "matiere": "Comptabilité Générale 1",
           "moy": 10.8,
           "count": 17263
-        },
-        {
-          "matiere": "Comptabilité Générale 2",
-          "moy": 10.7,
-          "count": 17238
         },
         {
           "matiere": "Actions de Recherche Encadrées",
@@ -4898,8 +4898,8 @@
         },
         {
           "matiere": "Business English 2",
-          "moy": 11.54,
-          "count": 9068
+          "moy": 11.53,
+          "count": 9146
         },
         {
           "matiere": "Humanitaire",
@@ -4920,11 +4920,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.55,
-          "count": 1166014
+          "count": 1168381
         },
         "exam": {
           "moy": 11.1,
-          "count": 1166004
+          "count": 1168369
         }
       }
     },
@@ -6672,16 +6672,16 @@
           "tauxReussite": 73.2
         },
         {
+          "matiere": "Comptabilité Générale 2",
+          "moy": 10.66,
+          "count": 17442,
+          "tauxReussite": 65.9
+        },
+        {
           "matiere": "Comptabilité Générale 1",
           "moy": 10.8,
           "count": 17263,
           "tauxReussite": 71.8
-        },
-        {
-          "matiere": "Comptabilité Générale 2",
-          "moy": 10.7,
-          "count": 17238,
-          "tauxReussite": 66.1
         },
         {
           "matiere": "Actions de Recherche Encadrées",
