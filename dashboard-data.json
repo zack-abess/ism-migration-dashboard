@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:50:00.637Z",
+  "generatedAt": "2026-03-30T02:55:00.699Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4672,11 +4672,11 @@
     },
     "academic": {
       "moyenneGlobale": 11.33,
-      "totalNotes": 2268919,
+      "totalNotes": 2270207,
       "moyenneParEcole": {
         "ISM-DAKAR": {
-          "sum": 1396050.9800000053,
-          "count": 123092,
+          "sum": 1410361.9300000053,
+          "count": 124380,
           "moy": 11.34
         },
         "ISM Dakar Ecole d'Ingénieurs": {
@@ -4717,9 +4717,9 @@
       },
       "tauxReussite": {
         "ISM-DAKAR": {
-          "reussi": 91772,
-          "total": 123092,
-          "taux": 74.6
+          "reussi": 92646,
+          "total": 124380,
+          "taux": 74.5
         },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 344980,
@@ -4805,13 +4805,13 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.07,
-          "count": 11645
+          "moy": 12.08,
+          "count": 11737
         },
         {
           "matiere": "Comptabilité Générale 3",
-          "moy": 11.1,
-          "count": 11434
+          "moy": 11.07,
+          "count": 11526
         },
         {
           "matiere": "Mathématiques : Statistiques Descriptives",
@@ -4835,8 +4835,8 @@
         },
         {
           "matiere": "Mathématiques Financières",
-          "moy": 10.3,
-          "count": 8912
+          "moy": 10.33,
+          "count": 9004
         },
         {
           "matiere": "Humanitaire",
@@ -4862,11 +4862,11 @@
       "ccVsExam": {
         "cc": {
           "moy": 11.56,
-          "count": 1134460
+          "count": 1135104
         },
         "exam": {
           "moy": 11.1,
-          "count": 1134459
+          "count": 1135103
         }
       }
     },
@@ -6651,15 +6651,15 @@
         },
         {
           "matiere": "Entrepreneuriat",
-          "moy": 12.07,
-          "count": 11645,
-          "tauxReussite": 83.5
+          "moy": 12.08,
+          "count": 11737,
+          "tauxReussite": 83.6
         },
         {
           "matiere": "Comptabilité Générale 3",
-          "moy": 11.1,
-          "count": 11434,
-          "tauxReussite": 72.2
+          "moy": 11.07,
+          "count": 11526,
+          "tauxReussite": 72
         },
         {
           "matiere": "Mathématiques : Statistiques Descriptives",
