@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-30T03:35:01.083Z",
+  "generatedAt": "2026-03-30T03:40:00.908Z",
   "summary": {
-    "done": 55,
+    "done": 56,
     "skip": 8,
-    "inProgress": 1,
+    "inProgress": 0,
     "total": 64
   },
   "totalClasses": 2229,
@@ -21,6 +21,55 @@
   "uniqueEnseignants": 202,
   "uniqueMatieresGlobal": 4156,
   "schools": {
+    "ISM-DAKAR": {
+      "years": [
+        "courant"
+      ],
+      "doneCount": 1,
+      "skipCount": 0,
+      "inProgressCount": 0,
+      "nbClasses": 122,
+      "nbEleves": 5258,
+      "nbEnseignants": 153,
+      "scrapers": {
+        "notes": {
+          "ok": 1648,
+          "empty": 275,
+          "error": 0,
+          "noperiod": 74,
+          "nofield": 898,
+          "total": 2895,
+          "totalEntries": 59007
+        },
+        "assiduite": {
+          "ok": 554,
+          "empty": 319,
+          "error": 0,
+          "noperiod": 27,
+          "nofield": 0,
+          "total": 900,
+          "totalEntries": 30652
+        },
+        "classes": {
+          "ok": 122,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 122,
+          "totalEntries": 122
+        },
+        "pupils": {
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "total": 1,
+          "totalEntries": 1
+        }
+      }
+    },
     "ISM Dakar Ecole d'Ingénieurs": {
       "years": [
         "courant",
@@ -467,114 +516,9 @@
           "totalEntries": 8
         }
       }
-    },
-    "ISM-DAKAR": {
-      "years": [
-        "courant"
-      ],
-      "doneCount": 0,
-      "skipCount": 0,
-      "inProgressCount": 1,
-      "nbClasses": 122,
-      "nbEleves": 5258,
-      "nbEnseignants": 153,
-      "scrapers": {
-        "notes": {
-          "ok": 1648,
-          "empty": 275,
-          "error": 0,
-          "noperiod": 74,
-          "nofield": 898,
-          "total": 2895,
-          "totalEntries": 59007
-        },
-        "assiduite": {
-          "ok": 554,
-          "empty": 319,
-          "error": 0,
-          "noperiod": 27,
-          "nofield": 0,
-          "total": 900,
-          "totalEntries": 30652
-        },
-        "classes": {
-          "ok": 122,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "total": 122,
-          "totalEntries": 122
-        },
-        "pupils": {
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "total": 1,
-          "totalEntries": 1
-        }
-      }
     }
   },
   "licences": [
-    {
-      "name": "ISM-DAKAR",
-      "displayName": "ISM-DAKAR",
-      "school": "ISM-DAKAR",
-      "year": "courant",
-      "status": "in_progress",
-      "nbClasses": 122,
-      "nbEleves": 5258,
-      "nbEnseignants": 153,
-      "nbMatieres": 466,
-      "nbMatieresGlobal": 720,
-      "nbPeriodes": 13,
-      "lastModified": "2026-03-30T03:28:20.059Z",
-      "scrapers": {
-        "classes": {
-          "total": 122,
-          "ok": 122,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 122
-        },
-        "notes": {
-          "total": 2895,
-          "ok": 1648,
-          "empty": 275,
-          "error": 0,
-          "noperiod": 74,
-          "nofield": 898,
-          "validated": 1330,
-          "totalEntries": 59007
-        },
-        "assiduite": {
-          "total": 900,
-          "ok": 554,
-          "empty": 319,
-          "error": 0,
-          "noperiod": 27,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 30652
-        },
-        "pupils": {
-          "total": 1,
-          "ok": 1,
-          "empty": 0,
-          "error": 0,
-          "noperiod": 0,
-          "nofield": 0,
-          "validated": 0,
-          "totalEntries": 1
-        }
-      }
-    },
     {
       "name": "ISM_Dakar_Ecole_d'Ingénieurs",
       "displayName": "ISM Dakar Ecole d'Ingénieurs",
@@ -3656,6 +3600,62 @@
       }
     },
     {
+      "name": "ISM-DAKAR",
+      "displayName": "ISM-DAKAR",
+      "school": "ISM-DAKAR",
+      "year": "courant",
+      "status": "done",
+      "nbClasses": 122,
+      "nbEleves": 5258,
+      "nbEnseignants": 153,
+      "nbMatieres": 466,
+      "nbMatieresGlobal": 720,
+      "nbPeriodes": 13,
+      "lastModified": "2026-03-30T03:28:20.059Z",
+      "scrapers": {
+        "classes": {
+          "total": 122,
+          "ok": 122,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 122
+        },
+        "notes": {
+          "total": 2895,
+          "ok": 1648,
+          "empty": 275,
+          "error": 0,
+          "noperiod": 74,
+          "nofield": 898,
+          "validated": 1330,
+          "totalEntries": 59007
+        },
+        "assiduite": {
+          "total": 900,
+          "ok": 554,
+          "empty": 319,
+          "error": 0,
+          "noperiod": 27,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 30652
+        },
+        "pupils": {
+          "total": 1,
+          "ok": 1,
+          "empty": 0,
+          "error": 0,
+          "noperiod": 0,
+          "nofield": 0,
+          "validated": 0,
+          "totalEntries": 1
+        }
+      }
+    },
+    {
       "name": "ISM_HQ_2018-2019",
       "displayName": "ISM HQ 2018-2019",
       "school": "ISM HQ",
@@ -4111,9 +4111,6 @@
   },
   "business": {
     "effectifs": {
-      "ISM-DAKAR": {
-        "courant": 5258
-      },
       "ISM Dakar Ecole d'Ingénieurs": {
         "courant": 500,
         "2017-2018": 568,
@@ -4183,6 +4180,9 @@
       "ISM Online et ISF": {
         "2020-2021": 167
       },
+      "ISM-DAKAR": {
+        "courant": 5258
+      },
       "ISM HQ": {
         "2018-2019": 6,
         "2019-2020": 55,
@@ -4209,70 +4209,44 @@
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "Togolaise": 130,
-        "Béninoise": 63,
-        "Sénégalaise": 1927,
-        "Gabonaise": 321,
-        "Burkinabé": 61,
-        "Guinéenne": 118,
-        "Malienne": 80,
-        "Congolaise": 183,
-        "Mauritanienne": 47,
-        "Comorienne": 10,
-        "Bissau-Guinéenne": 3,
-        "Nigérienne": 110,
-        "Thiadienne": 1,
-        "Française": 26,
-        "Ivoirienne": 74,
-        "Centrafricaine": 35,
-        "Gambienne": 3,
-        "Tchadienne": 74,
-        "Camerounaise": 31,
-        "Cap-verdienne": 2,
-        "Equato-guinéenne": 5,
-        "Djiboutienne": 29,
-        "Bissau-guinéenne": 3,
-        "Haïtienne": 3,
-        "TOGOLAISE": 1061,
-        "SENEGALAISE": 23002,
-        "MALIENNE": 1037,
-        "BENINOISE": 848,
-        "MAURITANIENNE": 412,
-        "GABONAISE": 5441,
-        "TCHADIENNE": 1090,
-        "GUINEENNE": 1553,
-        "CONGOLAISE": 2257,
-        "DJIBOUTIENNE": 301,
-        "BURKINABE": 665,
-        "IVOIRIENNE": 929,
-        "sénégalaise": 6,
-        "CENTRAFRICAINE": 569,
-        "GUINENNE": 20,
-        "congolaise": 2,
-        "Beninoise": 8,
-        "Centre afrcaine": 1,
-        "NIGERIENNE": 1138,
-        "guinéenne": 1,
-        "HAITIENNE": 33,
-        "Equato-Guinéenne": 1,
-        "Tchiadienne": 3,
-        "haïtienne": 2,
-        "Brazzaville": 2,
         "GUINEENE": 5,
+        "TCHADIENNE": 1090,
+        "SENEGALAISE": 23002,
+        "Nigérienne": 110,
         "Français": 1,
+        "Guinéenne": 118,
+        "Gabonaise": 321,
+        "MALIENNE": 1037,
+        "BURKINABE": 665,
         "Sénégalo-malienne": 3,
+        "Sénégalaise": 1927,
         "Mauritanien": 3,
         "Sénégalais": 21,
         "Capverdienne": 3,
         "Gabonais": 1,
+        "Centrafricaine": 35,
         "Senegalaise": 36,
+        "Togolaise": 130,
+        "Congolaise": 183,
         "SENEGALISE": 10,
+        "CONGOLAISE": 2257,
         "Nigerienne": 8,
         "Senegalais": 3,
+        "TOGOLAISE": 1061,
+        "GUINEENNE": 1553,
+        "GABONAISE": 5441,
+        "DJIBOUTIENNE": 301,
+        "MAURITANIENNE": 412,
+        "BENINOISE": 848,
+        "IVOIRIENNE": 929,
+        "Tchadienne": 74,
+        "Malienne": 80,
         "Sénégal": 3,
+        "CENTRAFRICAINE": 569,
         "SENGALAISE": 20,
         "TCADIENNE": 4,
         "SENAGALAISE": 8,
+        "NIGERIENNE": 1138,
         "BISSAO-GUINEENNE": 3,
         "LIBANAISE": 10,
         "CAMEROUNAISE": 486,
@@ -4320,9 +4294,11 @@
         "SENEGALAIS": 9,
         "GUINEENNEE": 2,
         "Centreafricaine": 1,
+        "Française": 26,
         "CCENTRAFRICAINE": 1,
         "FRANCO-SENEGALAISE": 18,
         "HAITI": 1,
+        "HAITIENNE": 33,
         "SENEGALO BURKINABE": 1,
         "FRANCO SENEGALAISE": 2,
         "senegalaise": 8,
@@ -4348,15 +4324,25 @@
         "FRANCOSENEGALAISE": 1,
         "CONGOALAISE": 1,
         "GINEENNE": 1,
+        "Ivoirienne": 74,
+        "Burkinabé": 61,
         "Malgache": 3,
+        "Camerounaise": 31,
         "Haitienne": 2,
+        "sénégalaise": 6,
+        "Béninoise": 63,
+        "Djiboutienne": 29,
         "Dakar": 1,
         "Banguientrafricaine": 1,
+        "Brazzaville": 2,
         "Niamey": 2,
+        "Mauritanienne": 47,
         "Bissau Guinéenne": 2,
         "Gabon": 2,
+        "Comorienne": 10,
         "SENSEGALAISE": 8,
         "GUIEENNE": 2,
+        "GUINENNE": 20,
         "SE?EGALAISE": 1,
         "SENEGALO-FRANCAIS": 1,
         "SENGEGALAISE": 3,
@@ -4393,6 +4379,7 @@
         "ESPAGNOLE": 2,
         "Djiboutiéenne": 1,
         "Nigériane": 1,
+        "Gambienne": 3,
         "Equato Guinéenne": 1,
         "Centraficaine": 1,
         "Camérounaise": 1,
@@ -4441,7 +4428,14 @@
         "TUNISIENNE": 3,
         "SUISSE": 6,
         "FRANCO AMERICAINE": 1,
+        "Haïtienne": 3,
+        "Bissau-guinéenne": 3,
+        "Equato-guinéenne": 5,
         "Bissau guinéenne": 1,
+        "Cap-verdienne": 2,
+        "Tchiadienne": 3,
+        "Beninoise": 8,
+        "Bissau-Guinéenne": 3,
         "HAITENNE": 2,
         "CONGALAISE": 1,
         "Guineenne": 1,
@@ -4480,6 +4474,7 @@
         "SÉNÉGALAISE": 5,
         "SIERRA LEONNAISE": 1,
         "AMERICO-SENEGALAISE": 1,
+        "congolaise": 2,
         "Séngalaise": 3,
         "S": 1,
         "Ghanéene": 3,
@@ -4526,6 +4521,11 @@
         "CAMEROUNAIRE": 2,
         "SENEGAAISE": 1,
         "DJOUBOUTIENNE": 1,
+        "Thiadienne": 1,
+        "Centre afrcaine": 1,
+        "guinéenne": 1,
+        "Equato-Guinéenne": 1,
+        "haïtienne": 2,
         "NOTARIAL": 1,
         "MALIEN": 1,
         "FRANCO-AMERICAINE": 1,
@@ -4533,19 +4533,14 @@
         "LCM3": 1
       },
       "ages": {
-        ">30": 10746,
         "26-30": 15810,
+        ">30": 10746,
         "24-25": 7789,
         "21-23": 9608,
         "18-20": 3838,
         "<18": 96
       },
       "niveaux": {
-        "MBA2": 2460,
-        "L3": 853,
-        "L1": 1261,
-        "L2": 1150,
-        "MBA1": 2695,
         "IIA - ALBI": 22,
         "Licence 1": 1315,
         "Licence 2": 1193,
@@ -4573,6 +4568,8 @@
         "LICENCE3": 1219,
         "LICENCE1": 1490,
         "LICENCE2": 1384,
+        "MBA2": 2460,
+        "MBA1": 2695,
         "LICENCE 1 Cours du soir": 1,
         "Albi licence externe": 2,
         "CERTIFICAT": 689,
@@ -4601,6 +4598,9 @@
         "MBA 2 MPSD": 22,
         "MBA 1 Online S1": 95,
         "MBA 2 Online S1": 56,
+        "L3": 853,
+        "L1": 1261,
+        "L2": 1150,
         "ICCF": 2,
         "ROYALTIES - ACOMPTE": 4,
         "Certificat": 38,
@@ -4612,10 +4612,6 @@
         "DBA": 22
       },
       "sexeParEcole": {
-        "ISM-DAKAR": {
-          "M": 1042,
-          "F": 1273
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "M": 4907,
           "F": 3670
@@ -4644,13 +4640,16 @@
           "M": 106,
           "F": 61
         },
+        "ISM-DAKAR": {
+          "M": 1042,
+          "F": 1273
+        },
         "ISM HQ": {
           "M": 120,
           "F": 108
         }
       },
       "boursiersParEcole": {
-        "ISM-DAKAR": 27,
         "ISM Dakar Ecole d'Ingénieurs": 1342,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
@@ -4658,15 +4657,16 @@
         "ISM Dakar Madiba Leadership Institut": 990,
         "ISM Online & ISF": 541,
         "ISM Online et ISF": 56,
+        "ISM-DAKAR": 27,
         "ISM HQ": 14
       },
       "redoublantsParEcole": {
-        "ISM-DAKAR": 1,
         "ISM Dakar Ecole d'Ingénieurs": 41,
         "ISM Dakar Ecole de Droit": 104,
         "ISM Dakar Ecole de Management": 73,
         "ISM Dakar Graduate School": 93,
         "ISM Dakar Madiba Leadership Institut": 22,
+        "ISM-DAKAR": 1,
         "ISM HQ": 14
       }
     },
@@ -4674,11 +4674,6 @@
       "moyenneGlobale": 11.33,
       "totalNotes": 2274697,
       "moyenneParEcole": {
-        "ISM-DAKAR": {
-          "sum": 1462465.4700000046,
-          "count": 128870,
-          "moy": 11.35
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "sum": 5315905.400000062,
           "count": 456883,
@@ -4713,14 +4708,14 @@
           "sum": 35416.960000000014,
           "count": 4676,
           "moy": 7.57
+        },
+        "ISM-DAKAR": {
+          "sum": 1462465.4700000046,
+          "count": 128870,
+          "moy": 11.35
         }
       },
       "tauxReussite": {
-        "ISM-DAKAR": {
-          "reussi": 95954,
-          "total": 128870,
-          "taux": 74.5
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "reussi": 344980,
           "total": 456883,
@@ -4755,6 +4750,11 @@
           "reussi": 2500,
           "total": 4676,
           "taux": 53.5
+        },
+        "ISM-DAKAR": {
+          "reussi": 95954,
+          "total": 128870,
+          "taux": 74.5
         }
       },
       "topMatieres": [
@@ -4872,14 +4872,9 @@
     },
     "attendance": {
       "totalAbsences": 1160001.6000000557,
-      "totalJustifiees": 118076.8000000003,
+      "totalJustifiees": 118076.80000000025,
       "totalNonJustifiees": 1041924.8000000527,
       "absencesParEcole": {
-        "ISM-DAKAR": {
-          "absences": 67354.5,
-          "justifiees": 9421.5,
-          "records": 4191
-        },
         "ISM Dakar Ecole d'Ingénieurs": {
           "absences": 201891.5,
           "justifiees": 25555,
@@ -4904,16 +4899,16 @@
           "absences": 74023,
           "justifiees": 9966.5,
           "records": 4421
+        },
+        "ISM-DAKAR": {
+          "absences": 67354.5,
+          "justifiees": 9421.5,
+          "records": 4191
         }
       }
     },
     "structure": {
       "niveauxDistrib": {
-        "MBA2": 112,
-        "L1": 21,
-        "L2": 23,
-        "L3": 21,
-        "MBA1": 105,
         "IIA - ALBI": 1,
         "Licence 1": 34,
         "Licence 2": 35,
@@ -4943,6 +4938,8 @@
         "LICENCE2": 46,
         "LICENCE3": 45,
         "LICENCE1": 36,
+        "MBA1": 105,
+        "MBA2": 112,
         "LICENCE 1 Cours du soir": 1,
         "Albi licence externe": 1,
         "CERTIFICAT": 207,
@@ -4973,6 +4970,9 @@
         "MBA 2 MPSD": 4,
         "MBA 1 Online S1": 5,
         "MBA 2 Online S1": 5,
+        "L1": 21,
+        "L2": 23,
+        "L3": 21,
         "ICCF": 1,
         "ROYALTIES - ACOMPTE": 1,
         "Certificat": 1,
@@ -4984,18 +4984,9 @@
         "DBA": 4
       },
       "filieresDistrib": {
-        "Sciences Economiques et de gestion": 3,
-        "Sciences Economiques et de Gestion": 749,
-        "Sciences économiques et de Gestion": 3,
-        "Sciences de Gestion": 5,
         "Sciences et Technologies": 225,
-        "Sciences et technologies": 6,
-        "Sciences juridiques et Politiques": 1,
-        "Sciences Juridiques Politiques et de l'Administration": 15,
-        "Sciences Juridiques et Politiques": 27,
-        "SCIENCES ET TECHNOLOGIES": 1,
-        "Fiscalité Conseil Droit des Affaires": 1,
         "Sciences Economiques et Gestion": 33,
+        "Sciences Economiques et de Gestion": 749,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
         "Technologies Appliquées": 1,
@@ -5005,6 +4996,8 @@
         "Sciences Economique et Sociales": 4,
         "Sciences Economiques et Sociales": 4,
         "SCIENCES ECONOMIQUE ET SOCIALES": 3,
+        "Sciences Juridiques et Politiques": 27,
+        "Sciences Juridiques Politiques et de l'Administration": 15,
         "Sciences Juridiques, Politiques et de l'Administration": 118,
         "Master of Business Administration": 1,
         "Sciences Juridiques,Politiques et de l'Administration": 12,
@@ -5012,12 +5005,15 @@
         "SCIENCES JURIDIQUES, POLITIQUES ET DE L'ADMINISTRATION": 83,
         "Sciences économiques et de gestion": 8,
         "Sciences Economique de Gestion": 4,
+        "Sciences Economiques et de gestion": 3,
         "Sciences Economique et de Gestion": 1,
         "Sciences humaines et sociales": 2,
         "Sciences de l'information et de la communication": 58,
         "Sciences Economiques de Gestion": 7,
+        "Sciences de Gestion": 5,
         "Sciences Economiques et de Gestion tion": 1,
         "Science Economique et de Gestion": 2,
+        "Sciences économiques et de Gestion": 3,
         "Sciences de l' Information et de la Communication": 1,
         "Sciences politiques , Relations internationales-Communication Médias": 1,
         "Sciences politiques, Relations internationales- Communication Médias": 1,
@@ -5033,7 +5029,11 @@
         "SCIENCES POLITIQUES ET DU DEVELOPPEMENT": 13,
         "ART, CULTURE et CIVILISATION": 7,
         "SCIENCES DE L'INFORMATION ET DE LA COMMUNICATION": 9,
-        "Sciences Juridiques, Politiques et de L'Administration": 4
+        "Sciences Juridiques, Politiques et de L'Administration": 4,
+        "Sciences et technologies": 6,
+        "Sciences juridiques et Politiques": 1,
+        "SCIENCES ET TECHNOLOGIES": 1,
+        "Fiscalité Conseil Droit des Affaires": 1
       }
     },
     "quality": {
