@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T20:30:00.455Z",
+  "generatedAt": "2026-03-30T20:35:00.982Z",
   "summary": {
     "done": 55,
     "skip": 8,
@@ -4254,46 +4254,46 @@
     },
     "demographics": {
       "sexe": {
-        "M": 22068,
-        "F": 27923,
+        "M": 22123,
+        "F": 27987,
         "inconnu": 1605
       },
-      "boursiers": 7657,
+      "boursiers": 7661,
       "redoublants": 367,
       "exempts": 150,
-      "totalPupils": 51596,
+      "totalPupils": 51715,
       "nationalites": {
         "77": 1,
         "1999": 3,
         "778365205": 1,
         "784483604": 3,
-        "TCHADIENNE": 1164,
-        "GABONAISE": 5715,
-        "TOGOLAISE": 1111,
-        "SENEGALAISE": 24245,
-        "BURKINABE": 695,
-        "GUINEENNE": 1661,
-        "IVOIRIENNE": 954,
-        "MALIENNE": 1093,
-        "NIGERIENNE": 1188,
+        "TCHADIENNE": 1169,
+        "GABONAISE": 5725,
+        "TOGOLAISE": 1113,
+        "SENEGALAISE": 24319,
+        "BURKINABE": 696,
+        "GUINEENNE": 1667,
+        "IVOIRIENNE": 958,
+        "MALIENNE": 1094,
+        "NIGERIENNE": 1190,
         "HAÏTIENNE": 15,
-        "BENINOISE": 883,
+        "BENINOISE": 884,
         "HAITIENNE": 36,
-        "CONGOLAISE": 2375,
+        "CONGOLAISE": 2379,
         "Haitienne": 3,
         "CAMEROUN": 3,
         "BISSAU GUINEENNE": 29,
-        "CAMEROUNAISE": 520,
+        "CAMEROUNAISE": 523,
         "SENEGAL": 18,
         "SENEGLAISE": 21,
-        "MAURITANIENNE": 448,
+        "MAURITANIENNE": 449,
         "MAROCAINE": 35,
         "SEMEGALAISE": 3,
         "Djiboutienne": 30,
         "CANADO-MALIENNE": 3,
         "COMORIENNE": 130,
         "Centrafricaine": 36,
-        "CENTRAFRICAINE": 619,
+        "CENTRAFRICAINE": 623,
         "SENEGGALAISE": 2,
         "GUINÉENNE": 7,
         "ITALIENNE": 29,
@@ -4306,7 +4306,7 @@
         "RWANDAISE": 31,
         "ANGOLAISE": 7,
         "EQUATO GUINEENNE": 26,
-        "DJIBOUTIENNE": 308,
+        "DJIBOUTIENNE": 309,
         "CAMEROUNNAISE": 3,
         "NIGERIANNE": 15,
         "ENEGALAISE": 2,
@@ -4596,10 +4596,10 @@
         "LCM3": 1
       },
       "ages": {
-        "24-25": 8302,
-        "26-30": 16207,
-        ">30": 10918,
-        "21-23": 10623,
+        "24-25": 8331,
+        "26-30": 16241,
+        ">30": 10938,
+        "21-23": 10659,
         "18-20": 4002,
         "<18": 96
       },
@@ -4684,8 +4684,8 @@
           "F": 4285
         },
         "ISM Dakar Graduate School": {
-          "M": 3295,
-          "F": 4316
+          "M": 3350,
+          "F": 4380
         },
         "ISM Dakar Ecole de Droit": {
           "M": 3360,
@@ -4718,7 +4718,7 @@
       },
       "boursiersParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": 1610,
-        "ISM Dakar Graduate School": 639,
+        "ISM Dakar Graduate School": 643,
         "ISM Dakar Ecole de Droit": 1664,
         "ISM Dakar Ecole de Management": 2116,
         "ISM Dakar Madiba Leadership Institut": 990,
@@ -4739,12 +4739,12 @@
     },
     "academic": {
       "moyenneGlobale": 11.56,
-      "totalNotes": 2301125,
+      "totalNotes": 2307727,
       "moyenneParEcole": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "sum": 6186676.420000046,
-          "count": 532732,
-          "moy": 11.61
+          "sum": 6251097.92000005,
+          "count": 539334,
+          "moy": 11.59
         },
         "ISM Dakar Ecole de Droit": {
           "sum": 4990940.980000037,
@@ -4784,9 +4784,9 @@
       },
       "tauxReussite": {
         "ISM Dakar Ecole d'Ingénieurs": {
-          "reussi": 401009,
-          "total": 532732,
-          "taux": 75.3
+          "reussi": 405211,
+          "total": 539334,
+          "taux": 75.1
         },
         "ISM Dakar Ecole de Droit": {
           "reussi": 328894,
@@ -4842,13 +4842,13 @@
         },
         {
           "matiere": "Comptabilité Générale 2",
-          "moy": 10.71,
-          "count": 17478
+          "moy": 10.68,
+          "count": 17584
         },
         {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.72,
-          "count": 17182
+          "moy": 10.66,
+          "count": 17355
         },
         {
           "matiere": "Actions de Recherche Encadrées",
@@ -4901,39 +4901,39 @@
           "count": 9448
         },
         {
+          "matiere": "Business English 2",
+          "moy": 11.53,
+          "count": 9442
+        },
+        {
           "matiere": "Mathématiques Financières",
           "moy": 10.47,
           "count": 9314
         },
         {
-          "matiere": "Business English 2",
-          "moy": 11.56,
-          "count": 9186
+          "matiere": "Business English 1",
+          "moy": 11.02,
+          "count": 9141
+        },
+        {
+          "matiere": "Informatique Appliquée",
+          "moy": 11.43,
+          "count": 9087
         },
         {
           "matiere": "Humanitaire",
           "moy": 13.05,
           "count": 8907
-        },
-        {
-          "matiere": "Mathématiques : Calculs Matriciels & Fonctions à plusieurs variables",
-          "moy": 11.85,
-          "count": 8900
-        },
-        {
-          "matiere": "Comptabilité Analytique",
-          "moy": 10.67,
-          "count": 8857
         }
       ],
       "ccVsExam": {
         "cc": {
-          "moy": 11.79,
-          "count": 1150601
+          "moy": 11.78,
+          "count": 1153900
         },
         "exam": {
-          "moy": 11.34,
-          "count": 1150524
+          "moy": 11.33,
+          "count": 1153827
         }
       }
     },
@@ -4983,7 +4983,7 @@
         "LICENCE 3": 178,
         "LICENCE 1 R2": 29,
         "MBA 1": 302,
-        "MBA 2": 264,
+        "MBA 2": 268,
         "MBA 2 MANAGEMENT PROJETS INTERNATIONAUX": 3,
         "BP3-PRO": 2,
         "EMBA": 7,
@@ -4991,6 +4991,7 @@
         "M1 MARCHE FINANCIER ET TRADING": 1,
         "M1 FINANCE DIGITALE": 1,
         "MBA 1 Pétrole & Gaz": 4,
+        "MBA 2 Cours du Soir": 25,
         "M2 FINANCE DIGITALE": 1,
         "IIA - ALBI": 1,
         "Licence 1": 34,
@@ -5033,7 +5034,6 @@
         "E4IMPACT": 1,
         "EXECUTIVE MBA": 2,
         "E-4 IMPACT": 2,
-        "MBA 2 Cours du Soir": 21,
         "MBA 2 Pétrole & Gaz": 3,
         "CERTIFICAT EN GESTION DE PATRIMOINE": 1,
         "Licence 3 - EXTERNE": 2,
@@ -5063,7 +5063,7 @@
         "Sciences du Numérique": 49,
         "Sciences Economique Et Sociales": 6,
         "Sciences Economiques et Sociales": 5,
-        "Sciences Economiques et de Gestion": 784,
+        "Sciences Economiques et de Gestion": 792,
         "Sciences Economiques de Gestion": 8,
         "Stratégie Digitale": 3,
         "Sciences et Technologies Appliquées": 5,
@@ -5108,20 +5108,20 @@
       }
     },
     "quality": {
-      "total": 55588,
+      "total": 55707,
       "completude": {
         "sexe": 91.3,
-        "nationalite": 87,
+        "nationalite": 87.1,
         "dateNaissance": 91.7,
-        "email": 78.7,
+        "email": 78.8,
         "telephone": 74.2
       },
       "missing": {
         "sexe": 4847,
         "nationalite": 7200,
         "dateNaissance": 4632,
-        "email": 11834,
-        "telephone": 14363
+        "email": 11835,
+        "telephone": 14367
       }
     },
     "anomalies": {
@@ -5562,6 +5562,12 @@
         "moyAbsences": 41.5
       },
       {
+        "classe": "L1F-IA (IAGE & TTL C)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 9.06,
+        "moyAbsences": 41.3
+      },
+      {
         "classe": "L1-Intelligence Artificielle",
         "school": "Ecole d'Ingénieurs",
         "moyNotes": 12.73,
@@ -5764,6 +5770,12 @@
         "school": "Ecole de Droit",
         "moyNotes": 12.16,
         "moyAbsences": 34
+      },
+      {
+        "classe": "L1G-IA (GLRS & ETSE C)",
+        "school": "Ecole d'Ingénieurs",
+        "moyNotes": 10.37,
+        "moyAbsences": 33.9
       },
       {
         "classe": "LDA2A",
@@ -6484,18 +6496,6 @@
         "school": "Ecole d'Ingénieurs",
         "moyNotes": 10.95,
         "moyAbsences": 27.1
-      },
-      {
-        "classe": "MBA1 - Passation de Marchés",
-        "school": "Ecole de Droit",
-        "moyNotes": 10.29,
-        "moyAbsences": 27.1
-      },
-      {
-        "classe": "MBA1 - Droit Maritime et Activités Portuaires",
-        "school": "Ecole de Droit",
-        "moyNotes": 10.91,
-        "moyAbsences": 27
       }
     ],
     "palmares": {
@@ -6704,15 +6704,15 @@
         },
         {
           "matiere": "Comptabilité Générale 2",
-          "moy": 10.71,
-          "count": 17478,
-          "tauxReussite": 66.2
+          "moy": 10.68,
+          "count": 17584,
+          "tauxReussite": 65.9
         },
         {
           "matiere": "Comptabilité Générale 1",
-          "moy": 10.72,
-          "count": 17182,
-          "tauxReussite": 71
+          "moy": 10.66,
+          "count": 17355,
+          "tauxReussite": 70.5
         },
         {
           "matiere": "Actions de Recherche Encadrées",
