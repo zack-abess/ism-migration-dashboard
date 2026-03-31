@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture Agents IA — Migration ClassExpert → SchoolArt</title>
+<style>
+:root {
+  --navy: #1E2761;
+  --ice: #CADCFC;
+  --accent: #0891B2;
+  --dark: #1E293B;
+  --mid: #475569;
+  --light: #F1F5F9;
+  --white: #FFFFFF;
+  --green: #059669;
+  --orange: #D97706;
+  --red: #DC2626;
+  --teal: #0D9488;
+  --purple: #7C3AED;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--light); color: var(--dark); }
+
+/* Header */
+.header { background: linear-gradient(135deg, var(--navy) 0%, #2d3a8c 100%); color: white; padding: 2rem 2rem 1.5rem; }
+.header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.3rem; }
+.header p { color: var(--ice); font-size: 0.95rem; }
+
+/* Tabs */
+.tab-bar { display: flex; gap: 0; background: var(--navy); padding: 0 2rem; border-bottom: 3px solid var(--accent); }
+.tab-btn { padding: 0.7rem 1.4rem; background: none; border: none; color: rgba(255,255,255,0.6); font-size: 0.9rem; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: all 0.2s; }
+.tab-btn:hover { color: white; background: rgba(255,255,255,0.05); }
+.tab-btn.active { color: white; border-bottom-color: var(--accent); font-weight: 600; }
+.tab-content { display: none; padding: 2rem; max-width: 1400px; margin: 0 auto; }
+.tab-content.active { display: block; }
+
+/* Cards */
+.card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.card h2 { font-size: 1.2rem; color: var(--navy); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.card h3 { font-size: 1rem; color: var(--accent); margin: 1rem 0 0.5rem; }
+
+/* Pipeline diagram */
+.pipeline { display: flex; gap: 0; align-items: stretch; overflow-x: auto; padding: 1rem 0; }
+.pipe-stage { flex: 1; min-width: 180px; position: relative; }
+.pipe-box { background: white; border: 2px solid var(--ice); border-radius: 10px; padding: 1rem; margin: 0 0.3rem; text-align: center; position: relative; z-index: 1; height: 100%; }
+.pipe-box.active-stage { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(8,145,178,0.15); }
+.pipe-box .stage-num { display: inline-block; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; background: var(--accent); color: white; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.pipe-box h4 { font-size: 0.9rem; color: var(--navy); margin-bottom: 0.4rem; }
+.pipe-box p { font-size: 0.78rem; color: var(--mid); line-height: 1.4; }
+.pipe-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); z-index: 2; color: var(--accent); font-size: 1.4rem; }
+
+/* Agent cards */
+.agents-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 1.2rem; }
+.agent-card { background: white; border-radius: 12px; border-left: 4px solid var(--accent); padding: 1.3rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); cursor: pointer; transition: all 0.2s; }
+.agent-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); transform: translateY(-2px); }
+.agent-card.supervisor { border-left-color: var(--purple); }
+.agent-card.transform { border-left-color: var(--green); }
+.agent-card .agent-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
+.agent-card .agent-name { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+.agent-card .agent-model { font-size: 0.75rem; padding: 0.2rem 0.6rem; background: var(--light); border-radius: 20px; color: var(--mid); }
+.agent-card .agent-role { font-size: 0.85rem; color: var(--mid); margin-bottom: 0.8rem; line-height: 1.4; }
+.agent-card .tools-list { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.agent-card .tool-tag { font-size: 0.72rem; padding: 0.15rem 0.5rem; background: var(--ice); color: var(--navy); border-radius: 4px; font-family: 'Consolas', monospace; }
+
+/* Agent detail modal */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: center; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal { background: white; border-radius: 16px; max-width: 700px; width: 90%; max-height: 85vh; overflow-y: auto; padding: 2rem; position: relative; }
+.modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--mid); }
+.modal h2 { color: var(--navy); margin-bottom: 0.5rem; }
+.modal .badge { display: inline-block; padding: 0.2rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 1rem; }
+.modal .badge.opus { background: #EDE9FE; color: var(--purple); }
+.modal .badge.sonnet { background: #E0F2FE; color: var(--accent); }
+.modal table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.88rem; }
+.modal th, .modal td { padding: 0.5rem 0.8rem; text-align: left; border-bottom: 1px solid #E2E8F0; }
+.modal th { background: var(--light); color: var(--mid); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+.modal ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+.modal li { font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--dark); line-height: 1.5; }
+.modal code { background: var(--light); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.82rem; font-family: 'Consolas', monospace; }
+
+/* Dependency graph */
+.dep-graph { position: relative; min-height: 500px; }
+.dep-node { position: absolute; background: white; border: 2px solid var(--ice); border-radius: 10px; padding: 0.6rem 1rem; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 120px; cursor: default; transition: all 0.2s; }
+.dep-node:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.dep-node.layer1 { background: #FEF3C7; border-color: var(--orange); }
+.dep-node.layer2 { background: #DBEAFE; border-color: #3B82F6; }
+.dep-node.layer3 { background: #D1FAE5; border-color: var(--green); }
+.dep-node.human { background: #FEE2E2; border-color: var(--red); }
+.dep-node .node-sub { font-size: 0.7rem; font-weight: 400; color: var(--mid); display: block; }
+
+svg.dep-arrows { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+svg.dep-arrows line { stroke: #94A3B8; stroke-width: 1.5; }
+svg.dep-arrows line.parallel { stroke: #3B82F6; stroke-dasharray: 4 3; }
+
+/* Mapping table */
+.mapping-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.mapping-table th { background: var(--navy); color: white; padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+.mapping-table td { padding: 0.6rem 1rem; border-bottom: 1px solid #E2E8F0; }
+.mapping-table tr:nth-child(even) { background: var(--light); }
+.mapping-table tr:hover { background: var(--ice); }
+.complexity { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+.complexity.critical { background: #FEE2E2; color: var(--red); }
+.complexity.high { background: #FEF3C7; color: var(--orange); }
+.complexity.medium { background: #DBEAFE; color: #2563EB; }
+.complexity.low { background: #D1FAE5; color: var(--green); }
+
+/* Timeline */
+.timeline { position: relative; padding: 1rem 0 1rem 2rem; }
+.timeline::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: var(--ice); border-radius: 2px; }
+.tl-item { position: relative; margin-bottom: 1.5rem; }
+.tl-item::before { content: ''; position: absolute; left: -2rem; top: 0.3rem; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid white; box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.tl-item.phase1::before { background: var(--orange); box-shadow: 0 0 0 2px var(--orange); }
+.tl-item.phase2::before { background: #3B82F6; box-shadow: 0 0 0 2px #3B82F6; }
+.tl-item.phase3::before { background: var(--purple); box-shadow: 0 0 0 2px var(--purple); }
+.tl-item.phase4::before { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+.tl-item.phase5::before { background: var(--red); box-shadow: 0 0 0 2px var(--red); }
+.tl-title { font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+.tl-duration { font-size: 0.8rem; color: var(--mid); margin-bottom: 0.4rem; }
+.tl-tasks { font-size: 0.85rem; color: var(--dark); line-height: 1.6; }
+
+/* Stats row */
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.stat-card { background: white; border-radius: 10px; padding: 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.stat-card .stat-value { font-size: 1.8rem; font-weight: 800; color: var(--navy); }
+.stat-card .stat-label { font-size: 0.8rem; color: var(--mid); margin-top: 0.2rem; }
+
+/* File tree */
+.file-tree { font-family: 'Consolas', 'Monaco', monospace; font-size: 0.82rem; line-height: 1.8; background: var(--dark); color: #E2E8F0; padding: 1.5rem; border-radius: 10px; overflow-x: auto; }
+.file-tree .dir { color: #60A5FA; }
+.file-tree .file { color: #A5B4FC; }
+.file-tree .comment { color: #6B7280; }
+
+@media (max-width: 768px) {
+  .agents-grid { grid-template-columns: 1fr; }
+  .pipeline { flex-direction: column; }
+  .pipe-arrow { display: none; }
+  .tab-bar { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Architecture Agents IA — Migration ClassExpert → SchoolArt</h1>
+  <p>Groupe ISM • Sénégal • Plan de création et architecture finale • Mars 2026</p>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('overview')">Vue d'ensemble</button>
+  <button class="tab-btn" onclick="switchTab('agents')">Agents IA</button>
+  <button class="tab-btn" onclick="switchTab('mapping')">Mapping</button>
+  <button class="tab-btn" onclick="switchTab('pipeline')">Pipeline</button>
+  <button class="tab-btn" onclick="switchTab('plan')">Plan de création</button>
+  <button class="tab-btn" onclick="switchTab('structure')">Structure projet</button>
+</div>
+
+<!-- ═══════════════ OVERVIEW TAB ═══════════════ -->
+<div id="tab-overview" class="tab-content active">
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-value">7</div><div class="stat-label">Agents IA</div></div>
+    <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Couches</div></div>
+    <div class="stat-card"><div class="stat-value">220K</div><div class="stat-label">Anomalies détectées</div></div>
+    <div class="stat-card"><div class="stat-value">85+</div><div class="stat-label">Entités Doctrine</div></div>
+    <div class="stat-card"><div class="stat-value">55 925</div><div class="stat-label">Étudiants</div></div>
+    <div class="stat-card"><div class="stat-value">~6 sem.</div><div class="stat-label">Durée estimée</div></div>
+  </div>
+
+  <div class="card">
+    <h2>🏗️ Architecture 3 couches</h2>
+    <div class="pipeline">
+      <div class="pipe-stage">
+        <div class="pipe-box">
+          <div class="stage-num">1</div>
+          <h4>Layer 1</h4>
+          <p><strong>Nettoyage déterministe</strong><br>Scripts Node.js : casse, accents, format dates, dedup exact, garbage removal</p>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-box active-stage">
+          <div class="stage-num">2</div>
+          <h4>Layer 2</h4>
+          <p><strong>Agents IA spécialisés</strong><br>6 agents Claude autonomes : matières, UE, périodes, notes, élèves, transformation</p>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-box">
+          <div class="stage-num">3</div>
+          <h4>Layer 3</h4>
+          <p><strong>Orchestration</strong><br>SupervisorAgent (Opus 4) : coordination, rapports, validation humaine</p>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage">
+        <div class="pipe-box">
+          <div class="stage-num" style="background:var(--green)">✓</div>
+          <h4>SchoolArt</h4>
+          <p><strong>Injection API</strong><br>REST/JSON-LD via API Platform 3.0 (Symfony 7.2)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Stack technique</h2>
+    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+      <tr><td style="padding:0.5rem; font-weight:600; width:200px; color:var(--mid)">Runtime agents</td><td style="padding:0.5rem">Node.js 20+ avec Claude Agent SDK</td></tr>
+      <tr style="background:var(--light)"><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Modèle IA principal</td><td style="padding:0.5rem">Claude Sonnet 4 (agents) + Claude Opus 4 (superviseur)</td></tr>
+      <tr><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Protocole outils</td><td style="padding:0.5rem">MCP (Model Context Protocol) — tools custom par agent</td></tr>
+      <tr style="background:var(--light)"><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Source</td><td style="padding:0.5rem">JSON (ClassExpert scraper) — 65 licences, 2 190 classes</td></tr>
+      <tr><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Destination</td><td style="padding:0.5rem">SchoolArt API Platform 3.0 (REST/JSON-LD) — Symfony 7.2</td></tr>
+      <tr style="background:var(--light)"><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Base de données</td><td style="padding:0.5rem">MySQL — 85+ entités Doctrine, héritage JOINED</td></tr>
+      <tr><td style="padding:0.5rem; font-weight:600; color:var(--mid)">Coût API estimé</td><td style="padding:0.5rem">200–400 USD (Sonnet 4 principal)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════ AGENTS TAB ═══════════════ -->
+<div id="tab-agents" class="tab-content">
+  <div class="agents-grid">
+
+    <div class="agent-card supervisor" onclick="showAgent('supervisor')">
+      <div class="agent-header">
+        <span class="agent-name">🧠 SupervisorAgent</span>
+        <span class="agent-model">Opus 4</span>
+      </div>
+      <div class="agent-role">Orchestrateur principal. Coordonne les agents, gère les dépendances, génère les rapports, soumet les décisions critiques à validation humaine.</div>
+      <div class="tools-list">
+        <span class="tool-tag">launch_agent()</span>
+        <span class="tool-tag">get_agent_status()</span>
+        <span class="tool-tag">read_state()</span>
+        <span class="tool-tag">request_human_validation()</span>
+        <span class="tool-tag">generate_report()</span>
+        <span class="tool-tag">rollback_step()</span>
+      </div>
+    </div>
+
+    <div class="agent-card" onclick="showAgent('matieres')">
+      <div class="agent-header">
+        <span class="agent-name">📚 MatieresAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Normalise les 3 766 matières uniques, résout les 557 groupes de doublons, crée le référentiel canonique.</div>
+      <div class="tools-list">
+        <span class="tool-tag">read_class_fields()</span>
+        <span class="tool-tag">fuzzy_match()</span>
+        <span class="tool-tag">get_matiere_context()</span>
+        <span class="tool-tag">propose_merge()</span>
+        <span class="tool-tag">write_canonical()</span>
+      </div>
+    </div>
+
+    <div class="agent-card" onclick="showAgent('ue')">
+      <div class="agent-header">
+        <span class="agent-name">🏛️ UEAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Réorganise les UE, comble les 47% de champs vides, normalise les codes, gère la hiérarchie UeSup → Ue → Matiere.</div>
+      <div class="tools-list">
+        <span class="tool-tag">read_teaching_units()</span>
+        <span class="tool-tag">parse_ue_string()</span>
+        <span class="tool-tag">infer_ue_assignment()</span>
+        <span class="tool-tag">validate_ue_hierarchy()</span>
+      </div>
+    </div>
+
+    <div class="agent-card" onclick="showAgent('periodes')">
+      <div class="agent-header">
+        <span class="agent-name">📅 PeriodesAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Normalise les périodes, détecte les anomalies (>4 périodes/an), crée les entités Session + Semestre + Periode.</div>
+      <div class="tools-list">
+        <span class="tool-tag">read_periods()</span>
+        <span class="tool-tag">detect_anomaly()</span>
+        <span class="tool-tag">check_period_usage()</span>
+        <span class="tool-tag">map_to_schoolart_period()</span>
+      </div>
+    </div>
+
+    <div class="agent-card" onclick="showAgent('notes')">
+      <div class="agent-header">
+        <span class="agent-name">📝 NotesAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Valide les 52 548 fichiers de notes, détecte les notes uniformes suspectes, mappe CC/Examen vers cc1/cc2/examen.</div>
+      <div class="tools-list">
+        <span class="tool-tag">read_notes_file()</span>
+        <span class="tool-tag">detect_uniform_grades()</span>
+        <span class="tool-tag">validate_grade_range()</span>
+        <span class="tool-tag">resolve_student_identity()</span>
+      </div>
+    </div>
+
+    <div class="agent-card" onclick="showAgent('eleves')">
+      <div class="agent-header">
+        <span class="agent-name">👩‍🎓 ElevesAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Déduplique les 55 925 étudiants, normalise les nationalités (331→52), complète les champs, gère l'héritage User → Etudiant.</div>
+      <div class="tools-list">
+        <span class="tool-tag">read_pupils()</span>
+        <span class="tool-tag">find_duplicates()</span>
+        <span class="tool-tag">normalize_nationality()</span>
+        <span class="tool-tag">generate_login()</span>
+        <span class="tool-tag">map_to_etudiant()</span>
+      </div>
+    </div>
+
+    <div class="agent-card transform" onclick="showAgent('transform')">
+      <div class="agent-header">
+        <span class="agent-name">🔄 TransformAgent</span>
+        <span class="agent-model">Sonnet 4</span>
+      </div>
+      <div class="agent-role">Génère les payloads API Platform conformes (JSON-LD), gère les IRI, pilote l'injection REST vers SchoolArt.</div>
+      <div class="tools-list">
+        <span class="tool-tag">build_api_payload()</span>
+        <span class="tool-tag">call_api()</span>
+        <span class="tool-tag">resolve_iri()</span>
+        <span class="tool-tag">batch_insert()</span>
+        <span class="tool-tag">verify_insertion()</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════ MAPPING TAB ═══════════════ -->
+<div id="tab-mapping" class="tab-content">
+  <div class="card">
+    <h2>🔗 Mapping source → destination</h2>
+    <table class="mapping-table">
+      <thead>
+        <tr>
+          <th>Source (JSON)</th>
+          <th>Entité(s) SchoolArt</th>
+          <th>Volume</th>
+          <th>Complexité</th>
+          <th>Agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>main.json</code></td><td>Classe, Niveau, Specialisation, Diplome</td><td>2 190</td><td><span class="complexity high">Élevée</span></td><td>TransformAgent</td></tr>
+        <tr><td><code>pupils.json</code></td><td>User, Etudiant, classe_etudiant (M2M)</td><td>55 925</td><td><span class="complexity high">Élevée</span></td><td>ElevesAgent</td></tr>
+        <tr><td><code>class_fields.json</code></td><td>Matiere, Ue, UeSup, MatiereSup</td><td>104 669</td><td><span class="complexity critical">Critique</span></td><td>MatieresAgent</td></tr>
+        <tr><td><code>teaching_units.json</code></td><td>Ue, UeSup</td><td>~8 000</td><td><span class="complexity high">Élevée</span></td><td>UEAgent</td></tr>
+        <tr><td><code>class_periods.json</code></td><td>Periode, Session, Semestre</td><td>~8 760</td><td><span class="complexity medium">Moyenne</span></td><td>PeriodesAgent</td></tr>
+        <tr><td><code>_notes/*.json</code></td><td>Note (cc1, cc2, examen)</td><td>52 548 fichiers</td><td><span class="complexity high">Élevée</span></td><td>NotesAgent</td></tr>
+        <tr><td><code>_assiduite/*.json</code></td><td>Absence</td><td>8 918 fichiers</td><td><span class="complexity medium">Moyenne</span></td><td>TransformAgent</td></tr>
+        <tr><td><code>compensations.json</code></td><td>Compensation (M2M Ue)</td><td>~2 000</td><td><span class="complexity low">Faible</span></td><td>TransformAgent</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>📊 Ordre d'insertion (dépendances Doctrine)</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap:1rem;">
+      <div style="background:var(--light); padding:1rem; border-radius:8px; border-left:3px solid var(--orange);">
+        <strong style="color:var(--orange)">1. Prérequis structurels</strong><br>
+        <span style="font-size:0.85rem; color:var(--mid)">Etablissement → Institut → Zone → Profile<br><em>(déjà en base)</em></span>
+      </div>
+      <div style="background:var(--light); padding:1rem; border-radius:8px; border-left:3px solid #3B82F6;">
+        <strong style="color:#3B82F6">2. Années & Périodes</strong><br>
+        <span style="font-size:0.85rem; color:var(--mid)">AnneeAcademic → Niveau → Session → Semestre → Periode</span>
+      </div>
+      <div style="background:var(--light); padding:1rem; border-radius:8px; border-left:3px solid var(--accent);">
+        <strong style="color:var(--accent)">3. Structure pédagogique</strong><br>
+        <span style="font-size:0.85rem; color:var(--mid)">Specialisation → Classe → Diplome → UeSup → Ue → MatiereSup → Matiere</span>
+      </div>
+      <div style="background:var(--light); padding:1rem; border-radius:8px; border-left:3px solid var(--purple);">
+        <strong style="color:var(--purple)">4. Utilisateurs</strong><br>
+        <span style="font-size:0.85rem; color:var(--mid)">User → Etudiant (JOINED) → classe_etudiant (M2M)</span>
+      </div>
+      <div style="background:var(--light); padding:1rem; border-radius:8px; border-left:3px solid var(--green);">
+        <strong style="color:var(--green)">5. Données transactionnelles</strong><br>
+        <span style="font-size:0.85rem; color:var(--mid)">Note, Absence, Passage, Bulletin, Compensation</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PIPELINE TAB ═══════════════ -->
+<div id="tab-pipeline" class="tab-content">
+  <div class="card">
+    <h2>🔄 Graphe de dépendances d'exécution</h2>
+    <table class="mapping-table">
+      <thead>
+        <tr><th>Étape</th><th>Agent</th><th>Produit</th><th>Dépend de</th><th>Parallélisable</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td>Layer 1 (scripts)</td><td>JSON nettoyés</td><td>—</td><td>✅ Oui (par type)</td></tr>
+        <tr><td><strong>2a</strong></td><td>MatieresAgent</td><td>Référentiel matières</td><td>Étape 1</td><td>✅ Oui</td></tr>
+        <tr><td><strong>2b</strong></td><td>UEAgent</td><td>Référentiel UE</td><td>Étape 1</td><td>✅ // 2a</td></tr>
+        <tr><td><strong>2c</strong></td><td>PeriodesAgent</td><td>Périodes normalisées</td><td>Étape 1</td><td>✅ // 2a, 2b</td></tr>
+        <tr><td><strong>2d</strong></td><td>ElevesAgent</td><td>Référentiel étudiants</td><td>Étape 1</td><td>✅ // 2a-2c</td></tr>
+        <tr><td><strong>3</strong></td><td>NotesAgent</td><td>Notes validées</td><td>Étapes 2a, 2c, 2d</td><td>❌ Attend les 3</td></tr>
+        <tr><td><strong>4</strong></td><td style="color:var(--red); font-weight:600">Validation humaine</td><td>Décisions confirmées</td><td>Étape 3</td><td>❌ Bloquant</td></tr>
+        <tr><td><strong>5</strong></td><td>TransformAgent</td><td>Payloads API + Injection</td><td>Étape 4</td><td>⚠️ Partiellement</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>🛑 Points de validation humaine</h2>
+    <table class="mapping-table">
+      <thead>
+        <tr><th>Point de validation</th><th>Description</th><th>Impact si ignoré</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fusions matières ambiguës</td><td>Cas où la similarité est entre 0.7 et 0.9</td><td><span class="complexity critical">Doublons ou pertes de notes</span></td></tr>
+        <tr><td>Périodes surnuméraires</td><td>Classes avec >4 périodes détectées</td><td><span class="complexity high">Erreurs de structure notes</span></td></tr>
+        <tr><td>Doublons étudiants incertains</td><td>Homonymes avec identifiants différents</td><td><span class="complexity critical">Fusion de personnes distinctes</span></td></tr>
+        <tr><td>Notes uniformes suspectes</td><td>Classes entières à 0.00 ou note identique</td><td><span class="complexity high">Données invalides en production</span></td></tr>
+        <tr><td>Avant injection finale</td><td>Résumé global des transformations</td><td><span class="complexity critical">Données erronées en production</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>📋 Gestion d'état (state.json)</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:0.8rem;">
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>current_step</strong><br><span style="color:var(--mid)">Étape en cours</span></div>
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>agents_status</strong><br><span style="color:var(--mid)">idle / running / completed / failed</span></div>
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>decisions_pending</strong><br><span style="color:var(--mid)">En attente validation</span></div>
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>decisions_resolved</strong><br><span style="color:var(--mid)">Historique décisions</span></div>
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>metrics</strong><br><span style="color:var(--mid)">Records / erreurs / warnings</span></div>
+      <div style="background:var(--light); padding:0.8rem; border-radius:6px; font-size:0.85rem;"><strong>checkpoints</strong><br><span style="color:var(--mid)">Snapshots rollback</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PLAN TAB ═══════════════ -->
+<div id="tab-plan" class="tab-content">
+  <div class="card">
+    <h2>📆 Plan de création — 5 phases</h2>
+    <div class="timeline">
+      <div class="tl-item phase1">
+        <div class="tl-title">Phase 1 : Infrastructure</div>
+        <div class="tl-duration">Semaine 1</div>
+        <div class="tl-tasks">
+          Setup projet Node.js + Claude Agent SDK • Outils MCP partagés (file-reader, normalizer, fuzzy-match) • Client API SchoolArt (JWT, CRUD, IRI) • State-manager + checkpoints • Scripts Layer 1 (nettoyage déterministe)
+        </div>
+      </div>
+      <div class="tl-item phase2">
+        <div class="tl-title">Phase 2 : Agents de nettoyage</div>
+        <div class="tl-duration">Semaines 2–3</div>
+        <div class="tl-tasks">
+          MatieresAgent (normalisation + fusion + référentiel) • UEAgent (hiérarchie + complétion) • PeriodesAgent (normalisation + anomalies) • ElevesAgent (dédup + nationalités) • NotesAgent (validation + nettoyage) • Tests unitaires sur échantillon de 5 classes
+        </div>
+      </div>
+      <div class="tl-item phase3">
+        <div class="tl-title">Phase 3 : Orchestration</div>
+        <div class="tl-duration">Semaine 4</div>
+        <div class="tl-tasks">
+          SupervisorAgent (orchestration + dépendances) • Interface validation humaine (CLI) • Génération automatique de rapports • Intégration dashboard (onglet Migration) • Test pipeline complet sur 10 licences pilotes
+        </div>
+      </div>
+      <div class="tl-item phase4">
+        <div class="tl-title">Phase 4 : Injection</div>
+        <div class="tl-duration">Semaine 5</div>
+        <div class="tl-tasks">
+          TransformAgent (payloads API Platform + IRI) • Endpoints batch sur SchoolArt si nécessaire • Test d'injection sur staging • Validation données injectées (comptages + intégrité)
+        </div>
+      </div>
+      <div class="tl-item phase5">
+        <div class="tl-title">Phase 5 : Production</div>
+        <div class="tl-duration">Semaine 6</div>
+        <div class="tl-tasks">
+          Exécution complète 65 licences (production) • Rapport final de migration • Vérification post-migration (cohérence, intégrité référentielle) • Documentation technique et handover
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ Risques et mitigation</h2>
+    <table class="mapping-table">
+      <thead><tr><th>Risque</th><th>Impact</th><th>Probabilité</th><th>Mitigation</th></tr></thead>
+      <tbody>
+        <tr><td>Hallucination IA (fusions incorrectes)</td><td><span class="complexity critical">Élevé</span></td><td>Moyenne</td><td>Seuils stricts + validation humaine pour score &lt; 0.9</td></tr>
+        <tr><td>Coût API Claude élevé</td><td><span class="complexity medium">Moyen</span></td><td>Élevée</td><td>Sonnet 4 principal, batch processing, caching décisions</td></tr>
+        <tr><td>Perte de données en injection</td><td><span class="complexity critical">Critique</span></td><td>Faible</td><td>Checkpoints, transactions, backup base avant migration</td></tr>
+        <tr><td>Incohérence IRI</td><td><span class="complexity high">Élevé</span></td><td>Moyenne</td><td>Map IRI persistante, ordre insertion strict, vérification post</td></tr>
+        <tr><td>Sources évoluent pendant migration</td><td><span class="complexity medium">Moyen</span></td><td>Faible</td><td>Gel ClassExpert phase 5, delta sync si nécessaire</td></tr>
+        <tr><td>Limites context tokens</td><td><span class="complexity medium">Moyen</span></td><td>Moyenne</td><td>Chunking par lot de 50 classes, résumés inter-batch</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>💰 Estimations</h2>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-value">~65M</div><div class="stat-label">Tokens total</div></div>
+      <div class="stat-card"><div class="stat-value">200-400$</div><div class="stat-label">Coût API Claude</div></div>
+      <div class="stat-card"><div class="stat-value">4-8h</div><div class="stat-label">Durée pipeline</div></div>
+      <div class="stat-card"><div class="stat-value">&gt;90%</div><div class="stat-label">Automatisation</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ STRUCTURE TAB ═══════════════ -->
+<div id="tab-structure" class="tab-content">
+  <div class="card">
+    <h2>📁 Structure du projet</h2>
+    <div class="file-tree">
+<span class="dir">migration-agents/</span>
+├── package.json
+├── <span class="dir">config/</span>
+│   ├── <span class="file">pipeline.json</span>          <span class="comment"># Étapes et dépendances</span>
+│   ├── <span class="file">agents.json</span>            <span class="comment"># Config agents (modèle, outils, limites)</span>
+│   └── <span class="file">schoolart-api.json</span>     <span class="comment"># Endpoints API Platform + auth JWT</span>
+├── <span class="dir">src/</span>
+│   ├── <span class="dir">supervisor/</span>
+│   │   ├── <span class="file">index.js</span>              <span class="comment"># Point d'entrée SupervisorAgent</span>
+│   │   ├── <span class="file">state-manager.js</span>      <span class="comment"># Gestion du state.json</span>
+│   │   └── <span class="file">human-validation.js</span>   <span class="comment"># Interface CLI de validation</span>
+│   ├── <span class="dir">agents/</span>
+│   │   ├── <span class="file">matieres-agent.js</span>
+│   │   ├── <span class="file">ue-agent.js</span>
+│   │   ├── <span class="file">periodes-agent.js</span>
+│   │   ├── <span class="file">notes-agent.js</span>
+│   │   ├── <span class="file">eleves-agent.js</span>
+│   │   └── <span class="file">transform-agent.js</span>
+│   ├── <span class="dir">tools/</span>                    <span class="comment"># Outils MCP partagés</span>
+│   │   ├── <span class="file">file-reader.js</span>        <span class="comment"># Lecture JSON ClassExpert</span>
+│   │   ├── <span class="file">fuzzy-match.js</span>        <span class="comment"># Levenshtein + phonétique</span>
+│   │   ├── <span class="file">api-client.js</span>         <span class="comment"># Client REST SchoolArt + JWT</span>
+│   │   ├── <span class="file">normalizer.js</span>         <span class="comment"># Normalisations déterministes</span>
+│   │   └── <span class="file">reporter.js</span>           <span class="comment"># Génération de rapports</span>
+│   └── <span class="dir">layer1/</span>                   <span class="comment"># Scripts nettoyage déterministe</span>
+│       ├── <span class="file">normalize-text.js</span>
+│       ├── <span class="file">dedup-exact.js</span>
+│       ├── <span class="file">clean-nationalities.js</span>
+│       └── <span class="file">validate-structure.js</span>
+├── <span class="dir">data/</span>
+│   ├── <span class="dir">source/</span>                   <span class="comment"># Symlink → scraper-classexpert-v2/Done/</span>
+│   ├── <span class="dir">cleaned/</span>                  <span class="comment"># Sortie Layer 1</span>
+│   ├── <span class="dir">canonical/</span>                <span class="comment"># Sortie Layer 2 (référentiels)</span>
+│   ├── <span class="dir">payloads/</span>                 <span class="comment"># JSON-LD prêts pour injection</span>
+│   └── <span class="file">state.json</span>                <span class="comment"># État du pipeline</span>
+├── <span class="dir">reports/</span>
+│   ├── <span class="dir">decisions/</span>                <span class="comment"># Historique décisions IA</span>
+│   └── <span class="dir">validation/</span>               <span class="comment"># Requêtes validation humaine</span>
+└── <span class="dir">tests/</span>                        <span class="comment"># Tests unitaires + intégration</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ AGENT DETAIL MODAL ═══════════════ -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// Tab switching
+function switchTab(name) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Agent details
+const agents = {
+  supervisor: {
+    name: "SupervisorAgent",
+    emoji: "🧠",
+    model: "Claude Opus 4",
+    modelClass: "opus",
+    role: "Orchestrateur principal du pipeline de migration. Coordonne l'exécution de tous les agents spécialisés, gère les dépendances entre étapes, et soumet les décisions critiques à validation humaine.",
+    inputs: "Configuration pipeline (pipeline.json) + état courant (state.json)",
+    outputs: "Rapports de décision, requêtes de validation humaine, logs d'exécution, métriques globales",
+    tools: [
+      ["launch_agent(name, config)", "Démarre un agent spécialisé avec sa configuration"],
+      ["get_agent_status(id)", "Interroge l'état d'avancement d'un agent"],
+      ["read_state() / write_state()", "Lit/écrit l'état global du pipeline"],
+      ["request_human_validation(decision, options)", "Soumet un choix critique à l'humain"],
+      ["generate_report(type)", "Génère un rapport de progression ou de décisions"],
+      ["rollback_step(step_id)", "Annule les transformations d'une étape"],
+    ],
+    strategy: "Le SupervisorAgent utilise Opus 4 pour sa capacité de raisonnement global. Il maintient un state.json centralisé et orchestre les agents dans l'ordre des dépendances. Les étapes 2a-2d sont lancées en parallèle, puis l'étape 3 (NotesAgent) attend leur complétion. Avant l'injection finale, il génère un rapport de synthèse et attend la validation humaine."
+  },
+  matieres: {
+    name: "MatieresAgent",
+    emoji: "📚",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Normalise les 3 766 matières uniques, résout les 557 groupes de doublons par analyse sémantique, et crée le référentiel canonique.",
+    inputs: "class_fields.json de chaque classe (104 669 occurrences)",
+    outputs: "matieres_canonical.json + mapping_matieres.json (ancien → nouveau)",
+    tools: [
+      ["read_class_fields(path)", "Lit les champs d'une classe"],
+      ["fuzzy_match(name, candidates, threshold)", "Recherche floue (Levenshtein + phonétique)"],
+      ["get_matiere_context(name)", "Récupère le contexte (UE, période, niveau, licence)"],
+      ["propose_merge(group, canonical)", "Propose une fusion avec justification"],
+      ["write_canonical(matieres[])", "Écrit le référentiel validé"],
+    ],
+    strategy: "Pass 1 : Normalisation déterministe (casse, accents, espaces). Pass 2 : Clustering par similarité (Levenshtein ≤ 3, même UE/période). Pass 3 : Résolution sémantique IA (ex: « Compta générale » vs « Comptabilité Générale I »). Pass 4 : Validation humaine des cas ambigus (< 50 attendus)."
+  },
+  ue: {
+    name: "UEAgent",
+    emoji: "🏛️",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Réorganise les UE, comble les 47% de champs vides, normalise les codes, et gère la hiérarchie UeSup → Ue → Matiere.",
+    inputs: "teaching_units.json + class_fields.json (colonne U.E.)",
+    outputs: "ue_canonical.json + ue_matiere_mapping.json",
+    tools: [
+      ["read_teaching_units(path)", "Lit les UE d'une classe"],
+      ["parse_ue_string(raw)", "Décompose « DSG115 - Langues – Civilisations - Sem 1 / Sess 1 » en {code, nom, periode}"],
+      ["infer_ue_assignment(matiere, ctx)", "Infère l'UE d'une matière sans UE assignée"],
+      ["validate_ue_hierarchy(tree)", "Vérifie cohérence crédits et coefficients"],
+    ],
+    strategy: "Analyse les patterns de nommage des UE (préfixe code + nom + période), déduplique, et reconstruit la hiérarchie UeSup → Ue. Pour les 47% de matières sans UE, infère l'assignation par le contexte (même classe, même période, matières similaires)."
+  },
+  periodes: {
+    name: "PeriodesAgent",
+    emoji: "📅",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Normalise les périodes, détecte les anomalies (>4 périodes/an, périodes sans notes), et crée les entités Session + Semestre + Periode.",
+    inputs: "class_periods.json de chaque classe (~8 760 périodes)",
+    outputs: "periodes_normalized.json + anomalies_report.json",
+    tools: [
+      ["read_periods(path)", "Lit les périodes d'une classe"],
+      ["detect_anomaly(periods, pattern)", "Identifie les écarts par rapport au modèle 2S×2Sess"],
+      ["check_period_usage(period_id)", "Vérifie si une période a des notes/assiduité associées"],
+      ["map_to_schoolart_period(ce_period)", "Génère le mapping vers Periode + Session + Semestre"],
+    ],
+    strategy: "Pattern attendu : 4 périodes (Sem 1/Sess 1, Sem 1/Sess 2, Sem 2/Sess 1, Sem 2/Sess 2). Détecte et signale les classes avec plus de 4 périodes (50 anomalies identifiées). Vérifie que chaque période a des notes associées avant de la créer dans SchoolArt."
+  },
+  notes: {
+    name: "NotesAgent",
+    emoji: "📝",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Valide les 52 548 fichiers de notes, détecte les notes uniformes suspectes, et mappe CC/Examen vers cc1/cc2/examen SchoolArt.",
+    inputs: "_notes/*/*.json (52 548 fichiers)",
+    outputs: "notes_validated.json + notes_anomalies.json",
+    tools: [
+      ["read_notes_file(path)", "Lit un fichier avec parsing des virgules décimales"],
+      ["detect_uniform_grades(notes, threshold)", "Détecte les notes identiques pour toute une classe"],
+      ["validate_grade_range(note, bareme)", "Vérifie note ∈ [0, barème]"],
+      ["resolve_student_identity(name, classe)", "Fait le lien élève/note via le référentiel étudiants"],
+    ],
+    strategy: "Dépend des référentiels matières (2a), périodes (2c) et étudiants (2d). Parse les virgules décimales (16,00 → 16.0). Mappe « Contrôle Continu » → cc1, « Examen » → examen. Détecte et signale les classes à notes uniformes suspectes (36+ cas identifiés)."
+  },
+  eleves: {
+    name: "ElevesAgent",
+    emoji: "👩‍🎓",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Déduplique les 55 925 étudiants, normalise les nationalités (331→52), complète les champs manquants, et gère l'héritage User → Etudiant.",
+    inputs: "pupils.json de chaque classe",
+    outputs: "etudiants_canonical.json + dedup_mapping.json + nationalites_mapping.json",
+    tools: [
+      ["read_pupils(path)", "Lit les élèves d'une classe"],
+      ["find_duplicates(student, all)", "Détection multi-critères (nom+prénom+DOB+identifiant)"],
+      ["normalize_nationality(raw)", "NFD + Levenshtein + dictionnaire (déjà développé)"],
+      ["generate_login(nom, prenom)", "Génère un login unique pour SchoolArt"],
+      ["map_to_etudiant(data)", "Transforme vers le schéma Etudiant Doctrine"],
+    ],
+    strategy: "Déduplication en 3 passes : identifiant exact, nom+prénom+DOB exact, puis fuzzy (Levenshtein nom ≤ 2 + même DOB). Nationalités normalisées via l'algorithme déjà développé (NFD + dictionnaire + Levenshtein + garbage rejection). Génération de logins au format prenom.nom avec gestion des conflits."
+  },
+  transform: {
+    name: "TransformAgent",
+    emoji: "🔄",
+    model: "Claude Sonnet 4",
+    modelClass: "sonnet",
+    role: "Génère les payloads API Platform conformes (JSON-LD), gère les références IRI, et pilote l'injection REST vers SchoolArt.",
+    inputs: "Toutes les sorties normalisées des agents précédents",
+    outputs: "Appels API REST vers SchoolArt + logs d'injection + rollback data",
+    tools: [
+      ["read_canonical(type)", "Lit les données normalisées d'un type"],
+      ["build_api_payload(entity, data)", "Construit le JSON-LD conforme API Platform"],
+      ["call_api(method, endpoint, payload)", "Exécute un appel REST avec retry"],
+      ["resolve_iri(type, id)", "Résout les références IRI (/api/classes/42)"],
+      ["batch_insert(type, payloads[])", "Insertion en lot avec transaction"],
+      ["verify_insertion(type, count)", "Vérifie le nombre d'enregistrements créés"],
+    ],
+    strategy: "Suit l'ordre d'insertion Doctrine strict. Authentification JWT (Lexik) avec refresh auto. Maintient une map IRI persistante pour résoudre les références. Insertion par batch de 100 avec transactions MySQL. Rate limiting : 100 req/s max avec backoff exponentiel."
+  }
+};
+
+function showAgent(id) {
+  const a = agents[id];
+  const toolsHtml = a.tools.map(t => `<tr><td><code>${t[0]}</code></td><td>${t[1]}</td></tr>`).join('');
+  document.getElementById('modal-content').innerHTML = `
+    <h2>${a.emoji} ${a.name}</h2>
+    <span class="badge ${a.modelClass}">${a.model}</span>
+    <p style="margin-bottom:1rem; line-height:1.6">${a.role}</p>
+    <table>
+      <tr><th style="width:100px">Entrée</th><td>${a.inputs}</td></tr>
+      <tr><th>Sortie</th><td>${a.outputs}</td></tr>
+    </table>
+    <h3 style="color:var(--accent); margin:1rem 0 0.5rem">Outils MCP</h3>
+    <table>
+      <thead><tr><th>Outil</th><th>Description</th></tr></thead>
+      <tbody>${toolsHtml}</tbody>
+    </table>
+    <h3 style="color:var(--accent); margin:1rem 0 0.5rem">Stratégie</h3>
+    <p style="font-size:0.9rem; line-height:1.6; color:var(--mid)">${a.strategy}</p>
+  `;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
